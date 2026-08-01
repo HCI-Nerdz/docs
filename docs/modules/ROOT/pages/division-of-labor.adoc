@@ -1,0 +1,47 @@
+= Division of labor
+:description: What belongs in HCI Nerdz versus openshellorg and DevCentr.
+
+== Rule of thumb
+
+[cols="1,1"]
+|===
+| HCI Nerdz | OpenShellOrg
+
+| How should humans *see and manipulate* systems?
+| How should CLIs and shells *speak and compose*?
+
+| Surfaces, themes, dialogs, spatial UI, attention
+| Flags, pipes, entrypoints, help budgets, env refresh
+
+| Innovate / prototype GUIs
+| Standardize / certify / companion-tool CLIs
+|===
+
+DevCentr sits beside both: it recommends and configures environments; it does not own SOS or HCI chrome.
+
+== Boundary examples
+
+[cols="1,1"]
+|===
+| Topic | Home
+
+| Terminal prompts that promote to native GUI dialogs while always echoing prompt text to stdout
+| OpenShellOrg (`terminal-gui-prompts`) — shell transport honesty
+
+| Custom rich file open dialogs / Explorer metaphor fixes
+| HCI Nerdz
+
+| Progressive CLI help (Prohelp)
+| OpenShellOrg
+
+| AsciiDoc preview theme fidelity in editors
+| HCI Nerdz (presentation); Antora plumbing may stay antora-supplemental
+
+| Non-frustrating graphical desktop shell
+| HCI Nerdz (philosophically); may partner-link if historically under OpenShellOrg
+|===
+
+== Disclaimer
+
+HCI Nerdz is *not* a shell standards body.
+For SOS and structured shell architecture, see link:https://openshellorg.github.io/[OpenShellOrg].

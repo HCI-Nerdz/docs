@@ -1,0 +1,107 @@
+/*
+ * HCI Nerdz brand layer on Valentus 2.x chrome.
+ * Amber focus + teal honesty on ink/paper.
+ */
+
+:root {
+  --hci-ink: #0e1218;
+  --hci-ink-muted: #6b7280;
+  --hci-paper: #e8e4d9;
+  --hci-paper-deep: #d9d4c6;
+  --hci-elevated: #ffffff;
+  --hci-focus: #e8a54b;
+  --hci-focus-bright: #f0b85f;
+  --hci-honesty: #3d9b8f;
+  --hci-border: #d0cbbd;
+  --hci-accent-soft: rgba(232, 165, 75, 0.12);
+
+  --adt-canvas: var(--hci-paper);
+  --adt-elevated: var(--hci-elevated);
+  --adt-ink: var(--hci-ink);
+  --adt-ink-muted: var(--hci-ink-muted);
+  --adt-accent: var(--hci-honesty);
+  --adt-accent-hover: var(--hci-focus);
+  --adt-accent-soft: var(--hci-accent-soft);
+  --adt-border: var(--hci-border);
+  --adt-chrome: var(--hci-paper-deep);
+  --adt-chrome-border: var(--hci-border);
+  --adt-nav-bg: transparent;
+  --adt-shadow-float: 0 0.35rem 1rem rgba(14, 18, 24, 0.1);
+  --adt-shadow-sticky: 0 4px 16px rgba(14, 18, 24, 0.07);
+
+  --adt-bc-kicker-fg: var(--adt-accent);
+  --adt-bc-kicker-bg: var(--adt-accent-soft);
+  --adt-bc-kicker-border: color-mix(in srgb, var(--adt-accent) 28%, transparent);
+  --adt-header-bar-bg: var(--adt-chrome);
+  --adt-header-bar-fg: var(--adt-ink);
+  --adt-header-bar-border: var(--adt-chrome-border);
+  --adt-header-bar-hover: var(--adt-accent-soft);
+
+  --body-font-family: "Literata", "Iowan Old Style", "Palatino Linotype", serif;
+  --heading-font-family: "Syne", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+html.dark-theme {
+  --hci-ink: #e8e4d9;
+  --hci-ink-muted: #9aa3b2;
+  --hci-paper: #0e1218;
+  --hci-paper-deep: #161c26;
+  --hci-elevated: #1a2330;
+  --hci-focus: #e8a54b;
+  --hci-focus-bright: #f0b85f;
+  --hci-honesty: #4fb3a6;
+  --hci-border: rgba(61, 155, 143, 0.35);
+  --hci-accent-soft: rgba(232, 165, 75, 0.14);
+
+  --adt-canvas: var(--hci-paper);
+  --adt-elevated: var(--hci-elevated);
+  --adt-ink: var(--hci-ink);
+  --adt-ink-muted: var(--hci-ink-muted);
+  --adt-accent: var(--hci-honesty);
+  --adt-accent-hover: var(--hci-focus);
+  --adt-accent-soft: var(--hci-accent-soft);
+  --adt-border: var(--hci-border);
+  --adt-chrome: var(--hci-paper-deep);
+  --adt-chrome-border: var(--hci-border);
+  --adt-nav-bg: transparent;
+  --adt-shadow-float: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.45);
+  --adt-shadow-sticky: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --adt-header-vcs-icon-filter: none;
+
+  --adt-bc-kicker-fg: var(--adt-accent);
+  --adt-bc-kicker-bg: var(--adt-accent-soft);
+  --adt-bc-kicker-border: color-mix(in srgb, var(--adt-accent) 35%, transparent);
+  --adt-header-bar-bg: var(--adt-chrome);
+  --adt-header-bar-fg: var(--adt-ink);
+  --adt-header-bar-border: var(--adt-chrome-border);
+  --adt-header-bar-hover: var(--adt-accent-soft);
+}
+
+html:not(.dark-theme) .doc h1,
+html:not(.dark-theme) .doc h1.page,
+html:not(.dark-theme) .doc .adt-page-title,
+html:not(.dark-theme) .doc h2 {
+  color: var(--hci-ink) !important;
+  font-family: var(--heading-font-family);
+}
+
+.doc h1,
+.doc h2,
+.doc h3,
+.nav-menu > .title,
+.navbar-item {
+  font-family: var(--heading-font-family);
+}
+
+html.dark-theme .navbar .button,
+html.dark-theme .navbar .button.is-primary {
+  background-color: #1a2330;
+  border-color: #3d9b8f;
+  color: #e8e4d9;
+}
+
+html.dark-theme .navbar .button:hover,
+html.dark-theme .navbar .button.is-primary:hover {
+  background-color: #243042;
+  border-color: #e8a54b;
+}

@@ -1,0 +1,6 @@
+name: hci-nerdz
+title: HCI Nerdz
+version: ~
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc

@@ -1,0 +1,55 @@
+= Philosophy
+:description: What HCI Nerdz stands for — cognitive honesty, heirloom software, and the split from shell/CLI work.
+
+HCI Nerdz improves *graphical interfaces and interaction design* through principles, prototypes, and product-facing tooling — not by absorbing shell standards.
+
+== Cognitive honesty
+
+Software should be compatible with basic human psychology.
+End-user tools should be minimally invasive on attention.
+Developer workflows should keep cognitive overhead low.
+
+Our greatest assets are our brains.
+Software that spends attention for us and abuses working memory is disrespectful.
+
+The recurring question:
+
+> Are we programming the computers, or are they programming us?
+
+== Product representation
+
+When capability exists in the engine but not in the first-class UI, the product is lying about what counts.
+
+The bug is often *discoverability and product representation*, not missing backend search or APIs.
+Power-user syntax is not a substitute for filters and settings people can find.
+
+The same honesty rule applies to:
+
+* Severity chrome (warnings that look like errors)
+* Exit codes (help is success, not failure)
+* Settings GUIs versus the files they claim to represent
+* Previews and diagrams that refuse the host theme
+
+== Human intuition over backwards convention
+
+Consistency with existing conventions has value, but it is not absolute truth.
+When a convention is fundamentally backwards from human intuition and creates compounding inconvenience, it should be corrected.
+
+The inconvenience of migration is temporary.
+The inconvenience of living with a backwards convention is permanent and compounding.
+
+== Heirloom software
+
+UX is of utmost importance in any technical system.
+Be kind to your future self and considerate of others' time and attention.
+Every developer was once a user.
+Pass down maintainable software that a naïve reader can still understand.
+
+Things that behave similarly should not be presented in vastly different ways.
+
+== Related
+
+* xref:principles.adoc[Principles]
+* xref:division-of-labor.adoc[Division of labor]
+* link:https://ryanjohnson.website/vision/[Vision essay]
+* link:https://openshellorg.github.io/docs/open-shell-org/philosophy.html[OpenShellOrg philosophy]

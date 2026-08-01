@@ -1,0 +1,36 @@
+site:
+  title: HCI Nerdz Docs (local)
+  url: http://localhost:8080
+  start_page: hci-nerdz::index.adoc
+  keys:
+    header_logo: logo.svg
+    site_home_url: https://hci-nerdz.github.io
+    site_home_label: HCI Nerdz home
+    header_doc_title: HCI Nerdz Docs
+
+antora:
+  extensions:
+    - '@antora/lunr-extension'
+    - require: '@antora-supplemental/alias-component-to-latest'
+
+content:
+  sources:
+    - url: ./
+      branches: HEAD
+      start_path: docs
+
+ui:
+  bundle:
+    url: https://github.com/antora-supplemental/valentus-theme/releases/download/v2/ui-bundle.zip
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+
+asciidoc:
+  attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+
+output:
+  dir: build/site

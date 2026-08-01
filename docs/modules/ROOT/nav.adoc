@@ -1,0 +1,5 @@
+* xref:index.adoc[Home]
+* xref:philosophy.adoc[Philosophy]
+* xref:principles.adoc[Principles]
+* xref:ecosystem.adoc[Ecosystem]
+* xref:division-of-labor.adoc[Division of labor]

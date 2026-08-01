@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="{{{uiRootPath}}}/css/site-extra.css">
+<meta name="dm-navbar" content="{{or site.keys.darkModeNavbar 'light'}}">
+<script>
+(function () {
+  const dmNavbar = document.querySelector('meta[name="dm-navbar"]')
+  if (dmNavbar && dmNavbar.content) {
+    document.documentElement.dataset.dmNavbar = dmNavbar.content
+  }
+  const MODE = 'antora-theme-mode'
+  const LEGACY = 'antora-theme'
+  function mode() {
+    const m = localStorage.getItem(MODE)
+    if (m === 'system' || m === 'dark' || m === 'light') return m
+    const o = localStorage.getItem(LEGACY)
+    if (o === 'dark' || o === 'light') return o
+    return 'system'
+  }
+  function isDark() {
+    const m = mode()
+    if (m === 'dark') return true
+    if (m === 'light') return false
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+  if (isDark()) document.documentElement.classList.add('dark-theme')
+})()
+</script>
+<script>
+(function () {
+  try {
+    var w = localStorage.getItem('adt-read-width')
+    document.documentElement.setAttribute(
+      'data-adt-read-width',
+      w === 'narrow' || w === 'comfortable' || w === 'wide' ? w : 'comfortable'
+    )
+  } catch (e) {
+    document.documentElement.setAttribute('data-adt-read-width', 'comfortable')
+  }
+})()
+</script>
+<script>
+(function () {
+  try {
+    var s = localStorage.getItem('adt-font-size')
+    document.documentElement.setAttribute(
+      'data-adt-font-size',
+      s === 'small' || s === 'medium' || s === 'large' ? s : 'medium'
+    )
+  } catch (e) {
+    document.documentElement.setAttribute('data-adt-font-size', 'medium')
+  }
+})()
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,700&family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="{{{uiRootPath}}}/css/site-doc-layout.css">
+<link rel="stylesheet" href="{{{uiRootPath}}}/css/site-visual.css">
+<link rel="stylesheet" href="{{{uiRootPath}}}/css/site-read-width.css">
+<link rel="stylesheet" href="{{{uiRootPath}}}/css/site-font-size.css">
+<link rel="stylesheet" href="{{{uiRootPath}}}/css/hci-brand.css">
+{{#if page.origin.webUrl}}
+<meta name="antora-repo-url" content="{{page.origin.webUrl}}">
+{{/if}}

@@ -1,0 +1,12 @@
+{
+  "incremental": false,
+  "typescript": {
+    "enabled": false
+  },
+  "json": {
+    "enabled": true
+  },
+  "excludes": ["**/node_modules", "**/build", "**/.git"],
+  "plugins": [],
+  "includes": ["**/*.{json,jsonc,yml,yaml,md,adoc}"]
+}

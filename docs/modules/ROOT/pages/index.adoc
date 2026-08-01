@@ -1,0 +1,21 @@
+= HCI Nerdz Docs
+:description: Documentation hub for HCI Nerdz — honest surfaces and lower cognitive tax.
+:page-role: home
+
+Welcome to the HCI Nerdz documentation hub.
+
+*xref:philosophy.adoc[Philosophy]* · *xref:principles.adoc[Principles]* · *xref:ecosystem.adoc[Ecosystem]* · *xref:division-of-labor.adoc[Division of labor]*
+
+== Mission
+
+Drive refinements and innovation in *human–computer interaction* — UI chrome, interaction design, discoverability, theme integrity, and product representation — while leaving shell and CLI standards to link:https://github.com/openshellorg[openshellorg].
+
+== Site
+
+* Public site: link:https://hci-nerdz.github.io/[hci-nerdz.github.io]
+* News: link:https://hci-nerdz.github.io/news/[News feed]
+* GitHub: link:https://github.com/HCI-Nerdz[HCI-Nerdz]
+
+== Theme
+
+This docs site uses the link:https://github.com/antora-supplemental/valentus-theme[Valentus] Antora UI bundle with HCI Nerdz branding overlays.

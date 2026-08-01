@@ -1,0 +1,42 @@
+= Principles
+:description: Recurring UX principles HCI Nerdz fights for.
+
+[cols="1,2"]
+|===
+| Principle | Plain statement
+
+| Surface what the backend already knows
+| First-class UI for real user jobs; power-user syntax is not a substitute
+
+| Parity of affordances
+| If Mentions is a dropdown, Commenter must be too
+
+| GUI / source-of-truth sync
+| Settings GUI must reflect reality; jump-to-JSON when needed
+
+| Honest severity and exit codes
+| Warnings look like warnings; help is not failure
+
+| No silent failure / lying toasts
+| Explain *why*, offer a fix
+
+| Theme as contract
+| Previews and diagrams inherit host theme tokens
+
+| Preview fidelity
+| Interactive constructs stay interactive; sync tracks source
+
+| Progressive disclosure
+| Budget the first screen; deepen on demand
+
+| Unified selection modes
+| File and folder in one dialog when the job is "open something"
+
+| Non-frustrating responsiveness
+| Hangs are architectural bugs, not user patience tests
+
+| Attention ethics
+| Do not spend the user's brain for engagement metrics
+|===
+
+These principles come from filed issues, discussions, and shipping products — not from abstract style guides.

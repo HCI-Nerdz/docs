@@ -1,0 +1,6 @@
+= Docs bootstrap
+:revdate: 2026-08-01
+
+Initial Antora hub with philosophy, principles, ecosystem, and division-of-labor pages.
+Valentus UI bundle with HCI Nerdz brand tokens and partner footer.
+GitHub Pages CI via antora-build-action.

@@ -1,0 +1,19 @@
+= HCI Nerdz Docs
+:toc:
+
+Antora documentation hub for link:https://github.com/HCI-Nerdz[HCI-Nerdz], themed with link:https://github.com/antora-supplemental/valentus-theme[Valentus].
+
+== Commands
+
+[source,shell]
+----
+pnpm install
+pnpm docs:local
+pnpm docs
+----
+
+Published site: link:https://hci-nerdz.github.io/docs/[hci-nerdz.github.io/docs].
+
+== Changelog
+
+See link:CHANGELOG.adoc[CHANGELOG.adoc].

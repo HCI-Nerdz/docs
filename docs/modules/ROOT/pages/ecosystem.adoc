@@ -1,0 +1,38 @@
+= Ecosystem
+:description: Partner organizations and how they relate to HCI Nerdz.
+
+HCI Nerdz is one altitude in a sibling stack.
+
+[cols="1,2"]
+|===
+| Org | Role
+
+| link:https://github.com/HCI-Nerdz[HCI-Nerdz]
+| Surfaces, themes, dialogs, desktop metaphors, IDE UX, attention-respecting product design
+
+| link:https://github.com/openshellorg[openshellorg]
+| Shells, CLIs, SOS, structured pipelines, progressive help, entrypoint honesty
+
+| link:https://github.com/dev-centr[dev-centr]
+| Environments, orchestration, toolchain management for practitioners
+
+| link:https://github.com/antora-supplemental[antora-supplemental]
+| AsciiDoc / Antora publishing UX (including Valentus)
+
+| link:https://github.com/dlang-supplemental[dlang-supplemental]
+| D libraries and native tooling shared across projects
+
+| link:https://github.com/formatte[formatte]
+| Formatting ecosystem
+
+| link:https://github.com/LinxPhotos[LinxPhotos]
+| Photo / portfolio hosting
+
+| link:https://github.com/FoodTruckNerdz[FoodTruckNerdz]
+| Product domain (food trucks)
+|===
+
+Rule: *aligned, not merged*.
+Cross-link; do not duplicate governance.
+
+See xref:division-of-labor.adoc[Division of labor].
