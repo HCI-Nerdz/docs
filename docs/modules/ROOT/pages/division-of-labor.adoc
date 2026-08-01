@@ -35,13 +35,12 @@ DevCentr sits beside both: it recommends and configures environments; it does no
 | OpenShellOrg
 
 | AsciiDoc preview theme fidelity in editors
-| HCI Nerdz (presentation); Antora plumbing may stay antora-supplemental
+| HCI Nerdz for the presentation layer; Antora plumbing with antora-supplemental
 
 | Non-frustrating graphical desktop shell
-| HCI Nerdz (philosophically); may partner-link if historically under OpenShellOrg
+| HCI Nerdz
 |===
 
-== Disclaimer
+== Related
 
-HCI Nerdz is *not* a shell standards body.
-For SOS and structured shell architecture, see link:https://openshellorg.github.io/[OpenShellOrg].
+Shell and CLI standards: link:https://openshellorg.github.io/[OpenShellOrg].

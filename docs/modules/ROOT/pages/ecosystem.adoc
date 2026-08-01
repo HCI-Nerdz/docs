@@ -32,7 +32,7 @@ HCI Nerdz is one altitude in a sibling stack.
 | Product domain (food trucks)
 |===
 
-Rule: *aligned, not merged*.
-Cross-link; do not duplicate governance.
+These orgs stay sibling by design: each keeps its own focus and links out where the work overlaps.
+
 
 See xref:division-of-labor.adoc[Division of labor].
