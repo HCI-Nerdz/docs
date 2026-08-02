@@ -1,0 +1,53 @@
+= Processing maps
+:description: Sequence-first pipeline composer interfaces for systems that apply rules in order.
+
+A *processing map* (or *pipeline composer*) is a product surface for any system whose runtime is ordered.
+If the engine applies steps in sequence, the UI shows that sequence as one editable map — not as a scatter of settings pages.
+
+== Core claim
+
+Sequence is the top-level organization.
+Parallelism, branching, and reuse nest inside steps as typed composites.
+Users insert steps between neighbors, but only rule kinds that fit the socket type.
+
+This is an HCI stance on product representation: the map must match execution, or the product is lying about what counts.
+
+== Why it exists
+
+Fragmented sequentiality forces users to hold the real pipeline in working memory.
+Classic failure: two vendors each own a redirect, a proxy toggle joins them into one path, and the browser reports a loop — while no admin UI ever showed both rules on one spine.
+
+== Anatomy
+
+* *Map* — ordered stages; empty sockets between steps
+* *Typed sockets* — insert palette filtered by valid rule kinds for that phase
+* *Nested composition* — linear sub-pipelines, parallel groups with join policy, conditionals that rejoin
+* *Replay* — sample input walks the map so debugging is reading, not folklore
+* *Export* — serialization matches what the engine loads
+
+== Design rules
+
+. One map for one runtime order — if it runs in the path, it appears on the path
+. Sequence at the root; nest parallelism
+. Insert between, with types
+. Summaries before forms
+. Replay beats folklore
+. Export is sacred
+
+== What it is not
+
+* Not BPMN theater
+* Not a default freeform node graph (use graphs when the domain is a graph)
+* Not a replacement for code review — the composer is the honest face of config
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[Sequence is the top-level]
+* Repository: link:https://github.com/HCI-Nerdz/pipeline-composer[HCI-Nerdz/pipeline-composer]
+* Demo: link:https://hci-nerdz.github.io/pipeline-composer/[pipeline-composer demo]
+
+== Related
+
+* xref:philosophy.adoc[Philosophy]
+* xref:principles.adoc[Principles]
+* xref:division-of-labor.adoc[Division of labor]

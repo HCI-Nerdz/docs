@@ -1,0 +1,5 @@
+= 2026-08-02 — Processing maps
+
+Added the xref-style topic *Processing maps*: sequence-first pipeline composer interfaces, design rules, and links to the blog essay and `pipeline-composer` prototype.
+
+Also referenced the pattern from Philosophy and Principles.

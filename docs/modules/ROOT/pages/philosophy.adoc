@@ -48,9 +48,17 @@ Pass down maintainable software that a naïve reader can still understand.
 
 Things that behave similarly should not be presented in vastly different ways.
 
+== Processing maps
+
+When a system applies rules in order, sequence is the top-level UI.
+Parallelism nests inside steps.
+See xref:processing-maps.adoc[Processing maps] and the
+link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[pipeline composer essay].
+
 == Related
 
 * xref:principles.adoc[Principles]
+* xref:processing-maps.adoc[Processing maps]
 * xref:division-of-labor.adoc[Division of labor]
 * link:https://ryanjohnson.website/vision/[Vision essay]
 * link:https://openshellorg.github.io/docs/open-shell-org/philosophy.html[OpenShellOrg philosophy]

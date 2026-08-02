@@ -29,6 +29,9 @@
 | Progressive disclosure
 | Budget the first screen; deepen on demand
 
+| Processing maps for ordered systems
+| If the runtime is a sequence, compose it as one typed pipeline — nest parallelism inside steps
+
 | Unified selection modes
 | File and folder in one dialog when the job is "open something"
 

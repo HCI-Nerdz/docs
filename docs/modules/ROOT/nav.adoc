@@ -1,5 +1,6 @@
 * xref:index.adoc[Home]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
+* xref:processing-maps.adoc[Processing maps]
 * xref:ecosystem.adoc[Ecosystem]
 * xref:division-of-labor.adoc[Division of labor]
