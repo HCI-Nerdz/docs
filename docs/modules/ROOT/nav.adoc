@@ -2,5 +2,7 @@
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:processing-maps.adoc[Processing maps]
+* xref:prototype-strategy.adoc[Prototype strategy]
+* xref:fundamental-contexts.adoc[Fundamental contexts]
 * xref:ecosystem.adoc[Ecosystem]
 * xref:division-of-labor.adoc[Division of labor]

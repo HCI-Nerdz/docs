@@ -55,10 +55,18 @@ Parallelism nests inside steps.
 See xref:processing-maps.adoc[Processing maps] and the
 link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[pipeline composer essay].
 
+== Prototype strategy
+
+Interaction-heavy prototypes should share meaning and behavior — domain IR plus a headless controller — and hand-write thin views per ecosystem.
+Do not chase universal UI export; compose prior art (headless machines, typed IR, swappable renderers) on purpose.
+See xref:prototype-strategy.adoc[Prototype strategy] and xref:fundamental-contexts.adoc[Fundamental contexts].
+
 == Related
 
 * xref:principles.adoc[Principles]
 * xref:processing-maps.adoc[Processing maps]
+* xref:prototype-strategy.adoc[Prototype strategy]
+* xref:fundamental-contexts.adoc[Fundamental contexts]
 * xref:division-of-labor.adoc[Division of labor]
 * link:https://ryanjohnson.website/vision/[Vision essay]
 * link:https://openshellorg.github.io/docs/open-shell-org/philosophy.html[OpenShellOrg philosophy]

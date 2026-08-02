@@ -1,0 +1,8 @@
+= 2026-08-02 — Prototype strategy topics
+
+Added Antora topics:
+
+* *Prototype strategy: core, controller, renderers* — reusable template for interaction-heavy prototypes
+* *Fundamental contexts for portable UI* — discussion stub linking to the exploratory blog essay
+
+Wired into nav, Philosophy, Principles, and Processing maps cross-links.

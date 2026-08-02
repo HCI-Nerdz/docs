@@ -1,0 +1,53 @@
+= Fundamental contexts for portable UI
+:description: Exploratory map — portability as a few sharable contexts (IR, machines, renderer capabilities) instead of one mega-spec.
+
+*Status:* discussion stub — the long-form brainstorm lives on the blog.
+
+== Thesis
+
+Portability may not require one mega-spec.
+Interactive systems share a small set of *contexts* — structure/semantics, placement, events, 2D (and sometimes 3D) surfaces, zoom/navigation — that can be specified sharply while host chrome stays native.
+
+== Sharable vs native
+
+[cols="1,2,2"]
+|===
+| Context | Can specify | Stays native
+
+| Structure / semantics
+| Domain IR, validation, evaluation
+| Copy, empty states, delight
+
+| Events / interactivity
+| Controller machines, roles, shortcuts
+| Platform a11y idioms beyond baselines
+
+| Layout / placement
+| Renderer capability profiles
+| Theme tokens, density, design-system chrome
+
+| 2D / 3D presentation
+| Renderer choice (DOM list vs canvas)
+| Asset and animation polish
+
+| Zoom / navigation
+| Controller navigation modes per zoom level
+| Gestures tied to host OS
+|===
+
+Zoom is not a skin — it changes the interaction paradigm (focus context, level-of-detail, spatial memory).
+
+== Stack (intentional composition)
+
+Prior art tackled *parts* (Zag, Mitosis, Web Components, XState, node editors, QML, Power Automate).
+HCI Nerdz prototypes stack them:
+
+. xref:prototype-strategy.adoc[Core + controller + renderers + thin wrappers]
+. Same IR for DOM and canvas — see link:https://hci-nerdz.github.io/pipeline-composer/[pipeline-composer]
+
+== Read next
+
+* Blog (exploratory): link:https://hci-nerdz.github.io/blog/fundamental-contexts-for-portable-ui/[Fundamental contexts for portable UI]
+* Strategy (pattern): link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Share the IR, not the pixels]
+* xref:prototype-strategy.adoc[Prototype strategy template]
+* xref:processing-maps.adoc[Processing maps]

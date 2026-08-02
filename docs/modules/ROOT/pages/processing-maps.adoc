@@ -46,8 +46,17 @@ Classic failure: two vendors each own a redirect, a proxy toggle joins them into
 * Repository: link:https://github.com/HCI-Nerdz/pipeline-composer[HCI-Nerdz/pipeline-composer]
 * Demo: link:https://hci-nerdz.github.io/pipeline-composer/[pipeline-composer demo]
 
+== Prototype architecture
+
+Interaction-heavy composers should split core IR, headless controller, renderers, and thin host wrappers — not auto-export full UI.
+See xref:prototype-strategy.adoc[Prototype strategy] and xref:fundamental-contexts.adoc[Fundamental contexts].
+
 == Related
 
+* xref:prototype-strategy.adoc[Prototype strategy]
+* xref:fundamental-contexts.adoc[Fundamental contexts]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:division-of-labor.adoc[Division of labor]
+* link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Share the IR, not the pixels]
+* link:https://hci-nerdz.github.io/blog/fundamental-contexts-for-portable-ui/[Fundamental contexts essay]

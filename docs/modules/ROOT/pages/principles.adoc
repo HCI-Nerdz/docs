@@ -32,6 +32,9 @@
 | Processing maps for ordered systems
 | If the runtime is a sequence, compose it as one typed pipeline — nest parallelism inside steps
 
+| Share IR, not pixels
+| Prototypes split core, headless controller, renderers, and thin host wrappers — do not auto-export full UI
+
 | Unified selection modes
 | File and folder in one dialog when the job is "open something"
 

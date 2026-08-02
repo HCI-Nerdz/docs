@@ -1,0 +1,57 @@
+= Prototype strategy: core, controller, renderers
+:description: Reusable architecture template for interaction-heavy HCI Nerdz prototypes — share meaning and behavior, hand-write thin views.
+
+Use this template when a prototype is interaction-heavy, domain-typed, and likely to ship in more than one UI host.
+
+== Claim
+
+Do *not* aim to auto-convert full UI across ecosystems.
+Share *meaning* and *behavior* — domain IR plus a headless controller — and hand-write thin views per host.
+
+== Layers
+
+[cols="1,3"]
+|===
+| Layer | Owns
+
+| *Core*
+| Domain IR: types, validation, evaluation/replay, serialize/deserialize
+
+| *Controller*
+| Headless interaction state machine (Zag.js / XState-shaped): selection, insert palettes, drag phases, keyboard paths, undo
+
+| *Renderers*
+| DOM first (a11y, clarity, theme); canvas/zoomable later for deep nesting
+
+| *Thin wrappers*
+| React / Solid / Vue / Web Components — bind host reactivity ↔ controller, pick renderer
+|===
+
+== Design rules
+
+. *Core has no DOM* — legality and evaluation are framework-agnostic
+. *Controller mutates through core APIs* — no shadow IR in a wrapper
+. *One IR, many renderers* — same map semantics in a list or on a zoom plane
+. *Wrappers stay thin* — logic that grows belongs in core or controller
+. *Export meaning* — serialized IR + evaluation story, not pixel-perfect chrome
+
+== What not to promise
+
+* Universal UI export — historical UI languages (UIML, XUL, QML) won as *runtimes*, not exporters
+* Prior art covers *parts*: Zag/Ark (behavior), Mitosis/Stencil (structure), Web Components (encapsulation), XState (machines), node editors (canvas), Power Automate (product proof for visual pipelines — closed runtime)
+
+Compose those parts on purpose.
+See xref:fundamental-contexts.adoc[Fundamental contexts] for the broader map.
+
+== Proving ground
+
+* Demo: link:https://hci-nerdz.github.io/pipeline-composer/[pipeline-composer]
+* Repository: link:https://github.com/HCI-Nerdz/pipeline-composer[pipeline-composer]
+* Blog: link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Share the IR, not the pixels]
+
+== Related
+
+* xref:processing-maps.adoc[Processing maps]
+* xref:fundamental-contexts.adoc[Fundamental contexts]
+* xref:philosophy.adoc[Philosophy]
+* link:https://hci-nerdz.github.io/demos/[Demos index]
