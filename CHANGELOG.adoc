@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-01 — Processing maps scope
+
+* link:changelog-details/2026-08-01%20-%20processing-maps-scope.adoc[Details]
+
 == 2026-08-02 — Prototype strategy topics
 
 * link:changelog-details/2026-08-02%20-%20prototype-strategy-topics.adoc[Details]

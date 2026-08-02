@@ -1,0 +1,5 @@
+= 2026-08-01 — Processing maps scope
+
+Clarified that sequence as the top-level organization applies to the processing-map / pipeline composer surface, not the entire product shell.
+
+Updated essay link text and Philosophy wording to match the retitled blog post.

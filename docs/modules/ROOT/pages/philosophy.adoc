@@ -50,7 +50,7 @@ Things that behave similarly should not be presented in vastly different ways.
 
 == Processing maps
 
-When a system applies rules in order, sequence is the top-level UI.
+When a system applies rules in order, the processing-map surface should treat sequence as the top-level organization.
 Parallelism nests inside steps.
 See xref:processing-maps.adoc[Processing maps] and the
 link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[pipeline composer essay].

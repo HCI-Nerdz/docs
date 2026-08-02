@@ -6,9 +6,12 @@ If the engine applies steps in sequence, the UI shows that sequence as one edita
 
 == Core claim
 
-Sequence is the top-level organization.
+Sequence as the top-level organization — on the processing-map / pipeline composer surface, not on every screen in the product.
 Parallelism, branching, and reuse nest inside steps as typed composites.
 Users insert steps between neighbors, but only rule kinds that fit the socket type.
+
+Real admin UIs still wrap the composer in navigation, hero copy, and unrelated settings.
+The claim is that the spine *inside* the map matches the spine the engine runs.
 
 This is an HCI stance on product representation: the map must match execution, or the product is lying about what counts.
 
@@ -42,7 +45,7 @@ Classic failure: two vendors each own a redirect, a proxy toggle joins them into
 
 == Prototype
 
-* Blog essay: link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[Sequence is the top-level]
+* Blog essay: link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[Sequence as the top-level]
 * Repository: link:https://github.com/HCI-Nerdz/pipeline-composer[HCI-Nerdz/pipeline-composer]
 * Demo: link:https://hci-nerdz.github.io/pipeline-composer/[pipeline-composer demo]
 
