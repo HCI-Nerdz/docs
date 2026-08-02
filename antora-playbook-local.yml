@@ -11,7 +11,7 @@ site:
 antora:
   extensions:
     - '@antora/lunr-extension'
-    - require: '@antora-supplemental/alias-component-to-latest'
+    - require: '@antora-supplemental/unversioned-component-urls'
 
 content:
   sources:

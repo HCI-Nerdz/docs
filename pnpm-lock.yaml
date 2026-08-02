@@ -8,9 +8,9 @@ importers:
 
   .:
     devDependencies:
-      '@antora-supplemental/alias-component-to-latest':
-        specifier: github:antora-supplemental/antora-alias-component-to-latest#v2.0.0
-        version: https://codeload.github.com/antora-supplemental/antora-alias-component-to-latest/tar.gz/59f5cdec02a78fedee5b57a9ed2a3ef33d23a760(@antora/site-generator@3.1.15)
+      '@antora-supplemental/unversioned-component-urls':
+        specifier: github:antora-supplemental/antora-unversioned-component-urls#v2.1.0
+        version: https://codeload.github.com/antora-supplemental/antora-unversioned-component-urls/tar.gz/fab7292ee987bc1b479ad174f4a394fe8952998e(@antora/site-generator@3.1.15)
       '@antora/cli':
         specifier: ^3.1.14
         version: 3.1.15
@@ -23,9 +23,9 @@ importers:
 
 packages:
 
-  '@antora-supplemental/alias-component-to-latest@https://codeload.github.com/antora-supplemental/antora-alias-component-to-latest/tar.gz/59f5cdec02a78fedee5b57a9ed2a3ef33d23a760':
-    resolution: {tarball: https://codeload.github.com/antora-supplemental/antora-alias-component-to-latest/tar.gz/59f5cdec02a78fedee5b57a9ed2a3ef33d23a760}
-    version: 2.0.0
+  '@antora-supplemental/unversioned-component-urls@https://codeload.github.com/antora-supplemental/antora-unversioned-component-urls/tar.gz/fab7292ee987bc1b479ad174f4a394fe8952998e':
+    resolution: {tarball: https://codeload.github.com/antora-supplemental/antora-unversioned-component-urls/tar.gz/fab7292ee987bc1b479ad174f4a394fe8952998e}
+    version: 2.1.0
     engines: {node: '>=18'}
     peerDependencies:
       '@antora/site-generator': '>=3.1.0'
@@ -655,7 +655,7 @@ packages:
 
 snapshots:
 
-  '@antora-supplemental/alias-component-to-latest@https://codeload.github.com/antora-supplemental/antora-alias-component-to-latest/tar.gz/59f5cdec02a78fedee5b57a9ed2a3ef33d23a760(@antora/site-generator@3.1.15)':
+  '@antora-supplemental/unversioned-component-urls@https://codeload.github.com/antora-supplemental/antora-unversioned-component-urls/tar.gz/fab7292ee987bc1b479ad174f4a394fe8952998e(@antora/site-generator@3.1.15)':
     dependencies:
       '@antora/site-generator': 3.1.15
 
