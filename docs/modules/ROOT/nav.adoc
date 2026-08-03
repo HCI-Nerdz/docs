@@ -9,3 +9,4 @@
 * xref:fundamental-contexts.adoc[Fundamental contexts]
 * xref:ecosystem.adoc[Ecosystem]
 * xref:division-of-labor.adoc[Division of labor]
+* xref:literature.adoc[Literature]

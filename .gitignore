@@ -11,6 +11,8 @@
 !antora-playbook-local.yml
 !docs/
 !docs/**
+!literature/
+!literature/**
 !supplemental-ui/
 !supplemental-ui/**
 !.github/

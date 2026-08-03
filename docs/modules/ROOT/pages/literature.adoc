@@ -1,0 +1,30 @@
+= Literature
+:description: Authoritative conversation sources behind published HCI Nerdz concepts.
+
+Some encyclopedia topics began as research conversations (exports, design dumps).
+Those raw sources live in the docs repository under `literature/` so agents and maintainers can re-check claims against the original thread.
+
+They are *not* polished docs.
+Prefer the curated topic pages for teaching; open the literature files when you need provenance, wording history, or unused side-paths from the conversation.
+
+== Catalog
+
+[cols="2,3,2"]
+|===
+| Concept | Authoritative sources (repo) | Curated face
+
+| Scoped UX architecture
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/scoped-ux-architecture/gemini-understanding-scoped-user-experience.md[Gemini export — Understanding Scoped User Experience]
+  (2025-10-23);
+  link:https://github.com/HCI-Nerdz/docs/blob/main/literature/scoped-ux-architecture/scoped-ux-framework-with-feedforward-design.pdf[PDF design dump]
+  (2026-08-01)
+| xref:scoped-ux-architecture.adoc[Scoped UX architecture]
+|===
+
+Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.adoc[`literature/README.adoc`].
+
+== Related
+
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture]
+* xref:philosophy.adoc[Philosophy]
+* xref:principles.adoc[Principles]

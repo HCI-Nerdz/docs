@@ -55,6 +55,7 @@ Hard boundaries prevent junk-drawer surfaces; a consistent interaction model let
 Feedforward guidance lives *inside* those scoped tools — it is not a synonym for the architecture.
 See xref:scoped-ux-architecture.adoc[Scoped UX architecture] and the
 link:https://hci-nerdz.github.io/blog/scoped-ux-architecture/[scoped UX essay].
+Authoritative conversation sources: xref:literature.adoc[Literature].
 
 == Processing maps
 
@@ -96,5 +97,6 @@ See xref:prototype-strategy.adoc[Prototype strategy] and xref:fundamental-contex
 * xref:prototype-strategy.adoc[Prototype strategy]
 * xref:fundamental-contexts.adoc[Fundamental contexts]
 * xref:division-of-labor.adoc[Division of labor]
+* xref:literature.adoc[Literature]
 * link:https://ryanjohnson.website/vision/[Vision essay]
 * link:https://openshellorg.github.io/docs/open-shell-org/philosophy.html[OpenShellOrg philosophy]

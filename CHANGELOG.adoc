@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-03 — Literature sources for Scoped UX
+
+* link:changelog-details/2026-08-03%20-%20literature-scoped-ux.adoc[Details]
+
 == 2026-08-02 — Pass-through extensions
 
 * link:changelog-details/2026-08-02%20-%20pass-through-extensions.adoc[Details]

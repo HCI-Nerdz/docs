@@ -20,6 +20,11 @@ AsciiDoc extension: `@antora-supplemental/instruction-flow` (live sample on the 
 
 See link:CHANGELOG.adoc[CHANGELOG.adoc].
 
+== Literature
+
+Authoritative conversation exports behind published concepts live under link:literature/README.adoc[`literature/`].
+Start with the Antora catalog: link:https://hci-nerdz.github.io/docs/hci-nerdz/literature.html[Literature].
+
 == Editorial style
 
 Title rules for this hub and linked site prose: link:STYLE.adoc[STYLE.adoc]. Agent entrypoint: link:AGENTS.md[AGENTS.md].

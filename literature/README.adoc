@@ -1,0 +1,31 @@
+= Literature — authoritative conversation sources
+:toc:
+
+Raw conversation exports and design dumps that seeded published HCI Nerdz concepts.
+These files are the *source material*; curated encyclopedia pages and essays are the public face.
+
+Do not treat this folder as polished documentation.
+When a concept page and a conversation disagree, update the curated page deliberately — then note the change here if the source is kept for history.
+
+== Catalog
+
+[cols="2,2,3"]
+|===
+| Concept | Sources | Public face
+
+| Scoped UX architecture + feedforward distinction
+| link:scoped-ux-architecture/gemini-understanding-scoped-user-experience.md[`gemini-understanding-scoped-user-experience.md`]
+  (Gemini export, 2025-10-23);
+  link:scoped-ux-architecture/scoped-ux-framework-with-feedforward-design.pdf[`scoped-ux-framework-with-feedforward-design.pdf`]
+  (design dump, 2026-08-01)
+| xref:scoped-ux-architecture.adoc[Docs topic];
+  link:https://hci-nerdz.github.io/blog/scoped-ux-architecture/[Essay];
+  link:https://hci-nerdz.github.io/demos/scoped-ux/[Demo]
+|===
+
+== Adding a source
+
+. Put the export under `literature/<concept-slug>/` with a stable kebab-case filename.
+. Add a row to the catalog above.
+. Link the curated docs topic (and essay when one exists) under a *Literature* / *Source* section.
+. Prefer *move* from Downloads once the repo copy is the authority.

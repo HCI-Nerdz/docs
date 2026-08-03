@@ -1,0 +1,8 @@
+= 2026-08-03 — Literature sources for Scoped UX
+
+Moved the authoritative conversation sources for *Scoped UX architecture* (and its feedforward distinction) from Downloads into the docs repo.
+
+* New tree: `literature/scoped-ux-architecture/` — Gemini export + PDF design dump
+* New catalog page: `literature.adoc` (nav + home hub)
+* Topic, README, and AGENTS point at the sources
+* Downloads copies removed so the repo is the authority
