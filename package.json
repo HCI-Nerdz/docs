@@ -9,9 +9,10 @@
     "format:check": "dprint check"
   },
   "devDependencies": {
+    "@antora-supplemental/instruction-flow": "github:antora-supplemental/asciidoc-interactive",
+    "@antora-supplemental/unversioned-component-urls": "github:antora-supplemental/antora-unversioned-component-urls#v2.1.0",
     "@antora/cli": "^3.1.14",
     "@antora/lunr-extension": "1.0.0-alpha.13",
-    "@antora/site-generator": "^3.1.14",
-    "@antora-supplemental/unversioned-component-urls": "github:antora-supplemental/antora-unversioned-component-urls#v2.1.0"
+    "@antora/site-generator": "^3.1.14"
   }
 }

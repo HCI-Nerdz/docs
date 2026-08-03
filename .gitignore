@@ -1,4 +1,4 @@
-*
+﻿*
 !.gitignore
 !README.adoc
 !CHANGELOG.adoc
@@ -15,5 +15,8 @@
 !supplemental-ui/**
 !.github/
 !.github/**
-!MEMORIES.md
+!AGENTS.md
+!STYLE.adoc
 !dprint.jsonc
+!.cursor/
+!.cursor/**

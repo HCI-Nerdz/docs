@@ -4,7 +4,7 @@
 
 Welcome to the HCI Nerdz documentation hub.
 
-*xref:philosophy.adoc[Philosophy]* · *xref:principles.adoc[Principles]* · *xref:ecosystem.adoc[Ecosystem]* · *xref:division-of-labor.adoc[Division of labor]*
+*xref:philosophy.adoc[Philosophy]* · *xref:principles.adoc[Principles]* · *xref:scoped-ux-architecture.adoc[Scoped UX architecture]* · *xref:instruction-flows.adoc[Instruction flows]* · *xref:pass-through-extensions.adoc[Pass-through extensions]* · *xref:ecosystem.adoc[Ecosystem]* · *xref:division-of-labor.adoc[Division of labor]*
 
 == Mission
 

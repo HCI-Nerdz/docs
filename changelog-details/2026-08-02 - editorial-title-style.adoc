@@ -1,0 +1,5 @@
+= 2026-08-02 — Editorial title style
+
+* Added `STYLE.adoc` and `AGENTS.md` for title/headline policy
+* Cursor rule `.cursor/rules/editorial-titles.mdc`
+* Points agents at site STYLE for news/essay titles; Antora topics stay conceptual

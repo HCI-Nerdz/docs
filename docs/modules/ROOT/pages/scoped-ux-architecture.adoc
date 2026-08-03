@@ -1,0 +1,79 @@
+= Scoped UX architecture
+:description: Many small tools with hard boundaries, sharing one shell so they still feel like one product.
+
+A *scoped UX architecture* structures a multi-tool application so each tool stays narrowly focused, while a shared shell keeps the overall workflow coherent.
+
+In plain language: *many small tools, each with a clear job, under one roof*.
+
+== Core claim
+
+When an app coordinates many capabilities, do not grow one endless surface.
+Give each tool a hard boundary — what it does and what it refuses to do — and enforce a shared interaction model so users transfer learning across tools.
+
+The architecture is about *structure and constraint*, not about a single widget style.
+
+== Why it exists
+
+Large apps often collapse into feature junk drawers: every tool accumulates unrelated controls until nothing has a beginning, middle, or end.
+Users then hold the real workflow in working memory.
+
+Scoped tools reverse that.
+Each panel answers one job.
+The shell answers how those jobs compose into a larger process (phases, hierarchies, nesting).
+
+== Architectural principles
+
+. *Constraint-driven tools* — each utility addresses a narrow, defined task; feature creep inside a tool is an architecture bug
+. *Shared shell, not shared sprawl* — look, feel, and navigational logic stay consistent so learning transfers
+. *Cognitive alignment* — boundaries and flow should model the domain workflow the product teaches (phases, hierarchies, nesting)
+. *Small enough for feedforward* — when a tool's outcomes are predictable, the UI can show what will happen *before* commit
+
+== Relationship to feedforward UX
+
+*Scoped UX architecture* and *feedforward UX* are not interchangeable.
+
+[cols="1,2,1"]
+|===
+| Term | Focus | Layer
+
+| Scoped UX architecture
+| What each tool includes/excludes; how consistency is enforced across tools
+| Strategic / system
+
+| Feedforward UX
+| How the UI proactively shows the expected result of an action before the user commits
+| Interaction
+|===
+
+Use the architecture to keep tools small and composable.
+Use feedforward *inside* those tools to teach the next honest step, prerequisites, and likely outcome.
+
+Narrow scope makes feedforward credible.
+A mega-tool with unbounded side effects cannot honestly preview what will happen.
+
+== Scoped UI vs scoped UX
+
+* *Scoped UX architecture* (preferred when teaching a workflow) — constraints on experience, cognitive load, and process model
+* *Scoped UI architecture* — the technical subset: component boundaries, visual rules, and code organization that enforce limited presentation
+
+UI scope is necessary; UX scope is the goal when the product trains how people think about a domain.
+
+== What it is not
+
+* Not "remove features until the app is empty"
+* Not a substitute for progressive disclosure on a single screen
+* Not the same as micro-frontends (those are a delivery tactic; this is an experience stance)
+* Not feedforward by another name
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/scoped-ux-architecture/[Many small tools under one roof]
+* Demo: link:https://hci-nerdz.github.io/demos/scoped-ux/[Scoped UX desk]
+
+== Related
+
+* xref:philosophy.adoc[Philosophy]
+* xref:principles.adoc[Principles]
+* xref:processing-maps.adoc[Processing maps]
+* xref:prototype-strategy.adoc[Prototype strategy]
+* link:https://hci-nerdz.github.io/demos/[Demos index]

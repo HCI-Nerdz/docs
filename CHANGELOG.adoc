@@ -1,5 +1,21 @@
 = Changelog
 
+== 2026-08-02 — Pass-through extensions
+
+* link:changelog-details/2026-08-02%20-%20pass-through-extensions.adoc[Details]
+
+== 2026-08-02 — Editorial title style
+
+* link:changelog-details/2026-08-02%20-%20editorial-title-style.adoc[Details]
+
+== 2026-08-02 — Instruction flows
+
+* link:changelog-details/2026-08-02%20-%20instruction-flows.adoc[Details]
+
+== 2026-08-01 — Scoped UX architecture
+
+* link:changelog-details/2026-08-01%20-%20scoped-ux-architecture.adoc[Details]
+
 == 2026-08-01 — Processing maps scope
 
 * link:changelog-details/2026-08-01%20-%20processing-maps-scope.adoc[Details]

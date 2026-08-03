@@ -45,7 +45,7 @@ Classic failure: two vendors each own a redirect, a proxy toggle joins them into
 
 == Prototype
 
-* Blog essay: link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[Sequence as the top-level]
+* Blog essay: link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[Sequence as top-level organization]
 * Repository: link:https://github.com/HCI-Nerdz/pipeline-composer[HCI-Nerdz/pipeline-composer]
 * Demo: link:https://hci-nerdz.github.io/pipeline-composer/[pipeline-composer demo]
 
@@ -61,5 +61,5 @@ See xref:prototype-strategy.adoc[Prototype strategy] and xref:fundamental-contex
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:division-of-labor.adoc[Division of labor]
-* link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Share the IR, not the pixels]
+* link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Sharing the IR, not the pixels]
 * link:https://hci-nerdz.github.io/blog/fundamental-contexts-for-portable-ui/[Fundamental contexts essay]

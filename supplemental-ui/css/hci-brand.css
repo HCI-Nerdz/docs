@@ -105,3 +105,35 @@ html.dark-theme .navbar .button.is-primary:hover {
   background-color: #243042;
   border-color: #e8a54b;
 }
+
+/* Instruction-flow extension — inherit HCI tokens */
+.instruction-flow {
+  border-color: var(--hci-border);
+  background: var(--hci-accent-soft);
+  color: var(--hci-ink);
+}
+
+.instruction-flow__toolbar button,
+.instruction-flow__choice {
+  border-color: var(--hci-border);
+  background: var(--hci-elevated);
+  color: var(--hci-ink);
+}
+
+.instruction-flow__choice:hover,
+.instruction-flow__toolbar button:hover {
+  border-color: var(--hci-honesty);
+}
+
+.instruction-flow__choice:focus-visible,
+.instruction-flow__toolbar button:focus-visible {
+  outline-color: var(--hci-focus);
+}
+
+.instruction-flow__breadcrumb {
+  color: var(--hci-ink-muted);
+}
+
+.instruction-flow__title {
+  font-family: var(--heading-font-family);
+}

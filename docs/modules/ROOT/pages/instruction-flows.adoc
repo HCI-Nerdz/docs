@@ -1,0 +1,130 @@
+= Instruction flows
+:description: Menu-style interactive docs for multi-platform install and setup guides.
+
+An *instruction flow* turns a choose-your-own-adventure install guide into a menu-driven path: one decision at a time, then only the steps that follow.
+
+In plain language: *navigate by the content itself*.
+
+== Core claim
+
+When documentation is really a decision tree (OS, install method, package manager, CI flavor), do not dump every branch on one page and do not exile long branches to tangent articles.
+Present orthogonal choices as buttons, insert the chosen subflow as a continuation, and keep other options available so readers can rewind.
+
+== Why it exists
+
+Linear install pages either explode into every platform variant or hide important paths behind “oh by the way” links.
+Both force readers to hold the real tree in working memory — the same cognitive tax progressive disclosure refuses elsewhere.
+
+Instruction flows merge navigation and content for the wizard-shaped part of a page.
+The rest of the article can stay ordinary prose.
+
+== Anatomy
+
+* *Decision* — short prompt plus option buttons (inline when labels are short)
+* *Continuation* — steps revealed under the chosen option (nested decisions allowed)
+* *Path state* — breadcrumb of choices; shareable URL variables
+* *Expand / print* — optional kitchen-sink mode for printing or scraping
+* *Skeleton* — prefer keeping branches in the DOM (hidden) so SEO and AI still see the graph; add lazy loading only when size forces it
+
+== Design rules
+
+. Order decisions by contextual dependency (environment first, optional methods later)
+. Offer short implications on each option; link out for deep comparisons
+. Prefer continuations over tangent pages for the same job
+. Leave unchosen options visible so users can try another path
+. Encode the path in the URL when the combination is worth sharing
+. Keep a master expanded mode for print — do not make the default view the kitchen sink
+
+== Antora / Asciidoctor
+
+Implementation lives in the sibling org as `@antora-supplemental/instruction-flow`
+(repository link:https://github.com/antora-supplemental/asciidoc-interactive[asciidoc-interactive]).
+
+* Asciidoctor block style `instructionflow` on example blocks (`====`) with a JSON5 graph (`start`, `nodes`, `choice` / `content`)
+* Embedded CSS + client script (self-contained pages)
+* Query parameter `iflow_<flow-id>=optionId1,optionId2,...` for shareable links
+* Toolbar: Back, Start over, Expand all for print
+
+This docs site registers that extension so the live example below is real Antora output — not a mock.
+
+[instructionflow#install-sample]
+====
+{
+  id: "install-sample",
+  start: "choose-os",
+  nodes: {
+    "choose-os": {
+      type: "choice",
+      title: "Choose your operating system",
+      options: [
+        { id: "linux", label: "Linux", hint: "Including WSL", next: "choose-method" },
+        { id: "macos", label: "macOS", next: "choose-method" },
+        { id: "windows", label: "Windows", next: "choose-method" },
+      ],
+    },
+    "choose-method": {
+      type: "choice",
+      title: "Install method",
+      options: [
+        { id: "cli", label: "Host CLI", hint: "Node on the machine", next: "choose-pm" },
+        { id: "docker", label: "Docker", hint: "Containerized Antora", next: "cmd-docker" },
+      ],
+    },
+    "choose-pm": {
+      type: "choice",
+      title: "Which package manager?",
+      options: [
+        { id: "npm", label: "npm", next: "cmd-npm" },
+        { id: "pnpm", label: "pnpm", next: "cmd-pnpm" },
+        { id: "yarn", label: "Yarn", next: "cmd-yarn" },
+      ],
+    },
+    "cmd-npm": {
+      type: "content",
+      html: "<p>Install the Antora CLI globally:</p><pre><code>npm i -g @antora/cli @antora/site-generator</code></pre>",
+    },
+    "cmd-pnpm": {
+      type: "content",
+      html: "<p>Install the Antora CLI globally:</p><pre><code>pnpm add -g @antora/cli @antora/site-generator</code></pre>",
+    },
+    "cmd-yarn": {
+      type: "content",
+      html: "<p>Install the Antora CLI globally:</p><pre><code>yarn global add @antora/cli @antora/site-generator</code></pre>",
+    },
+    "cmd-docker": {
+      type: "content",
+      html: "<p>Run Antora in Docker against the current directory:</p><pre><code>docker run --rm -v \"$PWD:/antora\" antora/antora antora-playbook.yml</code></pre><p>Docker is a first-class branch — not a footnote to another article.</p>",
+    },
+  },
+}
+====
+
+TIP: Use *Back* and *Start over* to try another path.
+The URL query string stores choices (for example `iflow_install-sample=linux,cli,pnpm`).
+
+== Roadmap (extension)
+
+Planned authoring layers on the same runtime — not blockers for embedding today:
+
+* Inline choice macros (`[npm][pnpm]…`)
+* AsciiDoc-native nested list / role syntax (less raw JSON5)
+* Lazy-loaded branches for huge graphs
+* Analytics events on each choice
+* Optional full-site mode that mirrors or replaces the nav tree
+
+See the package roadmap in link:https://github.com/antora-supplemental/asciidoc-interactive[asciidoc-interactive].
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/instruction-flows/[Navigating by content]
+* Site demo (continuation-insert UX): link:https://hci-nerdz.github.io/demos/instruction-flow/[Instruction flow demo]
+* Extension: link:https://github.com/antora-supplemental/asciidoc-interactive[antora-supplemental/asciidoc-interactive]
+
+== Related
+
+* xref:philosophy.adoc[Philosophy]
+* xref:principles.adoc[Principles]
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture]
+* xref:processing-maps.adoc[Processing maps]
+* xref:ecosystem.adoc[Ecosystem]
+* link:https://hci-nerdz.github.io/demos/[Demos index]

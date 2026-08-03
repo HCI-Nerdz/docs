@@ -14,6 +14,12 @@ pnpm docs
 
 Published site: link:https://hci-nerdz.github.io/docs/[hci-nerdz.github.io/docs].
 
+AsciiDoc extension: `@antora-supplemental/instruction-flow` (live sample on the Instruction flows topic).
+
 == Changelog
 
 See link:CHANGELOG.adoc[CHANGELOG.adoc].
+
+== Editorial style
+
+Title rules for this hub and linked site prose: link:STYLE.adoc[STYLE.adoc]. Agent entrypoint: link:AGENTS.md[AGENTS.md].

@@ -1,0 +1,11 @@
+﻿= Editorial style — titles and headlines
+:toc:
+
+See the public site guide for the full doctrine:
+link:https://github.com/HCI-Nerdz/HCI-Nerdz.github.io/blob/main/STYLE.adoc[HCI-Nerdz.github.io STYLE.adoc]
+and the philosophy essay link:https://hci-nerdz.github.io/blog/titles-as-orientation/[Titles as orientation].
+
+Antora page titles (`= …`) stay encyclopedia concept names.
+When drafting linked site news/blog titles, follow that STYLE (first-party news omits the org; *as*-framing; attach modifiers).
+
+Agent entrypoint: link:AGENTS.md[AGENTS.md].

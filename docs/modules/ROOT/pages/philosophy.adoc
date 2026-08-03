@@ -48,12 +48,37 @@ Pass down maintainable software that a naïve reader can still understand.
 
 Things that behave similarly should not be presented in vastly different ways.
 
+== Scoped UX architecture
+
+When an app coordinates many tools, keep each tool narrowly focused and share one shell so they still feel like one product.
+Hard boundaries prevent junk-drawer surfaces; a consistent interaction model lets learning transfer.
+Feedforward guidance lives *inside* those scoped tools — it is not a synonym for the architecture.
+See xref:scoped-ux-architecture.adoc[Scoped UX architecture] and the
+link:https://hci-nerdz.github.io/blog/scoped-ux-architecture/[scoped UX essay].
+
 == Processing maps
 
 When a system applies rules in order, the processing-map surface should treat sequence as the top-level organization.
 Parallelism nests inside steps.
 See xref:processing-maps.adoc[Processing maps] and the
 link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[pipeline composer essay].
+
+== Instruction flows
+
+When a doc is really a decision tree (install guides, multi-platform setup), present one choice at a time and insert the chosen subflow as a continuation — navigate by content itself.
+See xref:instruction-flows.adoc[Instruction flows] and the
+link:https://hci-nerdz.github.io/blog/instruction-flows/[instruction flows essay].
+
+== Pass-through extensions
+
+When a filename wears a meta-badge (`.example`, `.template`, `.dist`), the shell should peel it and open the file as the inner type — not strand the user on a dead last-suffix association.
+See xref:pass-through-extensions.adoc[Pass-through extensions] and the
+link:https://hci-nerdz.github.io/blog/when-example-files-lose-their-type/[example-files essay].
+
+== Titles as orientation
+
+Titles should place the reader in a mental room: first-party news omits the org, essays prefer *as*-framing and attached modifiers over rigid *X is Y* equations.
+See link:https://hci-nerdz.github.io/blog/titles-as-orientation/[Titles as orientation].
 
 == Prototype strategy
 
@@ -64,6 +89,9 @@ See xref:prototype-strategy.adoc[Prototype strategy] and xref:fundamental-contex
 == Related
 
 * xref:principles.adoc[Principles]
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture]
+* xref:instruction-flows.adoc[Instruction flows]
+* xref:pass-through-extensions.adoc[Pass-through extensions]
 * xref:processing-maps.adoc[Processing maps]
 * xref:prototype-strategy.adoc[Prototype strategy]
 * xref:fundamental-contexts.adoc[Fundamental contexts]

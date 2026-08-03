@@ -1,0 +1,125 @@
+= Pass-through extensions
+:description: Meta-suffixes such as .example and .template that wrap another file type and should inherit that type's open, edit, and icon behavior.
+
+A *pass-through extension* is a trailing meta-suffix that does not own content of its own.
+It marks a file as an example, template, sample, or distribution default of *another* type — and the shell should treat the inner type as authoritative for open, edit, icon, and perceived type.
+
+In plain language: `appsettings.json.example` is a JSON file wearing a badge, not an "example" document with no handler.
+
+== Core claim
+
+File association should support *typed meta-suffixes* that peel and resolve to the remaining name.
+
+When the user opens, edits, or previews `nginx.conf.template`, the shell should ask what handles `.conf` (after stripping `.template`), then invoke that association against the *actual* path — not invent a dead `.template` ProgID or dump the file into "unknown."
+
+== Why it exists
+
+Programmers ship example and template files constantly:
+
+* `appsettings.json.example`, `.env.example`
+* `nginx.conf.template`, `Dockerfile.template`
+* `php.ini.dist`, `config.yml.sample`
+
+Windows File Explorer (and the Win32 association model behind it) resolves type from the *last* extension segment.
+So `blah.ext.example` becomes "EXAMPLE File" — no useful open verb, no icon inheritance, no preview — even though the content is plainly `ext`.
+
+The registry can bind a ProgID to `.example`, but stock Windows has no first-class *passthru* or *delegate-to-stem* association kind.
+Nobody wired the predictable meta-list into the shell as peelable wrappers.
+Users double-click an example config and get "Windows cannot open this file" or a useless generic prompt — the opposite of product representation.
+
+== Resolution model
+
+Given a filename, peel zero or more *known pass-through suffixes* from the right, then resolve associations on the remaining stem's final extension.
+
+[cols="1,2,2"]
+|===
+| Name | Last-suffix rule (today) | Pass-through peel (proposed)
+
+| `appsettings.json.example`
+| type = `.example` → unknown / useless
+| peel `.example` → type = `.json` → JSON handler, path still `…json.example`
+
+| `site.conf.template`
+| type = `.template`
+| peel `.template` → type = `.conf`
+
+| `php.ini.dist`
+| type = `.dist`
+| peel `.dist` → type = `.ini`
+
+| `notes.txt`
+| type = `.txt`
+| no peel → `.txt` (unchanged)
+
+| `archive.tar.gz`
+| type = `.gz` (compound archives are *content* codecs, not meta-badges)
+| do *not* treat `.gz` / `.bz2` / `.xz` as pass-through — different problem
+|===
+
+Pass-through is about *role badges* on an already-typed payload, not about multi-part compression codecs.
+
+== Default meta-suffix set
+
+Ship a small, boring allow-list — not an unbounded AI guesser:
+
+* `.example`
+* `.template` / `.tmpl`
+* `.sample`
+* `.dist`
+* `.default`
+* `.skeleton`
+* `.stub`
+* `.orig`
+* `.bak`
+* `.old`
+
+Optional / careful (off by default in the app until you add them):
+
+* `.in` — Autoconf inputs (`Makefile.in`); high value for developers, but short enough to collide with niche types — peel only when a prior extension remains
+
+Users can add further meta-suffixes in the link:https://github.com/HCI-Nerdz/pass-through-extensions[pass-through-extensions] settings app; the active list is stored per user and re-registered on Apply.
+
+Chained badges (`file.json.example.bak`) should peel right-to-left while the suffix remains in the allow-list.
+
+== What the OS should inherit
+
+After peel, the remaining association should drive:
+
+. *Default open* and *Edit* verbs
+. *DefaultIcon* (and thumbnails / preview handlers when safe)
+. *Perceived type* and Details "Type" column wording ("JSON Example File" is fine; "EXAMPLE File" is not)
+. *New* menu behavior — creating `.example` alone is rarely the job; creating `.json.example` might be
+
+Security: the *bytes on disk* do not change.
+Pass-through must not strip the suffix from the path passed to the handler — only from the *association lookup*.
+Handlers that reject unknown extensions may still need an "open anyway" story; that is a separate honesty problem inside those apps.
+
+== What it is not
+
+* Not "ignore all extensions" or content-sniffing as the primary rule
+* Not treating `.tar.gz` as a pass-through badge
+* Not a substitute for apps that refuse to open `*.json.example` even when Explorer routes correctly — app-side open dialogs should accept the same peel, or offer Open With honesty
+* Not ownership by openshellorg — this is Explorer / desktop association UX (HCI Nerdz); shells may later grow matching completion hints
+
+== Implementations short of Microsoft
+
+Until Win32 grows a real passthru association kind:
+
+* *Settings app + open broker* — link:https://github.com/HCI-Nerdz/pass-through-extensions[pass-through-extensions] lets users toggle built-ins, add custom meta-types, and Apply current-user Explorer mappings
+* *Interactive demo* — link:https://hci-nerdz.github.io/demos/pass-through-extensions/[resolution peel] on the public site
+* *PowerToys candidate* — same peel + configurable list as an Explorer utility module
+* *Feedback Hub / WinUI wishlist* — ask for a documented association flag: *this ProgID is a meta-suffix; resolve open/icon/preview from the stem*
+* *Cross-host* — same peel list for "Open with" pickers, VS Code / editor "files.associations" defaults, and Linux `xdg-mime` helpers where last-suffix bias also bites
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/when-example-files-lose-their-type/[When example files lose their type]
+* Demo: link:https://hci-nerdz.github.io/demos/pass-through-extensions/[Pass-through peel]
+* Tooling: link:https://github.com/HCI-Nerdz/pass-through-extensions[pass-through-extensions]
+
+== Related
+
+* xref:principles.adoc[Principles] — surface what the system already knows
+* xref:philosophy.adoc[Philosophy] — product representation; intuition over backwards convention
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture]
+* link:https://hci-nerdz.github.io/demos/[Demos index]

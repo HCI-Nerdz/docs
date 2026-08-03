@@ -1,0 +1,8 @@
+= 2026-08-02 — Pass-through extensions
+
+Documented pass-through extensions: meta-suffixes that should inherit the inner file type.
+
+* New page: `pass-through-extensions.adoc`
+* Principles row for peel-to-inner association honesty
+* Nav and home cross-links
+* Points at site essay/demo and the `pass-through-extensions` Windows helper repo

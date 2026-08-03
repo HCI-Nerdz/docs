@@ -47,7 +47,7 @@ See xref:fundamental-contexts.adoc[Fundamental contexts] for the broader map.
 
 * Demo: link:https://hci-nerdz.github.io/pipeline-composer/[pipeline-composer]
 * Repository: link:https://github.com/HCI-Nerdz/pipeline-composer[pipeline-composer]
-* Blog: link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Share the IR, not the pixels]
+* Blog: link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Sharing the IR, not the pixels]
 
 == Related
 

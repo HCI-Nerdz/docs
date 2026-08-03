@@ -29,6 +29,15 @@
 | Progressive disclosure
 | Budget the first screen; deepen on demand
 
+| Instruction flows for decision-tree docs
+| Menu-style paths: one choice at a time, continuations under decisions, shareable URL state
+
+| Pass-through extensions for meta-suffixes
+| `.example` / `.template` / `.dist` badges peel to the inner type for open, edit, and icon — not a dead last-suffix ProgID
+
+| Scoped UX architecture
+| Many small tools, each with a clear job, under one roof — hard boundaries plus a shared shell
+
 | Processing maps for ordered systems
 | If the runtime is a sequence, compose it as one typed pipeline — nest parallelism inside steps
 

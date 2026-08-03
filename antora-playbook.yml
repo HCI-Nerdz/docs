@@ -31,6 +31,8 @@ asciidoc:
     idprefix: ''
     idseparator: '-'
     page-pagination: ''
+  extensions:
+    - ./node_modules/@antora-supplemental/instruction-flow/lib/instruction-flow-extension.js
 
 output:
   dir: build/site

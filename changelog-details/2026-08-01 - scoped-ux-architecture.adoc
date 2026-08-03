@@ -1,0 +1,8 @@
+= 2026-08-01 — Scoped UX architecture
+
+Added *Scoped UX architecture* as a first-class encyclopedia topic.
+
+* New page: `scoped-ux-architecture.adoc` — many small tools under one roof; distinction from feedforward UX
+* Principles table + philosophy section
+* Nav + home hub links
+* Cross-links to the site essay and `/demos/scoped-ux/` prototype

@@ -17,7 +17,7 @@ HCI Nerdz is one altitude in a sibling stack.
 | Environments, orchestration, toolchain management for practitioners
 
 | link:https://github.com/antora-supplemental[antora-supplemental]
-| AsciiDoc / Antora publishing UX (including Valentus)
+| AsciiDoc / Antora publishing UX (Valentus, link:https://github.com/antora-supplemental/asciidoc-interactive[instruction-flow], and related extensions)
 
 | link:https://github.com/dlang-supplemental[dlang-supplemental]
 | D libraries and native tooling shared across projects

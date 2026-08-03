@@ -1,0 +1,8 @@
+= 2026-08-02 — Instruction flows
+
+Documented instruction flows and wired the Antora extension into this hub.
+
+* New page: `instruction-flows.adoc` — pattern + live `[instructionflow]` sample
+* Dependency: `@antora-supplemental/instruction-flow` (GitHub: `asciidoc-interactive`)
+* Playbooks register the Asciidoctor extension under `asciidoc.extensions`
+* Principles, philosophy, nav, home, and ecosystem cross-links

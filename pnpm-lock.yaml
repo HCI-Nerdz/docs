@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@antora-supplemental/instruction-flow':
+        specifier: github:antora-supplemental/asciidoc-interactive
+        version: https://codeload.github.com/antora-supplemental/asciidoc-interactive/tar.gz/c367f78b9b3b9e97cfbce8196a8af4b697436616
       '@antora-supplemental/unversioned-component-urls':
         specifier: github:antora-supplemental/antora-unversioned-component-urls#v2.1.0
         version: https://codeload.github.com/antora-supplemental/antora-unversioned-component-urls/tar.gz/fab7292ee987bc1b479ad174f4a394fe8952998e(@antora/site-generator@3.1.15)
@@ -22,6 +25,11 @@ importers:
         version: 3.1.15
 
 packages:
+
+  '@antora-supplemental/instruction-flow@https://codeload.github.com/antora-supplemental/asciidoc-interactive/tar.gz/c367f78b9b3b9e97cfbce8196a8af4b697436616':
+    resolution: {tarball: https://codeload.github.com/antora-supplemental/asciidoc-interactive/tar.gz/c367f78b9b3b9e97cfbce8196a8af4b697436616}
+    version: 0.1.0
+    engines: {node: '>=18'}
 
   '@antora-supplemental/unversioned-component-urls@https://codeload.github.com/antora-supplemental/antora-unversioned-component-urls/tar.gz/fab7292ee987bc1b479ad174f4a394fe8952998e':
     resolution: {tarball: https://codeload.github.com/antora-supplemental/antora-unversioned-component-urls/tar.gz/fab7292ee987bc1b479ad174f4a394fe8952998e}
@@ -654,6 +662,10 @@ packages:
     resolution: {integrity: sha512-BbETDVWG+VcMUle37k5Fqp//7SDOK2/1+T7X8TD96M3D9G8jK5VLUdQVdVjGi8im7FGkazX7kk5hkU8X4L5Bng==}
 
 snapshots:
+
+  '@antora-supplemental/instruction-flow@https://codeload.github.com/antora-supplemental/asciidoc-interactive/tar.gz/c367f78b9b3b9e97cfbce8196a8af4b697436616':
+    dependencies:
+      json5: 2.2.3
 
   '@antora-supplemental/unversioned-component-urls@https://codeload.github.com/antora-supplemental/antora-unversioned-component-urls/tar.gz/fab7292ee987bc1b479ad174f4a394fe8952998e(@antora/site-generator@3.1.15)':
     dependencies:

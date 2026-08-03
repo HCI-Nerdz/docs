@@ -48,6 +48,6 @@ HCI Nerdz prototypes stack them:
 == Read next
 
 * Blog (exploratory): link:https://hci-nerdz.github.io/blog/fundamental-contexts-for-portable-ui/[Fundamental contexts for portable UI]
-* Strategy (pattern): link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Share the IR, not the pixels]
+* Strategy (pattern): link:https://hci-nerdz.github.io/blog/share-the-ir-not-the-pixels/[Sharing the IR, not the pixels]
 * xref:prototype-strategy.adoc[Prototype strategy template]
 * xref:processing-maps.adoc[Processing maps]
