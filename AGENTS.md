@@ -15,5 +15,6 @@
 - `@antora-supplemental/unversioned-component-urls` / alias so `/hci-nerdz/` → latest
 - Instruction flows: `instruction-flows.adoc` + `@antora-supplemental/instruction-flow` (GitHub `asciidoc-interactive`) under `asciidoc.extensions`
 - Pass-through extensions: `pass-through-extensions.adoc` — meta-suffix peel for Explorer associations
+- Open-with interrupt: `open-with-interrupt.adoc` — Ctrl+double-click / file middle-click → app picker; recipes for Windows/macOS/Linux
 - Topics: `scoped-ux-architecture.adoc` (≠ feedforward)
 - Literature: raw conversation sources under `literature/` — catalog page `literature.adoc`; prefer curated topics for teaching, open literature for provenance

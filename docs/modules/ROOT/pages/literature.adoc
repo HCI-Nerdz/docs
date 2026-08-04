@@ -15,10 +15,15 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 
 | Scoped UX architecture
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/scoped-ux-architecture/gemini-understanding-scoped-user-experience.md[Gemini export — Understanding Scoped User Experience]
-  (2025-10-23);
-  link:https://github.com/HCI-Nerdz/docs/blob/main/literature/scoped-ux-architecture/scoped-ux-framework-with-feedforward-design.pdf[PDF design dump]
-  (2026-08-01)
+ (2025-10-23);
+ link:https://github.com/HCI-Nerdz/docs/blob/main/literature/scoped-ux-architecture/scoped-ux-framework-with-feedforward-design.pdf[PDF design dump]
+ (2026-08-01)
 | xref:scoped-ux-architecture.adoc[Scoped UX architecture]
+
+| Open-with interrupt
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/open-with-interrupt/gemini-windows-file-handler-selection-dialog.md[Gemini export — Windows File Handler Selection Dialog]
+ (2026-08-04)
+| xref:open-with-interrupt.adoc[Open-with interrupt]
 |===
 
 Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.adoc[`literature/README.adoc`].
@@ -26,5 +31,6 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 == Related
 
 * xref:scoped-ux-architecture.adoc[Scoped UX architecture]
+* xref:open-with-interrupt.adoc[Open-with interrupt]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]

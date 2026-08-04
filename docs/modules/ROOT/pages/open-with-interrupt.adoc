@@ -1,0 +1,141 @@
+= Open-with interrupt
+:description: A first-class gesture that interrupts default file open and shows the application picker (Open with) without digging through the context menu.
+
+An *open-with interrupt* is a pointer or modifier gesture that stops the default file-handler handoff and opens the system application picker for the selected file — temporary choice, same honesty surface as today's **Open with**.
+
+In plain language: double-click commits; the interrupt asks.
+
+== Core claim
+
+File managers should expose a discoverable, first-class interrupt for "open with a non-default app this time" at the moment of open — not only via context menus or property sheets.
+
+Preferred candidates (unused or weakly assigned for *files*):
+
+. *Ctrl + double-click* — mnemonic: control which app opens this
+. *Middle-click on a file* — alternate-open family; do not steal middle-click-on-folder (new tab) behavior
+
+Permanent default changes stay in Properties / Get Info / "Always open with." The interrupt is for *this* launch.
+
+== Why it exists
+
+Across major desktops, no stock binding intercepts double-click / Enter to force an app picker:
+
+[cols="1,2,2"]
+|===
+| Environment | Default open | Native "choose now" interrupt?
+
+| Windows File Explorer
+| Double-click / Enter → default ProgID
+| No. Context menu **Open with**, or Properties → Change…
+
+| macOS Finder
+| Double-click → default app
+| No. Control-click → **Open With**; Option+double-click closes the folder window instead
+
+| GNOME Nautilus
+| Double-click → default
+| No. Context menu **Open With Other Application**; middle-click on files ignored
+
+| KDE Dolphin
+| Double-click → default
+| No. Context menu **Open With**; middle-click on files often *is* default-open (no picker)
+|===
+
+Users who switch handlers often (images, text, markdown, media) pay a menu tax on every exception. The association database already lists candidates; the open gesture refuses to ask.
+
+== Recommended semantics
+
+* Target: one or more selected *files* (folders keep existing middle-click tab behavior)
+* Action: invoke the platform Open-with / app-chooser UI for each selected file (or the primary selection)
+* Do *not* silently rewrite the permanent default
+* Prefer system UI (`OpenAs_RunDLL` on Windows, portal/app chooser on Linux, Open With panel on macOS) over a custom app list when the OS already ships one
+
+== Implementation paths
+
+Until the OS or file manager ships the binding, developers and power users can prototype.
+
+=== Windows (AutoHotkey v2 reference)
+
+Hook Ctrl+left-button inside Explorer (`CabinetWClass`), detect a double-click within the system double-click time, resolve the selected item via `Shell.Application`, and call the native Open with dialog:
+
+[source,autohotkey]
+----
+#Requires AutoHotkey v2.0
+
+#HotIf WinActive("ahk_class CabinetWClass")
+^LButton:: {
+    if (A_PriorHotkey == "^LButton" && A_TimeSincePriorHotkey < DllCall("GetDoubleClickTime")) {
+        OpenFileWithDialog()
+    }
+}
+#HotIf
+
+OpenFileWithDialog() {
+    hwnd := WinGetID("A")
+    for window in ComObject("Shell.Application").Windows {
+        if (window.HWND == hwnd) {
+            for item in window.Document.SelectedItems {
+                Run('rundll32.exe shell32.dll,OpenAs_RunDLL "' item.Path '"')
+                return
+            }
+        }
+    }
+}
+----
+
+Notes:
+
+* Scope the hotkey to Explorer (and optionally Desktop `WorkerW` / `Progman`) so it does not steal Ctrl+click elsewhere
+* Middle-click on files can call the same `OpenFileWithDialog` helper; leave folder middle-click alone
+* PowerToys / a small Explorer utility are natural hosts for a maintained version of this hook
+* Wishlist: a documented Explorer / Shell binding for "Open with (once)" on Ctrl+double-click and/or file middle-click
+
+=== macOS
+
+Finder does not expose a public "open with picker" Apple Event for third-party mouse hooks the way Windows exposes `OpenAs_RunDLL`. Practical paths today:
+
+* Teach users Control-click → **Open With** (and Control+Option for **Always**)
+* Third-party default-handler apps (Choosy, Velja, OpenIn, and similar) intercept *as the registered default* and present a chooser — different architecture, related job
+* Wishlist: Finder supports Control+double-click (or a documented alternate click) to open the Open With UI without replacing the default app permanently
+
+=== Linux
+
+True Ctrl+double-click interception inside Nautilus/Dolphin usually needs either file-manager support or an input-layer hook (`libinput` / compositor / `keyd`-class tools). Cleaner prototype without raw hooks: an intermediary handler.
+
+. Script `~/.local/bin/pick-app` that takes a file path, presents an app chooser (`zenity`, `kdialog`, or a `.desktop` browser), then execs the chosen `Exec=` line with the file
+. Register that script as the default handler via `xdg-mime` for the types where you want to *always* choose — or bind a custom action in the file manager
+. Prefer FM patches or GIO/portal APIs that invoke the standard "Open With" dialog on a configured gesture
+
+Middle-click on files should open the picker in this model; middle-click on directories should keep "new tab."
+
+== What it is not
+
+* Not a replacement for setting a permanent default
+* Not "always ask" for every open (that is a different preference; this is an interrupt)
+* Not stealing Ctrl+click multi-select or folder middle-click tabs
+* Not a substitute for pass-through extension honesty (xref:pass-through-extensions.adoc[pass-through extensions]) — wrong type vs wrong *handler*
+
+== Wishlist (vendors and hosts)
+
+* Windows Explorer / Shell: first-class Ctrl+double-click and/or file middle-click → Open with (once)
+* PowerToys: Explorer module wrapping the AutoHotkey-class hook with a settings toggle
+* macOS Finder: documented alternate-open gesture to the Open With UI
+* Nautilus / Dolphin / xdg desktop portals: configurable open-with interrupt; fix Dolphin middle-click-on-file = silent default open if picker is the desired alternate
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/when-double-click-skips-the-choice/[When double-click skips the choice]
+* News: link:https://hci-nerdz.github.io/news/open-with-interrupt-added-to-repertoire/[Open-with interrupt added to the repertoire]
+
+== Literature
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/open-with-interrupt/gemini-windows-file-handler-selection-dialog.md[Gemini export — Windows File Handler Selection Dialog]
+  (2026-08-04) — initial gap survey and Ctrl / middle-click candidates
+
+== Related
+
+* xref:principles.adoc[Principles] — surface what the system already knows
+* xref:philosophy.adoc[Philosophy] — product representation; intuition over backwards convention
+* xref:pass-through-extensions.adoc[Pass-through extensions] — association honesty for meta-suffixes
+* xref:literature.adoc[Literature]
+* link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[Product representation is the bug]

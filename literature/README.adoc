@@ -15,17 +15,23 @@ When a concept page and a conversation disagree, update the curated page deliber
 
 | Scoped UX architecture + feedforward distinction
 | link:scoped-ux-architecture/gemini-understanding-scoped-user-experience.md[`gemini-understanding-scoped-user-experience.md`]
-  (Gemini export, 2025-10-23);
-  link:scoped-ux-architecture/scoped-ux-framework-with-feedforward-design.pdf[`scoped-ux-framework-with-feedforward-design.pdf`]
-  (design dump, 2026-08-01)
+ (Gemini export, 2025-10-23);
+ link:scoped-ux-architecture/scoped-ux-framework-with-feedforward-design.pdf[`scoped-ux-framework-with-feedforward-design.pdf`]
+ (design dump, 2026-08-01)
 | xref:scoped-ux-architecture.adoc[Docs topic];
-  link:https://hci-nerdz.github.io/blog/scoped-ux-architecture/[Essay];
-  link:https://hci-nerdz.github.io/demos/scoped-ux/[Demo]
+ link:https://hci-nerdz.github.io/blog/scoped-ux-architecture/[Essay];
+ link:https://hci-nerdz.github.io/demos/scoped-ux/[Demo]
+
+| Open-with interrupt
+| link:open-with-interrupt/gemini-windows-file-handler-selection-dialog.md[`gemini-windows-file-handler-selection-dialog.md`]
+ (Gemini export, 2026-08-04)
+| xref:open-with-interrupt.adoc[Docs topic];
+ link:https://hci-nerdz.github.io/blog/when-double-click-skips-the-choice/[Essay]
 |===
 
 == Adding a source
 
-. Put the export under `literature/<concept-slug>/` with a stable kebab-case filename.
+. Put the export under `literature/<concept>/` with a stable kebab-case filename.
 . Add a row to the catalog above.
 . Link the curated docs topic (and essay when one exists) under a *Literature* / *Source* section.
 . Prefer *move* from Downloads once the repo copy is the authority.

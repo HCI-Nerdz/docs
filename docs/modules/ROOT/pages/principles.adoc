@@ -35,6 +35,9 @@
 | Pass-through extensions for meta-suffixes
 | `.example` / `.template` / `.dist` badges peel to the inner type for open, edit, and icon — not a dead last-suffix ProgID
 
+| Open-with interrupt for alternate handlers
+| Ctrl+double-click or middle-click on a file asks which app opens *this* launch — default open is not an unstoppable handoff
+
 | Scoped UX architecture
 | Many small tools, each with a clear job, under one roof — hard boundaries plus a shared shell
 
