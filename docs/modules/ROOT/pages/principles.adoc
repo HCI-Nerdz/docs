@@ -38,6 +38,9 @@
 | Open-with interrupt for alternate handlers
 | Ctrl+double-click or middle-click on a file asks which app opens *this* launch — default open is not an unstoppable handoff
 
+| ClearType per-monitor honesty
+| Monitor pickers must not imply independent RGB/BGR when GDI orientation is session-global and DirectWrite opt-in is uneven
+
 | Scoped UX architecture
 | Many small tools, each with a clear job, under one roof — hard boundaries plus a shared shell
 

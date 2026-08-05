@@ -1,0 +1,54 @@
+= ClearType per-monitor settings
+:description: Subpixel layout (RGB/BGR) as a product-representation problem—UI that offers per-monitor tuning vs renderers that often apply one global orientation.
+
+*ClearType per-monitor settings* are the Windows affordances that *look* like each display can have its own subpixel antialiasing layout (RGB, BGR, or grayscale), while large parts of the text stack still behave as one session-wide choice.
+
+In plain language: the tuner asks which monitor; GDI mostly ignores that question; DirectWrite only honors it when the app opts in.
+
+== Core claim
+
+A settings UI that enumerates monitors for ClearType implies *per-panel honesty*. Stock Windows only partially delivers that honesty. Tools that stamp one layout on every display are often *more* accurate about OS reality than a wizard that writes decorative per-display keys.
+
+== Why it is an HCI topic
+
+This is the same class of bug as link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[product representation]: the engine and registry have more than one structure; the first-class UI narrates a simpler story than renderers implement.
+
+* **Representation:** monitor picker in `cttune.exe`
+* **Partial truth:** `HKCU/HKLM\SOFTWARE\Microsoft\Avalon.Graphics\DISPLAYn` can hold distinct `PixelStructure` values (documented for WPF)
+* **Contradiction:** `SPI_SETFONTSMOOTHINGORIENTATION` / `FontSmoothingOrientation` under `Control Panel\Desktop` is session-global for GDI; many DirectWrite apps never call `CreateMonitorRenderingParams`
+
+Users with an RGB laptop panel and a BGR external display learn the lie as color fringing on whichever side lost the global vote.
+
+== Evidence map
+
+[cols="1,2"]
+|===
+| Claim | Sources
+
+| WPF documents per-display `PixelStructure` (0/1/2)
+| link:https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/cleartype-registry-settings[ClearType Registry Settings — WPF]
+
+| DirectWrite can load defaults per `HMONITOR`; primary-only factory method is a footgun
+| link:https://learn.microsoft.com/en-us/windows/win32/directwrite/how-to-add-support-for-multiple-monitors[How to Add Support for Multiple Monitors]; link:https://learn.microsoft.com/en-us/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createmonitorrenderingparams[`CreateMonitorRenderingParams`]
+
+| GDI orientation is a single SPI value
+| link:https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-systemparametersinfoa[`SystemParametersInfo` — `SPI_*FONTSMOOTHINGORIENTATION`]
+
+| Inbox tuner page → registry mapping (including global Desktop keys)
+| link:https://blog.yuo.be/2025/05/20/what-does-each-step-in-the-cleartype-tuner-do/[Reupen, 2025]; link:https://github.com/bp2008/BetterClearTypeTuner/wiki/ClearType-Investigations[bp2008 wiki]
+
+| Better ClearType Tuner sets all monitors the same on purpose
+| link:https://github.com/bp2008/BetterClearTypeTuner/blob/master/README.md[README caveats]; implementation loop in `MainForm.SetLegacyKeys`; link:https://github.com/bp2008/BetterClearTypeTuner/issues/11[issue #11]
+|===
+
+== Guidance (honest defaults)
+
+* Treat **Better ClearType Tuner** as a global RGB/BGR/grayscale + contrast tool. Do not expect it to fix one panel without affecting the other.
+* Treat **`cttune.exe`** as able to differentiate Avalon per-display keys, not as a guarantee of independent GDI layouts.
+* For mixed subpixel hardware, verify with the actual apps you read in (GDI classic UI vs DirectWrite/WPF vs browsers). MacType and similar exist when inbox stacks cannot express the panel.
+
+Engineering deep dive (registry planes, citations, worked advice): link:https://docs.devcentr.org/general-knowledge/explanation/cleartype-per-monitor-settings.html[Dev-Centr — ClearType per-monitor settings].
+
+How to find this class of Microsoft material when search wording fails: link:https://docs.devcentr.org/general-knowledge/how-to/finding-windows-internals-docs.html[Finding Windows internals documentation].
+
+Essay form: link:https://hci-nerdz.github.io/blog/cleartype-when-monitors-disagree/[ClearType when monitors disagree].

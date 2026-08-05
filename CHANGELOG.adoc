@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-05 — ClearType per-monitor settings
+
+* link:changelog-details/2026-08-05%20-%20cleartype-per-monitor.adoc[Details]
+
 == 2026-08-04 — Open-with interrupt
 
 * link:changelog-details/2026-08-04%20-%20open-with-interrupt.adoc[Details]

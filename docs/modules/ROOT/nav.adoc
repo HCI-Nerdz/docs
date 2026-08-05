@@ -5,6 +5,7 @@
 * xref:instruction-flows.adoc[Instruction flows]
 * xref:pass-through-extensions.adoc[Pass-through extensions]
 * xref:open-with-interrupt.adoc[Open-with interrupt]
+* xref:cleartype-per-monitor.adoc[ClearType per-monitor settings]
 * xref:processing-maps.adoc[Processing maps]
 * xref:prototype-strategy.adoc[Prototype strategy]
 * xref:fundamental-contexts.adoc[Fundamental contexts]
