@@ -1,8 +1,8 @@
 = 2026-08-05 — ClearType
 
-Documented ClearType as subpixel font smoothing (HCI): geometry contract, setting-plane honesty, multi-monitor as corollary.
+Documented ClearType (HCI): text-clarity system, tuner role, setting-plane honesty; mixed monitors as corollary.
 
-* Page: `cleartype.adoc` (replaces per-monitor-first draft)
+* Page: `cleartype.adoc`
 * Principles row: ClearType subpixel honesty
 * Nav and home cross-links
-* Points at essay and Dev-Centr engineering article
+* Essay: ClearType Tuner in Windows

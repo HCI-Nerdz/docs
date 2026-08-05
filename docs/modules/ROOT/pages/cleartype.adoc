@@ -1,5 +1,5 @@
 = ClearType
-:description: ClearType as subpixel font smoothing on striped LCDs—what it assumes, what Windows exposes, and where the tuner UI over-promises (including mixed RGB/BGR monitors).
+:description: ClearType is a text clarity system in Windows that uses subpixel rendering to improve text sharpness for reading—and a tuner so people can match that system to their eyes and hardware.
 
 *ClearType* is Windows’ subpixel font-smoothing for displays with horizontal RGB or BGR stripe geometry. It paints antialiased glyph edges using the individual color stripes inside each pixel so text can look sharper than grayscale antialiasing alone—when the assumed stripe order matches the panel.
 
@@ -32,7 +32,8 @@ Covered fully in the engineering article; short form here:
 
 If an RGB laptop and a BGR external share a desk, no stock path gives every app two independent GDI orientations. Avalon per-display `PixelStructure` values can differ; many apps never consume them per `HMONITOR`. Forcing BGR in a global tuner “fixes” one panel and fringes the other.
 
-Essay: link:https://hci-nerdz.github.io/blog/cleartype-as-subpixel-rendering/[ClearType as subpixel rendering].
+Essay: link:https://hci-nerdz.github.io/blog/cleartype-tuner-in-windows/[ClearType Tuner in Windows].
+
 
 == Evidence map
 
