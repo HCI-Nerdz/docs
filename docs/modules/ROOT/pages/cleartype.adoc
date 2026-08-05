@@ -1,0 +1,62 @@
+= ClearType
+:description: ClearType as subpixel font smoothing on striped LCDs—what it assumes, what Windows exposes, and where the tuner UI over-promises (including mixed RGB/BGR monitors).
+
+*ClearType* is Windows’ subpixel font-smoothing for displays with horizontal RGB or BGR stripe geometry. It paints antialiased glyph edges using the individual color stripes inside each pixel so text can look sharper than grayscale antialiasing alone—when the assumed stripe order matches the panel.
+
+In plain language: ClearType bets on your subpixels. Wrong bet → colored fringing. No bet (grayscale) → softer edges, no stripe-order dependency.
+
+== Core claim
+
+ClearType is a contract between *renderer geometry* and *panel geometry*. Windows exposes that contract through several setting planes and APIs that do not all share the same scope. The inbox tuner UI often narrates a simpler story than GDI, WPF, and DirectWrite actually implement—especially across multiple monitors.
+
+That is product representation: link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[product representation is the bug].
+
+== What users are choosing
+
+* **On / off** — ClearType vs grayscale smoothing (or smoothing disabled entirely)
+* **RGB vs BGR** — which horizontal stripe order the filter assumes
+* **Contrast / sample pages** — how heavy filtered stems look (some wizard pages have been dead weight on modern Windows)
+
+Engineering detail and citations: link:https://docs.devcentr.org/general-knowledge/explanation/cleartype.html[Dev-Centr — ClearType].
+
+== Why it is an HCI topic
+
+Reading text is a first-class daily job. Subpixel filtering is invisible when correct and loudly wrong when mismatched. The settings surface must not imply capabilities the text stack does not deliver.
+
+* **Honest global tools** (for example Better ClearType Tuner) expose one RGB/BGR dial for the session.
+* **Partially honest wizards** (`cttune.exe`) offer a monitor picker while GDI orientation remains session-global and DirectWrite monitor params remain app-opt-in.
+
+== When monitors disagree
+
+Covered fully in the engineering article; short form here:
+
+If an RGB laptop and a BGR external share a desk, no stock path gives every app two independent GDI orientations. Avalon per-display `PixelStructure` values can differ; many apps never consume them per `HMONITOR`. Forcing BGR in a global tuner “fixes” one panel and fringes the other.
+
+Essay: link:https://hci-nerdz.github.io/blog/cleartype-as-subpixel-rendering/[ClearType as subpixel rendering].
+
+== Evidence map
+
+[cols="1,2"]
+|===
+| Claim | Sources
+
+| WPF documents per-display `PixelStructure` (0/1/2)
+| link:https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/cleartype-registry-settings[ClearType Registry Settings — WPF]
+
+| DirectWrite can load defaults per `HMONITOR`; primary-only factory method is a footgun
+| link:https://learn.microsoft.com/en-us/windows/win32/directwrite/how-to-add-support-for-multiple-monitors[How to Add Support for Multiple Monitors]; link:https://learn.microsoft.com/en-us/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createmonitorrenderingparams[`CreateMonitorRenderingParams`]
+
+| GDI orientation is a single SPI value
+| link:https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-systemparametersinfoa[`SystemParametersInfo` — `SPI_*FONTSMOOTHINGORIENTATION`]
+
+| Inbox tuner page → registry mapping
+| link:https://blog.yuo.be/2025/05/20/what-does-each-step-in-the-cleartype-tuner-do/[Reupen, 2025]; link:https://github.com/bp2008/BetterClearTypeTuner/wiki/ClearType-Investigations[bp2008 wiki]
+
+| Better ClearType Tuner sets all monitors the same on purpose
+| link:https://github.com/bp2008/BetterClearTypeTuner/blob/master/README.md[README caveats]; link:https://github.com/bp2008/BetterClearTypeTuner/issues/11[issue #11]
+|===
+
+== See also
+
+* link:https://docs.devcentr.org/general-knowledge/how-to/finding-windows-internals-docs.html[Finding Windows internals documentation]
+* xref:open-with-interrupt.adoc[Open-with interrupt] — another first-class gesture / honesty pattern
