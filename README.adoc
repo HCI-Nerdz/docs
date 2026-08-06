@@ -1,9 +1,42 @@
+ifndef::env-github[:icons: font]
+:toc: preamble
+:toclevels: 2
+:sectanchors:
+
+ifndef::env-github[]
+image:https://img.shields.io/github/contributors/HCI-Nerdz/docs.svg?style=for-the-badge[Contributors,link=https://github.com/HCI-Nerdz/docs/graphs/contributors]
+image:https://img.shields.io/github/forks/HCI-Nerdz/docs.svg?style=for-the-badge[Forks,link=https://github.com/HCI-Nerdz/docs/network/members]
+image:https://img.shields.io/github/stars/HCI-Nerdz/docs.svg?style=for-the-badge[Stars,link=https://github.com/HCI-Nerdz/docs/stargazers]
+image:https://img.shields.io/github/issues/HCI-Nerdz/docs.svg?style=for-the-badge[Issues,link=https://github.com/HCI-Nerdz/docs/issues]
+endif::[]
+
+ifdef::env-github[]
+image:https://img.shields.io/github/contributors/HCI-Nerdz/docs.svg?style=for-the-badge[Contributors]
+image:https://img.shields.io/github/forks/HCI-Nerdz/docs.svg?style=for-the-badge[Forks]
+image:https://img.shields.io/github/stars/HCI-Nerdz/docs.svg?style=for-the-badge[Stars]
+image:https://img.shields.io/github/issues/HCI-Nerdz/docs.svg?style=for-the-badge[Issues]
+endif::[]
+
 = HCI Nerdz Docs
-:toc:
+
+HCI Nerdz documentation hub (Antora + Valentus).
+
+link:https://hci-nerdz.github.io/docs/[Explore the docs] ·
+link:https://github.com/HCI-Nerdz/docs/issues[Report Bug] ·
+link:https://github.com/HCI-Nerdz/docs/issues[Request Feature]
 
 Antora documentation hub for link:https://github.com/HCI-Nerdz[HCI-Nerdz], themed with link:https://github.com/antora-supplemental/valentus-theme[Valentus].
 
-== Commands
+== About The Project
+
+Published site: link:https://hci-nerdz.github.io/docs/[hci-nerdz.github.io/docs].
+
+AsciiDoc extension: `@antora-supplemental/instruction-flow` (live sample on the Instruction flows topic).
+
+Authoritative conversation exports behind published concepts live under link:literature/README.adoc[`literature/`].
+Start with the Antora catalog: link:https://hci-nerdz.github.io/docs/hci-nerdz/literature.html[Literature].
+
+== Installation
 
 [source,shell]
 ----
@@ -12,19 +45,17 @@ pnpm docs:local
 pnpm docs
 ----
 
-Published site: link:https://hci-nerdz.github.io/docs/[hci-nerdz.github.io/docs].
+== Usage
 
-AsciiDoc extension: `@antora-supplemental/instruction-flow` (live sample on the Instruction flows topic).
+Title rules for this hub and linked site prose: link:STYLE.adoc[STYLE.adoc]. Agent entrypoint: link:AGENTS.md[AGENTS.md].
 
 == Changelog
 
 See link:CHANGELOG.adoc[CHANGELOG.adoc].
 
-== Literature
+== Contact
 
-Authoritative conversation exports behind published concepts live under link:literature/README.adoc[`literature/`].
-Start with the Antora catalog: link:https://hci-nerdz.github.io/docs/hci-nerdz/literature.html[Literature].
+HCI Nerdz — [ORG_EMAIL]
 
-== Editorial style
-
-Title rules for this hub and linked site prose: link:STYLE.adoc[STYLE.adoc]. Agent entrypoint: link:AGENTS.md[AGENTS.md].
+* Project: https://github.com/HCI-Nerdz/docs
+* Site: https://hci-nerdz.github.io
