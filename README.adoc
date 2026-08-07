@@ -3,7 +3,29 @@ ifndef::env-github[:icons: font]
 :toclevels: 2
 :sectanchors:
 
-[[readme-top]]
+ifdef::env-github[]
+++++
+<a id="readme-top"></a>
+<div align="center">
+<a href="https://github.com/HCI-Nerdz/docs/graphs/contributors"><img src="https://img.shields.io/github/contributors/HCI-Nerdz/docs.svg?style=for-the-badge" alt="Contributors"></a>
+<a href="https://github.com/HCI-Nerdz/docs/network/members"><img src="https://img.shields.io/github/forks/HCI-Nerdz/docs.svg?style=for-the-badge" alt="Forks"></a>
+<a href="https://github.com/HCI-Nerdz/docs/stargazers"><img src="https://img.shields.io/github/stars/HCI-Nerdz/docs.svg?style=for-the-badge" alt="Stars"></a>
+<a href="https://github.com/HCI-Nerdz/docs/issues"><img src="https://img.shields.io/github/issues/HCI-Nerdz/docs.svg?style=for-the-badge" alt="Issues"></a>
+<br />
+<h3 align="center">HCI Nerdz Docs</h3>
+<p align="center">
+HCI Nerdz documentation hub (Antora + Valentus).<br /><br />
+<a href="https://hci-nerdz.github.io/docs/">Explore the docs</a>
+&middot;
+<a href="https://github.com/HCI-Nerdz/docs/issues">Report Bug</a>
+&middot;
+<a href="https://github.com/HCI-Nerdz/docs/issues">Request Feature</a>
+</p>
+</div>
+++++
+endif::[]
+
+ifndef::env-github[]
 image:https://img.shields.io/github/contributors/HCI-Nerdz/docs.svg?style=for-the-badge[Contributors,link=https://github.com/HCI-Nerdz/docs/graphs/contributors]
 image:https://img.shields.io/github/forks/HCI-Nerdz/docs.svg?style=for-the-badge[Forks,link=https://github.com/HCI-Nerdz/docs/network/members]
 image:https://img.shields.io/github/stars/HCI-Nerdz/docs.svg?style=for-the-badge[Stars,link=https://github.com/HCI-Nerdz/docs/stargazers]
@@ -13,12 +35,14 @@ image:https://img.shields.io/github/issues/HCI-Nerdz/docs.svg?style=for-the-badg
 
 HCI Nerdz documentation hub (Antora + Valentus).
 
-link:https://hci-nerdz.github.io/docs/[Explore the docs] ·
-link:https://github.com/HCI-Nerdz/docs/issues[Report Bug] ·
+link:https://hci-nerdz.github.io/docs/[Explore the docs] 
+· 
+link:https://github.com/HCI-Nerdz/docs/issues[Report Bug] 
+· 
 link:https://github.com/HCI-Nerdz/docs/issues[Request Feature]
+endif::[]
 
 Antora documentation hub for link:https://github.com/HCI-Nerdz[HCI-Nerdz], themed with link:https://github.com/antora-supplemental/valentus-theme[Valentus].
-
 == About The Project
 
 Published site: link:https://hci-nerdz.github.io/docs/[hci-nerdz.github.io/docs].
@@ -28,7 +52,9 @@ AsciiDoc extension: `@antora-supplemental/instruction-flow` (live sample on the 
 Authoritative conversation exports behind published concepts live under link:literature/README.adoc[`literature/`].
 Start with the Antora catalog: link:https://hci-nerdz.github.io/docs/hci-nerdz/literature.html[Literature].
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 
 == Installation
 
@@ -39,13 +65,17 @@ pnpm docs:local
 pnpm docs
 ----
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 
 == Usage
 
 Title rules for this hub and linked site prose: link:STYLE.adoc[STYLE.adoc]. Agent entrypoint: link:AGENTS.md[AGENTS.md].
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 
 == Changelog
 
@@ -58,4 +88,6 @@ HCI Nerdz — [ORG_EMAIL]
 * Project: https://github.com/HCI-Nerdz/docs
 * Site: https://hci-nerdz.github.io
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
