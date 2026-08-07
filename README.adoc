@@ -3,19 +3,11 @@ ifndef::env-github[:icons: font]
 :toclevels: 2
 :sectanchors:
 
-ifndef::env-github[]
+[[readme-top]]
 image:https://img.shields.io/github/contributors/HCI-Nerdz/docs.svg?style=for-the-badge[Contributors,link=https://github.com/HCI-Nerdz/docs/graphs/contributors]
 image:https://img.shields.io/github/forks/HCI-Nerdz/docs.svg?style=for-the-badge[Forks,link=https://github.com/HCI-Nerdz/docs/network/members]
 image:https://img.shields.io/github/stars/HCI-Nerdz/docs.svg?style=for-the-badge[Stars,link=https://github.com/HCI-Nerdz/docs/stargazers]
 image:https://img.shields.io/github/issues/HCI-Nerdz/docs.svg?style=for-the-badge[Issues,link=https://github.com/HCI-Nerdz/docs/issues]
-endif::[]
-
-ifdef::env-github[]
-image:https://img.shields.io/github/contributors/HCI-Nerdz/docs.svg?style=for-the-badge[Contributors]
-image:https://img.shields.io/github/forks/HCI-Nerdz/docs.svg?style=for-the-badge[Forks]
-image:https://img.shields.io/github/stars/HCI-Nerdz/docs.svg?style=for-the-badge[Stars]
-image:https://img.shields.io/github/issues/HCI-Nerdz/docs.svg?style=for-the-badge[Issues]
-endif::[]
 
 = HCI Nerdz Docs
 
@@ -36,6 +28,8 @@ AsciiDoc extension: `@antora-supplemental/instruction-flow` (live sample on the 
 Authoritative conversation exports behind published concepts live under link:literature/README.adoc[`literature/`].
 Start with the Antora catalog: link:https://hci-nerdz.github.io/docs/hci-nerdz/literature.html[Literature].
 
+link:#readme-top[back to top]
+
 == Installation
 
 [source,shell]
@@ -45,9 +39,13 @@ pnpm docs:local
 pnpm docs
 ----
 
+link:#readme-top[back to top]
+
 == Usage
 
 Title rules for this hub and linked site prose: link:STYLE.adoc[STYLE.adoc]. Agent entrypoint: link:AGENTS.md[AGENTS.md].
+
+link:#readme-top[back to top]
 
 == Changelog
 
@@ -59,3 +57,5 @@ HCI Nerdz — [ORG_EMAIL]
 
 * Project: https://github.com/HCI-Nerdz/docs
 * Site: https://hci-nerdz.github.io
+
+link:#readme-top[back to top]
