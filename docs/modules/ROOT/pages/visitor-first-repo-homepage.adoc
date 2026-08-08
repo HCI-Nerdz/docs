@@ -1,0 +1,97 @@
+= Visitor-first repo homepage
+:description: GitHub repository pages should default to visitor meaning — hide empty owner CTAs, put README before the file tree, and disclose addable sidebar sections on demand.
+
+A *visitor-first repo homepage* is a repository landing layout optimized for the larger audience of readers and potential contributors: populated sidebar facts only, README (when present) ahead of or instead of the file browser in the first viewport, and owner onboarding revealed through progressive disclosure rather than permanent empty chrome.
+
+In plain language: stop teaching visitors that “No releases” and a directory dump are the project.
+
+== Core claim
+
+GitHub repository pages are still tuned for *owners and maintainers*. Visitors outnumber them. Empty Releases / Packages sections, redundant About chrome, and a files-first first viewport are owner onboarding and maintainer navigation wearing visitor clothes.
+
+Preferred remedies (combine):
+
+. *Progressive disclosure for unpopulated sidebar sections* — render only sections with real content; owners get a hover `+` / Add section affordance with one-line explanations
+. *README-first home* — sticky **README** | **Code** tabs (default README when a README exists), or README above a collapsible / below-the-fold file tree
+. *Honest About* — no **Readme** link when there is no README; do not duplicate stars / watch / fork already in the header
+
+Permanent Releases and Packages stay when the repo uses them. Owner tools stay available to owners — only default *visibility* and *disclosure* change for visitors.
+
+== Why it exists
+
+On repositories with no releases or packages, the sidebar still spends first-viewport budget on “No releases published” and “No packages published.” Those strings are CTAs for maintainers, not facts for visitors.
+
+The file browser owns the first viewport. Most visitors want the project story (README). Owners who need the tree already know where Code lives.
+
+About often duplicates header chrome (stars, watching, forks) and offers a **Readme** jump that is redundant when a README exists — and misleading when it does not.
+
+This is the same class of mismatch as product vocabulary centered on the person who created the repository rather than people joining later. External thesis (Jan 2026): link:https://anish95.medium.com/github-needs-a-meaning-first-makeover-in-2026-d3fb4d42e27d[GitHub Needs a Meaning First Makeover].
+
+== Proposal A — Progressive disclosure for empty sidebar sections
+
+* *Default:* only render sections that have real content (latest release, published package, contributors, website, topics, and so on)
+* *Minimal always-on set (suggestion):* description / topics (if set), website (if set), Activity, Contributors — plus the existing header Pin / Watch / Fork / Star
+* *Owner/maintainer hover affordance:* below populated items, hovering the empty area reveals a `+` control; it opens a short list of addable sections; hovering a row briefly expands a one-line explanation (for example “Releases — publish versioned binaries and notes”)
+* *No README → no Readme link* in About
+
+== Proposal B — README-first home
+
+Either:
+
+. Sticky secondary tabs: *README* | *Code* (default README when present; otherwise Code), or
+. README above a collapsible / below-the-fold file tree
+
+Sticky tabs under the repo nav keep switching cheap without burying meaning under files.
+
+== Mockups
+
+Each step builds on the previous. Source: link:https://github.com/orgs/community/discussions/204347[GitHub Community discussion #204347].
+
+=== Current — empty Releases/Packages + files-first
+
+image::github-repo-visitor-first/current-github-repo-page.png[Current GitHub repo page showing empty Releases and Packages,width=100%]
+
+=== Proposed — README first; empty sections gone; owner + affordance
+
+image::github-repo-visitor-first/poc-readme-first-minimal-sidebar.png[README-first layout with minimal sidebar,width=100%]
+
+=== Hover + → Add section with brief descriptions
+
+image::github-repo-visitor-first/poc-sidebar-hover-add-sections.png[Sidebar hover add-section menu cropped,width=100%]
+
+=== Code tab — file browser; minimal sidebar retained
+
+image::github-repo-visitor-first/poc-code-tab-files.png[Code tab showing file browser with minimal sidebar,width=100%]
+
+== Non-goals
+
+* Removing Releases / Packages when a repo actually uses them
+* Hiding owner tools from owners — only change default visibility and progressive disclosure for visitors
+
+== Prior art / related
+
+* Community workarounds: Refined GitHub, GitHub-Defreshed, and similar — users already paper over density issues
+* Adjacent ideas (tabs next to README, density complaints) exist elsewhere; this thread combines hide-empty sidebar progressive disclosure + README-first / sticky Code↔README tabs with mockups
+
+== Wishlist (GitHub)
+
+* Ship Proposal A (hide empty sidebar sections + owner `+` disclosure) without waiting on a full layout rewrite
+* Ship Proposal B (README | Code sticky tabs or README-above-tree) as the default when a README exists
+* Drop the About **Readme** link when no README is present; stop duplicating header engagement counts in About
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/when-the-file-tree-owns-the-first-viewport/[When the file tree owns the first viewport]
+* Upstream ask: link:https://github.com/orgs/community/discussions/204347[Repo homepage should be visitor-first…]
+
+== Literature
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/visitor-first-repo-homepage/github-community-discussion-204347.md[GitHub Community discussion #204347 snapshot]
+  (2026-08-08) — product feedback body and mockup sequence
+
+== Related
+
+* xref:principles.adoc[Principles] — progressive disclosure; surface what counts
+* xref:philosophy.adoc[Philosophy] — product representation; attention ethics
+* xref:literature.adoc[Literature]
+* link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[When the UI hides what counts]

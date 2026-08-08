@@ -27,6 +27,12 @@ When a concept page and a conversation disagree, update the curated page deliber
  (Gemini export, 2026-08-04)
 | xref:open-with-interrupt.adoc[Docs topic];
  link:https://hci-nerdz.github.io/blog/when-double-click-skips-the-choice/[Essay]
+
+| Visitor-first repo homepage
+| link:visitor-first-repo-homepage/github-community-discussion-204347.md[`github-community-discussion-204347.md`]
+ (Community discussion snapshot, 2026-08-08)
+| xref:visitor-first-repo-homepage.adoc[Docs topic];
+ link:https://hci-nerdz.github.io/blog/when-the-file-tree-owns-the-first-viewport/[Essay]
 |===
 
 == Adding a source

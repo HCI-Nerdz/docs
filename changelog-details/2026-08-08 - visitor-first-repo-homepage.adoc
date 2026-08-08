@@ -1,0 +1,9 @@
+= 2026-08-08 — Visitor-first repo homepage
+
+Documented visitor-first GitHub repository homepage: hide empty owner CTAs, README before the file tree, progressive disclosure for addable sidebar sections.
+
+* New page: `visitor-first-repo-homepage.adoc` (mockups under `images/github-repo-visitor-first/`)
+* Principles row for visitor-first repo homepage
+* Nav and home cross-links
+* Literature: Community discussion #204347 snapshot under `literature/visitor-first-repo-homepage/`
+* Points at site essay and upstream https://github.com/orgs/community/discussions/204347

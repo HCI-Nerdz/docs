@@ -29,6 +29,9 @@
 | Progressive disclosure
 | Budget the first screen; deepen on demand
 
+| Visitor-first repo homepage
+| Hide empty owner CTAs; put README before the file tree; disclose addable sidebar sections on demand
+
 | Instruction flows for decision-tree docs
 | Menu-style paths: one choice at a time, continuations under decisions, shareable URL state
 

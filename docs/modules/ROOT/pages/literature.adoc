@@ -24,6 +24,12 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/open-with-interrupt/gemini-windows-file-handler-selection-dialog.md[Gemini export — Windows File Handler Selection Dialog]
  (2026-08-04)
 | xref:open-with-interrupt.adoc[Open-with interrupt]
+
+| Visitor-first repo homepage
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/visitor-first-repo-homepage/github-community-discussion-204347.md[GitHub Community discussion #204347 snapshot]
+ (2026-08-08);
+ link:https://github.com/orgs/community/discussions/204347[live discussion]
+| xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 |===
 
 Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.adoc[`literature/README.adoc`].
@@ -32,5 +38,6 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 
 * xref:scoped-ux-architecture.adoc[Scoped UX architecture]
 * xref:open-with-interrupt.adoc[Open-with interrupt]
+* xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]

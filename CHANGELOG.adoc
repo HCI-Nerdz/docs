@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-08 — Visitor-first repo homepage
+
+* link:changelog-details/2026-08-08%20-%20visitor-first-repo-homepage.adoc[Details]
+
 == 2026-08-05 — ClearType
 
 * link:changelog-details/2026-08-05%20-%20cleartype.adoc[Details]
