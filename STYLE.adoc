@@ -6,6 +6,6 @@ link:https://github.com/HCI-Nerdz/HCI-Nerdz.github.io/blob/main/STYLE.adoc[HCI-N
 and the philosophy essay link:https://hci-nerdz.github.io/blog/titles-as-orientation/[Titles as orientation].
 
 Antora page titles (`= …`) stay encyclopedia concept names.
-When drafting linked site news/blog titles, follow that STYLE (first-party news omits the org; *as*-framing; attach modifiers).
+When drafting linked site news/blog titles, follow that STYLE (news = outward / shared record; blog = inward / ideas and philosophy; first-party news omits the org; *as*-framing; attach modifiers).
 
 Agent entrypoint: link:AGENTS.md[AGENTS.md].
