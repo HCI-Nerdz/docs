@@ -1,0 +1,9 @@
+= 2026-08-10 — Context-bound settings
+
+Documented context-bound settings: configuration as a dependent process beside the activity UI.
+
+* New page: `context-bound-settings.adoc` (mockups under `images/context-bound-settings/`)
+* Principles row for context-bound settings
+* Nav, home, and literature catalog links
+* Literature: prompt seed under `literature/context-bound-settings/`
+* Points at site essay and demo

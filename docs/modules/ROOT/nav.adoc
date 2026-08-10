@@ -6,6 +6,7 @@
 * xref:pass-through-extensions.adoc[Pass-through extensions]
 * xref:open-with-interrupt.adoc[Open-with interrupt]
 * xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
+* xref:context-bound-settings.adoc[Context-bound settings]
 * xref:cleartype.adoc[ClearType]
 * xref:processing-maps.adoc[Processing maps]
 * xref:prototype-strategy.adoc[Prototype strategy]

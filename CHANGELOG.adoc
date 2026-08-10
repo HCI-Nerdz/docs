@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-10 — Context-bound settings
+
+* link:changelog-details/2026-08-10%20-%20context-bound-settings.adoc[Details]
+
 == 2026-08-08 — Visitor-first repo homepage
 
 * link:changelog-details/2026-08-08%20-%20visitor-first-repo-homepage.adoc[Details]

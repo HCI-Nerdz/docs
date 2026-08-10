@@ -33,6 +33,13 @@ When a concept page and a conversation disagree, update the curated page deliber
  (Community discussion snapshot, 2026-08-08)
 | xref:visitor-first-repo-homepage.adoc[Docs topic];
  link:https://hci-nerdz.github.io/blog/when-the-file-tree-owns-the-first-viewport/[Essay]
+
+| Context-bound settings
+| link:context-bound-settings/prompt-seed-2026-08-10.md[`prompt-seed-2026-08-10.md`]
+ (author framing seed, 2026-08-10)
+| xref:context-bound-settings.adoc[Docs topic];
+ link:https://hci-nerdz.github.io/blog/when-settings-live-across-town/[Essay];
+ link:https://hci-nerdz.github.io/demos/context-bound-settings/[Demo]
 |===
 
 == Adding a source

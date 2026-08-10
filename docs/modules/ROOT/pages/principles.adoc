@@ -32,6 +32,9 @@
 | Visitor-first repo homepage
 | Hide empty owner CTAs; put README before the file tree; disclose addable sidebar sections on demand
 
+| Context-bound settings
+| Settings follow activity state as a dependent surface — show only applicable controls beside the here-and-now; keep the global catalog as escape hatch
+
 | Instruction flows for decision-tree docs
 | Menu-style paths: one choice at a time, continuations under decisions, shareable URL state
 

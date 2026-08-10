@@ -1,0 +1,145 @@
+= Context-bound settings
+:description: Settings as a dependent process — a separate surface that follows activity-UI state and shows only applicable controls for the here-and-now.
+
+*Context-bound settings* are configuration controls presented on a surface *beside* the activity UI, filtered by the activity's live context (view, selection, mode, draft), so the user does not leave the here-and-now to rebuild mental models in a distant Settings tree.
+
+In plain language: settings follow the work as a dependent process — not a storage room across town.
+
+== Core claim
+
+Most products treat Settings as a destination: leave the task, open a catalog, hunt a control, save, walk back.
+That forces the user to recreate the mental context the activity already had.
+
+Preferred shape:
+
+. *Activity UI remains primary* — browsing users, editing a group, composing a policy stay in the main plane
+. *Settings surface is dependent* — a sidebar / inspector / docked pane that *subscribes* to activity context
+. *Applicability predicates* — each setting declares when it is relevant; the pane renders only matches
+. *Global catalog remains* — full search, audit, and power-user jumps still exist; default altitude is context-bound
+
+== Why it exists
+
+Admin consoles and multi-state web apps bury consequence.
+A toggle labeled "External members" means something when you can *see* the Engineering group; it means almost nothing on page 40 of Organization → Advanced.
+
+Desktop inspectors and property sheets approximate the pattern for *selected objects*.
+Cloud consoles rarely do for *activity states*.
+The gap is product representation: the engine already knows which object and mode are live; the Settings gear pretends otherwise.
+
+== Mockups
+
+=== Anti-pattern — settings across town
+
+image::context-bound-settings/settings-across-town.png[Dense admin settings wall disconnected from live work,width=100%]
+
+Deep breadcrumbs, unrelated columns, Save as a single decision over many domains.
+The user who was managing a person now holds that person in working memory while editing SMTP and API quotas.
+
+=== Bound to a selected user
+
+image::context-bound-settings/settings-beside-activity.png[Users table with context-bound settings pane for the selected user,width=100%]
+
+Activity stays visible.
+The pane names the bind (`Context: selected user · Users view`) and lists only user-applicable controls with plain consequences.
+
+=== Same shell, group activity state
+
+image::context-bound-settings/settings-group-context.png[Group editor with settings pane rebound to the group,width=100%]
+
+Meaningful context transition → pane reshapes.
+Membership work and group policy sit in one field of view.
+
+=== Architecture
+
+image::context-bound-settings/context-bound-settings-architecture.png[Activity UI, context bus, and settings surface as dependent process,width=100%]
+
+[cols="1,2"]
+|===
+| Layer | Job
+
+| Activity UI (main process)
+| Owns views, selection, modes; emits context events
+
+| Context bus
+| Message pass, reactive store, or IPC / shared memory across process boundaries
+
+| Settings surface (dependent process)
+| Subscribe → match applicability → render bound controls; write back to the catalog
+
+| Global catalog
+| Authoritative inventory; filtered for presentation, not deleted
+|===
+
+== Applicability model (sketch)
+
+Treat each setting as a record with at least:
+
+* `id` — stable catalog key
+* `appliesWhen` — predicate over context (`view`, `selectionType`, `mode`, `capabilities`, …)
+* `render` — control + short consequence copy
+* `source` — where the value lives (API, policy file, directory attribute)
+
+Example contexts:
+
+* `{ view: "users", selection: { type: "user", id } }` → role, OU, 2SV reset, suspend, transfer
+* `{ view: "groups", mode: "edit", selection: { type: "group", id } }` → join policy, posting, external members, aliases
+* `{ view: "policies", mode: "compose", draftId }` → scope, enforcement, exceptions for *this* draft
+
+Reshape the pane on *meaningful* transitions (view change, selection change, mode change) — not on every keystroke — so spatial memory inside the pane can form.
+
+== Implementation notes
+
+=== In-process web / desktop
+
+A shared store (signals, Redux, Elm architecture, SwiftUI environment, Qt property bindings) is enough when activity and settings share a process.
+The settings module must not own the context; it *observes* it.
+
+=== Cross-process shells
+
+When the activity lives in one process and chrome / settings in another (browser extension side panels, IDE plugin hosts, multi-window desktop), use explicit message passing or shared memory with a versioned context schema.
+Stale context is a correctness bug: show a disconnected state rather than editing the wrong object.
+
+=== Catalog escape hatch
+
+Always offer *Browse all settings* / jump-to-catalog for the current key.
+Context-bound is the default altitude, not a prison.
+
+=== Honesty
+
+Pair with GUI / source-of-truth sync from xref:principles.adoc[Principles]: the pane reflects real config; jump to policy JSON / directory source when the file is authority.
+Pair with feedforward where outcomes are predictable (xref:scoped-ux-architecture.adoc[Scoped UX architecture]).
+
+== Non-goals
+
+* Deleting the global Settings catalog
+* Magical rearrangement that hides causality (always name the bind)
+* Replacing object inspectors — this *generalizes* them to activity states
+* Auto-mutating the *activity* chrome based on ML guesses of intent (different problem class)
+
+== Prior art / related
+
+* Windows property sheets — link:https://learn.microsoft.com/en-us/windows/win32/controls/property-sheets[About Property Sheets]
+* Design-tool properties panels (selection-bound inspectors)
+* Context-aware UIs — link:https://www.interaction-design.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/context-aware-computing-context-awareness-context-aware-user-interfaces-and-implicit-interaction[Context-Aware Computing (IxDF)]
+* Adaptive UI / Event–Condition–Action literature
+* Lucy Suchman — *Plans and Situated Actions* (situated meaning; design-time critique we push toward runtime bind)
+* Henry Lieberman & Ted Selker — *Out of context: Computer systems that adapt to, and learn from, context*
+* Ben Shneiderman — direct manipulation (visibility of the object of interest)
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/when-settings-live-across-town/[When settings live across town]
+* Demo: link:https://hci-nerdz.github.io/demos/context-bound-settings/[Context-bound settings desk]
+
+== Literature
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-bound-settings/prompt-seed-2026-08-10.md[Prompt seed — context-bound settings]
+  (2026-08-10) — originating framing for the dependent-process claim
+
+== Related
+
+* xref:principles.adoc[Principles] — progressive disclosure; GUI / source-of-truth sync
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture] — narrow tools make applicability honest
+* xref:philosophy.adoc[Philosophy] — product representation; attention ethics
+* xref:literature.adoc[Literature]
+* link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[When the UI hides what counts]

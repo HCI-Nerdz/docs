@@ -17,5 +17,6 @@
 - Pass-through extensions: `pass-through-extensions.adoc` — meta-suffix peel for Explorer associations
 - Open-with interrupt: `open-with-interrupt.adoc` — Ctrl+double-click / file middle-click → app picker; recipes for Windows/macOS/Linux
 - Visitor-first repo homepage: `visitor-first-repo-homepage.adoc` — hide empty GitHub sidebar CTAs; README before file tree; upstream https://github.com/orgs/community/discussions/204347
+- Context-bound settings: `context-bound-settings.adoc` — settings as dependent process beside activity UI; applicability predicates; essay `/blog/when-settings-live-across-town/`; demo `/demos/context-bound-settings/`
 - Topics: `scoped-ux-architecture.adoc` (≠ feedforward)
 - Literature: raw conversation sources under `literature/` — catalog page `literature.adoc`; prefer curated topics for teaching, open literature for provenance
