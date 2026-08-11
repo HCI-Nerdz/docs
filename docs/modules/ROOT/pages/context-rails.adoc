@@ -72,8 +72,8 @@ Hover:
 
 Depth:
 
-* A setting caps how far toward the top ancestor segments may climb before *compressing* the lower (rootward) zones, proportional to depth
-* When the left rail expands, compressed zones *unfold* as the user scrolls toward the base of the tree
+* A length ceiling. Segments that fit stay conventional; only the ones that would run off are log-compressed into a reserved end-zone
+* Left sequence is root→leaf, bottom to top, whether the pack sits at the top or the bottom of the edge
 
 File-explorer trees grow downward (root at top).
 Path Edge inverts that on the *left* on purpose: you want the *current* mark first.
@@ -176,9 +176,9 @@ Treat rails as chrome owned by the *ecosystem shell*, not by each page:
 * `pairHover` — when sides share a nav type, hover/focus on either expands both
 * `labelSide` — `top` (no rotated left-edge type)
 * `leftOrder` — `current-first` (top-most = here)
-* `topLength` / `leftLength` — how much of each rail the path stack may occupy (not a reset on expand)
-* Rootward hops shrink first when the rail is full (weight ∝ depth). Rest keeps those weights on expand. Live dock-amplifies the focused hop.
-* Tint mode keeps design-system colors but drops intensity; a pointer spot hints the hue.
+* `topLength` / `leftLength` — a ceiling, not a forced fill. Hops that fit keep a conventional size; only overflow hops share a reserved end-zone (log compression).
+* Left pack sits at the *top* or *bottom* of the left edge. Sequence is always root→leaf, bottom to top — not a transpose.
+* Tint is idle-monochrome (page-color greys). Hover keeps icons and the mono field; a pointer mask reveals stored hop color via a selectable blend mode.
 * `activePlatform.overlay` / `stack[].overlay` — CSS variables or theme tokens for base wash / duo-tone / layer identity
 
 Reshape overlays on *platform change*, not on every in-page click, so spatial and chromatic memory can form.

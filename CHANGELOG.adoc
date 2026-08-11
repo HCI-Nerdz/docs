@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-10 — Path overflow zone and tint-as-hover
+
+* Length is a ceiling; left pack origin; tint is monochrome until hover
+
 == 2026-08-10 — Path length and mode notes
 
 * `topLength` / `leftLength`; expand keeps rootward compression; Tint / Live called out on the topic
