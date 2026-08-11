@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-10 — Path Edge and paired hover
+
+* link:changelog-details/2026-08-10%20-%20path-edge.adoc[Details]
+
 == 2026-08-10 — Map Edge vs Modal Edge variants
 
 * link:changelog-details/2026-08-10%20-%20map-vs-modal-edge.adoc[Details]

@@ -10,44 +10,73 @@ In plain language: streets under skyscrapers, not streets painted on the roof.
 Naming note: conversation also uses *Nav Edge*, *Modal Edge*, and *Context Edge*.
 This page keeps *context rails* as the published concept name and treats the names below as *variants* of the same edge affordance.
 
-== Two variants (Map Edge vs Modal Edge)
+== Variants
 
-The edge affordance is shared (thin top/left presence, hover expand, color identity).
-What happens *on click* splits into two designs worth holding side by side:
+The edge affordance is shared (thin top/left presence, hover expand).
+If *top and left are the same nav type*, hovering *either* edge expands *both* — they present together.
+Labels stay on the *top* edge (readable). Do not rotate type on the left.
 
-[cols="1,2,2"]
+What happens *on click*, and what the idle color *means*, splits into variants worth holding side by side:
+
+[cols="1,2,2,2"]
 |===
-| | Variant A — *Map Edge* (context rails default) | Variant B — *Modal Edge*
+| | A — *Map Edge* | B — *Modal Edge* | C — *Path Edge*
 
 | Metaphor
 | Streets under skyscrapers; summon a street map
 | Windows on windows; current activity is the top-most sheet
+| The rail *is* the breadcrumb — a candy-stripe of the exact path
 
 | Edge means
 | “Open ecosystem navigation”
 | “This node’s identity — peel back the stack”
+| “This is the path you took in the org tree”
 
 | On click
-| Full *wireframe / directory* of platforms, modes, roles
-| *View Transitions* (or equivalent) slide the current page down and right; colored ancestor layers show behind
-
-| Navigation model
-| Lateral jump across a catalog/map
-| Climb the *path* from root → current (recursive modal ancestry)
+| Full *wireframe / directory*
+| Slide the sheet; colored ancestor layers behind
+| Jump to that path node (level), then work *in* it
 
 | Color
-| Stable overlay per *platform* while you work there
-| Edge (and layers) encode the *path nodes*; current sheet wears the top node
+| One overlay per *platform* while you work there
+| Current sheet + stacked layer colors
+| A *series* of unique colors = this exact path (not merely “tier 3”)
+
+| Left edge
+| Same color as top; expand together; no icon toolbar
+| Sheet chrome; layers underneath
+| Current level *top-most* (one mark); ancestors compress downward
 
 | Tension
-| Great for “where else can I go in the suite?”
-| Great for “how did I get here / what am I on top of?” — weaker as a full suite directory
+| Great for “where else can I go?”
+| Great for “what am I on top of?”
+| Great for “where am I in the tree?” — weaker as a full lateral directory
 |===
 
-They conflict if you force one click to mean both “show me the whole map” and “reveal my ancestry stack.”
-Prefer shipping *both* as explicit modes (or different edges / modifiers) while the pattern is still under study.
+They conflict if one click must mean map *and* stack *and* path jump.
+Prefer explicit modes (or different edges / modifiers) while the pattern is still under study.
 
-Prototype for Variant B: link:https://hci-nerdz.github.io/context-rails/demos/modal-edge/[Modal Edge · VT stack].
+* Variant B: link:https://hci-nerdz.github.io/context-rails/demos/modal-edge/[Modal Edge · VT stack]
+* Variant C: link:https://hci-nerdz.github.io/context-rails/demos/path-edge/[Path Edge · breadcrumb colors]
+
+=== Path Edge notes
+
+Idle rails show the path as color segments (Google-shaped depth: Home → Cloud → Console → Billing → Accounts — use your own tokens; primary brand colors can seed early hops without forcing “every app = one brand hue”).
+A unique *sequence* identifies the path even when two apps share a hue.
+
+Hover:
+
+* *Top* — horizontal text labels only (no vertical / rotated type)
+* *Left* — one mark per *level* (not a sidebar of in-app destinations). Current level sits at the top-left so you see *where you are* first and the corner stays clean
+* Icon soup is a non-goal: icons rarely carry meaning alone; a cue word under an enlarged icon mostly helps as a *shape combo*. Here the user needs to *identify the level and enter it*. Background color per hop does that memory work; at most one mark per hop
+
+Depth:
+
+* A setting caps how far toward the top ancestor segments may climb before *compressing* the lower (rootward) zones, proportional to depth
+* When the left rail expands, compressed zones *unfold* as the user scrolls toward the base of the tree
+
+File-explorer trees grow downward (root at top).
+Path Edge inverts that on the *left* on purpose: you want the *current* mark first.
 
 == Core claim
 
@@ -61,9 +90,10 @@ Preferred shape:
 
 . *Content stays the skyscraper* — the activity UI fills the plane; local page chrome stays local
 . *Rails live at the edges* — top and/or left (same or different context types) as summonable streets
-. *Hover expands* — enough width for a label, or color-only presence in mature systems
+. *Hover expands the pair* — if top and left are the same nav type, either hover presents both; labels on the top edge only
 . *Click opens wireframe ecosystem nav* (Variant A / Map Edge) — a dedicated substrate UI, not another header row
 . *Or click reveals modal ancestry* (Variant B / Modal Edge) — slide the current sheet; colored layers are prior nodes
+. *Or the rail is the path* (Variant C / Path Edge) — stacked unique colors for the exact breadcrumb; one mark per level, current at top-left
 . *Platform / node overlay colors* — stable washes so activity identity is visual and non-competing
 
 == Why it exists
@@ -98,11 +128,28 @@ image::context-rails/rails-idle-edges.png[Desktop app with thin top and left con
 Content owns the plane.
 Thin edge bars hint at substrate without stealing attention.
 
-=== Hover expand
+=== Hover expand (same nav type on both edges)
 
-image::context-rails/rails-hover-expand.png[Left rail widened on hover with ecosystem label,width=100%]
+image::context-rails/rails-hover-expand.png[Top and left rails expanded together in the same teal,width=100%]
 
-Hover grows the rail until a label fits — or, when the system is mature, color alone is enough.
+If the top and left rails are the *same* navigation node type, they stay the same color and they *present together*.
+Hover either edge — both expand. Readable labels live on the *top*.
+The left rail is not a conventional icon sidebar: no column of unclear glyphs pretending to be IA.
+
+=== Path Edge idle — breadcrumb as color series
+
+image::context-rails/path-edge-idle.png[Thin L-rails striped with the path's unique colors,width=100%]
+
+Not one wash around the frame: a *series* of colors for the exact path in the org tree.
+Orientation is instant even before any label appears.
+
+=== Path Edge hover — labels on top, current mark at top-left
+
+image::context-rails/path-edge-hover.png[Expanded path rails with top labels and one mark per level on the left,width=100%]
+
+Top edge carries the words.
+Left edge carries one mark per hop, current level first.
+Click a hop to enter that level — not to hunt among in-app icons.
 
 === Wireframe ecosystem nav
 
@@ -124,7 +171,12 @@ Treat rails as chrome owned by the *ecosystem shell*, not by each page:
 * `sides` — `top`, `left`, or both (optionally different context types per side)
 * `idleWidth` / `hoverWidth` — thin presence vs label-ready expansion
 * `labelMode` — `text` | `color-only`
-* `onActivate` — Variant A: open wireframe map; Variant B: reveal ancestry stack via View Transitions (slide down+right)
+* `onActivate` — A: open wireframe map; B: reveal ancestry stack; C: jump to path node
+* `path[].color` — unique hop colors (sequence = this breadcrumb); optional `path[].mark` (one per level)
+* `pairHover` — when sides share a nav type, hover/focus on either expands both
+* `labelSide` — `top` (no rotated left-edge type)
+* `leftOrder` — `current-first` (top-most = here)
+* `compressCeiling` — how far ancestors may climb before rootward segments squeeze; expanded rail unfolds on scroll
 * `activePlatform.overlay` / `stack[].overlay` — CSS variables or theme tokens for base wash / duo-tone / layer identity
 
 Reshape overlays on *platform change*, not on every in-page click, so spatial and chromatic memory can form.
@@ -186,6 +238,7 @@ Hover expand is progressive enhancement on desktop.
 * Mobile gesture design as the first target (desktop/web ecosystem shells first)
 * Cloning any vendor's proprietary console chrome
 * Painting streets on the skyscraper (header overload) and calling it “navigation”
+* Replacing the edge with a conventional icon rail (icons as the *goal*; cue-words as a patch for weak glyphs)
 
 == Prototype
 
@@ -193,6 +246,7 @@ Hover expand is progressive enhancement on desktop.
 * Site demo: link:https://hci-nerdz.github.io/demos/context-rails/[Context rails desk]
 * Multi-framework MVP: link:https://hci-nerdz.github.io/context-rails/[context-rails] · link:https://github.com/HCI-Nerdz/context-rails[repo]
 * Modal Edge demo: link:https://hci-nerdz.github.io/context-rails/demos/modal-edge/[VT ancestry stack]
+* Path Edge demo: link:https://hci-nerdz.github.io/context-rails/demos/path-edge/[breadcrumb colors]
 
 == Literature
 

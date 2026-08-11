@@ -1,0 +1,6 @@
+= 2026-08-10 — Path Edge and paired hover
+
+* Hover mockup now matches idle: top + left same color, both present together
+* Variant C — Path Edge: breadcrumb as a color series; labels on top; current mark top-left; compress/unfold
+* Non-goal: conventional icon sidebars
+* Images: `rails-hover-expand.png`, `path-edge-idle.png`, `path-edge-hover.png`
