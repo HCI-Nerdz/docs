@@ -1,0 +1,155 @@
+= File manager actions
+:description: Revive DES-EMA so apps register context-menu actions once under an XDG catalog instead of N file-manager formats.
+
+A *file manager action* is a third-party command that appears in a file manager's context menu for selected files or folders (or the folder background) and runs a declared `Exec` line with those paths.
+
+In plain language: install once, show up in every file manager — the same honesty Desktop Entry Spec already gives application launchers.
+
+== Core claim
+
+File managers should load third-party context actions from one XDG catalog:
+
+`$XDG_DATA_HOME` and `$XDG_DATA_DIRS` + `file-manager/actions/*.desktop`
+
+That is the path already sketched by **DES-EMA** (*Desktop Entry Specification — Extension for Menus and Actions*, draft ~0.15, 2010). Mainstream file managers never converged on it. They should.
+
+Apps must not ship N proprietary emitters (Dolphin service menus, Nemo actions, Thunar UCA XML, Nautilus scripts, …) as the *primary* contract. Emitters are adapters for today's FMs until DES-EMA is a living consumer API.
+
+== Why it exists
+
+Launchers share Desktop Entry Spec. Context menus do not:
+
+[cols="1,2,2"]
+|===
+| File manager | Action mechanism today | Shared XDG lookup?
+
+| KDE Dolphin
+| Service menus (`.desktop` under `kio/servicemenus`, `kservices5/6`)
+| No — KDE-specific directories and keys (`X-KDE-Priority`, `ServiceTypes`)
+
+| GNOME Nautilus
+| Scripts directory and/or Python extensions / third-party action hosts
+| No — scripts are not DES-EMA; FileManager Actions is archived
+
+| Cinnamon Nemo
+| `.nemo_action` files
+| No — Nemo-specific schema
+
+| XFCE Thunar
+| Custom Actions XML (`uca.xml`)
+| No — single user XML document
+
+| PCManFM / helloSystem Filer
+| Partial DES-EMA under `file-manager/actions`
+| Yes for those apps — not for the ecosystem
+
+| Windows File Explorer
+| Classic registry verbs vs Win11 `IExplorerCommand` + package identity
+| Different OS; listed to show the same *job* exists elsewhere
+|===
+
+`org.freedesktop.FileManager1` only covers *show this folder / highlight these items* in the FM. It does not register context-menu actions. Desktop Menu Spec covers application menus, not FM selection actions.
+
+Result: every IDE, archive tool, and VCS GUI reinvents installers — or skips Linux context menus entirely. Users lose discoverability; vendors burn adapter tax.
+
+== DES-EMA revival (recommended)
+
+Treat DES-EMA as the FreeDesktop-trackable target. Keep the 2010 draft's core, tighten naming, and require consumer support in new FM majors.
+
+=== On-disk layout
+
+* Search path: `$XDG_DATA_HOME/file-manager/actions/` then each `$XDG_DATA_DIRS/…/file-manager/actions/`
+* One action or menu per `.desktop` file; unique `desktop_file_id`
+* Optional `level-zero.directory` for top-level ordering (first found wins)
+
+=== Minimal action shape
+
+[source,ini]
+----
+[Desktop Entry]
+Type=Action
+Name=Open folder in DevCentr
+Tooltip=Open this folder in DevCentr
+Icon=folder
+Profiles=on_folder;
+
+[X-Action-Profile on_folder]
+MimeTypes=inode/directory;
+SelectionCount=< 2
+Exec=/usr/bin/dev-center --mode=open --path=%f
+----
+
+Menus group items:
+
+[source,ini]
+----
+[Desktop Entry]
+Type=Menu
+Name=DevCentr
+ItemsList=devcentr-new-file;devcentr-new-project;devcentr-open;
+----
+
+=== Exec placeholders
+
+Align with Desktop Entry Spec where possible (`%f`, `%F`, `%u`, `%U`). Document FM-common extras carefully:
+
+* `%d` / `%D` — containing directories (widely used; meanings vary slightly — specify)
+* Prefer `%f`/`%F` for portable actions
+
+Profiles may constrain `MimeTypes`, `Schemes`, and `SelectionCount` so background vs selection stay honest.
+
+=== Security
+
+* User-local overrides beat system packages (standard XDG precedence)
+* No silent elevation; actions run as the FM's user
+* FMs should show the action's `Name`/`Tooltip` and allow disable in settings
+* Do not execute unmarked binaries from untrusted data dirs without the same trust model used for `.desktop` launchers
+
+== Migration map (adapters)
+
+Until consumers exist, apps may generate:
+
+[cols="1,2"]
+|===
+| Target | Adapter from DES-EMA
+
+| Dolphin
+| Map `Type=Action` profiles → `Type=Service` + `Actions=` desktop actions; install under `kio/servicemenus`
+
+| Nemo
+| Map to `.nemo_action` (`Exec`, `Extensions=dir;`, `Selection=`)
+
+| Thunar
+| Map to `<action>` elements in `uca.xml` with stable `unique-id`
+
+| Nautilus
+| Temporary scripts under `nautilus/scripts/` *or* a DES-EMA loader extension
+
+| DES-EMA consumers
+| Write the canonical files only — no second format
+|===
+
+DevCentr's installer already writes DES-EMA plus these adapters from one action list — a client of this proposal, not a replacement for it.
+
+== What it is not
+
+* Not a replacement for MIME default apps (`xdg-mime`) or Open With
+* Not `org.freedesktop.FileManager1` (reveal-in-FM only)
+* Not application menu entries (`applications/*.desktop`)
+* Not a demand that every FM drop native extension APIs — native APIs remain for deep plugins; *simple Exec actions* should share DES-EMA
+
+== Wishlist (vendors)
+
+* Nautilus, Dolphin, Nemo, Thunar, PCManFM: load `file-manager/actions` natively (or ship a thin DES-EMA bridge)
+* FreeDesktop: republish DES-EMA as an active spec with test vectors and a `desktop-file-validate`-class checker for Action/Menu types
+* Distros: document the path next to Desktop Entry Spec in packaging guidelines
+* macOS Finder / Windows Explorer: out of band — same *user job*, different host contracts (noted for cross-platform apps)
+
+== Related
+
+* xref:open-with-interrupt.adoc[Open-with interrupt] — gesture to choose a handler; actions are declared verbs in the menu
+* xref:pass-through-extensions.adoc[Pass-through extensions] — association honesty for meta-suffixes
+* xref:principles.adoc[Principles] — surface what the system already knows; parity of affordances
+* link:https://hellosystem.github.io/docs/developer/filer-context-menus.html[helloSystem — Extending Filer context menus] (DES-EMA draft notes)
+* link:https://specifications.freedesktop.org/desktop-entry-spec/latest/[Desktop Entry Specification]
+* link:https://www.freedesktop.org/wiki/Specifications/file-manager-interface/[File Manager D-Bus Interface] (`FileManager1`)

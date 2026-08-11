@@ -64,6 +64,9 @@
 
 | Attention ethics
 | Do not spend the user's brain for engagement metrics
+
+| Navigating by content
+| Pretty names are human labels; systems wire on content identity or explicit pointers — not on the label alone
 |===
 
 These principles come from filed issues, discussions, and shipping products — not from abstract style guides.

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Navigating by content — stable hash core with detachable name label">
+  <title>Navigating by content</title>
+  <defs>
+    <linearGradient id="core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c6b6e"/>
+      <stop offset="100%" stop-color="#145a5c"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#core)" d="M64 14 L104 37 V83 L64 106 L24 83 V37 Z"/>
+  <path fill="none" stroke="#e6eef2" stroke-width="3" stroke-linecap="round"
+        d="M48 58h32M52 70h24M56 46h16"/>
+  <text x="64" y="92" text-anchor="middle" fill="#b8d4d5" font-family="IBM Plex Mono, monospace" font-size="9">#a3f…</text>
+  <line x1="104" y1="50" x2="118" y2="36" stroke="#d4568c" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="72" y="14" width="52" height="22" rx="4" fill="#f4f7f8" stroke="#d4568c" stroke-width="2"/>
+  <text x="98" y="29" text-anchor="middle" fill="#142029" font-family="Syne, sans-serif" font-size="9" font-weight="700">/docs/api</text>
+</svg>

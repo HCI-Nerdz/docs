@@ -1,5 +1,20 @@
 = Changelog
 
+
+== 2026-08-11 � Math formula plumbing
+
+* Enable stem: latexmath and KaTeX (site-math.js) on every docs page, even when unused
+
+== 2026-08-11 — Navigating by content
+
+* Analysis + proposal: labels vs wires; CAS, mutable pointers, reverse consumers
+* Mermaid rendering via supplemental `site-mermaid.js`
+* link:changelog-details/2026-08-11%20-%20navigating-by-content.adoc[Details]
+
+== 2026-08-11 — Edge Bar is the topic name
+
+* The Antora page, nav, and hub link say Edge Bar; slug stays `context-rails`
+
 == 2026-08-11 — Framework impedance match
 
 * Context-rails topic heading matches the README

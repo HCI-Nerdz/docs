@@ -1,0 +1,209 @@
+= Navigating by content
+:description: Analysis and proposal — treat pretty URLs as human labels, not functional wires; combine CAS, mutable pointers, and reverse consumer graphs.
+:navtitle: Navigating by content
+
+image::navigating-by-content/icon.svg[Navigating by content icon — hash core with detachable URL label,width=120]
+
+*Navigating by content* is the claim that **identity should follow the thing**, not the pretty name we hang on it today.
+Canonical URLs, package names, and doc paths stay useful for humans.
+They must not be the only way machines and dependents find the resource.
+
+This is a UX argument and, more sharply, a *DevX* argument: developers should not spend attention chasing renamed strings across repos.
+
+== Core claim
+
+. *Labels are for people* — `/docs/api/auth`, `awesome-lib`, `hci-nerdz.github.io/...` orient readers.
+. *Wires are for systems* — fetch, cite, depend, and refactor should bind to *content identity* (hash / GUID / graph node) or to an explicit mutable pointer that resolves to that identity.
+. *When labels must change*, producers know their consumers (reverse dependency graph) so updates are search-and-fix under known trees — not org-wide guesswork.
+
+== Why it hurts
+
+Cross-repo prose is the weak edge of the modern web and of multi-repo orgs.
+Package registries already expose reverse dependents for *code*.
+Markdown, AsciiDoc, CI configs, and marketing sites still bake path strings as if they were APIs.
+
+Symptoms:
+
+* Rename a docs path → another project's README and Antora nav rot
+* Move a site → every hardcoded URL becomes archaeology
+* AI agents sweep the wrong trees because nobody recorded *who depends on you*
+
+[mermaid]
+----
+flowchart LR
+  subgraph today [Today — label is the wire]
+    P[Producer renames /docs/v1]
+    C1[Consumer README]
+    C2[Sibling Antora nav]
+    C3[Blog citation]
+    P -.->|string break| C1
+    P -.->|string break| C2
+    P -.->|string break| C3
+  end
+----
+
+== Two naming failures (orthogonal layers)
+
+Research and industry work on *naming* often gets conflated.
+They solve different bounds.
+
+[cols="1,2,2"]
+|===
+| Layer | What it names | Representative work
+
+| Network / delivery
+| How to fetch named data without depending on a host IP
+| Named Data Networking (NDN) — e.g. NSF Future Internet work; Dr. Lan Wang / University of Memphis Networking Research Lab as a known PI node in that community
+
+| Application / DevX
+| How dependents stay correct when symbols, paths, or docs change
+| Kythe / Sourcegraph graphs; OpenRewrite multi-repo recipes; Unison content-addressed definitions; producer-owned `CONSUMERS.md`
+|===
+
+[mermaid]
+----
+flowchart TB
+  subgraph app [Application — semantic life cycle]
+    AST[AST / docs / manifests]
+    REV[Reverse consumer graph]
+    REF[Refactor / PRs]
+    AST --> REV --> REF
+  end
+  subgraph net [Network — delivery]
+    NAME[Content or hierarchical name]
+    CACHE[Nearest cache / peer]
+    NAME --> CACHE
+  end
+  app -.->|"opaque name string"| net
+----
+
+NDN (and similar ICN designs) decouple *data from location*.
+They do **not** rewrite a Markdown link when you rename `/docs/v1` to `/docs/v2`.
+To the network those are unrelated names.
+
+Conversely, a perfect `CONSUMERS.md` works the same whether bytes travel over TCP/IP or NDN.
+
+=== UX complement without collapsing the layers
+
+The *human* want is one sentence: I should not care where the file lives or what we currently call it, if it is still the same thing.
+
+That want is served by *stacking* layers, not by pretending one layer does both jobs:
+
+* **CAS** answers “same bytes?”
+* **Mutable pointer** answers “same intent after an edit?”
+* **Reverse consumers** answer “who still holds an old *label*?”
+* **Redirects / aliases** absorb breaks on today's IP web
+
+== Combined architecture
+
+[mermaid]
+----
+flowchart TB
+  Consumer[Consumer app / docs / agent]
+  Hash["Content hash / node id\n(immutable identity)"]
+  Pointer["Mutable human pointer\n(/org/docs/auth → current hash)"]
+  Meta["Self-describing metadata\ncanonical path, aliases, signatures"]
+  ConsumersFile["CONSUMERS.md / registry\n(who holds labels)"]
+
+  Consumer -->|"prefer"| Hash
+  Consumer -->|"or resolve"| Pointer
+  Pointer --> Hash
+  Hash --> Meta
+  ConsumersFile -->|"when labels must move"| Consumer
+----
+
+=== Content-addressed identity
+
+If `file_A` moves and renames but bytes are unchanged, stem:[Hash(Bytes_{old}) = Hash(Bytes_{new})].
+Consumers that stored the hash still fetch the right object.
+Human path metadata can ride *inside* or *beside* the object once retrieved.
+
+=== Mutable pointers for updates
+
+Edits change bytes → a new hash:
+
+[stem]
+++++
+Hash(Bytes_{v1}) \neq Hash(Bytes_{v2})
+++++
+
+A fixed semantic name (`/docs/latest/auth`, NDN hierarchical name, IPNS-style pointer) must advance to the new hash.
+Without that pointer layer, CAS alone freezes you on `v1` forever — which is correct for immutability and wrong for “give me the current auth guide.”
+
+=== Reverse consumer manifests (today's gap)
+
+Until the world stops wiring on strings, producers maintain an explicit *inbound* list:
+
+[source,markdown]
+----
+# Consumers (reverse dependencies)
+
+| Consumer | Tree | Coupling | Notes |
+|---|---|---|---|
+| docs hub | `…/dev-centr/docs` | antora / xref | playbook + nav |
+| sibling site | `…/foo/bar` | hardcoded URL | `https://example.com/docs/…` |
+----
+
+Rules that make it work:
+
+. Own the list on the *producer*
+. Record coupling type (package import vs URL vs Antora component vs secret name)
+. Prefer aliases over renames
+. Let agents search listed trees instead of guessing
+
+Name the file `CONSUMERS.md` or `REVERSE_DEPENDENCIES.md` — not bare `DEPENDENCIES.md` (that usually means outbound deps / SBOM).
+
+=== Pragmatic absorb layer
+
+Cool URIs don't change (W3C).
+When they must: 301s, Antora page aliases, vanity domains, CI link checkers.
+These do not replace identity; they buy time.
+
+== Relationship to connectome-fs
+
+link:https://github.com/connectome-fs/connectome-fs[connectome-fs] attacks the same mistake at the filesystem / association plane:
+path strings are navigation slices; *nodes and edges* are truth.
+Unison shows content-addressed identity for code definitions; connectome-fs aims at the substrate under many languages and non-code artifacts.
+
+See the sibling explanation on the connectome-fs docs hub (Navigating by content) and xref-style links from *Semantic change units*.
+
+== Near-term adoption (multi-repo orgs)
+
+. Freeze public path contracts where possible; alias instead of rename
+. Add `CONSUMERS.md` on anything other people hardcode
+. Teach agents: read consumers → search those trees → open PRs
+. Keep redirects forever for anything that ever was public
+. Prefer hub docs (`xref:`) over raw foreign URLs
+
+== Long-term adoption (internet-shaped)
+
+. Publish content-addressed artifacts (or graph nodes) as the cite/fetch target
+. Keep human URLs as *labels* that resolve through a pointer service
+. Grow reverse-deps from manifests toward indexed graphs (Kythe-class) where scale demands
+. Treat NDN/ICN as a delivery upgrade, not a substitute for application graphs
+
+== Public faces
+
+[cols="1,2"]
+|===
+| Face | Where
+
+| Relatable essay
+| link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[When renaming a page breaks half your docs]
+
+| Technical essay
+| link:https://hci-nerdz.github.io/blog/when-the-name-is-not-the-wire/[When the name is not the wire]
+
+| Interactive mock
+| link:https://hci-nerdz.github.io/demos/navigating-by-content/[Demo]
+
+| connectome-fs
+| link:https://connectome-fs.github.io/connectome-fs/[Project site] · docs explanation *Navigating by content*
+|===
+
+== Literature / sources
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/gemini-dependency-management-and-network-architecture.md[Gemini export — Dependency Management and Network Architecture] (2026-08-11)
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/cursor-analysis-seed-2026-08-11.md[Cursor analysis seed] (2026-08-11)
+* W3C: Cool URIs don't change
+* NDN project materials; Unison language; Sourcegraph / Kythe; OpenRewrite / Moderne

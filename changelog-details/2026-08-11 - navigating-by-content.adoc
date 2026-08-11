@@ -1,0 +1,14 @@
+= Navigating by content — changelog detail
+:description: Docs topic, literature, Mermaid, principles row.
+
+== Added
+
+* Antora topic `navigating-by-content.adoc` with mermaid stack diagrams and `CONSUMERS.md` shape
+* Literature: Gemini export + Cursor analysis seed under `literature/navigating-by-content/`
+* Principle row: pretty names as labels, not wires
+* Supplemental Mermaid JS/CSS (ported from DevCentr docs pattern)
+
+== Why
+
+Cross-repo string coupling (especially docs URLs) is a DevX / cognitive-tax failure.
+The topic separates network naming (NDN) from application reverse-deps while proposing a stacked fix: content-addressed identity, mutable human pointers, and producer-owned consumer manifests.

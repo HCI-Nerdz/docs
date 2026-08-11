@@ -1,13 +1,13 @@
-= Context rails
+= Edge Bar
 :description: Edge-summoned ecosystem navigation — thin top/left rails that expand on hover and open a wireframe platform map, with stable color overlays per subplatform.
 
-*Context rails* are thin bars on the top edge, left edge, or both that act as a *nav substrate* for an ecosystem of platforms or modes.
+*Edge Bar* puts thin bars on the top edge, left edge, or both that act as a *nav substrate* for an ecosystem of platforms or modes.
 On hover they widen enough for a label (or, in a mature system, stay unlabeled — color alone signals “this edge summons context”).
 On click they open a full *wireframe* navigation interface between platforms — instead of stuffing subsections into the content header.
 
 In plain language: streets under skyscrapers, not streets painted on the roof.
 
-Naming note: the shipping product name is *Edge Bar*. This page slug stays `context-rails`.
+The thinking name is *context rails* (page slug and repo stay `context-rails`).
 Variants are *Map Edge*, *Modal Edge*, and *Path Edge*.
 
 == Variants
@@ -185,7 +185,7 @@ Reshape overlays on *platform change*, not on every in-page click, so spatial an
 
 == Framework impedance match
 
-Context rails are *long-lived shell chrome* with hover, open-state, and platform identity.
+Edge Bar is *long-lived shell chrome* with hover, open-state, and platform identity.
 They shine where the UI runtime can hold that state next to routed content.
 
 [cols="1,2,2"]
@@ -245,8 +245,8 @@ Hover expand is progressive enhancement on desktop.
 == Prototype
 
 * Blog essay: link:https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/[When platforms overload the entrypoint]
-* Site demo: link:https://hci-nerdz.github.io/demos/context-rails/[Context rails desk]
-* Multi-framework MVP: link:https://hci-nerdz.github.io/context-rails/[context-rails] · link:https://github.com/HCI-Nerdz/context-rails[repo]
+* Site demo: link:https://hci-nerdz.github.io/demos/context-rails/[Edge Bar desk]
+* Multi-framework MVP: link:https://hci-nerdz.github.io/context-rails/[Edge Bar] · link:https://github.com/HCI-Nerdz/context-rails[repo]
 * Modal Edge demo: link:https://hci-nerdz.github.io/context-rails/demos/modal-edge/[VT ancestry stack]
 * Path Edge demo: link:https://hci-nerdz.github.io/context-rails/demos/path-edge/[breadcrumb colors]
 

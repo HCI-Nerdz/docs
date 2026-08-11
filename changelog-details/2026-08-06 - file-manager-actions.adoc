@@ -1,0 +1,10 @@
+= 2026-08-06 — File manager actions
+
+Proposed revival of DES-EMA as the shared XDG lookup for file-manager context-menu actions.
+
+* New page: `file-manager-actions.adoc`
+* Fragmentation table (Dolphin / Nemo / Thunar / Nautilus / PCManFM)
+* Recommended on-disk layout, profile keys, security notes
+* Migration map for today's proprietary formats
+* Nav, home, principles cross-links
+* Changelog entry

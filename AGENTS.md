@@ -18,6 +18,8 @@
 - Open-with interrupt: `open-with-interrupt.adoc` — Ctrl+double-click / file middle-click → app picker; recipes for Windows/macOS/Linux
 - Visitor-first repo homepage: `visitor-first-repo-homepage.adoc` — hide empty GitHub sidebar CTAs; README before file tree; upstream https://github.com/orgs/community/discussions/204347
 - Context-bound settings: `context-bound-settings.adoc` — settings as dependent process beside activity UI; applicability predicates; essay `/blog/when-settings-live-across-town/`; demo `/demos/context-bound-settings/`
-- Context rails: `context-rails.adoc` — edge-summoned ecosystem nav (top/left rails → wireframe platform map; overlay colors); essay `/blog/when-platforms-overload-the-entrypoint/`; demo `/demos/context-rails/`; MVP `HCI-Nerdz/context-rails`
+- Edge Bar: `context-rails.adoc` (slug / thinking name: context rails) — edge-summoned ecosystem nav (top/left rails → wireframe platform map; overlay colors); essay `/blog/when-platforms-overload-the-entrypoint/`; demo `/demos/context-rails/`; MVP `HCI-Nerdz/context-rails`
+- Navigating by content: `navigating-by-content.adoc` — labels vs wires; CAS + mutable pointers + `CONSUMERS.md`; essays `/blog/when-renaming-a-page-breaks-half-your-docs/` + `/blog/when-the-name-is-not-the-wire/`; demo `/demos/navigating-by-content/`; sibling connectome-fs explanation
 - Topics: `scoped-ux-architecture.adoc` (≠ feedforward)
 - Literature: raw conversation sources under `literature/` — catalog page `literature.adoc`; prefer curated topics for teaching, open literature for provenance
+- Mermaid: `supplemental-ui/js/site-mermaid.js` + `css/site-mermaid.css` (same pattern as DevCentr docs)
