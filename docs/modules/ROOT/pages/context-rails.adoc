@@ -25,7 +25,7 @@ What happens *on click*, and what the idle color *means*, splits into variants w
 | Metaphor
 | Streets under skyscrapers; summon a street map
 | Windows on windows; current activity is the top-most sheet
-| The rail *is* the breadcrumb — a candy-stripe of the exact path
+| The edge is a path trace — a candy-stripe of the hops you took
 
 | Edge means
 | “Open ecosystem navigation”
@@ -93,7 +93,7 @@ Preferred shape:
 . *Hover expands the pair* — if top and left are the same nav type, either hover presents both; labels on the top edge only
 . *Click opens wireframe ecosystem nav* (Variant A / Map Edge) — a dedicated substrate UI, not another header row
 . *Or click reveals modal ancestry* (Variant B / Modal Edge) — slide the current sheet; colored layers are prior nodes
-. *Or the rail is the path* (Variant C / Path Edge) — stacked unique colors for the exact breadcrumb; one mark per level, current at top-left
+. *Or the edge is a path trace* (Variant C / Path Edge) — stacked unique colors for the hops; one mark per level, current at top-left
 . *Platform / node overlay colors* — stable washes so activity identity is visual and non-competing
 
 == Why it exists
