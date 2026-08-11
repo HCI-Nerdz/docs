@@ -1,0 +1,8 @@
+= 2026-08-10 — Map Edge vs Modal Edge variants
+
+Document two click-behaviors for the shared edge affordance.
+
+* Variant A — Map Edge (wireframe / directory summon) — existing context-rails default
+* Variant B — Modal Edge (View Transitions slide; colored ancestry layers)
+* Naming aliases: Nav Edge, Context Edge, Modal Edge
+* MVP demo: `https://hci-nerdz.github.io/context-rails/demos/modal-edge/`

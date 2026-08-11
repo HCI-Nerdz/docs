@@ -7,6 +7,48 @@ On click they open a full *wireframe* navigation interface between platforms —
 
 In plain language: streets under skyscrapers, not streets painted on the roof.
 
+Naming note: conversation also uses *Nav Edge*, *Modal Edge*, and *Context Edge*.
+This page keeps *context rails* as the published concept name and treats the names below as *variants* of the same edge affordance.
+
+== Two variants (Map Edge vs Modal Edge)
+
+The edge affordance is shared (thin top/left presence, hover expand, color identity).
+What happens *on click* splits into two designs worth holding side by side:
+
+[cols="1,2,2"]
+|===
+| | Variant A — *Map Edge* (context rails default) | Variant B — *Modal Edge*
+
+| Metaphor
+| Streets under skyscrapers; summon a street map
+| Windows on windows; current activity is the top-most sheet
+
+| Edge means
+| “Open ecosystem navigation”
+| “This node’s identity — peel back the stack”
+
+| On click
+| Full *wireframe / directory* of platforms, modes, roles
+| *View Transitions* (or equivalent) slide the current page down and right; colored ancestor layers show behind
+
+| Navigation model
+| Lateral jump across a catalog/map
+| Climb the *path* from root → current (recursive modal ancestry)
+
+| Color
+| Stable overlay per *platform* while you work there
+| Edge (and layers) encode the *path nodes*; current sheet wears the top node
+
+| Tension
+| Great for “where else can I go in the suite?”
+| Great for “how did I get here / what am I on top of?” — weaker as a full suite directory
+|===
+
+They conflict if you force one click to mean both “show me the whole map” and “reveal my ancestry stack.”
+Prefer shipping *both* as explicit modes (or different edges / modifiers) while the pattern is still under study.
+
+Prototype for Variant B: link:https://hci-nerdz.github.io/context-rails/demos/modal-edge/[Modal Edge · VT stack].
+
 == Core claim
 
 Many cloud consoles and suite entrypoints *embed new platforms inside the old one's chrome*.
@@ -20,8 +62,9 @@ Preferred shape:
 . *Content stays the skyscraper* — the activity UI fills the plane; local page chrome stays local
 . *Rails live at the edges* — top and/or left (same or different context types) as summonable streets
 . *Hover expands* — enough width for a label, or color-only presence in mature systems
-. *Click opens wireframe ecosystem nav* — a dedicated substrate UI, not another header row
-. *Platform overlay colors* — each subplatform assumes a stable base overlay (duo-tone, radial wash) on the ultimate base so activity identity is visual and non-competing
+. *Click opens wireframe ecosystem nav* (Variant A / Map Edge) — a dedicated substrate UI, not another header row
+. *Or click reveals modal ancestry* (Variant B / Modal Edge) — slide the current sheet; colored layers are prior nodes
+. *Platform / node overlay colors* — stable washes so activity identity is visual and non-competing
 
 == Why it exists
 
@@ -81,8 +124,8 @@ Treat rails as chrome owned by the *ecosystem shell*, not by each page:
 * `sides` — `top`, `left`, or both (optionally different context types per side)
 * `idleWidth` / `hoverWidth` — thin presence vs label-ready expansion
 * `labelMode` — `text` | `color-only`
-* `onActivate` — open wireframe nav (platforms, modes, roles)
-* `activePlatform.overlay` — CSS variables or theme tokens for base wash / duo-tone
+* `onActivate` — Variant A: open wireframe map; Variant B: reveal ancestry stack via View Transitions (slide down+right)
+* `activePlatform.overlay` / `stack[].overlay` — CSS variables or theme tokens for base wash / duo-tone / layer identity
 
 Reshape overlays on *platform change*, not on every in-page click, so spatial and chromatic memory can form.
 
@@ -149,6 +192,7 @@ Hover expand is progressive enhancement on desktop.
 * Blog essay: link:https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/[When platforms overload the entrypoint]
 * Site demo: link:https://hci-nerdz.github.io/demos/context-rails/[Context rails desk]
 * Multi-framework MVP: link:https://hci-nerdz.github.io/context-rails/[context-rails] · link:https://github.com/HCI-Nerdz/context-rails[repo]
+* Modal Edge demo: link:https://hci-nerdz.github.io/context-rails/demos/modal-edge/[VT ancestry stack]
 
 == Literature
 
