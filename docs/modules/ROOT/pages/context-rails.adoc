@@ -183,7 +183,7 @@ Treat rails as chrome owned by the *ecosystem shell*, not by each page:
 
 Reshape overlays on *platform change*, not on every in-page click, so spatial and chromatic memory can form.
 
-== Framework impedance
+== Framework impedance match
 
 Context rails are *long-lived shell chrome* with hover, open-state, and platform identity.
 They shine where the UI runtime can hold that state next to routed content.
