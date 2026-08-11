@@ -7,8 +7,8 @@ On click they open a full *wireframe* navigation interface between platforms —
 
 In plain language: streets under skyscrapers, not streets painted on the roof.
 
-Naming note: conversation also uses *Nav Edge*, *Modal Edge*, and *Context Edge*.
-This page keeps *context rails* as the published concept name and treats the names below as *variants* of the same edge affordance.
+Naming note: the shipping product name is *Edge Bar*. This page slug stays `context-rails`.
+Variants are *Map Edge*, *Modal Edge*, and *Path Edge*.
 
 == Variants
 
