@@ -1,0 +1,166 @@
+= Context rails
+:description: Edge-summoned ecosystem navigation — thin top/left rails that expand on hover and open a wireframe platform map, with stable color overlays per subplatform.
+
+*Context rails* are thin bars on the top edge, left edge, or both that act as a *nav substrate* for an ecosystem of platforms or modes.
+On hover they widen enough for a label (or, in a mature system, stay unlabeled — color alone signals “this edge summons context”).
+On click they open a full *wireframe* navigation interface between platforms — instead of stuffing subsections into the content header.
+
+In plain language: streets under skyscrapers, not streets painted on the roof.
+
+== Core claim
+
+Many cloud consoles and suite entrypoints *embed new platforms inside the old one's chrome*.
+The new surface *overloads* the entrypoint design language instead of making clear which platform owns the current context.
+
+Designers keep parking subsections in the top navbar.
+That nav is ephemeral, ugly when dense, and illogical: it sits *on top of* the content, when navigation is really the *substrate for access* to different activities.
+
+Preferred shape:
+
+. *Content stays the skyscraper* — the activity UI fills the plane; local page chrome stays local
+. *Rails live at the edges* — top and/or left (same or different context types) as summonable streets
+. *Hover expands* — enough width for a label, or color-only presence in mature systems
+. *Click opens wireframe ecosystem nav* — a dedicated substrate UI, not another header row
+. *Platform overlay colors* — each subplatform assumes a stable base overlay (duo-tone, radial wash) on the ultimate base so activity identity is visual and non-competing
+
+== Why it exists
+
+Google-style cloud consoles and large Microsoft-style ecosystems make users relearn how to move between platforms because each product overloads a shared entrypoint.
+Reddit, Stack Overflow, and similar subsection-heavy sites push the same anti-pattern: ephemeral top chrome for roles that deserve a stable substrate.
+
+Cities already solved the metaphor.
+Streets do not get summoned on top of skyscrapers.
+Skyscrapers are features; streets are the nav substrate at ground level.
+
+== Mockups
+
+=== Streets as substrate
+
+image::context-rails/streets-as-substrate.png[City street canyon as circulation under skyscrapers,width=100%]
+
+Circulation lives below the buildings.
+The buildings are destinations, not places to hang street signs across the facade.
+
+=== Anti-pattern — platforms overload the entrypoint
+
+image::context-rails/platforms-overload-entrypoint.png[Cloud console header stuffed with subsection platform tabs,width=100%]
+
+Subsection platforms compete in the header with the page they claim to serve.
+Context is ephemeral text in chrome, not a stable visual field.
+
+=== Rails idle at the edges
+
+image::context-rails/rails-idle-edges.png[Desktop app with thin top and left context rails,width=100%]
+
+Content owns the plane.
+Thin edge bars hint at substrate without stealing attention.
+
+=== Hover expand
+
+image::context-rails/rails-hover-expand.png[Left rail widened on hover with ecosystem label,width=100%]
+
+Hover grows the rail until a label fits — or, when the system is mature, color alone is enough.
+
+=== Wireframe ecosystem nav
+
+image::context-rails/wireframe-ecosystem-nav.png[Full-screen wireframe map of platforms summoned from the rails,width=100%]
+
+Click opens a *navigation interface*, not another content toolbar.
+Users summon the street map; they do not relearn a different header per building.
+
+=== Platform overlay colors
+
+image::context-rails/platform-overlay-colors.png[Three shells with distinct duo-tone platform overlays,width=100%]
+
+Each subplatform keeps a stable overlay on the ultimate base — duo-tone or soft radial gradients multiply the ways to identify which world is active without fighting the content.
+
+== Edge model (sketch)
+
+Treat rails as chrome owned by the *ecosystem shell*, not by each page:
+
+* `sides` — `top`, `left`, or both (optionally different context types per side)
+* `idleWidth` / `hoverWidth` — thin presence vs label-ready expansion
+* `labelMode` — `text` | `color-only`
+* `onActivate` — open wireframe nav (platforms, modes, roles)
+* `activePlatform.overlay` — CSS variables or theme tokens for base wash / duo-tone
+
+Reshape overlays on *platform change*, not on every in-page click, so spatial and chromatic memory can form.
+
+== Framework impedance
+
+Context rails are *long-lived shell chrome* with hover, open-state, and platform identity.
+They shine where the UI runtime can hold that state next to routed content.
+
+[cols="1,2,2"]
+|===
+| Host | Fit | Impedance / note
+
+| Solid + SolidStart
+| *Shines.* Signals map cleanly to hover width, open overlay, and platform tokens. SolidStart root/layout is the natural production home for the same components used in Astro islands.
+| SolidStart is not required to *demo* the pattern; drop Solid rail components into a SolidStart layout. File routes stay content; rails stay shell.
+
+| React + Next.js
+| *Valuable and portable.* Client layout wrapper around `children` mirrors the substrate.
+| App Router: rails must be `"use client"`. Keep live platform identity in a client store; do not leave overlay state only on the server RSC tree.
+
+| Svelte + SvelteKit
+| *Strong for motion.* Edge expand and overlay transitions are cheap; Kit layouts mirror substrate slots.
+| Same shell-vs-page split as SolidStart.
+
+| Astro (MPA / islands)
+| *Excellent for demos and docs sites* — multiple framework islands can share one contract.
+| Weak if each “platform” is already a heavy SPA that owns the viewport; then rails belong *inside* that SPA shell, not only the Astro layout.
+
+| Vue / Nuxt
+| Fine; diminishing returns once Solid + React + Svelte exist for a repertoire MVP.
+| Same client-shell rules as the others.
+
+| Mobile-first cramped chrome
+| Poor default.
+| Edge hover fails; prefer an explicit switcher pattern — out of scope here.
+|===
+
+== Implementation notes
+
+=== Shell owns rails
+
+The activity page must not invent its own competing ecosystem tabs in the header.
+Local IA (in-app sections) can stay in-page; *cross-platform* moves go through rails.
+
+=== Escape hatch
+
+Keep deep links and search.
+Rails change the *default altitude* of ecosystem nav, not the existence of URLs.
+
+=== Accessibility
+
+Rails need keyboard focus, visible focus rings, and an explicit control (not hover-only) to open the wireframe nav.
+Hover expand is progressive enhancement on desktop.
+
+== Non-goals
+
+* Replacing in-app information architecture with a giant ecosystem map on every click
+* Mobile gesture design as the first target (desktop/web ecosystem shells first)
+* Cloning any vendor's proprietary console chrome
+* Painting streets on the skyscraper (header overload) and calling it “navigation”
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/[When platforms overload the entrypoint]
+* Site demo: link:https://hci-nerdz.github.io/demos/context-rails/[Context rails desk]
+* Multi-framework MVP: link:https://hci-nerdz.github.io/context-rails/[context-rails] · link:https://github.com/HCI-Nerdz/context-rails[repo]
+
+== Literature
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-rails/prompt-seed-2026-08-10.md[Prompt seed — context rails]
+  (2026-08-10) — originating framing (overload, edges, overlays, streets/skyscrapers)
+
+== Related
+
+* xref:principles.adoc[Principles] — progressive disclosure; attention budget
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture] — many small tools under one roof
+* xref:context-bound-settings.adoc[Context-bound settings] — dependent settings beside activity (sibling bind problem)
+* xref:fundamental-contexts.adoc[Fundamental contexts]
+* xref:ecosystem.adoc[Ecosystem]
+* xref:literature.adoc[Literature]
+* link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[When the UI hides what counts]

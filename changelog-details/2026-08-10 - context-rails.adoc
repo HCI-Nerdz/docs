@@ -1,0 +1,8 @@
+= 2026-08-10 — Context rails
+
+Essay, news, mockups, site desk, and Astro multi-island MVP for edge-summoned ecosystem navigation.
+
+* Literature: `literature/context-rails/prompt-seed-2026-08-10.md`
+* Docs topic: `context-rails.adoc`
+* Images: `docs/modules/ROOT/images/context-rails/`
+* Blog / news / site demo / MVP live on HCI-Nerdz.github.io and `HCI-Nerdz/context-rails`

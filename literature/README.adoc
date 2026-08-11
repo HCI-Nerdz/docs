@@ -40,6 +40,14 @@ When a concept page and a conversation disagree, update the curated page deliber
 | xref:context-bound-settings.adoc[Docs topic];
  link:https://hci-nerdz.github.io/blog/when-settings-live-across-town/[Essay];
  link:https://hci-nerdz.github.io/demos/context-bound-settings/[Demo]
+
+| Context rails
+| link:context-rails/prompt-seed-2026-08-10.md[`prompt-seed-2026-08-10.md`]
+ (author framing seed, 2026-08-10)
+| xref:context-rails.adoc[Docs topic];
+ link:https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/[Essay];
+ link:https://hci-nerdz.github.io/demos/context-rails/[Demo];
+ link:https://hci-nerdz.github.io/context-rails/[MVP]
 |===
 
 == Adding a source

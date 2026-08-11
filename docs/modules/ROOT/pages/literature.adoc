@@ -35,6 +35,11 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-bound-settings/prompt-seed-2026-08-10.md[Prompt seed — context-bound settings]
  (2026-08-10)
 | xref:context-bound-settings.adoc[Context-bound settings]
+
+| Context rails
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-rails/prompt-seed-2026-08-10.md[Prompt seed — context rails]
+ (2026-08-10)
+| xref:context-rails.adoc[Context rails]
 |===
 
 Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.adoc[`literature/README.adoc`].
@@ -45,6 +50,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:open-with-interrupt.adoc[Open-with interrupt]
 * xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 * xref:context-bound-settings.adoc[Context-bound settings]
+* xref:context-rails.adoc[Context rails]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:literature.adoc[Literature]
