@@ -176,7 +176,9 @@ Treat rails as chrome owned by the *ecosystem shell*, not by each page:
 * `pairHover` — when sides share a nav type, hover/focus on either expands both
 * `labelSide` — `top` (no rotated left-edge type)
 * `leftOrder` — `current-first` (top-most = here)
-* `compressCeiling` — how far ancestors may climb before rootward segments squeeze; expanded rail unfolds on scroll
+* `topLength` / `leftLength` — how much of each rail the path stack may occupy (not a reset on expand)
+* Rootward hops shrink first when the rail is full (weight ∝ depth). Rest keeps those weights on expand. Live dock-amplifies the focused hop.
+* Tint mode keeps design-system colors but drops intensity; a pointer spot hints the hue.
 * `activePlatform.overlay` / `stack[].overlay` — CSS variables or theme tokens for base wash / duo-tone / layer identity
 
 Reshape overlays on *platform change*, not on every in-page click, so spatial and chromatic memory can form.
