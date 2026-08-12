@@ -1,0 +1,11 @@
+---
+description: Editorial titles — news/blog [On] test; Antora topics stay conceptual
+globs: "**/*.adoc,**/STYLE.adoc"
+alwaysApply: false
+---
+
+# Titles
+
+- Antora page titles name concepts (`Instruction flows`).
+- When drafting linked **site** news/blog titles, follow `STYLE.adoc` and the site guide: subject + present for news; implied **[On]** for action essay titles.
+- Full policy: `STYLE.adoc`. Agent map: `AGENTS.md`. Not `MEMORIES.md` alone.

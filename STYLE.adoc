@@ -1,4 +1,4 @@
-﻿= Editorial style — titles and headlines
+= Editorial style — titles and headlines
 :toc:
 
 See the public site guide for the full doctrine:
@@ -9,3 +9,6 @@ Antora page titles (`= …`) stay encyclopedia concept names.
 When drafting linked site news/blog titles, follow that STYLE (news = outward / shared record; blog = inward / ideas and philosophy; first-party news omits the org; *as*-framing; attach modifiers).
 
 Agent entrypoint: link:AGENTS.md[AGENTS.md].
+== Pull request titles and summaries
+
+PR *titles* use simple plain language; PR *summaries* use inviting plain English (lead with the human problem; screenshots for UI-visible changes). See the full site STYLE and link:https://github.com/dev-centr/agent-rules/blob/main/general/pull-requests.md[dev-centr/agent-rules pull-requests guide].
