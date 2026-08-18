@@ -46,10 +46,10 @@ The shell answers how those jobs compose into a larger process (phases, hierarch
 |===
 
 Use the architecture to keep tools small and composable.
-Use feedforward *inside* those tools to teach the next honest step, prerequisites, and likely outcome.
+Use feedforward *inside* those tools to teach the next clear step, prerequisites, and likely outcome.
 
 Narrow scope makes feedforward credible.
-A mega-tool with unbounded side effects cannot honestly preview what will happen.
+A mega-tool with unbounded side effects cannot reliably preview what will happen.
 
 == Scoped UI vs scoped UX
 

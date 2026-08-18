@@ -1,7 +1,7 @@
 = Open-with interrupt
 :description: A first-class gesture that interrupts default file open and shows the application picker (Open with) without digging through the context menu.
 
-An *open-with interrupt* is a pointer or modifier gesture that stops the default file-handler handoff and opens the system application picker for the selected file — temporary choice, same honesty surface as today's **Open with**.
+An *open-with interrupt* is a pointer or modifier gesture that stops the default file-handler handoff and opens the system application picker for the selected file — temporary choice, same discoverable surface as today's **Open with**.
 
 In plain language: double-click commits; the interrupt asks.
 
@@ -113,7 +113,7 @@ Middle-click on files should open the picker in this model; middle-click on dire
 * Not a replacement for setting a permanent default
 * Not "always ask" for every open (that is a different preference; this is an interrupt)
 * Not stealing Ctrl+click multi-select or folder middle-click tabs
-* Not a substitute for pass-through extension honesty (xref:pass-through-extensions.adoc[pass-through extensions]) — wrong type vs wrong *handler*
+* Not a substitute for pass-through extension clarity (xref:pass-through-extensions.adoc[pass-through extensions]) — wrong type vs wrong *handler*
 
 == Wishlist (vendors and hosts)
 
@@ -136,6 +136,6 @@ Middle-click on files should open the picker in this model; middle-click on dire
 
 * xref:principles.adoc[Principles] — surface what the system already knows
 * xref:philosophy.adoc[Philosophy] — product representation; intuition over backwards convention
-* xref:pass-through-extensions.adoc[Pass-through extensions] — association honesty for meta-suffixes
+* xref:pass-through-extensions.adoc[Pass-through extensions] — association clarity for meta-suffixes
 * xref:literature.adoc[Literature]
 * link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[Product representation is the bug]

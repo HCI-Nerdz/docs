@@ -1,0 +1,55 @@
+= COLR color fonts (COLRv1 / COLRv0)
+:description: COLR color font tech — Nabla (typearture.com) and what COLRv1 adds beyond COLRv0.
+
+== Core idea
+
+*Color fonts* move multi-color design *inside the font file* so apps can type rich glyphs without layering a pile of separate SVG/text layers in the UI.
+
+Two closely related specifications matter here:
+
+* *COLRv0* — the earlier “COLR” color font flavor (mostly solid color layers + alpha).
+* *COLRv1* — the newer flavor that adds richer effects (for example gradients and blending/compositing) and works well with palette customization.
+
+Nabla is a public ambassador project for COLRv1.
+
+== COLRv0 vs COLRv1 (what changed)
+
+COLRv0 layers are fundamentally limited: they support solid colors with an alpha channel, and the visual “effect range” is comparatively small.
+
+COLRv1 expands the design space:
+
+* richer paint (for example gradients: linear / radial / conic),
+* blending modes (for example `screen`, `multiply`, `overlay`),
+* and compositing: layers can *fill shapes with other drawn shapes* instead of only painting final-colored quads.
+
+In plain language: COLRv1 is “more than multi-layer color”; it is multi-layer *effects*.
+
+== How Nabla (typearture.com) frames COLRv1
+
+Nabla’s walkthrough emphasizes how COLRv1 keeps both flexibility and a compact font-file design:
+
+* outline shapes live in the font file as “layers” with assigned color / gradient / blending info,
+* the export/assembly into a glyph combines those layers into a single character,
+* and a color-table concept makes palette values adjustable via code (unlike fixed-color SVG glyphs).
+
+Nabla also calls out web support: it’s available in most browsers, with exceptions that include Safari and iOS browsers.
+
+== Why HCI Nerdz cares
+
+Color type is not “just aesthetics”; it is a rendering contract:
+
+* *Theme integrity.* If the UI promises a palette, the type renderer should honor it without awkward “SVG overlay” hacks.
+* *Discoverability via invariants.* If the font provides controlled color behaviors, designers can rely on stable mapping rather than re-layering content per screen.
+* *Motion as a parameter.* COLRv1 palette + variable animations make it easier to animate color without redrawing the DOM as a brittle stack of separate layers.
+
+== Resources
+
+* Nabla / COLRv1 explainer: link:https://nabla.typearture.com/whatisCOLRV1.html[nabla.typearture.com — What is COLRv1]
+* Typearture (design + publishing home): link:https://typearture.com[typearture.com]
+* SIL Open Font License 1.1 (Nabla licensing, as published by Nabla): link:https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web[OFL 1.1]
+
+== See also
+
+* link:https://github.com/antora-supplemental/valentus-theme[Valentus] (theme/UI integrity as a contract)
+* xref:cleartype.adoc[ClearType] — another “rendering pipeline as fidelity contract” example
+

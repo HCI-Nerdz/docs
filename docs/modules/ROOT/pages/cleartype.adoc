@@ -23,8 +23,8 @@ Engineering detail and citations: link:https://docs.devcentr.org/general-knowled
 
 Reading text is a first-class daily job. Subpixel filtering is invisible when correct and loudly wrong when mismatched. The settings surface must not imply capabilities the text stack does not deliver.
 
-* **Honest global tools** (for example Better ClearType Tuner) expose one RGB/BGR dial for the session.
-* **Partially honest wizards** (`cttune.exe`) offer a monitor picker while GDI orientation remains session-global and DirectWrite monitor params remain app-opt-in.
+* **Global-scope tools** (for example Better ClearType Tuner) expose one RGB/BGR dial for the session.
+* **Partially accurate wizards** (`cttune.exe`) offer a monitor picker while GDI orientation remains session-global and DirectWrite monitor params remain app-opt-in.
 
 == When monitors disagree
 
@@ -60,4 +60,4 @@ Essay: link:https://hci-nerdz.github.io/blog/cleartype-tuner-in-windows/[ClearTy
 == See also
 
 * link:https://docs.devcentr.org/general-knowledge/how-to/finding-windows-internals-docs.html[Finding Windows internals documentation]
-* xref:open-with-interrupt.adoc[Open-with interrupt] — another first-class gesture / honesty pattern
+* xref:open-with-interrupt.adoc[Open-with interrupt] — another first-class gesture / discoverability pattern

@@ -10,6 +10,7 @@
 * xref:context-rails.adoc[Edge Bar]
 * xref:navigating-by-content.adoc[Navigating by content]
 * xref:cleartype.adoc[ClearType]
+* xref:colr.adoc[COLR color fonts]
 * xref:processing-maps.adoc[Processing maps]
 * xref:prototype-strategy.adoc[Prototype strategy]
 * xref:fundamental-contexts.adoc[Fundamental contexts]

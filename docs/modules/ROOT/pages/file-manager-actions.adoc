@@ -3,7 +3,7 @@
 
 A *file manager action* is a third-party command that appears in a file manager's context menu for selected files or folders (or the folder background) and runs a declared `Exec` line with those paths.
 
-In plain language: install once, show up in every file manager — the same honesty Desktop Entry Spec already gives application launchers.
+In plain language: install once, show up in every file manager — the same discoverability Desktop Entry Spec already gives application launchers.
 
 == Core claim
 
@@ -96,7 +96,7 @@ Align with Desktop Entry Spec where possible (`%f`, `%F`, `%u`, `%U`). Document 
 * `%d` / `%D` — containing directories (widely used; meanings vary slightly — specify)
 * Prefer `%f`/`%F` for portable actions
 
-Profiles may constrain `MimeTypes`, `Schemes`, and `SelectionCount` so background vs selection stay honest.
+Profiles may constrain `MimeTypes`, `Schemes`, and `SelectionCount` so background vs selection stay distinct.
 
 === Security
 
@@ -148,7 +148,7 @@ DevCentr's installer already writes DES-EMA plus these adapters from one action 
 == Related
 
 * xref:open-with-interrupt.adoc[Open-with interrupt] — gesture to choose a handler; actions are declared verbs in the menu
-* xref:pass-through-extensions.adoc[Pass-through extensions] — association honesty for meta-suffixes
+* xref:pass-through-extensions.adoc[Pass-through extensions] — association clarity for meta-suffixes
 * xref:principles.adoc[Principles] — surface what the system already knows; parity of affordances
 * link:https://hellosystem.github.io/docs/developer/filer-context-menus.html[helloSystem — Extending Filer context menus] (DES-EMA draft notes)
 * link:https://specifications.freedesktop.org/desktop-entry-spec/latest/[Desktop Entry Specification]

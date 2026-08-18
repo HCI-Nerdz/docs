@@ -104,7 +104,7 @@ Stale context is a correctness bug: show a disconnected state rather than editin
 Always offer *Browse all settings* / jump-to-catalog for the current key.
 Context-bound is the default altitude, not a prison.
 
-=== Honesty
+=== Source-of-truth sync
 
 Pair with GUI / source-of-truth sync from xref:principles.adoc[Principles]: the pane reflects real config; jump to policy JSON / directory source when the file is authority.
 Pair with feedforward where outcomes are predictable (xref:scoped-ux-architecture.adoc[Scoped UX architecture]).
@@ -139,7 +139,7 @@ Pair with feedforward where outcomes are predictable (xref:scoped-ux-architectur
 == Related
 
 * xref:principles.adoc[Principles] — progressive disclosure; GUI / source-of-truth sync
-* xref:scoped-ux-architecture.adoc[Scoped UX architecture] — narrow tools make applicability honest
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture] — narrow tools make applicability clear
 * xref:philosophy.adoc[Philosophy] — product representation; attention ethics
 * xref:literature.adoc[Literature]
 * link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[When the UI hides what counts]

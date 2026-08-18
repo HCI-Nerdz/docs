@@ -11,7 +11,7 @@ HCI Nerdz is one altitude in a sibling stack.
 | Surfaces, themes, dialogs, desktop metaphors, IDE UX, attention-respecting product design
 
 | link:https://github.com/openshellorg[openshellorg]
-| Shells, CLIs, SOS, structured pipelines, progressive help, entrypoint honesty
+| Shells, CLIs, SOS, structured pipelines, progressive help, entrypoint clarity
 
 | link:https://github.com/dev-centr[dev-centr]
 | Environments, orchestration, toolchain management for practitioners

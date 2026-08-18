@@ -92,13 +92,13 @@ After peel, the remaining association should drive:
 
 Security: the *bytes on disk* do not change.
 Pass-through must not strip the suffix from the path passed to the handler — only from the *association lookup*.
-Handlers that reject unknown extensions may still need an "open anyway" story; that is a separate honesty problem inside those apps.
+Handlers that reject unknown extensions may still need an "open anyway" story; that is a separate discoverability problem inside those apps.
 
 == What it is not
 
 * Not "ignore all extensions" or content-sniffing as the primary rule
 * Not treating `.tar.gz` as a pass-through badge
-* Not a substitute for apps that refuse to open `*.json.example` even when Explorer routes correctly — app-side open dialogs should accept the same peel, or offer Open With honesty
+* Not a substitute for apps that refuse to open `*.json.example` even when Explorer routes correctly — app-side open dialogs should accept the same peel, or offer Open With clarity
 * Not ownership by openshellorg — this is Explorer / desktop association UX (HCI Nerdz); shells may later grow matching completion hints
 
 == Implementations short of Microsoft

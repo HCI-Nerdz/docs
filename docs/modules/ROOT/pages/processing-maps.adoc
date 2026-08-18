@@ -41,7 +41,7 @@ Classic failure: two vendors each own a redirect, a proxy toggle joins them into
 
 * Not BPMN theater
 * Not a default freeform node graph (use graphs when the domain is a graph)
-* Not a replacement for code review — the composer is the honest face of config
+* Not a replacement for code review — the composer is the faithful face of config
 
 == Prototype
 

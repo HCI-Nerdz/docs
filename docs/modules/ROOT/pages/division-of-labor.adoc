@@ -26,7 +26,7 @@ DevCentr sits beside both: it recommends and configures environments; it does no
 | Topic | Home
 
 | Terminal prompts that promote to native GUI dialogs while always echoing prompt text to stdout
-| OpenShellOrg (`terminal-gui-prompts`) — shell transport honesty
+| OpenShellOrg (`terminal-gui-prompts`) — shell transport clarity
 
 | Custom rich file open dialogs / Explorer metaphor fixes
 | HCI Nerdz

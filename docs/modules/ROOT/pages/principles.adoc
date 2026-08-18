@@ -14,7 +14,7 @@
 | GUI / source-of-truth sync
 | Settings GUI must reflect reality; jump-to-JSON when needed
 
-| Honest severity and exit codes
+| Clear severity and exit codes
 | Warnings look like warnings; help is not failure
 
 | No silent failure / lying toasts
@@ -44,7 +44,7 @@
 | Open-with interrupt for alternate handlers
 | Ctrl+double-click or middle-click on a file asks which app opens *this* launch — default open is not an unstoppable handoff
 
-| ClearType subpixel honesty
+| ClearType subpixel fidelity
 | Tuner UI must not imply per-panel RGB/BGR when GDI orientation is session-global and DirectWrite monitor params are app-opt-in
 
 | Scoped UX architecture

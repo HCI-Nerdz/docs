@@ -13,7 +13,7 @@ Preferred remedies (combine):
 
 . *Progressive disclosure for unpopulated sidebar sections* — render only sections with real content; owners get a hover `+` / Add section affordance with one-line explanations
 . *README-first home* — sticky **README** | **Code** tabs (default README when a README exists), or README above a collapsible / below-the-fold file tree
-. *Honest About* — no **Readme** link when there is no README; do not duplicate stars / watch / fork already in the header
+. *Accurate About* — no **Readme** link when there is no README; do not duplicate stars / watch / fork already in the header
 
 Permanent Releases and Packages stay when the repo uses them. Owner tools stay available to owners — only default *visibility* and *disclosure* change for visitors.
 

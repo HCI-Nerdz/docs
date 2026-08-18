@@ -1,10 +1,10 @@
 = Philosophy
-:description: What HCI Nerdz stands for — cognitive honesty, heirloom software, and the split from shell/CLI work.
+:description: What HCI Nerdz stands for — respecting cognition, heirloom software, and the split from shell/CLI work.
 
 HCI Nerdz improves *graphical interfaces and interaction design* through principles, prototypes, and product-facing tooling.
 Shell and CLI standards belong with our sibling org, link:https://github.com/openshellorg[openshellorg].
 
-== Cognitive honesty
+== Respecting cognition
 
 Software should be compatible with basic human psychology.
 End-user tools should be minimally invasive on attention.
@@ -24,7 +24,7 @@ When capability exists in the engine but not in the first-class UI, the product 
 The bug is often *discoverability and product representation*, not missing backend search or APIs.
 Power-user syntax is not a substitute for filters and settings people can find.
 
-The same honesty rule applies to:
+The same rule applies to:
 
 * Severity chrome (warnings that look like errors)
 * Exit codes (help is success, not failure)

@@ -47,6 +47,10 @@ Prefer the curated topic pages for teaching; open the literature files when you 
  link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/cursor-analysis-seed-2026-08-11.md[Cursor analysis seed]
  (2026-08-11)
 | xref:navigating-by-content.adoc[Navigating by content]
+| COLR color fonts (COLRv1 / COLRv0)
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/colr-color-fonts/nabla-colrv1-notes.md[Nabla / COLRv1 notes]
+(2026-08-18)
+| xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
 |===
 
 Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.adoc[`literature/README.adoc`].
@@ -59,6 +63,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:context-bound-settings.adoc[Context-bound settings]
 * xref:context-rails.adoc[Edge Bar]
 * xref:navigating-by-content.adoc[Navigating by content]
+* xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:literature.adoc[Literature]
