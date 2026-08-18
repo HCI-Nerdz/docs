@@ -13,7 +13,7 @@
 - URL: `https://hci-nerdz.github.io/docs/`
 - UI: Valentus `v2` bundle; brand CSS `supplemental-ui/css/hci-brand.css`
 - `@antora-supplemental/unversioned-component-urls` / alias so `/hci-nerdz/` → latest
-- Instruction flows: `instruction-flows.adoc` + `@antora-supplemental/instruction-flow` (GitHub `asciidoc-interactive`) under `asciidoc.extensions`
+- Instruction flows: `instruction-flows.adoc` + `@antora-supplemental/instruction-flow` (GitHub `asciidoc-interactive`) under `asciidoc.extensions`; literature `literature/instruction-flows/`
 - Pass-through extensions: `pass-through-extensions.adoc` — meta-suffix peel for Explorer associations
 - Open-with interrupt: `open-with-interrupt.adoc` — Ctrl+double-click / file middle-click → app picker; recipes for Windows/macOS/Linux
 - Visitor-first repo homepage: `visitor-first-repo-homepage.adoc` — hide empty GitHub sidebar CTAs; README before file tree; upstream https://github.com/orgs/community/discussions/204347

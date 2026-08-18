@@ -1,0 +1,13 @@
+= Instruction-flow origin dump — changelog detail
+:description: Historical copy of the instruction-flow idea prompt and Grok review.
+
+== Added
+
+* Literature: `literature/instruction-flows/interactive-document-extension-idea.md`
+* Catalog rows on `literature.adoc` and `literature/README.adoc`
+* Source link on the Instruction flows topic
+
+== Why
+
+The originating writeup was never in Downloads. It lived in `antora-supplemental/asciidoc-interactive`.
+The docs hub now holds a dated copy so provenance does not depend on that sibling repo staying put.

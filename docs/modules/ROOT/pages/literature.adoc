@@ -41,6 +41,11 @@ Prefer the curated topic pages for teaching; open the literature files when you 
  (2026-08-10)
 | xref:context-rails.adoc[Edge Bar]
 
+| Instruction flows
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/instruction-flows/interactive-document-extension-idea.md[Prompt + Grok review — Interactive Document Extension]
+ (copied 2026-08-18 from `antora-supplemental/asciidoc-interactive`; not a Downloads export)
+| xref:instruction-flows.adoc[Instruction flows]
+
 | Navigating by content
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/gemini-dependency-management-and-network-architecture.md[Gemini export — Dependency Management and Network Architecture]
  (2026-08-11);
@@ -62,6 +67,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 * xref:context-bound-settings.adoc[Context-bound settings]
 * xref:context-rails.adoc[Edge Bar]
+* xref:instruction-flows.adoc[Instruction flows]
 * xref:navigating-by-content.adoc[Navigating by content]
 * xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
 * xref:philosophy.adoc[Philosophy]

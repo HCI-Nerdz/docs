@@ -1,0 +1,4 @@
+= Desktop Tooling sibling
+:date: 2026-08-18
+
+Division of labor now splits OS-level Explorer and windowing utilities into Desktop Tooling, keeping HCI Nerdz on interaction-design experiments.

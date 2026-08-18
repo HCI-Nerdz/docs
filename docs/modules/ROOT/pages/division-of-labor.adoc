@@ -1,23 +1,26 @@
 = Division of labor
-:description: What belongs in HCI Nerdz versus openshellorg and DevCentr.
+:description: What belongs in HCI Nerdz versus Desktop Tooling, openshellorg, and DevCentr.
 
 == Rule of thumb
 
-[cols="1,1"]
+[cols="1,1,1"]
 |===
-| HCI Nerdz | OpenShellOrg
+| HCI Nerdz | Desktop Tooling | OpenShellOrg
 
 | How should humans *see and manipulate* systems?
+| How should the *OS desktop* behave?
 | How should CLIs and shells *speak and compose*?
 
 | Surfaces, themes, dialogs, spatial UI, attention
+| Explorer, shell extensions, theming, launchers, windowing
 | Flags, pipes, entrypoints, help budgets, env refresh
 
 | Innovate / prototype GUIs
+| Ship OS utilities
 | Standardize / certify / companion-tool CLIs
 |===
 
-DevCentr sits beside both: it recommends and configures environments; it does not own SOS or HCI chrome.
+DevCentr sits beside all three: it recommends and configures developer environments; it does not own SOS, HCI chrome, or Explorer gadgets.
 
 == Boundary examples
 
@@ -28,8 +31,11 @@ DevCentr sits beside both: it recommends and configures environments; it does no
 | Terminal prompts that promote to native GUI dialogs while always echoing prompt text to stdout
 | OpenShellOrg (`terminal-gui-prompts`) — shell transport clarity
 
-| Custom rich file open dialogs / Explorer metaphor fixes
-| HCI Nerdz
+| Custom rich file open dialogs as an *interaction pattern*
+| HCI Nerdz (`electron-custom-dialog`)
+
+| SVG thumbnail handler / Explorer thumbcache verb
+| Desktop Tooling
 
 | Progressive CLI help (Prohelp)
 | OpenShellOrg
@@ -37,10 +43,14 @@ DevCentr sits beside both: it recommends and configures environments; it does no
 | AsciiDoc preview theme fidelity in editors
 | HCI Nerdz for the presentation layer; Antora plumbing with antora-supplemental
 
-| Non-frustrating graphical desktop shell
+| Non-frustrating graphical desktop *shell* as HCI research
 | HCI Nerdz
+
+| Activity map launcher, night theme changer, webcam bridge
+| Desktop Tooling
 |===
 
 == Related
 
-Shell and CLI standards: link:https://openshellorg.github.io/[OpenShellOrg].
+* OS utilities: link:https://desktop-tooling.github.io/[Desktop Tooling]
+* Shell and CLI standards: link:https://openshellorg.github.io/[OpenShellOrg]

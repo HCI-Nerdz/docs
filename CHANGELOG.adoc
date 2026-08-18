@@ -1,5 +1,14 @@
 = Changelog
 
+== 2026-08-18 — Desktop Tooling sibling
+
+* Division of labor names Desktop Tooling as the OS-utilities home (Explorer, shell extensions, launchers).
+* link:changelog-details/2026-08-18%20-%20desktop-tooling-sibling.adoc[Details]
+
+== 2026-08-18 — Instruction-flow origin dump
+
+* Literature: prompt + Grok review copied from `antora-supplemental/asciidoc-interactive` (not Downloads)
+* link:changelog-details/2026-08-18%20-%20instruction-flow-literature.adoc[Details]
 
 == 2026-08-11 — Math formula plumbing
 

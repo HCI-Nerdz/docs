@@ -34,6 +34,13 @@ When a concept page and a conversation disagree, update the curated page deliber
 | xref:visitor-first-repo-homepage.adoc[Docs topic];
  link:https://hci-nerdz.github.io/blog/when-the-file-tree-owns-the-first-viewport/[Essay]
 
+| Instruction flows
+| link:instruction-flows/interactive-document-extension-idea.md[`interactive-document-extension-idea.md`]
+ (prompt + Grok review; copied 2026-08-18 from `antora-supplemental/asciidoc-interactive`, not Downloads)
+| xref:instruction-flows.adoc[Docs topic];
+ link:https://hci-nerdz.github.io/blog/instruction-flows/[Essay];
+ link:https://hci-nerdz.github.io/demos/instruction-flow/[Demo]
+
 | Context-bound settings
 | link:context-bound-settings/prompt-seed-2026-08-10.md[`prompt-seed-2026-08-10.md`]
  (author framing seed, 2026-08-10)

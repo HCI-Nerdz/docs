@@ -120,6 +120,11 @@ See the package roadmap in link:https://github.com/antora-supplemental/asciidoc-
 * Site demo (continuation-insert UX): link:https://hci-nerdz.github.io/demos/instruction-flow/[Instruction flow demo]
 * Extension: link:https://github.com/antora-supplemental/asciidoc-interactive[antora-supplemental/asciidoc-interactive]
 
+== Literature
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/instruction-flows/interactive-document-extension-idea.md[Prompt + Grok review — Interactive Document Extension]
+  (copied 2026-08-18 from `antora-supplemental/asciidoc-interactive`; no Downloads export existed)
+
 == Related
 
 * xref:philosophy.adoc[Philosophy]
@@ -127,4 +132,5 @@ See the package roadmap in link:https://github.com/antora-supplemental/asciidoc-
 * xref:scoped-ux-architecture.adoc[Scoped UX architecture]
 * xref:processing-maps.adoc[Processing maps]
 * xref:ecosystem.adoc[Ecosystem]
+* xref:literature.adoc[Literature]
 * link:https://hci-nerdz.github.io/demos/[Demos index]
