@@ -1,0 +1,6 @@
+= Labels versus wires — symptom ↔ diagnosis dialectic
+
+* Antora concept title: *Labels versus wires* (was *Navigating by content* — that phrase stays with instruction flows)
+* Slug unchanged: `navigating-by-content.html`
+* Page faces: Symptom (essay + demo links) · Diagnosis · Treatment (`CONSUMERS.md`, CAS stack, adoption)
+* Literature catalog and principles row updated to the new concept name

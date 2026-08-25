@@ -65,8 +65,8 @@
 | Attention ethics
 | Do not spend the user's brain for engagement metrics
 
-| Navigating by content
-| Pretty names are human labels; systems wire on content identity or explicit pointers — not on the label alone
+| Labels versus wires
+| Pretty names are human labels; systems wire on content identity or explicit pointers — not on the label alone. Public entry is the felt rename/URL breakage; this principle is the diagnosis.
 |===
 
 These principles come from filed issues, discussions, and shipping products — not from abstract style guides.

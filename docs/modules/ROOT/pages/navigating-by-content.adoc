@@ -1,28 +1,45 @@
-= Navigating by content
-:description: Analysis and proposal — treat pretty URLs as human labels, not functional wires; combine CAS, mutable pointers, and reverse consumer graphs.
-:navtitle: Navigating by content
+= Labels versus wires
+:description: Diagnosis and treatment — pretty names are human labels; systems wire on content identity, mutable pointers, and reverse consumers. Symptom entry is the rename essay and demo.
+:navtitle: Labels versus wires
 
-image::navigating-by-content/icon.svg[Navigating by content icon — hash core with detachable URL label,width=120]
+image::navigating-by-content/icon.svg[Labels versus wires icon — hash core with detachable URL label,width=120]
 
-*Navigating by content* is the claim that **identity should follow the thing**, not the pretty name we hang on it today.
-Canonical URLs, package names, and doc paths stay useful for humans.
-They must not be the only way machines and dependents find the resource.
+People already chase the *thing*.
+What they feel is the symptom: a link that used to work, a rename that quietly broke someone else's docs, unpaid string archaeology across repos.
+They rarely arrive with the diagnosis.
 
-This is a UX argument and, more sharply, a *DevX* argument: developers should not spend attention chasing renamed strings across repos.
+This page is the **diagnosis and treatment** face of the idea.
+The **symptom** face stays separate so either side can revise without dragging the other:
 
-== Core claim
+[cols="1,2,2"]
+|===
+| Face | Job | Current surface
 
-. *Labels are for people* — `/docs/api/auth`, `awesome-lib`, `hci-nerdz.github.io/...` orient readers.
-. *Wires are for systems* — fetch, cite, depend, and refactor should bind to *content identity* (hash / GUID / graph node) or to an explicit mutable pointer that resolves to that identity.
-. *When labels must change*, producers know their consumers (reverse dependency graph) so updates are search-and-fix under known trees — not org-wide guesswork.
+| Symptom
+| Name what people already feel
+| link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[When renaming a page breaks half your docs] · link:https://hci-nerdz.github.io/demos/navigating-by-content/[demo]
 
-== Why it hurts
+| Diagnosis
+| Name the mistake (label used as wire)
+| link:https://hci-nerdz.github.io/blog/when-the-name-is-not-the-wire/[When the name is not the wire] · this topic
+
+| Treatment
+| What to do near-term and long-term
+| Adoption sections below · `CONSUMERS.md` · redirects / aliases
+|===
+
+Slug stays `navigating-by-content` (Cool URI absorb); the concept name is *Labels versus wires*.
+Do not confuse with *Navigating by content* on instruction flows — that phrase is about menu-style docs, not reference identity.
+
+**Umbrella (systems altitude):** link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr] — machine ↔ DevX/ecosystem ↔ internet reference durability under Internet Architecture. This page remains the HCI symptom ↔ diagnosis/treatment face.
+
+== Symptom
 
 Cross-repo prose is the weak edge of the modern web and of multi-repo orgs.
 Package registries already expose reverse dependents for *code*.
 Markdown, AsciiDoc, CI configs, and marketing sites still bake path strings as if they were APIs.
 
-Symptoms:
+What people notice:
 
 * Rename a docs path → another project's README and Antora nav rot
 * Move a site → every hardcoded URL becomes archaeology
@@ -42,7 +59,22 @@ flowchart LR
   end
 ----
 
-== Two naming failures (orthogonal layers)
+URL reliability on today's internet is the familiar slice of this pain — not the whole claim.
+Same mistake shows up in package names, doc slugs, and file paths.
+
+== Diagnosis
+
+*Labels versus wires* is the claim that **identity should follow the thing**, not the pretty name we hang on it today.
+Canonical URLs, package names, and doc paths stay useful for humans.
+They must not be the only way machines and dependents find the resource.
+
+This is a UX argument and, more sharply, a *DevX* argument: developers should not spend attention chasing renamed strings across repos.
+
+. *Labels are for people* — `/docs/api/auth`, `awesome-lib`, `hci-nerdz.github.io/...` orient readers.
+. *Wires are for systems* — fetch, cite, depend, and refactor should bind to *content identity* (hash / GUID / graph node) or to an explicit mutable pointer that resolves to that identity.
+. *When labels must change*, producers know their consumers (reverse dependency graph) so updates are search-and-fix under known trees — not org-wide guesswork.
+
+=== Two naming failures (orthogonal layers)
 
 Research and industry work on *naming* often gets conflated.
 They solve different bounds.
@@ -94,7 +126,7 @@ That want is served by *stacking* layers, not by pretending one layer does both 
 * **Reverse consumers** answer “who still holds an old *label*?”
 * **Redirects / aliases** absorb breaks on today's IP web
 
-== Combined architecture
+== Treatment
 
 [mermaid]
 ----
@@ -159,15 +191,7 @@ Cool URIs don't change (W3C).
 When they must: 301s, Antora page aliases, vanity domains, CI link checkers.
 These do not replace identity; they buy time.
 
-== Relationship to connectome-fs
-
-link:https://github.com/connectome-fs/connectome-fs[connectome-fs] attacks the same mistake at the filesystem / association plane:
-path strings are navigation slices; *nodes and edges* are truth.
-Unison shows content-addressed identity for code definitions; connectome-fs aims at the substrate under many languages and non-code artifacts.
-
-See the sibling explanation on the connectome-fs docs hub (Navigating by content) and xref-style links from *Semantic change units*.
-
-== Near-term adoption (multi-repo orgs)
+=== Near-term adoption (multi-repo orgs)
 
 . Freeze public path contracts where possible; alias instead of rename
 . Add `CONSUMERS.md` on anything other people hardcode
@@ -175,12 +199,20 @@ See the sibling explanation on the connectome-fs docs hub (Navigating by content
 . Keep redirects forever for anything that ever was public
 . Prefer hub docs (`xref:`) over raw foreign URLs
 
-== Long-term adoption (internet-shaped)
+=== Long-term adoption (internet-shaped)
 
 . Publish content-addressed artifacts (or graph nodes) as the cite/fetch target
 . Keep human URLs as *labels* that resolve through a pointer service
 . Grow reverse-deps from manifests toward indexed graphs (Kythe-class) where scale demands
 . Treat NDN/ICN as a delivery upgrade, not a substitute for application graphs
+
+== Relationship to connectome-fs
+
+link:https://github.com/connectome-fs/connectome-fs[connectome-fs] attacks the same mistake at the filesystem / association plane:
+path strings are navigation slices; *nodes and edges* are truth.
+Unison shows content-addressed identity for code definitions; connectome-fs aims at the substrate under many languages and non-code artifacts.
+
+See the sibling explanation on the connectome-fs docs hub (*Labels versus wires*) and xref-style links from *Semantic change units*.
 
 == Public faces
 
@@ -188,17 +220,20 @@ See the sibling explanation on the connectome-fs docs hub (Navigating by content
 |===
 | Face | Where
 
-| Relatable essay
+| Systems umbrella (DevCentr)
+| link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability]
+
+| Symptom essay
 | link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[When renaming a page breaks half your docs]
 
-| Technical essay
+| Diagnosis essay
 | link:https://hci-nerdz.github.io/blog/when-the-name-is-not-the-wire/[When the name is not the wire]
 
-| Interactive mock
-| link:https://hci-nerdz.github.io/demos/navigating-by-content/[Demo]
+| Symptom demo
+| link:https://hci-nerdz.github.io/demos/navigating-by-content/[Rename simulation]
 
 | connectome-fs
-| link:https://connectome-fs.github.io/connectome-fs/[Project site] · docs explanation *Navigating by content*
+| link:https://connectome-fs.github.io/connectome-fs/[Project site] · docs explanation *Labels versus wires*
 |===
 
 == Literature / sources

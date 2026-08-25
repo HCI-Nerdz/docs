@@ -7,6 +7,7 @@ and the philosophy essay link:https://hci-nerdz.github.io/blog/titles-as-orienta
 
 Antora page titles (`= …`) stay encyclopedia concept names.
 When drafting linked site news/blog titles, follow that STYLE (news = outward / shared record; blog = inward / ideas and philosophy; first-party news omits the org; *as*-framing; attach modifiers).
+Symptom ↔ diagnosis/treatment pairing for repertoire topics is documented in that STYLE (example: *Labels versus wires*).
 
 Agent entrypoint: link:AGENTS.md[AGENTS.md].
 == Pull request titles and summaries

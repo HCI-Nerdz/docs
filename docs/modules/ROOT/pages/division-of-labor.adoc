@@ -21,6 +21,7 @@
 |===
 
 DevCentr sits beside all three: it recommends and configures developer environments; it does not own SOS, HCI chrome, or Explorer gadgets.
+It also hosts the systems-altitude framing for **Internet Reliability** (reference durability under Internet Architecture); HCI Nerdz keeps the *Labels versus wires* symptom ↔ diagnosis/treatment face and published essay/demo URLs.
 
 == Boundary examples
 

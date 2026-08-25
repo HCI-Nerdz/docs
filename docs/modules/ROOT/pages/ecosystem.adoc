@@ -14,13 +14,13 @@ HCI Nerdz is one altitude in a sibling stack.
 | Shells, CLIs, SOS, structured pipelines, progressive help, entrypoint clarity
 
 | link:https://github.com/dev-centr[dev-centr]
-| Environments, orchestration, toolchain management for practitioners
+| Environments, orchestration, toolchain management for practitioners; systems-altitude **Internet Reliability** (reference durability) with HCI keeping the symptom ↔ diagnosis face
 
 | link:https://github.com/connectome-fs/connectome-fs[connectome-fs]
-| Graph-native filesystem — path as navigation, node identity as truth (sibling to *Navigating by content*)
+| Graph-native filesystem — path as navigation, node identity as truth (sibling to *Labels versus wires*)
 
 | link:https://github.com/antora-supplemental[antora-supplemental]
-| AsciiDoc / Antora publishing UX (Valentus, link:https://github.com/antora-supplemental/asciidoc-interactive[instruction-flow], and related extensions)
+| AsciiDoc / Antora publishing UX (Valentus, link:https://github.com/antora-supplemental/antora-facto[antora-facto] compose pack, link:https://github.com/antora-supplemental/asciidoc-interactive[instruction-flow], and related extensions)
 
 | link:https://github.com/dlang-supplemental[dlang-supplemental]
 | D libraries and native tooling shared across projects

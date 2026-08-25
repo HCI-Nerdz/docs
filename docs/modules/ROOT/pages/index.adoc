@@ -4,7 +4,7 @@
 
 Welcome to the HCI Nerdz documentation hub.
 
-*xref:philosophy.adoc[Philosophy]* · *xref:principles.adoc[Principles]* · *xref:scoped-ux-architecture.adoc[Scoped UX architecture]* · *xref:instruction-flows.adoc[Instruction flows]* · *xref:pass-through-extensions.adoc[Pass-through extensions]* · *xref:open-with-interrupt.adoc[Open-with interrupt]* · *xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]* · *xref:context-bound-settings.adoc[Context-bound settings]* · *xref:context-rails.adoc[Edge Bar]* · *xref:navigating-by-content.adoc[Navigating by content]* · *xref:cleartype.adoc[ClearType]* · *xref:colr.adoc[COLR color fonts]* · *xref:ecosystem.adoc[Ecosystem]* · *xref:division-of-labor.adoc[Division of labor]* · *xref:literature.adoc[Literature]*
+*xref:philosophy.adoc[Philosophy]* · *xref:principles.adoc[Principles]* · *xref:scoped-ux-architecture.adoc[Scoped UX architecture]* · *xref:instruction-flows.adoc[Instruction flows]* · *xref:pass-through-extensions.adoc[Pass-through extensions]* · *xref:open-with-interrupt.adoc[Open-with interrupt]* · *xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]* · *xref:context-bound-settings.adoc[Context-bound settings]* · *xref:context-rails.adoc[Edge Bar]* · *xref:navigating-by-content.adoc[Labels versus wires]* · *xref:cleartype.adoc[ClearType]* · *xref:colr.adoc[COLR color fonts]* · *xref:ecosystem.adoc[Ecosystem]* · *xref:division-of-labor.adoc[Division of labor]* · *xref:literature.adoc[Literature]*
 
 == Mission
 

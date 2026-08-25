@@ -56,15 +56,15 @@ When a concept page and a conversation disagree, update the curated page deliber
  link:https://hci-nerdz.github.io/demos/context-rails/[Demo];
  link:https://hci-nerdz.github.io/context-rails/[MVP]
 
-| Navigating by content
+| Labels versus wires (slug `navigating-by-content`)
 | link:navigating-by-content/gemini-dependency-management-and-network-architecture.md[`gemini-dependency-management-and-network-architecture.md`]
  (Gemini export, 2026-08-11);
  link:navigating-by-content/cursor-analysis-seed-2026-08-11.md[`cursor-analysis-seed-2026-08-11.md`]
  (Cursor seed, 2026-08-11)
-| xref:navigating-by-content.adoc[Docs topic];
- link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[Relatable essay];
- link:https://hci-nerdz.github.io/blog/when-the-name-is-not-the-wire/[Technical essay];
- link:https://hci-nerdz.github.io/demos/navigating-by-content/[Demo]
+| xref:navigating-by-content.adoc[Docs — diagnosis/treatment];
+ link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[Symptom essay];
+ link:https://hci-nerdz.github.io/blog/when-the-name-is-not-the-wire/[Diagnosis essay];
+ link:https://hci-nerdz.github.io/demos/navigating-by-content/[Symptom demo]
 |===
 
 == Adding a source
