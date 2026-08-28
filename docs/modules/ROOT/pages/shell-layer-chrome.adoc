@@ -8,6 +8,37 @@ Interaction design for link:https://openshellorg.github.io/docs/shell-architectu
 TUIs belong on **ephemeral overlays**, not in stdout.
 Users should *see* pasted instructions before they run, *track* multi-step blocks, and *cancel* without guessing what half-ran.
 
+== Prompt gutter and auto-help
+
+Open Shell reserves a **gutter band** (display overlay, not stdout) left of context tokens.
+When prohelp matches the input buffer, a **`?` help affordance** appears there automatically — users do not type `--help` first.
+
+**Trust affordance:** spontaneous `?` signals "this shell knows this command has help."
+Hiding help behind memorized flags erodes confidence.
+
+=== Glyph choices
+
+[cols="1,2"]
+|===
+| Glyph | HCI verdict
+
+| `⍰` (U+2370)
+| Rejected in user testing — poor monospace visibility
+
+| Raw `?`
+| Acceptable v0 fallback
+
+| Custom TUI glyph (overlay-drawn)
+| **v1 target** — legible at small sizes; not tied to terminal font cell
+|===
+
+=== Placement
+
+* **Primary:** gutter at prompt start (before grey app tokens) — recommended
+* **Secondary:** inline ghost `?` after matched command prefix when terminal is narrow
+
+Gutter also carries shell-owned list chrome (`▶`, `▪`, `A`–`Z` markers) so CLIs stop spamming printf arrows into stdout.
+
 == Paste preview overlay
 
 === Layout
@@ -75,6 +106,7 @@ link:https://hci-nerdz.github.io/demos/shell-layer/[Shell layer desk] — paste 
 
 == Literature
 
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/prohelp-gutter/prompt-seed-2026-08-28.md[Prompt seed — prohelp gutter] (2026-08-28)
 * link:https://github.com/HCI-Nerdz/docs/blob/main/literature/shell-layer-chrome/prompt-seed-2026-08-28.md[Prompt seed — shell layer chrome] (2026-08-28)
 
 == Related

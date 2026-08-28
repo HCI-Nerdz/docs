@@ -9,6 +9,10 @@
 * Division of labor boundary rows for OpenShellOrg vs HCI Nerdz split.
 = Changelog
 
+== 2026-08-28 — Prohelp gutter + auto-help
+
+* shell-layer-chrome + shell-context-chrome updated; literature/prohelp-gutter seed.
+
 == 2026-08-28 ? Project inbox
 
 * Docs topic: parallel task grid, cosmetic forks, actor mailboxes, chapter snapshots

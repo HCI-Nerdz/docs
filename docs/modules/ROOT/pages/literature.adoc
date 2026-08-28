@@ -36,6 +36,10 @@ Prefer the curated topic pages for teaching; open the literature files when you 
  (2026-08-10)
 | xref:context-bound-settings.adoc[Context-bound settings]
 
+| Prohelp gutter / auto-help
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/prohelp-gutter/prompt-seed-2026-08-28.md[Prompt seed — prohelp gutter] (2026-08-28)
+| xref:shell-layer-chrome.adoc[Shell layer chrome]
+
 | Shell context chrome
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/shell-context-chrome/prompt-seed-2026-08-28.md[Prompt seed — shell context chrome]
  (2026-08-28)
