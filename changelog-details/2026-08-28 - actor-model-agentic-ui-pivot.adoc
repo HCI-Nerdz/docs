@@ -1,0 +1,6 @@
+= 2026-08-28 — Actor-model agentic UI pivot
+:page-audience: Maintainers tracking HCI Nerdz docs functional history
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-08-28
+
+Renamed teaching topic from project inbox to **Actor-model agentic UI** — node graph, spawn lineage, disk persistence. Redirect page at old slug.

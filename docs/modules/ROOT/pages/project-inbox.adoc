@@ -1,61 +1,7 @@
-= Project inbox
-:description: Parallel agent tasks as a scrollable grid with cosmetic fork chats — actor-model inbox for harnesses.
-:page-layout: docs
+= Project inbox (renamed)
+:page-redirect: actor-model-agentic-ui.adoc
+:description: Redirect — project inbox was renamed to actor-model agentic UI.
 
-When a coordinator spawns many subagents, a single chat thread turns parallel work into a *serialized wall* — repeated status headers, duplicate Done cards, unrelated repos interleaved in one scroll.
+**Project inbox** was renamed to **Actor-model agentic UI**.
 
-*Project inbox* is the layout answer: a glanceable task grid in its own scroll viewport, each cell with status light and summary, click-through to a localized fork chat, and a coordinator thread below that stays aware of sibling tasks.
-
-== Problem
-
-Agent harnesses already run work in parallel. The default UI still renders updates as one chronological transcript. Users scroll up hunting a specific repo while the same `9 of 12 running` header repeats three times.
-
-Artifacts help but sit inline — they do not occupy the *parallel* mental model the work already has.
-
-== Design
-
-[cols="1,2"]
-|===
-| Principle | Meaning
-
-| Cosmetic forks
-| One transcript on disk; the harness routes lines to task views by topic. Fork is routing, not a second brain.
-
-| Actor summaries
-| Each task publishes a short status snippet (running / done / blocked) that coworkers read without opening the full fork.
-
-| Grid scroll ≠ chat scroll
-| The task grid lives in its own scrollable region above the coordinator thread.
-
-| Chapters
-| When coherence breaks, start a new chapter — layout freezes; later edits roll into the new chapter's grid.
-
-| Message passing (optional)
-| Task contexts may live outside chat entirely; coordinators subscribe to state summaries. A wait graph can gate analyses on stale sibling status when needed.
-|===
-
-== Relationship to Dev-Centr harness
-
-Dev-Centr's lightweight harness treats project inbox as the second cross-org UX contract (after link:https://hci-nerdz.github.io/docs/hci-nerdz/grounded-tokens.html[grounded tokens]).
-
-Harness variable (proposed):
-
-[source,text]
-----
-PROJECT_INBOX = grid-forks | serialized | off
-PROJECT_INBOX_CHAPTERS = on | off
-PROJECT_INBOX_WAIT_GRAPH = enforce | warn | off
-----
-
-When `grid-forks`, the runtime routes subagent lines to task cells and publishes mailbox summaries siblings can read. When `serialized`, all lines land in the main scroll (today's default). Full harness integration: link:https://docs.devcentr.org/agent-rules/project-inbox.html[DevCentr — Project inbox].
-
-== Demo
-
-link:https://hci-nerdz.github.io/demos/project-inbox/[Live demo] — toggle serialized vs inbox layout, click task cells, advance chapters.
-
-== Related
-
-* link:https://hci-nerdz.github.io/blog/when-parallel-agents-still-read-as-one-thread/[Essay — When parallel agents still read as one thread]
-* link:https://hci-nerdz.github.io/demos/project-inbox/serialized-wall-of-updates.png[Case study screenshot — serialized wall]
-* xref:piles.adoc[Piles] — inbox UX for human attention; project inbox for agent coordination
-* link:https://docs.devcentr.org/agent-rules/agent-harness.html[DevCentr agent harness]
+The task grid is one *view* over a persisted *node graph*. See xref:actor-model-agentic-ui.adoc[Actor-model agentic UI].

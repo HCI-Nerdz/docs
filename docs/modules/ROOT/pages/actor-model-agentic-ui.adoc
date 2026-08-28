@@ -1,0 +1,105 @@
+= Actor-model agentic UI
+:description: Persisted node graph for agent harnesses — typed actors, spawn-on-drift, bidirectional addresses, grid and fork views.
+:page-audience: HCI and agent-UI authors; readers evaluating alternatives to linear chat
+:page-usage-context: Reference page on the HCI Nerdz docs hub
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-08-28
+
+*Actor-model agentic UI* replaces the linear chat assumption with a **persisted graph of nodes** — each node is an actor with its own chat log, type, disk address, and spawn lineage.
+
+**Node** and **actor** mean the same thing here; *node* is the general graph term, *actor* matches the concurrency model (mailbox summaries, message routing, no shared mutable transcript).
+
+== Problem
+
+Chat UIs assume one thread drifts until the user resets. Agent harnesses break that daily:
+
+* A coordinator **discussion** spawns many **task** nodes (multi-repo runs)
+* A **task** chat tangents into permissions or CLA policy — that tangent should **spawn** a **discussion** child, not pollute the merge log
+* Parallel jobs need a grid; tangents need lineage — same store, different views
+
+Serializing everything produces the wall of repeated `9 of 12 running` headers (see screenshot below).
+
+image::actor-model-agentic-ui/serialized-wall.png[Serialized multi-repo agent updates in one chat scroll,width=960]
+
+== Core claim
+
+**Persist the graph on disk.** RAM-only actor state loses spawn lineage when the session ends or the model compacts context.
+
+Each node writes:
+
+* `meta.json` — type, status, `spawnedBy`, `spawned[]`, `related[]`, mailbox summary, disk `address`
+* `chat.jsonl` — messages for this node only
+
+Parent and child both record each other's id **before** the child accepts traffic.
+
+== Node types
+
+[cols="1,2"]
+|===
+| Type | Role
+
+| `coordinator`
+| Root orchestrator; owns epoch grid; thin main thread
+
+| `discussion`
+| Exploratory chat; may spawn tasks or further discussions when topic forks
+
+| `task`
+| Bounded job (repo PR, merge, sync); appears in parallel grid with status dot
+|===
+
+More subtypes extend the same struct — type is a routing hint, not a separate storage silo.
+
+== Spawn on drift
+
+When chat in node A drifts from A's declared topic:
+
+. Harness creates node B with `spawnedBy: A`
+. A appends B to `spawned[]`; both `meta.json` files flush to disk
+. A gets a routing marker in its chat; new lines go to B's `chat.jsonl`
+. UI may show B in the grid, graph strip, or fork panel depending on type
+
+Trigger: model proposes spawn, user clicks **Spawn tangent**, or policy (non-task utterance in a task node).
+
+== Graph + views
+
+image::actor-model-agentic-ui/node-graph-topology.svg[Node graph — spawn edges, mailboxes, grid projection,width=720]
+
+One graph; multiple projections:
+
+* **Grid** — `type=task` nodes, status + summary, separate scroll from main thread
+* **Fork panel** — selected node's `chat.jsonl`
+* **Lineage strip** — `spawnedBy` / `spawned` for the active node
+* **Coordinator thread** — not every subagent line
+
+== Epochs (formerly chapters)
+
+When coherence breaks (mission reframed, CLA unblocked, batch phase change), start a **new epoch**. The grid layout for that epoch is immutable once issued; prior epochs remain inspectable.
+
+== Relationship to Dev-Centr harness
+
+[source,text]
+----
+ACTOR_AGENTIC_UI = graph-grid | serialized | off
+ACTOR_GRAPH_EPOCHS = on | off
+ACTOR_WAIT_GRAPH = enforce | warn | off
+ACTOR_NODE_STORE = jsonl-per-node | off
+----
+
+link:https://docs.devcentr.org/agent-rules/actor-model-agentic-ui.html[DevCentr — Actor-model agentic UI] owns disk schema and routing.
+
+== Demo
+
+link:https://hci-nerdz.github.io/demos/actor-model-agentic-ui/[Live demo] — node types, spawn lineage, disk addresses, epoch bar, serialized contrast.
+
+== Renamed from project inbox
+
+*Project inbox* named only the task-grid layout. This topic names the **underlying node graph**; the grid is one view. xref:project-inbox.adoc[Project inbox (renamed)] redirects here.
+
+== Related
+
+* xref:grounded-tokens.adoc[Grounded tokens] — provenance on words inside a node chat
+* link:https://hci-nerdz.github.io/blog/when-chat-should-spawn-a-node/[Essay — When chat should spawn a node]
+* link:https://docs.devcentr.org/agent-rules/agent-harness.html[DevCentr agent harness]
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture]

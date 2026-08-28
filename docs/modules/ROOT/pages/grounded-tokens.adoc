@@ -4,7 +4,7 @@
 
 *Grounded tokens* mark heuristic versus researched spans in assistant output.
 
-Complements link:project-inbox.adoc[Project inbox] — provenance on *words* inside a fork; inbox on *jobs* across forks.
+Complements link:actor-model-agentic-ui.adoc[Actor-model agentic UI] — provenance on *words* inside a fork; nodes on *jobs* across forks.
 
 == Demo
 
