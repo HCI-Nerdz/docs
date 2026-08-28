@@ -1,0 +1,10 @@
+= 2026-08-28 — Project inbox
+:page-audience: Maintainers tracking HCI Nerdz docs functional history
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-08-28
+
+New teaching page **Project inbox** — task grid for parallel agent work.
+
+* Actor topology diagram, serialized-wall case screenshot, status vocabulary, chapter model
+* Cross-links to DevCentr harness routing, essay, and demo
+* Nav entry after Grounded tokens

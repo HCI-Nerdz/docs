@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Project inbox actor topology</title>
+  <desc id="desc">One canonical thread fans out to task cards, fork views, and mailbox summaries; siblings read summaries without loading full forks.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#3d9b8f"/>
+    </marker>
+    <style>
+      .box { fill: #1a1f24; stroke: #3d9b8f; stroke-width: 1.5; rx: 8; }
+      .box-muted { fill: #12161a; stroke: #4a5560; stroke-width: 1.2; rx: 8; }
+      .label { fill: #e8eef2; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; }
+      .sublabel { fill: #9aa8b4; font-family: system-ui, sans-serif; font-size: 11px; }
+      .edge { stroke: #3d9b8f; stroke-width: 1.4; fill: none; marker-end: url(#arrow); }
+      .edge-muted { stroke: #4a5560; stroke-width: 1.2; fill: none; stroke-dasharray: 4 3; }
+    </style>
+  </defs>
+  <!-- Canonical thread -->
+  <rect class="box" x="260" y="24" width="200" height="56"/>
+  <text class="label" x="360" y="48" text-anchor="middle">thread.jsonl</text>
+  <text class="sublabel" x="360" y="66" text-anchor="middle">canonical log</text>
+  <!-- Router -->
+  <rect class="box" x="280" y="110" width="160" height="48"/>
+  <text class="label" x="360" y="140" text-anchor="middle">Harness router</text>
+  <!-- Grid -->
+  <rect class="box" x="40" y="200" width="140" height="72"/>
+  <text class="label" x="110" y="228" text-anchor="middle">Inbox grid</text>
+  <text class="sublabel" x="110" y="248" text-anchor="middle">chapter snapshot</text>
+  <!-- Main thread UI -->
+  <rect class="box" x="290" y="200" width="140" height="72"/>
+  <text class="label" x="360" y="228" text-anchor="middle">Main thread</text>
+  <text class="sublabel" x="360" y="248" text-anchor="middle">coordinator</text>
+  <!-- Fork -->
+  <rect class="box" x="540" y="200" width="140" height="72"/>
+  <text class="label" x="610" y="228" text-anchor="middle">Fork view</text>
+  <text class="sublabel" x="610" y="248" text-anchor="middle">cosmetic filter</text>
+  <!-- Mailboxes -->
+  <rect class="box-muted" x="120" y="320" width="120" height="56"/>
+  <text class="label" x="180" y="344" text-anchor="middle">summaries/A</text>
+  <rect class="box-muted" x="300" y="320" width="120" height="56"/>
+  <text class="label" x="360" y="344" text-anchor="middle">summaries/B</text>
+  <rect class="box-muted" x="480" y="320" width="120" height="56"/>
+  <text class="label" x="540" y="344" text-anchor="middle">summaries/C</text>
+  <!-- Edges -->
+  <path class="edge" d="M360 80 L360 110"/>
+  <path class="edge" d="M320 158 L110 200"/>
+  <path class="edge" d="M360 158 L360 200"/>
+  <path class="edge" d="M400 158 L610 200"/>
+  <path class="edge-muted" d="M110 272 L180 320"/>
+  <path class="edge-muted" d="M360 272 L360 320"/>
+  <path class="edge-muted" d="M610 272 L540 320"/>
+  <path class="edge-muted" d="M240 348 L300 348"/>
+  <path class="edge-muted" d="M420 348 L480 348"/>
+  <text class="sublabel" x="360" y="400" text-anchor="middle">Siblings read mailboxes at init  no need to load full fork transcripts</text>
+</svg>

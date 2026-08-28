@@ -10,6 +10,8 @@
 * xref:context-rails.adoc[Edge Bar]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:grounded-tokens.adoc[Grounded tokens]
+* xref:project-inbox.adoc[Project inbox]
+* xref:project-inbox.adoc[Project inbox]
 * xref:cleartype.adoc[ClearType]
 * xref:colr.adoc[COLR color fonts]
 * xref:processing-maps.adoc[Processing maps]

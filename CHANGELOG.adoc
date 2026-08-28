@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-08-28 ? Project inbox
+
+* Docs topic: parallel task grid, cosmetic forks, actor mailboxes, chapter snapshots
+* link:changelog-details/2026-08-28%20-%20project-inbox.adoc[Details]
+
 == 2026-08-25 ù Internet Reliability umbrella pointer
 
 * *Labels versus wires* and literature catalog point at DevCentr **Internet Reliability** as systems umbrella; symptom essays/demo and this diagnosis/treatment face stay on HCI (Cool URI / slug absorb unchanged).
