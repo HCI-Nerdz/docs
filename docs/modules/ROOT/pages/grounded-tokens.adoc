@@ -1,4 +1,4 @@
-﻿= Grounded tokens
+= Grounded tokens
 :description: Inline visual provenance for AI assistant output.
 :page-layout: docs
 
