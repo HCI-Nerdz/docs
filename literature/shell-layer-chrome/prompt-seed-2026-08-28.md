@@ -28,3 +28,19 @@ Add output/display layers to the shell. TUIs on separate buffer — does not int
 Rationale: monospace must fit OSO non-mono chrome (dew/host widgets, context bar) — not "any mono."
 Override allowed (user setting / host chrome).
 Fallback: Consolas → Cascadia Mono → Courier New → monospace.
+
+---
+
+## Addendum — open-terminal layout modes + association (same day, PM)
+
+Open Terminal chrome is **multi-mode**, not “decoupled index only”:
+
+| Mode | HCI note |
+|------|----------|
+| **Standalone** | Familiar “I opened a terminal” — tabs top or left; surface co-located. |
+| **Decoupled index** | Index / calling chrome separate from live PTY windows (activity-map cousin). |
+| **Other** | Leave room; don’t freeze compositions early. |
+
+**Re-association / thumbs:** session processes stay visible and produce thumbnails; controller UIs **subscribe** (v0 allows multiple). Exclusive “manager hides taskbar windows” is a later product choice. Prefer shared-memory thumb addresses for realtime previews — watch perf.
+
+Canonical: [PRODUCT-MODEL](https://github.com/openshellorg/open-terminal/blob/main/docs/PRODUCT-MODEL.adoc) · [session-association](https://github.com/openshellorg/shell-architecture/blob/main/docs/modules/ROOT/pages/session-association.adoc).
