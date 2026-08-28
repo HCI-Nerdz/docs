@@ -1,4 +1,8 @@
-﻿== 2026-08-28 — Shell layer chrome
+== 2026-08-28 - Host native widgets (HCI note)
+
+* shell-layer-chrome: distinguish **inserted** host chrome / stacked app top bar from **hover** widgets; link OpenShellOrg host-native-widgets spec.
+* Demo Widget: Host | Overlay mock deferred.
+== 2026-08-28 — Shell layer chrome
 
 * New topic: paste preview overlay, step tracker, control-plane focus, mode swap UI.
 * Pairs with OpenShellOrg xref:shell-display-layers.adoc[display layers] spec (cross-org link in prose).

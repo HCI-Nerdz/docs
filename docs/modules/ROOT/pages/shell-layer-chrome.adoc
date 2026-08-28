@@ -1,4 +1,4 @@
-﻿= Shell layer chrome
+= Shell layer chrome
 :description: HCI for layered shell UI — paste preview overlay, step tracker, control-plane focus, and mode swap affordances.
 
 Interaction design for link:https://openshellorg.github.io/docs/shell-architecture/shell-display-layers.html[OpenShellOrg display and control layers].
@@ -43,13 +43,24 @@ Gutter also carries shell-owned list chrome (`▶`, `▪`, `A`–`Z` markers) so
 
 == Top context bar: host chrome vs overlay
 
-Open Shell is **mode-engaged**: it tries to mount the top context bar in the **parent terminal's native chrome** first (OpenShellOrg `terminal` fork is first-class).
+Open Shell is **mode-engaged**: it tries to **insert** the top context bar into the **parent terminal's native chrome** first (OpenShellOrg `terminal` fork is first-class).
+Hovering that bar over the shell is an inferior placement for always-on session chrome.
 If probe/offer is rejected or unsupported → same bar on the **display-overlay** stack (never stdout).
 
 Users should barely notice except native host chrome feels more app-like.
 Spec: link:https://openshellorg.github.io/docs/shell-architecture/host-chrome-negotiation.html[host chrome negotiation].
 
 Demo simulates both with a **Host chrome | Overlay** control (labeled simulation).
+
+=== Host chrome vs hover widgets
+
+Keep the distinction clear:
+
+* **Host chrome (inserted)** — shell top bar; optional **stacked app top bar** under it for the active CLI
+* **Hover widgets** — host-owned floats over terminal content (color picker, GUI editor, file upload, ...) — not a substitute for inserted session chrome
+
+Spec: link:https://openshellorg.github.io/docs/shell-architecture/host-native-widgets.html[host native widgets].
+Demo mock for **Widget: Host | Overlay** is future work (skip until cheap).
 
 == Prompt line modes
 
