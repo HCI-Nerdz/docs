@@ -121,6 +121,8 @@ ACTOR_NODE_STORE = jsonl-per-node | off
 
 Defaults when `graph-grid`: `ACTOR_NODE_STORE=jsonl-per-node`, `ACTOR_WAIT_GRAPH=warn`.
 
+Reference runtime: link:https://github.com/dev-centr/hornet[`dev-centr/hornet`] (v0 disk store, v1 Mixr + desk, v2 temporal layout).
+
 link:https://docs.devcentr.org/agent-rules/actor-model-agentic-ui.html[DevCentr — Actor-model agentic UI] owns disk schema and routing.
 
 == Demo
