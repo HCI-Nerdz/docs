@@ -62,6 +62,15 @@ Keep the distinction clear:
 Spec: link:https://openshellorg.github.io/docs/shell-architecture/host-native-widgets.html[host native widgets].
 Demo mock for **Widget: Host | Overlay** is future work (skip until cheap).
 
+
+
+== Typography (cell font)
+
+Open Shell's curated default terminal/cell face is **Consolas** (system font — not bundled), chosen so monospace fits non-monospace dew/host chrome and the context bar.
+Users may override; fallback: Cascadia Mono → Courier New → monospace.
+
+Spec: link:https://openshellorg.github.io/docs/shell-architecture/typography.html[typography @ shell-architecture].
+Demo CSS: link:https://github.com/HCI-Nerdz/shell-context-demo[shell-context-demo].
 == Prompt line modes
 
 Always-on **top context bar** hosts a **line mode** control (`1-line` / `2-line`):

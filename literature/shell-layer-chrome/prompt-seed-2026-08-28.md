@@ -1,4 +1,4 @@
-﻿# Prompt seed — shell layer chrome
+# Prompt seed — shell layer chrome
 
 **Date:** 2026-08-28 (afternoon extension)  
 **Origin:** Author framing — display layers, paste preview, proshell naming debate  
@@ -19,3 +19,12 @@ Add output/display layers to the shell. TUIs on separate buffer — does not int
 **Startup:** Layout document on overlay, not profile echo hacks.
 
 **Comparison pages:** Keybindings matrix + shell landscape taxonomy on openshellorg site.
+
+---
+
+## Addendum — typography (same day)
+
+**Curated default cell/monospace font: Consolas** (system face; do not bundle).
+Rationale: monospace must fit OSO non-mono chrome (dew/host widgets, context bar) — not "any mono."
+Override allowed (user setting / host chrome).
+Fallback: Consolas → Cascadia Mono → Courier New → monospace.

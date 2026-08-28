@@ -1,3 +1,9 @@
+= Changelog
+
+== 2026-08-28 — Consolas cell default
+
+* xref:shell-layer-chrome.adoc[Shell layer chrome]: note Open Shell curated Consolas monospace + fallbacks; link shell-architecture typography.
+
 == 2026-08-28 - Host native widgets (HCI note)
 
 * shell-layer-chrome: distinguish **inserted** host chrome / stacked app top bar from **hover** widgets; link OpenShellOrg host-native-widgets spec.
