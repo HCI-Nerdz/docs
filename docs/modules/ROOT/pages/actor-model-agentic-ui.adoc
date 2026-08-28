@@ -4,7 +4,7 @@
 :page-usage-context: Reference page on the HCI Nerdz docs hub
 :page-orig-author: Ryan Johnson
 :page-last-author: Cursor agent on behalf of Ryan Johnson
-:page-last-edited: 2026-08-28
+:page-last-edited: 2026-08-28T05:48-0500
 
 *Actor-model agentic UI* replaces the linear chat assumption with a **persisted graph of nodes** — each node is an actor with its own chat log, type, disk address, and spawn lineage.
 
@@ -29,9 +29,9 @@ image::actor-model-agentic-ui/serialized-wall.png[Serialized multi-repo agent up
 Each node writes:
 
 * `meta.json` — type, status, `spawnedBy`, `spawned[]`, `related[]`, mailbox summary, disk `address`
-* `chat.jsonl` — messages for this node only
+* `chat.jsonl` — authoritative messages for this node only
 
-Parent and child both record each other's id **before** the child accepts traffic.
+Parent and child both record each other's id **before** the child accepts traffic. Runtime structs mirror disk 1:1 — no shadow transcript cache.
 
 == Node types
 
@@ -40,13 +40,16 @@ Parent and child both record each other's id **before** the child accepts traffi
 | Type | Role
 
 | `coordinator`
-| Root orchestrator; owns epoch grid; thin main thread
+| Root orchestrator; continuous top-level voice with summarization
 
 | `discussion`
-| Exploratory chat; may spawn tasks or further discussions when topic forks
+| Exploratory chat; may spawn tasks, discussions, or disambiguation when topic forks
 
 | `task`
 | Bounded job (repo PR, merge, sync); appears in parallel grid with status dot
+
+| `disambiguation`
+| Short-lived resolver when parent/child topic boundary is unclear
 |===
 
 More subtypes extend the same struct — type is a routing hint, not a separate storage silo.
@@ -60,22 +63,51 @@ When chat in node A drifts from A's declared topic:
 . A gets a routing marker in its chat; new lines go to B's `chat.jsonl`
 . UI may show B in the grid, graph strip, or fork panel depending on type
 
-Trigger: model proposes spawn, user clicks **Spawn tangent**, or policy (non-task utterance in a task node).
+**Primary trigger: model-proposed spawn** — when the user mixes continuation of the current subject with new ideas that deserve their own context.
+
+Secondary: user **Spawn tangent**, policy (non-task utterance in task node), or **`disambiguation`** child when the model cannot resolve the boundary yet.
+
+== Metathread
+
+Cross-node audit lives in `orchestrator/meta.jsonl`:
+
+* Coordinator utterances and spawn events
+* Line refs into child logs (`{ node, line, summary }`)
+* Agent-generated timeline bookmarks as chat progresses
+
+Interactive typing happens in `nodes/{id}/chat.jsonl`; the metathread is the spine, not a filtered copy of one mega-scroll.
 
 == Graph + views
 
 image::actor-model-agentic-ui/node-graph-topology.svg[Node graph — spawn edges, mailboxes, grid projection,width=720]
 
-One graph; multiple projections:
+One graph; multiple projections over the same disk store:
 
 * **Grid** — `type=task` nodes, status + summary, separate scroll from main thread
 * **Fork panel** — selected node's `chat.jsonl`
 * **Lineage strip** — `spawnedBy` / `spawned` for the active node
-* **Coordinator thread** — not every subagent line
+* **Global coordinator thread** — continuous chat with summarization; user can back out to global context from any node
+* **Temporal layout** — planned embeddable widget (see below)
 
-== Epochs (formerly chapters)
+Hierarchical coordinator mode and global personal-context mode are **different views**, not different stores. Reset = scope filter (archive / trim to bookmark), not delete disk.
 
-When coherence breaks (mission reframed, CLA unblocked, batch phase change), start a **new epoch**. The grid layout for that epoch is immutable once issued; prior epochs remain inspectable.
+== Wait graph
+
+Default: **`warn`**. Subagents declare subscriptions:
+
+* `warn` — mailbox may be stale; keep working on independent lines
+* `enforce` — block until terminal status (merges, releases)
+
+== Temporal layout (planned)
+
+Parallel nodes do not naturally chapter together. **Temporal layout** is a view engine — same component, different `scope`:
+
+* **Global timeline** — all activity under the chat root
+* **Sub-timeline** — one node subtree (widget inside node detail)
+
+Features (phased): fade idle nodes (not delete; respect `awaitingUser`), horizontal scrubber, token-volume strip, heatmap overlay, zoom-dependent keyword bookmarks in a sidebar. Bookmarks are **agent-generated** as chat progresses.
+
+Optional epoch snapshots (`views/epoch-N.json`) when the coordinator explicitly reframes a batch — supplements bookmarks; not the primary nav model.
 
 == Relationship to Dev-Centr harness
 
@@ -83,9 +115,11 @@ When coherence breaks (mission reframed, CLA unblocked, batch phase change), sta
 ----
 ACTOR_AGENTIC_UI = graph-grid | serialized | off
 ACTOR_GRAPH_EPOCHS = on | off
-ACTOR_WAIT_GRAPH = enforce | warn | off
+ACTOR_WAIT_GRAPH = warn | enforce | off
 ACTOR_NODE_STORE = jsonl-per-node | off
 ----
+
+Defaults when `graph-grid`: `ACTOR_NODE_STORE=jsonl-per-node`, `ACTOR_WAIT_GRAPH=warn`.
 
 link:https://docs.devcentr.org/agent-rules/actor-model-agentic-ui.html[DevCentr — Actor-model agentic UI] owns disk schema and routing.
 
