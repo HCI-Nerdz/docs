@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-28 — Highlight vs pipe linking
+
+* New topic: xref:highlight-vs-pipe-linking.adoc[Highlight versus pipe linking] — prefer highlight+dull over decorative window pipes for terminal-manager ↔ project-grid selection.
+* Pairs with OpenShellOrg `devcentr-terminal-manager` / `projectGroupedManager`.
 == 2026-08-28 — Consolas cell default
 
 * xref:shell-layer-chrome.adoc[Shell layer chrome]: note Open Shell curated Consolas monospace + fallbacks; link shell-architecture typography.

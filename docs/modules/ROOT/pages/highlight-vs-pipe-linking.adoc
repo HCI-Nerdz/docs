@@ -1,0 +1,57 @@
+= Highlight versus pipe linking
+:navtitle: Highlight vs pipe
+:page-audience: builders
+:page-usage-context: explanation
+:page-orig-author: agent on behalf of AMDphreak
+:page-last-author: agent on behalf of AMDphreak
+:description: When two windows share a selection (terminal manager ↔ project grid), prefer highlight-and-dull over drawing spatial pipes.
+
+== Claim
+
+When a **controller surface** and a **map/grid surface** must show the same selection, **highlight the target and dull the rest** before drawing a decorative connector between windows.
+
+In plain language: selection dimming is the everyday language of "this one"; a pipe is a special effect.
+
+== Context
+
+OpenShellOrg / DevCentr: a **project-grouped terminal manager** (vertical tab groups by spawn-project) sits beside DevCentr's **project grid**. Focusing a session should answer: *which project cell does this terminal belong to?*
+
+Product spec: link:https://github.com/openshellorg/shell-architecture/blob/main/docs/modules/ROOT/pages/devcentr-terminal-manager.adoc[devcentr-terminal-manager @ shell-architecture].
+
+== Two options
+
+|===
+| Pattern | What the user sees | Cost / risk
+
+| **Highlight + dull** (default)
+| Active project cell/tab is emphasized; siblings lose contrast or saturate down.
+| Cheap; works across monitors and when windows do not share an edge; matches OS and IDE selection idioms.
+
+| **Visual pipe**
+| A connector from manager chrome edge into the grid item / thumbnail edge.
+| Fancy; needs geometry, z-order, multi-monitor math; can compete with content; prior art for "window piping" was **not** found in-hive.
+|===
+
+== Recommendation
+
+. Ship **highlight + dull** as the default association cue.
+. Keep **pipe** as an optional flourish after association + highlight are solid.
+. Let the user **swap focus from the grid** (click another project) as well as from manager tabs -- the link is bidirectional selection, not a one-way animation.
+
+== Why highlight wins first
+
+* Working memory: contrast change is a known "focus" signal; a novel connector must be learned.
+* Failure modes: pipes break when windows overlap, minimize, or sit on separate displays; highlight still works on the grid alone.
+* Clutter budget: grids already carry thumbs and badges; a permanent pipe adds ink without adding control.
+
+== Related HCI
+
+* xref:spatial-web-windows.adoc[Spatial web windows] -- separate surfaces, shared selection via channels (not drawn wires).
+* xref:project-inbox.adoc[Project inbox] -- grid of parallel work; selection/dimming cousins.
+* Labels versus wires (xref:navigating-by-content.adoc[Labels versus wires]) is a different claim (identity vs pretty names) -- do not conflate with on-screen connector graphics.
+
+== Non-goals
+
+* Full pipe geometry algorithm
+* Replacing OS focus rectangles
+* Mandating dulling strength (theme packs may tune opacity)

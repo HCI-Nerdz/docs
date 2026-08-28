@@ -9,6 +9,7 @@
 * xref:context-bound-settings.adoc[Context-bound settings]
 * xref:shell-context-chrome.adoc[Shell context chrome]
 * xref:shell-layer-chrome.adoc[Shell layer chrome]
+* xref:highlight-vs-pipe-linking.adoc[Highlight vs pipe linking]
 * xref:context-rails.adoc[Edge Bar]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:grounded-tokens.adoc[Grounded tokens]

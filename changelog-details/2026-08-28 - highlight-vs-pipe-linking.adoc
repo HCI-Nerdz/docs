@@ -1,0 +1,4 @@
+= 2026-08-28 - highlight vs pipe linking
+
+* New HCI note: highlight-and-dull as default association cue between controller and map/grid surfaces.
+* Optional visual pipe deferred; OpenShellOrg project-grouped manager is the product context.
