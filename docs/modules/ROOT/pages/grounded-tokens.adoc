@@ -1,0 +1,122 @@
+= Grounded tokens
+:description: Visual provenance for AI assistant output - inline marks that distinguish heuristic guesses from researched facts so users see naming before looking costs turns.
+:page-layout: docs
+
+*Grounded tokens* mark salient spans in assistant replies by epistemic class: pattern-filled guesses versus facts confirmed by tools, files, or APIs.
+
+In plain language: *show me which words were researched before they read as facts*.
+
+== Core claim
+
+Assistant surfaces render every token with equal typographic weight.
+A repo slug, a file path, and a hedge in the same paragraph look identical - even when only some tokens were verified.
+
+That is a product-representation bug.
+Users should not reverse-engineer the tool loop to learn whether `AMDphreak/clients` came from GitHub or from analogy with `bitwarden/clients`.
+
+Grounded tokens are the **visual layer** on token provenance metadata: the harness knows the class; the transcript should show it inline.
+
+== Case study - fork name before lookup
+
+image::grounded-tokens/case-study-fork-name.png[Agent chat retrying heuristic AMDphreak/clients until researching AMDphreak/bitwarden-clients,width=100%]
+
+An agent updating a Bitwarden fork assumed the fork kept the upstream repo name.
+It retried the wrong slug several times.
+With grounded tokens, the first `AMDphreak/clients` would carry a *heuristic* mark; after `gh repo view` succeeds, `AMDphreak/bitwarden-clients` reads as *researched*.
+
+== Token classes
+
+[cols="1,2,3"]
+|===
+| Class | Meaning | Visual (proposal)
+
+| Heuristic
+| Analogy, default, or pattern fill - not yet verified
+| Dashed underline, warm tone; tooltip "Assumed - not verified"
+
+| Researched
+| Confirmed by tool output, file read, API, or crawl
+| Solid underline, cool tone; hover shows source (tool + excerpt)
+
+| User-stated
+| From prompt, @-mention, or pinned context
+| Dotted underline, neutral grey
+
+| Corrected
+| Heuristic explicitly rejected and replaced
+| Prior span struck or reclassed; replacement researched
+|===
+
+Do not rely on color alone.
+Pair underline style with a legend and optional glyph.
+
+== Design principles
+
+* *Emphasize guesses* - researched tokens stay quiet; heuristics pop before they waste turns.
+* *Upgrade in place* - when verification replaces a guess, animate heuristic → researched (or corrected → researched).
+* *People first* - lead with human cost (confidence, time), not tokenizer plumbing.
+* *Accessible* - `aria-description`, high-contrast patterns, no color-only encoding.
+
+== Mock - plain versus marked
+
+image::grounded-tokens/grounded-tokens-mock.svg[Plain assistant transcript versus the same text with heuristic and researched grounded token marks,width=100%]
+
+== Demo
+
+link:https://hci-nerdz.github.io/demos/grounded-tokens/[Grounded tokens desk] - replay the fork-name scenario; toggle *Show provenance*.
+
+== Implementation notes (host products)
+
+=== Preferred - harness metadata
+
+The agent runtime already knows tool calls. Emit structured span annotations alongside streamed text:
+
+[source,json]
+----
+{
+  "spans": [
+    { "start": 42, "end": 59, "class": "heuristic", "rule": "fork slug mirrors upstream" },
+    { "start": 120, "end": 145, "class": "researched", "source": "gh repo view", "at": "2026-08-28T08:12:04Z" }
+  ]
+}
+----
+
+=== Fallback - ledger inference
+
+Post-process: identifiers matching recent tool results → researched; others in factual contexts → heuristic. Weaker than harness truth, better than uniform confidence.
+
+=== Renderer
+
+Chat markdown layer wraps spans with `data-grounded-class` attributes; CSS handles underline styles; tooltip layer shows source payload.
+
+== Relationship to token provenance
+
+xref:token-provenance.adoc[Token provenance] names the metadata and policy story.
+Grounded tokens are the default human-facing encoding in chat surfaces.
+Same fork-name case study; complementary docs entry points.
+
+== Non-goals
+
+* A single confidence badge on the whole message (collapses lethal heuristics into averages)
+* Replacing tool logs for power users (marks are for reading flow, not audit export)
+* Claiming hosts already emit perfect span metadata (design for upgrade path)
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/when-the-agent-names-a-fork-before-it-looks/[When the agent names a fork before it looks]
+* Demo: link:https://hci-nerdz.github.io/demos/grounded-tokens/[Grounded tokens desk]
+* Sibling demo: link:https://hci-nerdz.github.io/demos/token-provenance/[Token provenance replay]
+
+== Literature
+
+* link:../../literature/grounded-tokens/cursor-seed-2026-08-28.md[cursor-seed-2026-08-28.md]
+* link:../../literature/token-provenance/cursor-seed-2026-08-28.md[token-provenance seed] - shared originating scene
+
+== Related
+
+* xref:token-provenance.adoc[Token provenance]
+* link:https://hci-nerdz.github.io/blog/when-the-agent-assumes-the-fork-name/[When the agent assumes the fork name]
+* link:https://hci-nerdz.github.io/blog/attention-is-not-inventory/[Attention is not inventory]
+* link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[Product representation is the bug]
+* xref:principles.adoc[Principles]
+* xref:literature.adoc[Literature]

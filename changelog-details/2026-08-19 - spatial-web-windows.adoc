@@ -1,0 +1,5 @@
+= Spatial web windows
+:date: 2026-08-19
+
+Multi-window desktop web UX: lite palettes, SharedWorker coordination, intent routing.
+Essay, Antora topic, demo desk, literature seed, and cross-links to Dev-Centr and Desktop-Tooling spatial-browser fork.

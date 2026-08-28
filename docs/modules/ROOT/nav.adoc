@@ -9,6 +9,7 @@
 * xref:context-bound-settings.adoc[Context-bound settings]
 * xref:context-rails.adoc[Edge Bar]
 * xref:navigating-by-content.adoc[Labels versus wires]
+* xref:grounded-tokens.adoc[Grounded tokens]
 * xref:cleartype.adoc[ClearType]
 * xref:colr.adoc[COLR color fonts]
 * xref:processing-maps.adoc[Processing maps]

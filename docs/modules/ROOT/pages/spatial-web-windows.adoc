@@ -1,0 +1,169 @@
+= Spatial web windows
+:description: Multi-window desktop web UX — lite palettes, decoupled state, and intent routing so professional tools can live on the web without a single viewport trap.
+
+*Spatial web windows* treat auxiliary browser surfaces — histogram palettes, curve remotes, inspectors — as first-class parts of a web application, physically separated on the desktop so users can manage working memory with mechanistic cues, not one flat SPA canvas.
+
+In plain language: *tear tools off into lite windows; keep them wired to the same work*.
+
+== Core claim
+
+Professional desktop software (Capture One, GIMP, NLE suites) separates the *model* (canvas, timeline) from *controls about the model* (histogram, curves, transport).
+The web converged on single-viewport SPAs; WASM and WebGPU fixed compute, not spatial ergonomics.
+
+Preferred shape:
+
+. *Viewport window* — engine work (WebGPU/WebGL canvas, or DOM primary surface)
+. *Lite palette windows* — DOM-native controls in chromeless popups or Document Picture-in-Picture
+. *Shared state hub* — `SharedWorker` or `BroadcastChannel` so palettes are projections, not duplicate apps
+. *Intent routing* — layout follows *display intent* (desktop vs mobile), not raw viewport width
+
+== Why it exists
+
+Logins and OAuth already use popups as signals back to the opener.
+Core product UI rarely does — not because the platform forbids it, but because popup blockers, mobile parity, COOP/`noopener`, and SPA frameworks optimized for one `document` root.
+
+Physically separating UIs is a powerful cue for human working memory:
+
+* Lock down the parent context while exploring a sub-task in a satellite window
+* *Remote control* metaphor — functions about the model live beside the model, not on top of it
+* Layering and spatial indexing — CAD, NLE, and desktop windowing solved this decades ago
+
+Forcing everything into one 2D global mental context — except basic modals — strains reasoning.
+
+== Anti-pattern — monolithic viewport
+
+image::spatial-web-windows/monolith-vs-spatial.png[Monolithic browser tab cramming viewport and all palettes versus spatial layout with torn-off lite windows,width=100%]
+
+One tab holds canvas, histogram, curves, and toolbar.
+The user holds every tool relationship in working memory because nothing in the chrome says *this window is the remote for that viewport*.
+
+== Preferred shape — spatial layout
+
+Same workflow with a main viewport and torn-off lite windows for histogram and curves.
+Each surface has a clear job; OS window boundaries reinforce context boundaries.
+
+== Communication patterns
+
+=== Same-origin (direct)
+
+When popup and opener share origin, synchronous access via `window.opener` is possible — but couples event loops and garbage collection.
+
+Prefer decoupled channels even when same-origin.
+
+=== Cross-origin (OAuth, connectors)
+
+`postMessage` with origin verification is the standard pattern.
+After redirect back to app origin, `BroadcastChannel` can replace a stale `opener` handle.
+
+=== Decoupled coordination (recommended)
+
+[cols="1,2"]
+|===
+| Mechanism | Role
+
+| `SharedWorker`
+| Headless state daemon; palettes and viewport subscribe to deltas
+
+| `BroadcastChannel`
+| Lightweight pub/sub for selection and mode events
+
+| DOM portals
+| `window.open('about:blank')` + stylesheet clone + framework portal into auxiliary `document`
+
+| Window Management API
+| `getScreenDetails()` for multi-monitor palette placement
+|===
+
+=== Topology
+
+image::spatial-web-windows/communication-topology.svg[Viewport, SharedWorker hub, and lite palette windows,width=80%]
+
+== Lite window primitives
+
+image::spatial-web-windows/lite-window-chrome.png[Full browser chrome versus lite popup versus Document Picture-in-Picture,width=100%]
+
+[cols="1,2"]
+|===
+| API | Behavior
+
+| Document Picture-in-Picture
+| `documentPictureInPicture.requestWindow()` — DOM floating window, no URL bar, always-on-top of parent document
+
+| Chromeless `window.open`
+| Feature string `popup,toolbar=no,menubar=no,location=no` — minimal auxiliary window in Chromium PWAs
+
+| Window Controls Overlay
+| PWA manifest `display_override: ["window-controls-overlay"]` — app claims surface to OS edge; native min/max/close only
+|===
+
+== Intent routing
+
+image::spatial-web-windows/intent-routing.png[Desktop intent keeps compact palette density at 300px width versus viewport-width responsive collapse,width=100%]
+
+Responsive CSS keyed only to `@media (max-width: …)` breaks multi-window desktop apps.
+A 250px-wide utility window must not become a hamburger-menu mobile layout.
+
+Use explicit *display intent*:
+
+* `desktop` — palettes as lite windows; resize adjusts tool density only
+* `mobile` — palettes collapse to bottom sheets / drawers (deferred polish in early demos)
+
+Guard with `@media (pointer: fine)` and `@media (any-hover: hover)` — fine pointer on a large monitor keeps desktop density even in narrow windows.
+
+== Browser sandbox impediments
+
+* *Background throttling* — focusing a palette throttles the viewport's `requestAnimationFrame` and timers
+* *No parent-relative always-on-top* — OS treats popups as peer windows; inspector cannot reliably float above its parent only
+* *Tab bar coupled to window stack* — switching tabs hides sibling surfaces under the same browser profile
+* *COOP / `noopener`* — security defaults sever `window.opener` unless explicitly managed
+* *Single main thread* — unless workers isolate work, heavy viewport repaint drops palette input frames
+
+image::spatial-web-windows/tab-window-decoupling.png[Logical workspace group decoupled from tab bar and OS window stack,width=100%]
+
+Browser-level fixes for workspace grouping, parent-relative always-on-top, and reduced throttling among workspace peers are tracked in link:https://github.com/Desktop-Tooling/spatial-browser[Desktop-Tooling/spatial-browser] (Chromium fork).
+
+== WASM and professional software
+
+The *canvas sandbox trap*: developers reimplement windowing inside WebGL (Dear ImGui, custom toolkits) because DOM felt too rigid.
+
+Spatial web windows invert that:
+
+* WASM/WebGPU engine in viewport (or `OffscreenCanvas` in worker)
+* Inspector and control palettes as lite DOM windows
+* State sync via `SharedArrayBuffer` or worker byte buffers
+
+Developers building UI-heavy web apps: see link:https://docs.devcentr.org/dev-centr/latest/architecture/ui-heavy-web-apps.html#spatial-windows-and-lite-palettes[Dev-Centr — Spatial windows and lite palettes].
+
+== Relationship to scoped UX
+
+xref:scoped-ux-architecture.adoc[Scoped UX architecture] keeps tools small with hard boundaries.
+Spatial web windows let each scoped tool *occupy its own OS window* while sharing one shell via the state hub — the remote-control pattern at platform scale.
+
+xref:fundamental-contexts.adoc[Fundamental contexts] — layout/placement context can span multiple `document` roots when the controller and IR stay shared.
+
+== Non-goals
+
+* Replacing mobile single-viewport flows (intent routing converts desktop → mobile separately)
+* Every popup as a new browser tab in the general tab strip
+* Bypassing popup blockers without user activation
+* Claiming stock browsers already deliver parent-anchored palettes without fork patches
+
+== Prototype
+
+* Blog essay: link:https://hci-nerdz.github.io/blog/when-the-browser-flattens-working-memory/[When the browser flattens working memory]
+* Demo: link:https://hci-nerdz.github.io/demos/spatial-web-windows/[Spatial web windows desk]
+* Browser fork: link:https://github.com/Desktop-Tooling/spatial-browser[Desktop-Tooling/spatial-browser]
+
+== Literature
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/spatial-web-windows/gemini-web-popups-communication-and-limitations.md[Gemini export — Web Popups: Communication and Limitations]
+  (2026-08-19; https://gemini.google.com/app/c7d7a13f9f1b8456[original thread])
+
+== Related
+
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture]
+* xref:context-bound-settings.adoc[Context-bound settings] — dependent surfaces beside activity
+* xref:division-of-labor.adoc[Division of labor]
+* xref:ecosystem.adoc[Ecosystem]
+* xref:literature.adoc[Literature]
+* link:https://docs.devcentr.org/dev-centr/latest/architecture/ui-heavy-web-apps.html[Dev-Centr — UI-heavy web applications]

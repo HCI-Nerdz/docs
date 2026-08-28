@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-label="Spatial web windows communication topology">
+  <defs>
+    <style>
+      .box { fill: #1a2332; stroke: #3D9B8F; stroke-width: 2; rx: 8; }
+      .hub { fill: #0E1218; stroke: #E8A54B; stroke-width: 2; rx: 12; }
+      .label { fill: #E8E4D9; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; }
+      .sublabel { fill: #9aa8b8; font-family: system-ui, sans-serif; font-size: 11px; }
+      .arrow { stroke: #E8A54B; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#E8A54B"/>
+    </marker>
+  </defs>
+  <rect class="box" x="24" y="48" width="160" height="88"/>
+  <text class="label" x="44" y="88">Viewport window</text>
+  <text class="sublabel" x="44" y="108">Canvas / WebGPU</text>
+  <rect class="box" x="24" y="184" width="160" height="88"/>
+  <text class="label" x="44" y="224">Histogram palette</text>
+  <text class="sublabel" x="44" y="244">Document PiP / popup</text>
+  <rect class="hub" x="280" y="112" width="160" height="96"/>
+  <text class="label" x="304" y="152">SharedWorker</text>
+  <text class="sublabel" x="304" y="172">State hub + deltas</text>
+  <rect class="box" x="536" y="48" width="160" height="88"/>
+  <text class="label" x="556" y="88">Curves remote</text>
+  <text class="sublabel" x="556" y="108">Lite window</text>
+  <rect class="box" x="536" y="184" width="160" height="88"/>
+  <text class="label" x="556" y="224">BroadcastChannel</text>
+  <text class="sublabel" x="556" y="244">Selection events</text>
+  <path class="arrow" d="M 184 92 L 280 152"/>
+  <path class="arrow" d="M 184 228 L 280 168"/>
+  <path class="arrow" d="M 440 152 L 536 92"/>
+  <path class="arrow" d="M 440 168 L 536 228"/>
+  <path class="arrow" d="M 104 136 L 104 184"/>
+</svg>

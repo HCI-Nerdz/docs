@@ -1,0 +1,55 @@
+= Piles
+:description: Canvas email with sentiment signals — pile-based inbox UX for glanceable good/bad news and urgency without autoload.
+:page-layout: docs
+
+Part of the link:https://github.com/HCI-Nerdz/piles[piles] repository.
+
+== Claim
+
+Chronological inbox lists force users to *mine* every message for signal.
+*Piles* replaces the flat list with a desk-like canvas of message previews — stacked by sender, decorated with sentiment borders and urgency glow — plus a vertical tab tray that never autoloads the next message.
+
+== Visual language
+
+[cols="1,2,3"]
+|===
+| Signal | Encoding | Values
+
+| Sentiment
+| Border color + label
+| Good (green), Mostly Good (blue), Neutral (grey), Mostly Bad (yellow), Bad (red)
+
+| Urgency
+| Glow behind card
+| Independent of sentiment
+
+| Importance
+| Striped border
+| Tone-mapped “needs you now” vs platform noise
+
+| Freshness
+| Opacity on landing canvas
+| Full → greyed (sorted) → removed (~10h)
+|===
+
+== Architecture
+
+Follow xref:prototype-strategy.adoc[Prototype strategy]:
+
+* *Core* — message IR, piles, sentiment types (TypeScript + D JSON interop)
+* *Controller* — lifecycle timers, tray, canvas drag, layout mode, search
+* *Renderers* — vanilla DOM, Avalonia controls, Gmail-chrome mock for screenshots
+
+The *pattern* lives here. The *mail client* (IMAP, SQLite cache, installable Avalonia/Electron) lives in
+link:https://github.com/Desktop-Tooling/piles[Desktop-Tooling/piles].
+See xref:division-of-labor.adoc[Division of labor].
+
+== Demo
+
+link:https://hci-nerdz.github.io/piles/[Live demo] · link:https://hci-nerdz.github.io/piles/gmail-chrome/[Gmail chrome mock] · link:https://hci-nerdz.github.io/piles/components/[Component catalog] · link:https://github.com/Desktop-Tooling/piles[Desktop app]
+
+== Related
+
+* link:https://hci-nerdz.github.io/blog/attention-is-not-inventory/[Attention is not inventory]
+* xref:fundamental-contexts.adoc[Fundamental contexts] — linear list vs zoomable canvas
+* Literature seed: link:../../literature/piles/cursor-seed-2026-08-19.md[cursor-seed-2026-08-19.md]

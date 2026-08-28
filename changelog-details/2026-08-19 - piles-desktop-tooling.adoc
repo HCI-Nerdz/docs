@@ -1,0 +1,5 @@
+= Piles owned by two orgs
+:date: 2026-08-19
+
+HCI Nerdz keeps the Piles interaction pattern, IR, component library, and demos.
+Desktop Tooling owns the daily-driver mail client (IMAP, cache, Avalonia/Electron).

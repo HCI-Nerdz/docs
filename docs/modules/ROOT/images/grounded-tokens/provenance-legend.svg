@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
+  <title id="title">Grounded tokens  provenance legend</title>
+  <desc id="desc">Heuristic tokens use a dashed warm underline; researched tokens use a solid cool underline.</desc>
+  <rect width="720" height="220" fill="#1a1d23" rx="12"/>
+  <text x="36" y="44" fill="#e8eaed" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="600">Provenance at a glance</text>
+  <text x="36" y="92" fill="#f0b35a" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600">HEURISTIC</text>
+  <text x="36" y="122" fill="#c9cdd3" font-family="ui-monospace, Consolas, monospace" font-size="16">Retrying </text>
+  <text x="132" y="122" fill="#ffb86c" font-family="ui-monospace, Consolas, monospace" font-size="16">AMDphreak/clients</text>
+  <line x1="132" y1="128" x2="318" y2="128" stroke="#f0b35a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="340" y="122" fill="#8b919a" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Assumed  not verified</text>
+  <text x="36" y="168" fill="#5fd4c4" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600">RESEARCHED</text>
+  <text x="36" y="198" fill="#c9cdd3" font-family="ui-monospace, Consolas, monospace" font-size="16">The fork is </text>
+  <text x="168" y="198" fill="#7dcea0" font-family="ui-monospace, Consolas, monospace" font-size="16">AMDphreak/bitwarden-clients</text>
+  <line x1="168" y1="204" x2="448" y2="204" stroke="#3d9b8f" stroke-width="2"/>
+  <text x="470" y="198" fill="#8b919a" font-family="Segoe UI, system-ui, sans-serif" font-size="13">gh repo view · 2s ago</text>
+</svg>
