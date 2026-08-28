@@ -1,0 +1,8 @@
+= 2026-08-28 — Prompt spatial line modes + arrow mode
+:page-audience: Maintainers tracking HCI Nerdz docs functional history
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-08-28
+
+Documented **line mode** (`1-line` | `2-line`) and **arrow mode** (`ephemeral` | `persist`) as top-bar settings.
+Gutter primary marker is `▶` (inside the gutter).
+Copy policy folds into arrow mode for v1: ephemeral never in copy; persist in history and copy.

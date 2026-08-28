@@ -39,6 +39,28 @@ Hiding help behind memorized flags erodes confidence.
 
 Gutter also carries shell-owned list chrome (`▶`, `▪`, `A`–`Z` markers) so CLIs stop spamming printf arrows into stdout.
 
+
+
+== Top context bar: host chrome vs overlay
+
+Open Shell is **mode-engaged**: it tries to mount the top context bar in the **parent terminal's native chrome** first (OpenShellOrg `terminal` fork is first-class).
+If probe/offer is rejected or unsupported → same bar on the **display-overlay** stack (never stdout).
+
+Users should barely notice except native host chrome feels more app-like.
+Spec: link:https://openshellorg.github.io/docs/shell-architecture/host-chrome-negotiation.html[host chrome negotiation].
+
+Demo simulates both with a **Host chrome | Overlay** control (labeled simulation).
+
+== Prompt line modes
+
+Always-on **top context bar** hosts a **line mode** control (`1-line` / `2-line`):
+
+* **2-line** — context bar above; gutter (with `▶`) + command below (preferred Open Shell default)
+* **1-line** — classic combined row for muscle-memory compare
+
+Both keep token focus, gutter `?`, and `▶` interactive.
+Detail: xref:shell-context-chrome.adoc[shell context chrome] and OpenShellOrg prompt-spatial-layout.
+
 == Paste preview overlay
 
 === Layout

@@ -26,35 +26,84 @@ When a CLI lacks required context, it exits with a structured request; the shell
 
 **Prompt as status, not control.** Users read `user@host:path` but cannot *change* app identity from the same surface they stare at between commands.
 
-== Prompt layout
+== Prompt layout (line modes)
 
-Recommended default (OpenShellOrg spec):
+Both modes are **first-class experimental** surfaces. Prefer **2-line** as the Open Shell default; keep **1-line** for muscle memory and spatial compare.
+The **line-mode switcher** lives in the TUI **top context bar** (always-on chrome) — not a settings page.
+
+See OpenShellOrg xref via link:https://openshellorg.github.io/docs/shell-architecture/prompt-spatial-layout.html[prompt spatial layout].
+
+=== 2-line (preferred)
 
 [source]
 ----
-[?] [gcloud: ftn ▾] [py: .venv ▾]  rjamd@desk:~/code ›
- ^ gutter help (overlay)
+    [gcloud: ftn] [py: .venv]  rjamd@desk:~/code
+[▶] gcloud compute instances list
 ----
+
+* Line 1: **all** contexts together (path, user@host, app tokens) — do not isolate path alone
+* Line 2: gutter (with `▶`) + command editor only
+* Context row indented to gutter width for column align
+
+=== 1-line (compare)
+
+[source]
+----
+[?] [gcloud: ftn] [py: .venv] rjamd@desk:~/code ▶ gcloud compute instances list
+----
+
+Concession: still types after chrome on the same line.
 
 [cols="1,2"]
 |===
 | Zone | Interaction
 
-| Gutter `?` (overlay, leftmost)
+| Gutter `?` (overlay, leftmost on input row)
 | Appears when prohelp recognizes input — no `--help` typing
 
-| App tokens (left)
+| App tokens
 | Dropdown / typeahead / click-expand; grey boxes (default theme)
 
-| Host tokens (right)
+| Host tokens
 | Path picker or cd completion; user@host display; blue boxes (default theme)
 
-| `›` input
-| Normal command entry; Left-arrow from column 0 enters token focus (rightmost token first)
+| `▶` input
+| Normal command entry; left-arrow from column 0 enters token focus (rightmost token first)
 |===
 
-Alternative order (user@host:path left, app tokens before `›`) breaks muscle memory for users migrating from bash/zsh/nu.
-Keep host anchor *adjacent to input*; app context sits to its left.
+Host anchor stays on the **context surface** with apps (2-line) or left of `▶` (1-line).
+Do not resurrect permanent 3-row path-isolated layouts as defaults — wrap the context surface instead.
+
+
+== Top-bar placement (mode-engaged)
+
+Prefer **native host chrome**; **overlay fallback** when negotiation fails.
+See shell-layer-chrome and OpenShellOrg host-chrome-negotiation.
+
+== Top-bar controls
+
+Always-on TUI top context bar (not a settings page):
+
+[cols="1,2"]
+|===
+| Control | Values
+
+| **Line mode**
+| `1-line` \| `2-line` (preferred default: `2-line`)
+
+| **Arrow mode**
+| `ephemeral` \| `persist` — gutter `▶` lifetime
+|===
+
+=== Arrow mode (HCI)
+
+* **`ephemeral` (reticle):** `▶` while editing; disappears after submit. Feels like a live cursor affordance. **Never in copy.**
+* **`persist`:** `▶` remains on committed history rows for scanability (“where did I type”). **Present in copy.**
+
+Do not hard-code one behavior — users disagree; expose the control.
+
+Copy tension: overlay-only `▶` (never in stdout) makes paste cleaner for scripts but removes scan markers from copied scrollback.
+v1 folds copy into arrow mode (no third control). Advanced later: visible-but-stripped-from-copy persist.
 
 == Token focus (keyboard)
 
@@ -168,6 +217,8 @@ Same pattern: **dependent context visible beside the work** — not buried in a 
   (2026-08-28) — originating framing (gcloud vs Composio, REPL critique, left-arrow)
 
 == Related
+
+* link:https://openshellorg.github.io/docs/shell-architecture/prompt-spatial-layout.html[Prompt spatial layout @ OpenShellOrg]
 
 * link:https://openshellorg.github.io/docs/shell-architecture/persistent-shell-context.html[Persistent shell context @ OpenShellOrg]
 * xref:context-bound-settings.adoc[Context-bound settings]

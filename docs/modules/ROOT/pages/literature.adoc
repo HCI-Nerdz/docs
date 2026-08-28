@@ -87,3 +87,5 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:literature.adoc[Literature]
+
+* xref:shell-context-chrome.adoc[Shell context chrome] / prompt spatial — link:https://github.com/HCI-Nerdz/docs/blob/main/literature/prompt-spatial-layout/prompt-seed-2026-08-28.md[seed 2026-08-28]

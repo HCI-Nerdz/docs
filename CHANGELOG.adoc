@@ -2,6 +2,17 @@
 
 * New topic: paste preview overlay, step tracker, control-plane focus, mode swap UI.
 * Pairs with OpenShellOrg xref:shell-display-layers.adoc[display layers] spec (cross-org link in prose).
+== 2026-08-28 - Host chrome negotiation (HCI note)
+
+* shell-layer-chrome / shell-context-chrome: mode-engaged top bar — native host chrome vs overlay fallback.
+* Demo: Host chrome | Overlay simulation control.
+
+== 2026-08-28 - Prompt spatial line modes + arrow mode
+
+* shell-context-chrome + shell-layer-chrome: 1-line/2-line and ephemeral/persist gutter arrow; top-bar controls; copy folded into arrow mode.
+* Literature: literature/prompt-spatial-layout/prompt-seed-2026-08-28.md
+* Details: link:changelog-details/2026-08-28%20-%20prompt-spatial-line-modes.adoc[changelog-details]
+
 == 2026-08-28 — Shell context chrome
 
 * New topic: xref:docs/modules/ROOT/pages/shell-context-chrome.adoc[shell context chrome] — interactive prompt tokens, left-arrow focus, theme packs; pairs with OpenShellOrg persistent shell context spec.
