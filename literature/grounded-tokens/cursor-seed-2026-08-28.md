@@ -1,12 +1,12 @@
-# Token provenance — literature seed (2026-08-28)
+# Grounded tokens — literature seed (2026-08-28)
 
-Source conversation that seeded the **token provenance** concept: visually mark which tokens in an AI assistant reply came from heuristics vs grounded investigation.
+Source conversation that seeded the **grounded tokens** concept: visually mark which tokens in an AI assistant reply came from heuristics vs grounded investigation.
 
 ## Motivation (case study)
 
 An agent was asked to update a Bitwarden fork onto `main`. It repeatedly targeted `AMDphreak/clients` — a plausible guess because upstream is `bitwarden/clients`. The actual fork is `AMDphreak/bitwarden-clients`. The agent burned several turns on 404s before checking GitHub.
 
-Screenshot: [`case-study-fork-name.png`](../../docs/modules/ROOT/assets/token-provenance/case-study-fork-name.png) (also in demo assets).
+Screenshot: [`case-study-fork-name.png`](../../docs/modules/ROOT/images/grounded-tokens/fork-assumption-case-study.png) (also in demo assets).
 
 The user could not tell, at a glance, that the repo slug was an **assumption** rather than a **verified** identifier.
 
@@ -17,14 +17,14 @@ Surface **provenance at the token level** in assistant output:
 | Class | Meaning | Example |
 | --- | --- | --- |
 | **Heuristic** | Pattern completion, default, analogy — not yet checked against a source | `AMDphreak/clients` before any `gh repo view` |
-| **Grounded** | Confirmed by tool output, file read, API response, or explicit user fact | `AMDphreak/bitwarden-clients` after GitHub lookup |
+| **Researched** | Confirmed by tool output, file read, API response, or explicit user fact | `AMDphreak/bitwarden-clients` after GitHub lookup |
 | **User-stated** | Taken from the prompt or pinned context | repo name the user typed |
 | **Unknown** | Model emitted a claim; runtime has no provenance metadata yet | legacy plain text |
 
 ## Visual language (proposal)
 
 - **Heuristic** — dashed underline, warm amber; tooltip: “Assumed — not verified”
-- **Grounded** — solid underline, teal; click/hover reveals source (tool name + snippet)
+- **Researched** — solid underline, teal; click/hover reveals source (tool name + snippet)
 - **User-stated** — dotted underline, neutral grey
 - **Do not** rely on color alone — underline style + legend + optional icon glyph
 
@@ -43,9 +43,9 @@ People first, devs second — the email to Cursor should lead with the **human c
 
 ## Links (public face)
 
-- Demo: https://hci-nerdz.github.io/demos/token-provenance/
-- Essay: https://hci-nerdz.github.io/blog/when-the-agent-assumes-the-fork-name/
-- Docs: https://hci-nerdz.github.io/docs/hci-nerdz/token-provenance.html
+- Demo: https://hci-nerdz.github.io/demos/grounded-tokens/
+- Essay: https://hci-nerdz.github.io/blog/when-the-agent-names-a-fork-before-it-looks/
+- Docs: https://hci-nerdz.github.io/docs/hci-nerdz/grounded-tokens.html
 
 ## Related HCI Nerdz thesis
 
