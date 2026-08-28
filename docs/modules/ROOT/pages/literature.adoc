@@ -1,4 +1,4 @@
-= Literature
+﻿= Literature
 :description: Authoritative conversation sources behind published HCI Nerdz concepts.
 
 Some encyclopedia topics began as research conversations (exports, design dumps).
@@ -14,14 +14,14 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 | Concept | Authoritative sources (repo) | Curated face
 
 | Scoped UX architecture
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/scoped-ux-architecture/gemini-understanding-scoped-user-experience.md[Gemini export — Understanding Scoped User Experience]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/scoped-ux-architecture/gemini-understanding-scoped-user-experience.md[Gemini export â€” Understanding Scoped User Experience]
  (2025-10-23);
  link:https://github.com/HCI-Nerdz/docs/blob/main/literature/scoped-ux-architecture/scoped-ux-framework-with-feedforward-design.pdf[PDF design dump]
  (2026-08-01)
 | xref:scoped-ux-architecture.adoc[Scoped UX architecture]
 
 | Open-with interrupt
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/open-with-interrupt/gemini-windows-file-handler-selection-dialog.md[Gemini export — Windows File Handler Selection Dialog]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/open-with-interrupt/gemini-windows-file-handler-selection-dialog.md[Gemini export â€” Windows File Handler Selection Dialog]
  (2026-08-04)
 | xref:open-with-interrupt.adoc[Open-with interrupt]
 
@@ -32,37 +32,37 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 | xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 
 | Context-bound settings
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-bound-settings/prompt-seed-2026-08-10.md[Prompt seed — context-bound settings]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-bound-settings/prompt-seed-2026-08-10.md[Prompt seed â€” context-bound settings]
  (2026-08-10)
 | xref:context-bound-settings.adoc[Context-bound settings]
 
 | Shell context chrome
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/shell-context-chrome/prompt-seed-2026-08-28.md[Prompt seed � shell context chrome]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/shell-context-chrome/prompt-seed-2026-08-28.md[Prompt seed — shell context chrome]
  (2026-08-28)
 | xref:shell-context-chrome.adoc[Shell context chrome]
 | Edge Bar (context rails)
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-rails/prompt-seed-2026-08-10.md[Prompt seed — context rails]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-rails/prompt-seed-2026-08-10.md[Prompt seed â€” context rails]
  (2026-08-10)
 | xref:context-rails.adoc[Edge Bar]
 
 | Instruction flows
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/instruction-flows/interactive-document-extension-idea.md[Prompt + Grok review — Interactive Document Extension]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/instruction-flows/interactive-document-extension-idea.md[Prompt + Grok review â€” Interactive Document Extension]
  (copied 2026-08-18 from `antora-supplemental/asciidoc-interactive`; not a Downloads export)
 | xref:instruction-flows.adoc[Instruction flows]
 
 | Labels versus wires
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/gemini-dependency-management-and-network-architecture.md[Gemini export — Dependency Management and Network Architecture]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/gemini-dependency-management-and-network-architecture.md[Gemini export â€” Dependency Management and Network Architecture]
  (2026-08-11);
  link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/cursor-analysis-seed-2026-08-11.md[Cursor analysis seed]
  (2026-08-11)
-| xref:navigating-by-content.adoc[Labels versus wires] · systems umbrella link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr]
+| xref:navigating-by-content.adoc[Labels versus wires] Â· systems umbrella link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr]
 | COLR color fonts (COLRv1 / COLRv0)
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/colr-color-fonts/nabla-colrv1-notes.md[Nabla / COLRv1 notes]
 (2026-08-18)
 | xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
 
 | Grounded tokens (token provenance)
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/grounded-tokens/cursor-seed-2026-08-28.md[Cursor seed — fork assumption]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/grounded-tokens/cursor-seed-2026-08-28.md[Cursor seed â€” fork assumption]
  (2026-08-28)
 | xref:grounded-tokens.adoc[Grounded tokens]
 |===

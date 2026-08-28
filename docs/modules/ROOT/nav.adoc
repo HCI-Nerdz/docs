@@ -1,4 +1,4 @@
-* xref:index.adoc[Home]
+﻿* xref:index.adoc[Home]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:scoped-ux-architecture.adoc[Scoped UX architecture]
@@ -8,6 +8,7 @@
 * xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 * xref:context-bound-settings.adoc[Context-bound settings]
 * xref:shell-context-chrome.adoc[Shell context chrome]
+* xref:shell-layer-chrome.adoc[Shell layer chrome]
 * xref:context-rails.adoc[Edge Bar]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:grounded-tokens.adoc[Grounded tokens]

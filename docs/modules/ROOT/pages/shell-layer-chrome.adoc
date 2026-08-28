@@ -1,0 +1,84 @@
+﻿= Shell layer chrome
+:description: HCI for layered shell UI — paste preview overlay, step tracker, control-plane focus, and mode swap affordances.
+
+Interaction design for link:https://openshellorg.github.io/docs/shell-architecture/shell-display-layers.html[OpenShellOrg display and control layers].
+
+== Core claim
+
+TUIs belong on **ephemeral overlays**, not in stdout.
+Users should *see* pasted instructions before they run, *track* multi-step blocks, and *cancel* without guessing what half-ran.
+
+== Paste preview overlay
+
+=== Layout
+
+[source]
+----
++--------------------------------------------------+
+| PASTE PREVIEW (5 lines visible, framed)          |
+| line 1 of pasted block                           |
+| line 2 ...                                       |
+|        [ PgUp / PgDn scroll ]  Enter accept Esc  |
++--------------------------------------------------+
+| [gcloud: ftn]  user@host:path >                  |
+| normal command output below...                   |
++--------------------------------------------------+
+----
+
+* Frame uses TUI outline — visually distinct from scrollback
+* Overlay sits **above** output; disappears after accept/reject
+* Not copied when user pipes session log (unless opt-in audit)
+
+=== Stepped execution tracker
+
+After accept, overlay may compress to a checklist:
+
+* Done steps: checked, muted
+* Current step: highlighted
+* Failed step: error color + jump focus on base layer output
+
+Cancel during steps: control plane surfaces honest copy ("remaining steps aborted; step 2 may have changed files").
+
+== Control-plane focus
+
+Invisible routing layer — user sees focus through chrome state:
+
+[cols="1,2"]
+|===
+| Focus target | Visual hint
+
+| Overlay | Top frame border bright; input line dimmed
+| Context token | Token focus ring (xref:shell-context-chrome.adoc[shell context chrome])
+| Base input | Normal prompt; overlay hidden
+|===
+
+== Mode swap UI
+
+Prefer **one selector control** (dropdown in always-on strip), not two equal buttons for UNIX vs Nu.
+
+* Label shows current mode plainly: `unix` / `structured`
+* Keyboard: `Ctrl+PgUp`/`Ctrl+PgDn` cycles — document in overlay help
+* Avoid implying one mode is "secondary"
+
+== Startup layout
+
+Startup document renders in overlay zone — welcome columns, env-health, context summary.
+Dismisses on first keystroke or timeout; never floods scrollback.
+
+== Naming note
+
+Public runtime: **Open Shell** — not `proshell` (prohelp must stay shell-agnostic).
+
+== Demo (planned)
+
+link:https://hci-nerdz.github.io/demos/shell-layer/[Shell layer desk] — paste preview + step tracker + mode selector mockup.
+
+== Literature
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/shell-layer-chrome/prompt-seed-2026-08-28.md[Prompt seed — shell layer chrome] (2026-08-28)
+
+== Related
+
+* xref:shell-context-chrome.adoc[Shell context chrome]
+* link:https://openshellorg.github.io/docs/shell-architecture/shell-display-layers.html[Display and control layers]
+* link:https://openshellorg.github.io/docs/shell-architecture/shell-keybindings.adoc[Keybindings comparison]
