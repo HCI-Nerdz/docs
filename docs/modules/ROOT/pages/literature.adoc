@@ -56,6 +56,11 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/colr-color-fonts/nabla-colrv1-notes.md[Nabla / COLRv1 notes]
 (2026-08-18)
 | xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
+
+| Grounded tokens (token provenance)
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/grounded-tokens/cursor-seed-2026-08-28.md[Cursor seed — fork assumption]
+ (2026-08-28)
+| xref:grounded-tokens.adoc[Grounded tokens]
 |===
 
 Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.adoc[`literature/README.adoc`].
@@ -70,6 +75,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:instruction-flows.adoc[Instruction flows]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
+* xref:grounded-tokens.adoc[Grounded tokens]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:literature.adoc[Literature]

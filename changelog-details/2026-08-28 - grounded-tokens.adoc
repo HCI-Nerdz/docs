@@ -1,9 +1,4 @@
-= Grounded tokens
-:date: 2026-08-28
+= 2026-08-28 — Grounded tokens
 
-Visual provenance for AI assistant output: heuristic versus researched inline marks.
-
-* New page: `grounded-tokens.adoc` - classes, principles, implementation sketch, relationship to token provenance
-* Images: `docs/modules/ROOT/images/grounded-tokens/` (case study + SVG mock)
-* Literature: `literature/grounded-tokens/cursor-seed-2026-08-28.md`
-* Cross-links to site essay and `/demos/grounded-tokens/` desk
+* Grounded tokens / token provenance: heuristic vs researched inline marks for AI assistant output
+* Literature seed, Antora topic, case-study screenshot, harness metadata cross-link
