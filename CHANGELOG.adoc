@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-08-28 -- Contained tiling (nested zones)
+
+* New topic: xref:contained-tiling.adoc[Contained tiling] -- app-nested tiling without replacing the OS WM; group vs zone registration.
+* Open Terminal / DevCentr apply the pattern; HCI owns the abstract essay.
+
 == 2026-08-28 — Highlight vs pipe linking
 
 * New topic: xref:highlight-vs-pipe-linking.adoc[Highlight versus pipe linking] — prefer highlight+dull over decorative window pipes for terminal-manager ↔ project-grid selection.

@@ -48,6 +48,7 @@ Product spec: link:https://github.com/openshellorg/shell-architecture/blob/main/
 
 * xref:spatial-web-windows.adoc[Spatial web windows] -- separate surfaces, shared selection via channels (not drawn wires).
 * xref:project-inbox.adoc[Project inbox] -- grid of parallel work; selection/dimming cousins.
+* xref:contained-tiling.adoc[Contained tiling] -- zones inside app chrome (cousin placement pattern).
 * Labels versus wires (xref:navigating-by-content.adoc[Labels versus wires]) is a different claim (identity vs pretty names) -- do not conflate with on-screen connector graphics.
 
 == Non-goals
