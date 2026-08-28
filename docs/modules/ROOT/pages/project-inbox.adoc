@@ -55,7 +55,7 @@ link:https://hci-nerdz.github.io/demos/project-inbox/[Live demo] — toggle seri
 
 == Related
 
-* link:https://hci-nerdz.github.io/blog/when-parallel-agents-fill-one-chat/[Essay — When parallel agents fill one chat]
+* link:https://hci-nerdz.github.io/blog/when-parallel-agents-still-read-as-one-thread/[Essay — When parallel agents still read as one thread]
 * link:https://hci-nerdz.github.io/demos/project-inbox/serialized-wall-of-updates.png[Case study screenshot — serialized wall]
 * xref:piles.adoc[Piles] — inbox UX for human attention; project inbox for agent coordination
 * link:https://docs.devcentr.org/agent-rules/agent-harness.html[DevCentr agent harness]
