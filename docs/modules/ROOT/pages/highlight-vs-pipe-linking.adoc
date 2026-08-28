@@ -44,6 +44,13 @@ Product spec: link:https://github.com/openshellorg/shell-architecture/blob/main/
 * Failure modes: pipes break when windows overlap, minimize, or sit on separate displays; highlight still works on the grid alone.
 * Clutter budget: grids already carry thumbs and badges; a permanent pipe adds ink without adding control.
 
+== Demo
+
+Interactive mock (highlight + dull):
+link:https://hci-nerdz.github.io/shell-context-demo/#/manager[shell-context-demo · Project manager].
+
+image::highlight-vs-pipe-linking/highlight-dull-demo.png[Manager focus linked to highlighted DevCentr grid cell,width=100%]
+
 == Related HCI
 
 * xref:spatial-web-windows.adoc[Spatial web windows] -- separate surfaces, shared selection via channels (not drawn wires).

@@ -91,6 +91,13 @@ OpenShellOrg applies it to terminals; other products may apply the same pattern 
 | Identity and membership (e.g. project groups) -- orthogonal to tile geometry.
 |===
 
+== Demo
+
+Interactive mock:
+link:https://hci-nerdz.github.io/shell-context-demo/#/zones[shell-context-demo · Nested zones].
+
+image::contained-tiling/nested-zones-demo.png[Contained tiling demo with faded empty zone,width=100%]
+
 == Related HCI
 
 * xref:spatial-web-windows.adoc[Spatial web windows] -- separate surfaces, shared selection.

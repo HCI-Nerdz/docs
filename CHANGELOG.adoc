@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-08-28 -- Contained tiling / highlight demos
+
+* Embedded live demo screenshots on xref:contained-tiling.adoc[contained-tiling] and xref:highlight-vs-pipe-linking.adoc[highlight-vs-pipe-linking].
+* Source: link:https://hci-nerdz.github.io/shell-context-demo/[shell-context-demo].
+
 == 2026-08-28 -- Contained tiling (nested zones)
 
 * New topic: xref:contained-tiling.adoc[Contained tiling] -- app-nested tiling without replacing the OS WM; group vs zone registration.
