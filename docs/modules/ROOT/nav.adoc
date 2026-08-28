@@ -7,6 +7,7 @@
 * xref:open-with-interrupt.adoc[Open-with interrupt]
 * xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 * xref:context-bound-settings.adoc[Context-bound settings]
+* xref:shell-context-chrome.adoc[Shell context chrome]
 * xref:context-rails.adoc[Edge Bar]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:grounded-tokens.adoc[Grounded tokens]

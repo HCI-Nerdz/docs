@@ -41,6 +41,12 @@ It also hosts the systems-altitude framing for **Internet Reliability** (referen
 | Progressive CLI help (Prohelp)
 | OpenShellOrg
 
+| Persistent shell context — protocol, CLI libs, Nushell fork
+| OpenShellOrg (`shell-context`, `persistent-shell-context` spec)
+
+| Shell prompt context tokens — left-arrow focus, boxed segments, theme packs, web demo
+| HCI Nerdz (`shell-context-chrome`, `shell-context-demo`)
+
 | AsciiDoc preview theme fidelity in editors
 | HCI Nerdz for the presentation layer; Antora plumbing with antora-supplemental
 
