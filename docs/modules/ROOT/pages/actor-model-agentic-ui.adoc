@@ -4,7 +4,7 @@
 :page-usage-context: Reference page on the HCI Nerdz docs hub
 :page-orig-author: Ryan Johnson
 :page-last-author: Cursor agent on behalf of Ryan Johnson
-:page-last-edited: 2026-08-28T05:48-0500
+:page-last-edited: 2026-08-29T05:00-0500
 
 *Actor-model agentic UI* replaces the linear chat assumption with a **persisted graph of nodes** — each node is an actor with its own chat log, type, disk address, and spawn lineage.
 
@@ -83,13 +83,16 @@ image::actor-model-agentic-ui/node-graph-topology.svg[Node graph — spawn edges
 
 One graph; multiple projections over the same disk store:
 
-* **Grid** — `type=task` nodes, status + summary, separate scroll from main thread
-* **Fork panel** — selected node's `chat.jsonl`
+* **Harness canvas** — rearrangeable conversation previews (thumb + clipped blurb), email-like PM statuses (working / waiting / unread / read / needs you / user-marked completed), archive bin that remembers canvas position. Fundamental inbox face; spatial patterns borrowed from xref:piles.adoc[Piles] (Piles stays email-domain).
+* **Grid** — `type=task` nodes, job status + summary, separate scroll from main thread
+* **Fork panel** — selected node's `chat.jsonl`; title-history index when the topic renames
 * **Lineage strip** — `spawnedBy` / `spawned` for the active node
 * **Global coordinator thread** — continuous chat with summarization; user can back out to global context from any node
 * **Temporal layout** — planned embeddable widget (see below)
 
 Hierarchical coordinator mode and global personal-context mode are **different views**, not different stores. Reset = scope filter (archive / trim to bookmark), not delete disk.
+
+Rebase ownership (canvas → demo / Piles pattern / Hornet runtime): link:https://github.com/HCI-Nerdz/project-plans/blob/main/seeds/2026-08-29%20-%20agent-harness-canvas-rebase.md[agent-harness-canvas rebase plan].
 
 == Wait graph
 
@@ -127,7 +130,7 @@ link:https://docs.devcentr.org/agent-rules/actor-model-agentic-ui.html[DevCentr 
 
 == Demo
 
-link:https://hci-nerdz.github.io/demos/actor-model-agentic-ui/[Live demo] — node types, spawn lineage, disk addresses, epoch bar, serialized contrast.
+link:https://hci-nerdz.github.io/demos/actor-model-agentic-ui/[Live demo] — harness canvas (PM statuses, drag, archive), grid, fork + title index, epochs, serialized contrast.
 
 == Renamed from project inbox
 
