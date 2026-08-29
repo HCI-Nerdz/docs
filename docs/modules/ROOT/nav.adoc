@@ -14,6 +14,8 @@
 * xref:context-rails.adoc[Edge Bar]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:grounded-tokens.adoc[Grounded tokens]
+* xref:cognitive-primitives.adoc[Cognitive primitives]
+* xref:cognitive-primitives-index.adoc[Cognitive primitives corpus]
 * xref:actor-model-agentic-ui.adoc[Actor-model agentic UI]
 * xref:cleartype.adoc[ClearType]
 * xref:colr.adoc[COLR color fonts]

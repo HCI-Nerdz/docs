@@ -1,0 +1,32 @@
+= Concrete-example-first (writing rule)
+:description: Open with one shared scenario; let abstractions extrapolate from it.
+:page-layout: docs
+
+Part of xref:cognitive-primitives.adoc[Cognitive primitives].
+
+== What the rule is
+
+Open with a tiny, named scenario (actors, sizes, steps) before the abstract definition.
+Return to that *same* scenario in later sections so every abstraction is an extrapolation from one shared example.
+Introduce terms only after the example has made the need for the term obvious.
+
+== What good looks like
+
+* One sticky vignette reused end-to-end.
+* Definitions that feel earned.
+* Walkthrough section that continues the same cast of characters.
+
+== Failure modes for LLM writing
+
+* Example in section 1, unrelated example in section 5.
+* Example that depends on the jargon it was meant to motivate.
+* Overspecific product APIs pretending to be pedagogy.
+
+== Micro-example
+
+*Weak:* “Thread-local GC collects per-thread heaps independently.”
+
+*Stronger:* “Thread A allocates a short string while handling a request.
+Thread B never sees that string.
+When A finishes the request, nothing else can reach A’s string, so A’s collector can reclaim it without asking B to stop.
+Call that arrangement *thread-local* collection when each thread owns a heap region others do not scan by default.”

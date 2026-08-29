@@ -69,6 +69,13 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/grounded-tokens/cursor-seed-2026-08-28.md[Cursor seed â€” fork assumption]
  (2026-08-28)
 | xref:grounded-tokens.adoc[Grounded tokens]
+
+| Cognitive primitives (writing clarity)
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/gemini-grounding-ai-in-cognitive-primitives-2026-08-29.md[Gemini export — Grounding AI in Cognitive Primitives]
+ (2026-08-29);
+ link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/articles/[articles corpus]
+| xref:cognitive-primitives.adoc[Cognitive primitives] ·
+ xref:cognitive-primitives-index.adoc[Corpus index]
 |===
 
 Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.adoc[`literature/README.adoc`].
@@ -84,6 +91,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
 * xref:grounded-tokens.adoc[Grounded tokens]
+* xref:cognitive-primitives.adoc[Cognitive primitives]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:literature.adoc[Literature]

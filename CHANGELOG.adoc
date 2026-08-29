@@ -1,5 +1,12 @@
 = Changelog
 
+== 2026-08-29 — Cognitive primitives writing corpus
+
+* New topic: xref:cognitive-primitives.adoc[Cognitive primitives] — grounding AI explanations in NSM, image schemas, embodied cognition, and related clarity constraints.
+* Corpus index: xref:cognitive-primitives-index.adoc[tabulated model baselines + framework variants].
+* Literature: `literature/cognitive-primitives/` (Gemini seed, shared prompt, style constraints, manifest, 8 baselines, 28 framework articles across thread-local GC, CAS vs locks, object capabilities, recursion).
+* Framework deep dives under `cognitive-primitives-frameworks/`.
+
 == 2026-08-28 -- Contained tiling / highlight demos
 
 * Embedded live demo screenshots on xref:contained-tiling.adoc[contained-tiling] and xref:highlight-vs-pipe-linking.adoc[highlight-vs-pipe-linking].

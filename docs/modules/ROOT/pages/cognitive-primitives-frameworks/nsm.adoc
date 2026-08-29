@@ -1,0 +1,30 @@
+= NSM / semantic primes (writing rule)
+:description: Using Natural Semantic Metalanguage primes to unpack technical jargon.
+:page-layout: docs
+
+Part of xref:cognitive-primitives.adoc[Cognitive primitives].
+
+== What the rule is
+
+Natural Semantic Metalanguage (NSM) posits a small universal vocabulary of irreducible meanings (*semantic primes*).
+Writing under this rule means: introduce compressed terms only after a *reductive paraphrase* built from everyday relational language close to those primes (THERE IS, SOMEONE, DO, HAPPEN, THINK, KNOW, WANT, INSIDE, BEFORE, AFTER, BECAUSE, IF, CAN, NOT, PART OF, KIND OF, …).
+
+== What good looks like
+
+* A definition that a careful non-specialist could restate without the original jargon token.
+* No circular dictionary loops (“garbage collection is the collection of garbage”).
+* Technical labels appear *after* the paraphrase, then get reused for brevity.
+
+== Failure modes for LLM writing
+
+* Fake simplicity: short sentences that still depend on undefined abstractions.
+* Prime cosplay: sprinkling words like “want” and “inside” without actually reducing the concept.
+* Over-reduction that becomes false (dropping essential constraints to keep the paraphrase cute).
+
+== Micro-example
+
+*Weak:* “A mutex provides mutual exclusion for critical sections.”
+
+*Stronger (NSM-flavored):* “There is a thing two programs must not do at the same time.
+If one is doing it, the other cannot do it until the first has finished.
+People call that kind of control a *mutex*.”
