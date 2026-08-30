@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-30 — Inline partner footer flex
+
+* Docs partner footer: wrapping flex row — bold name, description, · between items.
+
 == 2026-08-30 — Compact partner footer columns
 
 * Docs partner footer: multi-column grid with name · title on one line.

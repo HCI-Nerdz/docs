@@ -148,30 +148,35 @@ html.dark-theme .navbar .button.is-primary:hover {
 }
 
 .footer-partners {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
-  gap: 0.35rem 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
   margin: 0 0 1.25rem;
   padding: 0;
   max-width: 56rem;
   list-style: none;
-  text-align: left;
+  line-height: 1.7;
 }
 
 .footer-partners li {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: baseline;
-  column-gap: 0.45rem;
-  row-gap: 0.05rem;
-  min-width: 0;
+  gap: 0.35rem;
+}
+
+.footer-partners li + li::before {
+  content: "·";
+  margin: 0 0.55rem 0 0.35rem;
+  color: var(--hci-ink-muted);
+  font-weight: 400;
 }
 
 .footer-partners a {
   color: var(--hci-ink);
   text-decoration: none;
-  font-weight: 600;
-  white-space: nowrap;
+  font-weight: 700;
 }
 
 .footer-partners a:hover {
@@ -180,10 +185,6 @@ html.dark-theme .navbar .button.is-primary:hover {
 
 .footer-partners span {
   color: var(--hci-ink-muted);
-  font-size: 0.88rem;
-}
-
-.footer-partners span::before {
-  content: "· ";
-  color: var(--hci-ink-muted);
+  font-size: 0.92rem;
+  font-weight: 400;
 }
