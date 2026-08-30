@@ -166,7 +166,7 @@ html.dark-theme .navbar .button.is-primary:hover {
   gap: 0.35rem;
 }
 
-.footer-partners li + li::before {
+.footer-partners li:not(:last-child)::after {
   content: "·";
   margin-inline: 0.65rem;
   color: var(--hci-ink-muted);
