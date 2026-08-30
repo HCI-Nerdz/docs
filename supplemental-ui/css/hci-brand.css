@@ -139,7 +139,7 @@ html.dark-theme .navbar .button.is-primary:hover {
 }
 
 .footer-related-label {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.65rem;
   font-family: var(--heading-font-family);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
@@ -149,23 +149,29 @@ html.dark-theme .navbar .button.is-primary:hover {
 
 .footer-partners {
   display: grid;
-  gap: 0.55rem;
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+  gap: 0.35rem 1.75rem;
   margin: 0 0 1.25rem;
   padding: 0;
-  max-width: 36rem;
+  max-width: 56rem;
   list-style: none;
   text-align: left;
 }
 
 .footer-partners li {
-  display: grid;
-  gap: 0.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.45rem;
+  row-gap: 0.05rem;
+  min-width: 0;
 }
 
 .footer-partners a {
   color: var(--hci-ink);
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .footer-partners a:hover {
@@ -175,4 +181,9 @@ html.dark-theme .navbar .button.is-primary:hover {
 .footer-partners span {
   color: var(--hci-ink-muted);
   font-size: 0.88rem;
+}
+
+.footer-partners span::before {
+  content: "· ";
+  color: var(--hci-ink-muted);
 }

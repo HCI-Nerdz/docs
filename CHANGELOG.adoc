@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-30 — Compact partner footer columns
+
+* Docs partner footer: multi-column grid with name · title on one line.
+
 == 2026-08-30 — Partner footer titles
 
 * Docs footer: one link per org with a short title; adds Desktop Tooling and remaining sibling orgs.
