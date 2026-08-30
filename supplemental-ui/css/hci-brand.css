@@ -168,7 +168,7 @@ html.dark-theme .navbar .button.is-primary:hover {
 
 .footer-partners li + li::before {
   content: "·";
-  margin: 0 0.55rem 0 0.35rem;
+  margin-inline: 0.65rem;
   color: var(--hci-ink-muted);
   font-weight: 400;
 }
