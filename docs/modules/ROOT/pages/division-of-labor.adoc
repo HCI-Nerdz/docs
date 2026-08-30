@@ -60,4 +60,4 @@ It also hosts the systems-altitude framing for **Internet Reliability** (referen
 == Related
 
 * OS utilities: link:https://desktop-tooling.github.io/[Desktop Tooling]
-* Shell and CLI standards: link:https://openshellorg.github.io/[OpenShellOrg]
+* Shell and CLI standards: link:https://opensh.org/[OpenShellOrg]

@@ -1,7 +1,7 @@
 = Shell context chrome
 :description: Interactive prompt tokens for persistent shell context — boxed segments, left-arrow focus, theme packs, and desktop-grade dropdowns in the terminal.
 
-*Shell context chrome* is the interaction layer for link:https://openshellorg.github.io/docs/shell-architecture/persistent-shell-context.html[persistent shell context @ OpenShellOrg]: the prompt is not only `user@host:path ›` but a row of *editable context tokens* the shell owns and CLIs negotiate with.
+*Shell context chrome* is the interaction layer for link:https://opensh.org/docs/shell-architecture/persistent-shell-context.html[persistent shell context @ OpenShellOrg]: the prompt is not only `user@host:path ›` but a row of *editable context tokens* the shell owns and CLIs negotiate with.
 
 In plain language: stop hiding "which Google am I?" inside `gcloud`'s parallel config stack — show it in the prompt, let Left-arrow reach it, pick from a dropdown like desktop UI.
 
@@ -31,7 +31,7 @@ When a CLI lacks required context, it exits with a structured request; the shell
 Both modes are **first-class experimental** surfaces. Prefer **2-line** as the Open Shell default; keep **1-line** for muscle memory and spatial compare.
 The **line-mode switcher** lives in the TUI **top context bar** (always-on chrome) — not a settings page.
 
-See OpenShellOrg xref via link:https://openshellorg.github.io/docs/shell-architecture/prompt-spatial-layout.html[prompt spatial layout].
+See OpenShellOrg xref via link:https://opensh.org/docs/shell-architecture/prompt-spatial-layout.html[prompt spatial layout].
 
 === 2-line (preferred)
 
@@ -141,7 +141,7 @@ Reuse the interaction vocabulary from desktop patterns (implement via openshello
 | Masked display; never log raw value in structured emit
 |===
 
-When inline terminal widgets are insufficient, the link:https://openshellorg.github.io/docs/shell-architecture/shell-host-and-env-refresh.html[shell-host] (Windows Terminal fork) can promote the focused token to a native dropdown — same promotion rules as terminal-gui-prompts.
+When inline terminal widgets are insufficient, the link:https://opensh.org/docs/shell-architecture/shell-host-and-env-refresh.html[shell-host] (Windows Terminal fork) can promote the focused token to a native dropdown — same promotion rules as terminal-gui-prompts.
 
 == Color theming
 
@@ -218,11 +218,11 @@ Same pattern: **dependent context visible beside the work** — not buried in a 
 
 == Related
 
-* link:https://openshellorg.github.io/docs/shell-architecture/prompt-spatial-layout.html[Prompt spatial layout @ OpenShellOrg]
+* link:https://opensh.org/docs/shell-architecture/prompt-spatial-layout.html[Prompt spatial layout @ OpenShellOrg]
 
-* link:https://openshellorg.github.io/docs/shell-architecture/persistent-shell-context.html[Persistent shell context @ OpenShellOrg]
+* link:https://opensh.org/docs/shell-architecture/persistent-shell-context.html[Persistent shell context @ OpenShellOrg]
 * xref:context-bound-settings.adoc[Context-bound settings]
 * xref:instruction-flows.adoc[Instruction flows] — inline decision controls
 * xref:division-of-labor.adoc[Division of labor]
-* link:https://openshellorg.github.io/docs/shell-architecture/prohelp-gutter.html[Prohelp gutter @ OpenShellOrg]
+* link:https://opensh.org/docs/shell-architecture/prohelp-gutter.html[Prohelp gutter @ OpenShellOrg]
 * link:https://github.com/openshellorg/prohelp[Prohelp] — context-scoped help when token focused

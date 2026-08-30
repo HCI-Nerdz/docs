@@ -1,7 +1,7 @@
 = Shell layer chrome
 :description: HCI for layered shell UI — paste preview overlay, step tracker, control-plane focus, and mode swap affordances.
 
-Interaction design for link:https://openshellorg.github.io/docs/shell-architecture/shell-display-layers.html[OpenShellOrg display and control layers].
+Interaction design for link:https://opensh.org/docs/shell-architecture/shell-display-layers.html[OpenShellOrg display and control layers].
 
 == Core claim
 
@@ -48,7 +48,7 @@ Hovering that bar over the shell is an inferior placement for always-on session 
 If probe/offer is rejected or unsupported → same bar on the **display-overlay** stack (never stdout).
 
 Users should barely notice except native host chrome feels more app-like.
-Spec: link:https://openshellorg.github.io/docs/shell-architecture/host-chrome-negotiation.html[host chrome negotiation].
+Spec: link:https://opensh.org/docs/shell-architecture/host-chrome-negotiation.html[host chrome negotiation].
 
 Demo simulates both with a **Host chrome | Overlay** control (labeled simulation).
 
@@ -59,7 +59,7 @@ Keep the distinction clear:
 * **Host chrome (inserted)** — shell top bar; optional **stacked app top bar** under it for the active CLI
 * **Hover widgets** — host-owned floats over terminal content (color picker, GUI editor, file upload, ...) — not a substitute for inserted session chrome
 
-Spec: link:https://openshellorg.github.io/docs/shell-architecture/host-native-widgets.html[host native widgets].
+Spec: link:https://opensh.org/docs/shell-architecture/host-native-widgets.html[host native widgets].
 Demo mock for **Widget: Host | Overlay** is future work (skip until cheap).
 
 
@@ -69,7 +69,7 @@ Demo mock for **Widget: Host | Overlay** is future work (skip until cheap).
 Open Shell's curated default terminal/cell face is **Consolas** (system font — not bundled), chosen so monospace fits non-monospace dew/host chrome and the context bar.
 Users may override; fallback: Cascadia Mono → Courier New → monospace.
 
-Spec: link:https://openshellorg.github.io/docs/shell-architecture/typography.html[typography @ shell-architecture].
+Spec: link:https://opensh.org/docs/shell-architecture/typography.html[typography @ shell-architecture].
 Demo CSS: link:https://github.com/HCI-Nerdz/shell-context-demo[shell-context-demo].
 == Prompt line modes
 
@@ -154,5 +154,5 @@ link:https://hci-nerdz.github.io/demos/shell-layer/[Shell layer desk] — paste 
 == Related
 
 * xref:shell-context-chrome.adoc[Shell context chrome]
-* link:https://openshellorg.github.io/docs/shell-architecture/shell-display-layers.html[Display and control layers]
-* link:https://openshellorg.github.io/docs/shell-architecture/shell-keybindings.adoc[Keybindings comparison]
+* link:https://opensh.org/docs/shell-architecture/shell-display-layers.html[Display and control layers]
+* link:https://opensh.org/docs/shell-architecture/shell-keybindings.adoc[Keybindings comparison]

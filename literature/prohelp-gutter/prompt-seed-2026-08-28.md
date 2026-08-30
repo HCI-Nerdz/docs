@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-28
 **Origin:** User request â prohelp + Open Shell context-button system
-**Public face:** [Shell layer chrome](https://hci-nerdz.github.io/docs/hci-nerdz/shell-layer-chrome.html) Â· [Shell context chrome](https://hci-nerdz.github.io/docs/hci-nerdz/shell-context-chrome.html) Â· [Prohelp gutter @ OpenShellOrg](https://openshellorg.github.io/docs/shell-architecture/prohelp-gutter.html)
+**Public face:** [Shell layer chrome](https://hci-nerdz.github.io/docs/hci-nerdz/shell-layer-chrome.html) Â· [Shell context chrome](https://hci-nerdz.github.io/docs/hci-nerdz/shell-context-chrome.html) Â· [Prohelp gutter @ OpenShellOrg](https://opensh.org/docs/shell-architecture/prohelp-gutter.html)
 
 ---
 

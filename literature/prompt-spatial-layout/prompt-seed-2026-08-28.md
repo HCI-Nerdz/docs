@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-28  
 **Origin:** Author framing (conversation seed) — stop cramming app+host+path+input on one line; wire both 1-line and 2-line for compare  
-**Public faces:** [Shell context chrome](https://hci-nerdz.github.io/docs/hci-nerdz/shell-context-chrome.html) · [Prompt spatial layout @ OpenShellOrg](https://openshellorg.github.io/docs/shell-architecture/prompt-spatial-layout.html) · [Demo](https://hci-nerdz.github.io/shell-context-demo/)
+**Public faces:** [Shell context chrome](https://hci-nerdz.github.io/docs/hci-nerdz/shell-context-chrome.html) · [Prompt spatial layout @ OpenShellOrg](https://opensh.org/docs/shell-architecture/prompt-spatial-layout.html) · [Demo](https://hci-nerdz.github.io/shell-context-demo/)
 
 ---
 

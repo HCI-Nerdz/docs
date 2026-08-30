@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-30 — OpenShellOrg links use opensh.org
+
+* Docs and footer OpenShellOrg URLs use https://opensh.org/ instead of openshellorg.github.io.
+
 == 2026-08-30 — Inline partner footer flex
 
 * Docs partner footer: wrapping flex row — bold name, description, · between items.

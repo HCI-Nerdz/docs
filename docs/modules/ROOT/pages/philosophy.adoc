@@ -99,4 +99,4 @@ See xref:prototype-strategy.adoc[Prototype strategy] and xref:fundamental-contex
 * xref:division-of-labor.adoc[Division of labor]
 * xref:literature.adoc[Literature]
 * link:https://ryanjohnson.website/vision/[Vision essay]
-* link:https://openshellorg.github.io/docs/open-shell-org/philosophy.html[OpenShellOrg philosophy]
+* link:https://opensh.org/docs/open-shell-org/philosophy.html[OpenShellOrg philosophy]
