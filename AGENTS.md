@@ -3,9 +3,9 @@
 ## Editorial titles
 
 - Antora page titles name concepts.
-- Site news/blog: [STYLE on public site](https://github.com/HCI-Nerdz/HCI-Nerdz.github.io/blob/main/STYLE.adoc) — first-party news omits org; *as*-framing; attach modifiers.
+- News/blog titles: `$AGENT_RULES_PATH/agents/editorial/titles.md` (house; cold-reader gate). Local `STYLE.adoc` is a pointer only.
 - Philosophy: [Titles as orientation](https://hci-nerdz.github.io/blog/titles-as-orientation/)
-- Machine facts: `$CODE_ROOT/MEMORIES.md` only — no per-repo `MEMORIES.md`.
+- Workstation facts: `$CODE_ROOT/machine.md` + `$CODE_ROOT/harness.md` — never commit; never per-repo (legacy `MEMORIES.md` abandoned).
 
 ## Site / Antora
 

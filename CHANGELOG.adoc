@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-30 — AGENTS / STYLE house pointer
+
+* Editorial section points at `agents/editorial/titles.md`; local `STYLE.adoc` thinned; drop legacy `MEMORIES.md` line (use `machine.md` / `harness.md`).
+
 == 2026-08-30 — Grounded-tokens essay link
 
 * Essay URL and title: link:https://hci-nerdz.github.io/blog/making-model-assumptions-transparent/[Making model assumptions transparent] (trust / provenance first).
