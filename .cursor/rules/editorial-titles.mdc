@@ -1,11 +1,10 @@
 ---
-description: Editorial titles — cold-reader gate; house titles.md
+description: Titles — cold-reader gate; house titles.md
 globs: "**/*.adoc,**/STYLE.adoc"
 alwaysApply: false
 ---
 
 # Titles
 
-- Antora page titles name concepts (`Instruction flows`).
-- News/blog: `$AGENT_RULES_PATH/agents/editorial/titles.md` (canonical). Local `STYLE.adoc` is a pointer only.
-- Agent map: `AGENTS.md`. Workstation facts: `$CODE_ROOT/machine.md` + `$CODE_ROOT/harness.md`.
+Cold reader: title + lede orient a stranger out of thin air.
+Canonical: `$AGENT_RULES_PATH/agents/editorial/titles.md`. Local `STYLE.adoc` is a pointer only.
