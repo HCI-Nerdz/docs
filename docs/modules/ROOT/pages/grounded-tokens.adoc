@@ -6,6 +6,8 @@
 
 Complements link:actor-model-agentic-ui.adoc[Actor-model agentic UI] — provenance on *words* inside a fork; nodes on *jobs* across forks.
 
+Essay framing: link:https://hci-nerdz.github.io/blog/making-model-assumptions-transparent/[Making model assumptions transparent].
+
 == Demo
 
 link:https://hci-nerdz.github.io/demos/grounded-tokens/[Live demo]

@@ -44,7 +44,7 @@ People first, devs second — the email to Cursor should lead with the **human c
 ## Links (public face)
 
 - Demo: https://hci-nerdz.github.io/demos/grounded-tokens/
-- Essay: https://hci-nerdz.github.io/blog/when-the-agent-names-a-fork-before-it-looks/
+- Essay: https://hci-nerdz.github.io/blog/making-model-assumptions-transparent/
 - Docs: https://hci-nerdz.github.io/docs/hci-nerdz/grounded-tokens.html
 
 ## Related HCI Nerdz thesis

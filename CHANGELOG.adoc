@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-08-30 — Grounded-tokens essay link
+
+* Essay URL and title: link:https://hci-nerdz.github.io/blog/making-model-assumptions-transparent/[Making model assumptions transparent] (trust / provenance first).
+* Literature index, seed note, AGENTS, and xref:grounded-tokens.adoc[Grounded tokens] cross-links updated.
+
 == 2026-08-30 — Context Edge rename
 
 * Topic, nav, literature, and images move from `context-rails` / Edge Bar to xref:context-edge.adoc[Context Edge] (`context-edge` slug)

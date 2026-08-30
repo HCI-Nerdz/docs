@@ -70,7 +70,7 @@ When a concept page and a conversation disagree, update the curated page deliber
 | link:grounded-tokens/cursor-seed-2026-08-28.md[`cursor-seed-2026-08-28.md`]
  (Cursor seed, 2026-08-28)
 | xref:grounded-tokens.adoc[Docs topic];
- link:https://hci-nerdz.github.io/blog/when-the-agent-names-a-fork-before-it-looks/[Essay];
+ link:https://hci-nerdz.github.io/blog/making-model-assumptions-transparent/[Essay];
  link:https://hci-nerdz.github.io/demos/grounded-tokens/[Demo]
 
 | Cognitive primitives (writing clarity corpus)
