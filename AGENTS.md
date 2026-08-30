@@ -5,7 +5,7 @@
 - Antora page titles name concepts.
 - News/blog titles: `$AGENT_RULES_PATH/agents/editorial/titles.md` (house; cold-reader gate). Local `STYLE.adoc` is a pointer only.
 - Philosophy: [Titles as orientation](https://hci-nerdz.github.io/blog/titles-as-orientation/)
-- Workstation facts: `$CODE_ROOT/machine.md` + `$CODE_ROOT/harness.md` — never commit; never per-repo (legacy `MEMORIES.md` abandoned).
+- Workstation facts: `$CODE_ROOT/machine.md` + `$CODE_ROOT/harness.md` — never commit; never per-repo.
 
 ## Site / Antora
 
