@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-10  
 **Origin:** Author framing (conversation seed) before curated essay/docs  
-**Public face:** [Context-bound settings](https://hci-nerdz.github.io/docs/hci-nerdz/context-bound-settings.html) · [When settings live across town](https://hci-nerdz.github.io/blog/when-settings-live-across-town/)
+**Public face:** [Context-bound settings](https://hci-nerdz.github.io/docs/hci-nerdz/context-bound-settings.html) · [Making settings follow the activity](https://hci-nerdz.github.io/blog/making-settings-follow-the-activity/)
 
 ---
 

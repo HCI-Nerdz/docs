@@ -139,6 +139,6 @@ link:https://hci-nerdz.github.io/demos/actor-model-agentic-ui/[Live demo] — ha
 == Related
 
 * xref:grounded-tokens.adoc[Grounded tokens] — provenance on words inside a node chat
-* link:https://hci-nerdz.github.io/blog/when-chat-should-spawn-a-node/[Essay — When chat should spawn a node]
+* link:https://hci-nerdz.github.io/blog/persisting-agent-work-as-a-node-graph/[Essay — Persisting agent work as a node graph]
 * link:https://docs.devcentr.org/agent-rules/agent-harness.html[DevCentr agent harness]
 * xref:scoped-ux-architecture.adoc[Scoped UX architecture]

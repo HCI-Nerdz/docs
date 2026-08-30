@@ -21,7 +21,7 @@ The **symptom** face stays separate so either side can revise without dragging t
 
 | Diagnosis
 | Name the mistake (label used as wire)
-| link:https://hci-nerdz.github.io/blog/when-the-name-is-not-the-wire/[When the name is not the wire] · this topic
+| link:https://hci-nerdz.github.io/blog/labels-versus-wires/[Labels versus wires] · this topic
 
 | Treatment
 | What to do near-term and long-term
@@ -227,7 +227,7 @@ See the sibling explanation on the connectome-fs docs hub (*Labels versus wires*
 | link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[When renaming a page breaks half your docs]
 
 | Diagnosis essay
-| link:https://hci-nerdz.github.io/blog/when-the-name-is-not-the-wire/[When the name is not the wire]
+| link:https://hci-nerdz.github.io/blog/labels-versus-wires/[Labels versus wires]
 
 | Symptom demo
 | link:https://hci-nerdz.github.io/demos/navigating-by-content/[Rename simulation]

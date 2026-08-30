@@ -128,7 +128,7 @@ Pair with feedforward where outcomes are predictable (xref:scoped-ux-architectur
 
 == Prototype
 
-* Blog essay: link:https://hci-nerdz.github.io/blog/when-settings-live-across-town/[When settings live across town]
+* Blog essay: link:https://hci-nerdz.github.io/blog/making-settings-follow-the-activity/[Making settings follow the activity]
 * Demo: link:https://hci-nerdz.github.io/demos/context-bound-settings/[Context-bound settings desk]
 
 == Literature

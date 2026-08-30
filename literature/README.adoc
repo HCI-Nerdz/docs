@@ -45,14 +45,14 @@ When a concept page and a conversation disagree, update the curated page deliber
 | link:context-bound-settings/prompt-seed-2026-08-10.md[`prompt-seed-2026-08-10.md`]
  (author framing seed, 2026-08-10)
 | xref:context-bound-settings.adoc[Docs topic];
- link:https://hci-nerdz.github.io/blog/when-settings-live-across-town/[Essay];
+ link:https://hci-nerdz.github.io/blog/making-settings-follow-the-activity/[Essay];
  link:https://hci-nerdz.github.io/demos/context-bound-settings/[Demo]
 
 | Context Edge (context edge)
 | link:context-edge/prompt-seed-2026-08-10.md[`prompt-seed-2026-08-10.md`]
  (author framing seed, 2026-08-10)
 | xref:context-edge.adoc[Docs topic];
- link:https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/[Essay];
+ link:https://hci-nerdz.github.io/blog/ecosystem-nav-at-the-screen-edge/[Essay];
  link:https://hci-nerdz.github.io/demos/context-edge/[Demo];
  link:https://hci-nerdz.github.io/context-edge/[MVP]
 
@@ -63,7 +63,7 @@ When a concept page and a conversation disagree, update the curated page deliber
  (Cursor seed, 2026-08-11)
 | xref:navigating-by-content.adoc[Docs — diagnosis/treatment];
  link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[Symptom essay];
- link:https://hci-nerdz.github.io/blog/when-the-name-is-not-the-wire/[Diagnosis essay];
+ link:https://hci-nerdz.github.io/blog/labels-versus-wires/[Diagnosis essay];
  link:https://hci-nerdz.github.io/demos/navigating-by-content/[Symptom demo]
 
 | Grounded tokens

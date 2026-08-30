@@ -244,7 +244,7 @@ Hover expand is progressive enhancement on desktop.
 
 == Prototype
 
-* Blog essay: link:https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/[When platforms overload the entrypoint]
+* Blog essay: link:https://hci-nerdz.github.io/blog/ecosystem-nav-at-the-screen-edge/[Ecosystem nav at the screen edge]
 * Site demo: link:https://hci-nerdz.github.io/demos/context-edge/[Context Edge desk]
 * Multi-framework MVP: link:https://hci-nerdz.github.io/context-edge/[Context Edge] · link:https://github.com/HCI-Nerdz/context-edge[repo]
 * Modal Edge demo: link:https://hci-nerdz.github.io/context-edge/demos/modal-edge/[VT ancestry stack]

@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-10  
 **Origin:** Author framing (conversation seed) before curated essay/docs  
-**Public face:** [Context Edge](https://hci-nerdz.github.io/docs/hci-nerdz/context-edge.html) · [When platforms overload the entrypoint](https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/)
+**Public face:** [Context Edge](https://hci-nerdz.github.io/docs/hci-nerdz/context-edge.html) · [Ecosystem nav at the screen edge](https://hci-nerdz.github.io/blog/ecosystem-nav-at-the-screen-edge/)
 
 ---
 
