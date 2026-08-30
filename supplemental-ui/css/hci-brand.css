@@ -148,28 +148,16 @@ html.dark-theme .navbar .button.is-primary:hover {
 }
 
 .footer-partners {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
   margin: 0 0 1.25rem;
   padding: 0;
   max-width: 56rem;
   list-style: none;
   line-height: 1.7;
+  text-align: center;
 }
 
 .footer-partners li {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-
-.footer-partners li:not(:last-child)::after {
-  content: "·";
-  margin-inline: 0.4rem;
-  color: var(--hci-ink-muted);
-  font-weight: 400;
+  display: inline;
 }
 
 .footer-partners a {
@@ -183,7 +171,6 @@ html.dark-theme .navbar .button.is-primary:hover {
 }
 
 .footer-partners span {
-  margin-left: 0.3rem;
   color: var(--hci-ink-muted);
   font-size: 0.92rem;
   font-weight: 400;
