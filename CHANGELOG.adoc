@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-30 — Partner footer titles
+
+* Docs footer: one link per org with a short title; adds Desktop Tooling and remaining sibling orgs.
+
 == 2026-08-30 — Partner footer single entry points
 
 * Partner footer: one homepage link per org; drop Docs / GitHub stacks beside HCI Nerdz, OpenShellOrg, and DevCentr.

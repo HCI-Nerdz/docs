@@ -137,3 +137,42 @@ html.dark-theme .navbar .button.is-primary:hover {
 .instruction-flow__title {
   font-family: var(--heading-font-family);
 }
+
+.footer-related-label {
+  margin: 0 0 0.75rem;
+  font-family: var(--heading-font-family);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hci-ink-muted);
+}
+
+.footer-partners {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  max-width: 36rem;
+  list-style: none;
+  text-align: left;
+}
+
+.footer-partners li {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.footer-partners a {
+  color: var(--hci-ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-partners a:hover {
+  color: var(--hci-focus);
+}
+
+.footer-partners span {
+  color: var(--hci-ink-muted);
+  font-size: 0.88rem;
+}
