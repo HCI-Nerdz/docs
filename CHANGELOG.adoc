@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-30 — Partner footer single entry points
+
+* Partner footer: one homepage link per org; drop Docs / GitHub stacks beside HCI Nerdz, OpenShellOrg, and DevCentr.
+
 == 2026-08-30 — Cold-reader essay URL updates
 
 * Essay links retargeted to cold-reader titles (node graph, task grid, Context Edge, settings, labels versus wires, etc.).
