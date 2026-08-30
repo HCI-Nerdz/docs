@@ -48,13 +48,13 @@ When a concept page and a conversation disagree, update the curated page deliber
  link:https://hci-nerdz.github.io/blog/when-settings-live-across-town/[Essay];
  link:https://hci-nerdz.github.io/demos/context-bound-settings/[Demo]
 
-| Edge Bar (context rails)
-| link:context-rails/prompt-seed-2026-08-10.md[`prompt-seed-2026-08-10.md`]
+| Context Edge (context edge)
+| link:context-edge/prompt-seed-2026-08-10.md[`prompt-seed-2026-08-10.md`]
  (author framing seed, 2026-08-10)
-| xref:context-rails.adoc[Docs topic];
+| xref:context-edge.adoc[Docs topic];
  link:https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/[Essay];
- link:https://hci-nerdz.github.io/demos/context-rails/[Demo];
- link:https://hci-nerdz.github.io/context-rails/[MVP]
+ link:https://hci-nerdz.github.io/demos/context-edge/[Demo];
+ link:https://hci-nerdz.github.io/context-edge/[MVP]
 
 | Labels versus wires (slug `navigating-by-content`)
 | link:navigating-by-content/gemini-dependency-management-and-network-architecture.md[`gemini-dependency-management-and-network-architecture.md`]

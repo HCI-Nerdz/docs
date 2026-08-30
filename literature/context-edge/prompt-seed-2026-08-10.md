@@ -1,8 +1,8 @@
-# Prompt seed — context rails
+# Prompt seed — Context Edge
 
 **Date:** 2026-08-10  
 **Origin:** Author framing (conversation seed) before curated essay/docs  
-**Public face:** [Context rails](https://hci-nerdz.github.io/docs/hci-nerdz/context-rails.html) · [When platforms overload the entrypoint](https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/)
+**Public face:** [Context Edge](https://hci-nerdz.github.io/docs/hci-nerdz/context-edge.html) · [When platforms overload the entrypoint](https://hci-nerdz.github.io/blog/when-platforms-overload-the-entrypoint/)
 
 ---
 

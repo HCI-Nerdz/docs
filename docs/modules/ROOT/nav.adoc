@@ -11,7 +11,7 @@
 * xref:shell-layer-chrome.adoc[Shell layer chrome]
 * xref:highlight-vs-pipe-linking.adoc[Highlight vs pipe linking]
 * xref:contained-tiling.adoc[Contained tiling]
-* xref:context-rails.adoc[Edge Bar]
+* xref:context-edge.adoc[Context Edge]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:grounded-tokens.adoc[Grounded tokens]
 * xref:cognitive-primitives.adoc[Cognitive primitives]

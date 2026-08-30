@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-08-30 — Context Edge rename
+
+* Topic, nav, literature, and images move from `context-rails` / Edge Bar to xref:context-edge.adoc[Context Edge] (`context-edge` slug)
+* Stub xref:context-rails.adoc[context-rails] points at the new page for old bookmarks
+
 == 2026-08-29 — Actor-model harness canvas projection
 
 * xref:actor-model-agentic-ui.adoc[Actor-model agentic UI]: harness canvas named as a peer projection (PM statuses, rearrangeable previews, archive position memory); Piles kept as email sibling; link to rebase plan.

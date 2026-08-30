@@ -44,10 +44,10 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/shell-context-chrome/prompt-seed-2026-08-28.md[Prompt seed — shell context chrome]
  (2026-08-28)
 | xref:shell-context-chrome.adoc[Shell context chrome]
-| Edge Bar (context rails)
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-rails/prompt-seed-2026-08-10.md[Prompt seed â€” context rails]
+| Context Edge (context edge)
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/context-edge/prompt-seed-2026-08-10.md[Prompt seed â€” context edge]
  (2026-08-10)
-| xref:context-rails.adoc[Edge Bar]
+| xref:context-edge.adoc[Context Edge]
 
 | Instruction flows
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/instruction-flows/interactive-document-extension-idea.md[Prompt + Grok review â€” Interactive Document Extension]
@@ -86,7 +86,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:open-with-interrupt.adoc[Open-with interrupt]
 * xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 * xref:context-bound-settings.adoc[Context-bound settings]
-* xref:context-rails.adoc[Edge Bar]
+* xref:context-edge.adoc[Context Edge]
 * xref:instruction-flows.adoc[Instruction flows]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
