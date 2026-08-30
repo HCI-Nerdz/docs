@@ -148,16 +148,23 @@ html.dark-theme .navbar .button.is-primary:hover {
 }
 
 .footer-partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.35rem 1.1rem;
   margin: 0 0 1.25rem;
   padding: 0;
   max-width: 56rem;
   list-style: none;
-  line-height: 1.7;
-  text-align: center;
+  line-height: 1.55;
 }
 
 .footer-partners li {
-  display: inline;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem;
 }
 
 .footer-partners a {
