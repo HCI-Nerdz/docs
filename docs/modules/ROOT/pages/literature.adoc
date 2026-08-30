@@ -65,10 +65,10 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 (2026-08-18)
 | xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
 
-| Grounded tokens (token provenance)
+| Detecting AI lies (grounded tokens)
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/grounded-tokens/cursor-seed-2026-08-28.md[Cursor seed â€” fork assumption]
  (2026-08-28)
-| xref:grounded-tokens.adoc[Grounded tokens]
+| xref:grounded-tokens.adoc[Detecting AI lies]
 
 | Cognitive primitives (writing clarity)
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/gemini-grounding-ai-in-cognitive-primitives-2026-08-29.md[Gemini export — Grounding AI in Cognitive Primitives]
@@ -90,7 +90,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:instruction-flows.adoc[Instruction flows]
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
-* xref:grounded-tokens.adoc[Grounded tokens]
+* xref:grounded-tokens.adoc[Detecting AI lies]
 * xref:cognitive-primitives.adoc[Cognitive primitives]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]

@@ -1,8 +1,8 @@
-= Grounded tokens
+= Detecting AI lies
 :description: Inline visual provenance for AI assistant output.
 :page-layout: docs
 
-*Grounded tokens* mark heuristic versus researched spans in assistant output.
+*Detecting AI lies* (also called *grounded tokens*) marks heuristic versus researched spans in assistant output.
 
 Complements link:actor-model-agentic-ui.adoc[Actor-model agentic UI] — provenance on *words* inside a fork; nodes on *jobs* across forks.
 

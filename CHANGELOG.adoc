@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-08-30 — Detecting AI lies title + spatial nav
+
+* Docs topic / nav: Grounded tokens → Detecting AI lies (alias kept in body).
+* Spatial web windows added to Antora nav.
+
 == 2026-08-30 — OpenShellOrg links use opensh.org
 
 * Docs and footer OpenShellOrg URLs use https://opensh.org/ instead of openshellorg.github.io.
