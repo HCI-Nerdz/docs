@@ -163,12 +163,11 @@ html.dark-theme .navbar .button.is-primary:hover {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.35rem;
 }
 
 .footer-partners li:not(:last-child)::after {
   content: "·";
-  margin-inline: 0.65rem;
+  margin-inline: 0.4rem;
   color: var(--hci-ink-muted);
   font-weight: 400;
 }
@@ -184,6 +183,7 @@ html.dark-theme .navbar .button.is-primary:hover {
 }
 
 .footer-partners span {
+  margin-left: 0.3rem;
   color: var(--hci-ink-muted);
   font-size: 0.92rem;
   font-weight: 400;
