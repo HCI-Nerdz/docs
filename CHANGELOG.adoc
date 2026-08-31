@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-08-30 — Open-with interrupt essay retitle
+
+* link:changelog-details/2026-08-30%20-%20open-with-interrupt-essay-retitle.adoc[Details]
+
 == 2026-08-30 — Detecting AI lies title + spatial nav
 
 * Docs topic / nav: Grounded tokens → Detecting AI lies (alias kept in body).

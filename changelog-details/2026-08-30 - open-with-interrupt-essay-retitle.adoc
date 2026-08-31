@@ -1,0 +1,6 @@
+= 2026-08-30 — Open-with interrupt essay retitle
+
+Point curated faces at the cold-reader essay title:
+
+* Essay link: Choosing a file handler without the context menu
+* Updated `open-with-interrupt.adoc` Prototype and `literature/README.adoc` catalog

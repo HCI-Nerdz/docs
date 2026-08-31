@@ -15,7 +15,7 @@
 - `@antora-supplemental/unversioned-component-urls` / alias so `/hci-nerdz/` → latest
 - Instruction flows: `instruction-flows.adoc` + `@antora-supplemental/instruction-flow` (GitHub `asciidoc-interactive`) under `asciidoc.extensions`; literature `literature/instruction-flows/`
 - Pass-through extensions: `pass-through-extensions.adoc` — meta-suffix peel for Explorer associations
-- Open-with interrupt: `open-with-interrupt.adoc` — Ctrl+double-click / file middle-click → app picker; recipes for Windows/macOS/Linux
+- Open-with interrupt: `open-with-interrupt.adoc` — Ctrl+double-click / file middle-click → app picker; recipes for Windows/macOS/Linux; essay `/blog/choosing-a-file-handler-without-the-context-menu/`
 - Visitor-first repo homepage: `visitor-first-repo-homepage.adoc` — hide empty GitHub sidebar CTAs; README before file tree; upstream https://github.com/orgs/community/discussions/204347
 - Context-bound settings: `context-bound-settings.adoc` — settings as dependent process beside activity UI; applicability predicates; essay `/blog/making-settings-follow-the-activity/`; demo `/demos/context-bound-settings/`
 - Context Edge: `context-edge.adoc` (slug: context-edge) — edge-summoned ecosystem nav (top/left rails → wireframe platform map; overlay colors); essay `/blog/ecosystem-nav-at-the-screen-edge/`; demo `/demos/context-edge/`; MVP `HCI-Nerdz/context-edge`

@@ -7,4 +7,4 @@ Documented open-with interrupt: a first-class gesture to force the app picker at
 * Nav and home cross-links
 * Windows AutoHotkey reference, macOS notes, Linux recipes
 * Literature: Gemini export under `literature/open-with-interrupt/`
-* Points at site essay/news
+* Points at site essay/news (essay later retitled — see 2026-08-30 changelog)

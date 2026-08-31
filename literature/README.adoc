@@ -26,7 +26,7 @@ When a concept page and a conversation disagree, update the curated page deliber
 | link:open-with-interrupt/gemini-windows-file-handler-selection-dialog.md[`gemini-windows-file-handler-selection-dialog.md`]
  (Gemini export, 2026-08-04)
 | xref:open-with-interrupt.adoc[Docs topic];
- link:https://hci-nerdz.github.io/blog/when-double-click-skips-the-choice/[Essay]
+ link:https://hci-nerdz.github.io/blog/choosing-a-file-handler-without-the-context-menu/[Essay]
 
 | Visitor-first repo homepage
 | link:visitor-first-repo-homepage/github-community-discussion-204347.md[`github-community-discussion-204347.md`]

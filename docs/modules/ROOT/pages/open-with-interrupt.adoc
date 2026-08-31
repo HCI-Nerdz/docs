@@ -124,7 +124,7 @@ Middle-click on files should open the picker in this model; middle-click on dire
 
 == Prototype
 
-* Blog essay: link:https://hci-nerdz.github.io/blog/when-double-click-skips-the-choice/[When double-click skips the choice]
+* Blog essay: link:https://hci-nerdz.github.io/blog/choosing-a-file-handler-without-the-context-menu/[Choosing a file handler without the context menu]
 * News: link:https://hci-nerdz.github.io/news/open-with-interrupt-added-to-repertoire/[Open-with interrupt added to the repertoire]
 
 == Literature
