@@ -6,6 +6,9 @@
 :page-orig-author: Ryan Johnson
 :page-last-author: Composer on behalf of Ryan Johnson
 
+Why do AI and humans write differently?
+Why does AI writing often sound like it has no voice, no individuality, no personality, or theory of mind?
+
 Human readers do not parse every word as an equal token.
 Some concepts ride fast paths — spatial, bodily, evaluative primitives — and others demand working memory to unpack compressed jargon.
 Large language models are trained on co-occurrence, not on sensorimotor grounding, so they often prefer *prevalent* phrasing over *cognitively cheap* phrasing.
