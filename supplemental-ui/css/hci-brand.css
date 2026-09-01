@@ -138,7 +138,11 @@ html.dark-theme .navbar .button.is-primary:hover {
   font-family: var(--heading-font-family);
 }
 
-.footer-related-label {
+.footer .footer-related {
+  margin-bottom: 1rem;
+}
+
+.footer .footer-related-label {
   margin: 0 0 0.65rem;
   font-family: var(--heading-font-family);
   font-size: 0.8rem;
@@ -150,12 +154,11 @@ html.dark-theme .navbar .button.is-primary:hover {
 .footer-partners {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
   gap: 0.35rem 1.1rem;
   margin: 0 0 1.25rem;
   padding: 0;
-  max-width: 56rem;
   list-style: none;
   line-height: 1.55;
 }

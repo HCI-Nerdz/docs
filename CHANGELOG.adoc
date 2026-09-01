@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-01 — Partner footer left alignment
+
+* Partner organizations list: drop flex centering and max-width cap so header and entries align left with the rest of the footer (DevCentr pattern).
+
 == 2026-09-01 — Nav grouping + build stack refresh
 
 * Sidebar nav grouped into Foundation, Scoped UX & architecture, Interaction patterns, AI & writing, Rendering & media, and Strategy (nested `**` entries; Valentus v2).
