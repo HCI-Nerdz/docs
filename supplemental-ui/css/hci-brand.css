@@ -185,3 +185,45 @@ html.dark-theme .navbar .button.is-primary:hover {
   font-size: 0.92rem;
   font-weight: 400;
 }
+
+/*
+ * Descender clip — canonical fix in valentus-theme site-doc-layout.css (2.0.17+).
+ * Slipstream until rolling v2/ui-bundle.zip includes that release.
+ */
+.doc .adt-page-title,
+.adt-article .adt-page-title {
+  line-height: 1.3;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+@media screen and (max-width: 480px) {
+  .doc .adt-page-title,
+  .adt-article .adt-page-title {
+    line-height: 1.35;
+  }
+}
+
+.adt-breadcrumb-trail {
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.adt-bc-kicker {
+  line-height: 1.45;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.adt-bc-kicker-label,
+.adt-bc-kicker-version {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.adt-bc-menu-item a {
+  line-height: 1.35;
+  overflow-x: hidden;
+  overflow-y: visible;
+}

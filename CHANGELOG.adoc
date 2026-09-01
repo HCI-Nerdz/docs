@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-01 — Page title descender clip
+
+* Fix lowercase descenders (g, p, y) clipped on page titles and breadcrumb mast text — slipstream override in `hci-brand.css` until link:https://github.com/antora-supplemental/valentus-theme/releases[valentus-theme 2.0.17+] ships in the rolling `v2/ui-bundle.zip`.
+
 == 2026-09-01 — Partner footer left alignment
 
 * Partner organizations list: drop flex centering and max-width cap so header and entries align left with the rest of the footer (DevCentr pattern).
