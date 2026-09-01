@@ -1,8 +1,15 @@
 = Changelog
 
+== 2026-09-01 — Cognitive primitives → Writing principles
+
+* Docs topic renamed: xref:writing-principles.adoc[Writing principles] — cognitive and linguistic primitives as foundation for clear human and AI prose (distinct from xref:principles.adoc[UX principles]).
+* Corpus index: xref:writing-principles-corpus-index.adoc[Writing principles corpus].
+* Framework deep dives moved to `writing-principles-frameworks/`; `cognitive-primitives*` paths redirect.
+* Nav and literature index updated; literature folder path unchanged (`literature/cognitive-primitives/`).
+
 == 2026-09-01 — Cognitive primitives opening question
 
-* xref:docs/modules/ROOT/pages/cognitive-primitives.adoc[Cognitive primitives]: add stand-alone opening questions on AI vs human voice before the existing intro.
+* xref:writing-principles.adoc[Writing principles]: add stand-alone opening questions on AI vs human voice before the existing intro.
 
 == 2026-08-30 — Open-with interrupt essay retitle
 

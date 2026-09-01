@@ -1,0 +1,30 @@
+= Concreteness and imageability (writing rule)
+:description: Prefer basic-level, sensory-perceptible wording over stacked abstractions.
+:page-layout: docs
+
+Part of xref:writing-principles.adoc[Writing principles].
+
+== What the rule is
+
+Psycholinguistic norms rate words for how easy they are to experience with the senses (*concreteness* / *imageability*).
+The writing rule: prefer high-imageability, basic-level categories (thread, lock, pointer, stack frame) over superordinate fog (entity, mechanism, infrastructure), and cut stacked nominalizations.
+
+== What good looks like
+
+* Countable scenes: “three threads,” “one counter,” “two pointers.”
+* Nouns you could sketch.
+* Abstractions labels only after a concrete stand-in exists.
+
+== Failure modes for LLM writing
+
+* Thesaurus inflation (“utilize an orchestration substrate”).
+* Concrete nouns glued together without a scene (“thread heap pointer lifecycle”).
+* Fake concreteness via random numbers that do not track through the explanation.
+
+== Micro-example
+
+*Weak:* “Contention on shared mutable state necessitates synchronization primitives.”
+
+*Stronger:* “Two threads write the same counter.
+Without a rule for who goes first, the final number can be wrong.
+A lock or a compare-and-swap is that rule.”

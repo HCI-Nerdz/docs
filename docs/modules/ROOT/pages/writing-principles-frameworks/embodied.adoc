@@ -1,0 +1,30 @@
+= Grounded / embodied cognition (writing rule)
+:description: Prefer sensorimotor-flavored simulations as scaffolding for technical ideas.
+:page-layout: docs
+
+Part of xref:writing-principles.adoc[Writing principles].
+
+== What the rule is
+
+Embodied / grounded views treat concepts as partially reconstituted from modal experience (motor, tactile, spatial), not as purely amodal graph nodes.
+The writing rule: invite a *felt simulation* — grasp, release, wait, bump, hold while walking — while remaining technically honest about what the machine actually does.
+
+== What good looks like
+
+* Verbs of bodily action carrying the mechanism (“hold the only key,” “put the object down when the thread ends”).
+* Readers can rehearse the scenario mentally without a diagram.
+* Clear separation between pedagogical embodiment and false claims about machine intentionality.
+
+== Failure modes for LLM writing
+
+* Anthropomorphism (“the collector wants to free memory”).
+* Cute physical stories that omit the real invariant.
+* Embodiment piled on after a jargon wall — too late to help.
+
+== Micro-example
+
+*Weak:* “Thread-local storage isolates per-thread state.”
+
+*Stronger (embodied):* “Give each worker a pouch clipped to its belt.
+It can reach into its own pouch without asking anyone.
+It cannot reach into another worker’s pouch without an explicit handoff.”

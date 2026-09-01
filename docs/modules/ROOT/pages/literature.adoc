@@ -70,12 +70,12 @@ Prefer the curated topic pages for teaching; open the literature files when you 
  (2026-08-28)
 | xref:grounded-tokens.adoc[Detecting AI lies]
 
-| Cognitive primitives (writing clarity)
+| Writing principles (cognitive-primitives corpus)
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/gemini-grounding-ai-in-cognitive-primitives-2026-08-29.md[Gemini export — Grounding AI in Cognitive Primitives]
  (2026-08-29);
  link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/articles/[articles corpus]
-| xref:cognitive-primitives.adoc[Cognitive primitives] ·
- xref:cognitive-primitives-index.adoc[Corpus index]
+| xref:writing-principles.adoc[Writing principles] ·
+ xref:writing-principles-corpus-index.adoc[Corpus index]
 |===
 
 Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.adoc[`literature/README.adoc`].
@@ -91,7 +91,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:navigating-by-content.adoc[Labels versus wires]
 * xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
 * xref:grounded-tokens.adoc[Detecting AI lies]
-* xref:cognitive-primitives.adoc[Cognitive primitives]
+* xref:writing-principles.adoc[Writing principles]
 * xref:philosophy.adoc[Philosophy]
 * xref:principles.adoc[Principles]
 * xref:literature.adoc[Literature]

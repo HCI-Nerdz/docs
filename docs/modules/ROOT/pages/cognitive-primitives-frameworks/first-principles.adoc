@@ -1,31 +1,5 @@
-= First-principles unpacking (writing rule)
-:description: Build explanations upward from irreducible computational facts.
-:page-layout: docs
+= First-principles unpacking (moved)
+:page-redirect: writing-principles-frameworks/first-principles.adoc
+:description: Redirect � framework deep dive moved under Writing principles.
 
-Part of xref:cognitive-primitives.adoc[Cognitive primitives].
-
-== What the rule is
-
-Refuse to treat jargon as foundational.
-Start from irreducible facts (finite memory, exclusive versus shared access, sequential instruction streams, explicit ownership of references) and only then introduce specialized vocabulary that compresses those facts.
-
-== What good looks like
-
-* Later sections use only terms established earlier.
-* Each specialized word has an explicit “rests on …” chain.
-* No appeals to “as everyone knows” for the load-bearing bits.
-
-== Failure modes for LLM writing
-
-* Pseudo-first-principles that start mid-stack (“first, the nursery…”).
-* Reordering that smuggles undefined terms into the foundations.
-* Endless reduction that never rebuilds the useful abstraction.
-
-== Micro-example
-
-*Weak:* “Generational hypotheses motivate nursery collection.”
-
-*Stronger:* “Memory is finite, so something must reuse space that programs no longer need.
-Many programs create short-lived objects often and long-lived objects rarely.
-A collector can therefore scan the short-lived region more often.
-That design is called *generational* collection; the short-lived region is often called a *nursery*.”
+This writing-principle deep dive moved under xref:writing-principles.adoc[Writing principles]. See xref:writing-principles-frameworks/first-principles.adoc[First-principles unpacking].

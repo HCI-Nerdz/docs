@@ -1,0 +1,128 @@
+= Writing principles
+:description: Clear writing for humans and AI agents — grounded in cognitive and linguistic primitives.
+:page-layout: docs
+:page-audience: practitioners
+:page-usage-context: agent-writing-rules; clarity-benchmarks
+:page-orig-author: Ryan Johnson
+:page-last-author: Composer on behalf of Ryan Johnson
+
+Why do AI and humans write differently?
+Why does AI writing often sound like it has no voice, no individuality, no personality, or theory of mind?
+
+== What this is
+
+These are *writing* principles: rules for explanations, agent output, and technical prose that a reader can actually parse.
+They sit beside xref:principles.adoc[HCI Nerdz UX principles] — product interaction norms, not prose norms.
+
+This topic collects those principles, maps them to research on human cognition and language, and maintains a **writing corpus** that holds model baselines and principle-ruled variants constant so you can judge clarity subjectively later (and eventually tune agent rules).
+
+xref:writing-principles-corpus-index.adoc[Corpus index] ·
+link:https://github.com/HCI-Nerdz/docs/tree/main/literature/cognitive-primitives[Literature folder]
+
+== Cognitive primitives as foundation
+
+Human readers do not parse every word as an equal token.
+Some concepts ride fast paths — spatial, bodily, evaluative *primitives* — and others demand working memory to unpack compressed jargon.
+Large language models are trained on co-occurrence, not on sensorimotor grounding, so they often prefer *prevalent* phrasing over *cognitively cheap* phrasing.
+
+New technical words are usually *shortcuts*: one token that stands in for a dense graph of prior lessons.
+If the reader does not already hold that graph, the shortcut raises cognitive load instead of lowering it.
+
+Two everyday heuristics point at the same problem without naming the science:
+
+* *First-principles thinking* — refuse to treat jargon as foundational; rebuild from more primitive facts.
+* *Concrete examples* — show a well-bounded scene, then let the reader extrapolate the abstraction.
+
+Those heuristics help, but they are incomplete.
+A concrete example still fails if the scene itself depends on unfamiliar experience.
+The research programs below name the *irreducible building blocks* — cognitive and linguistic *primitives* — that good writing should respect before it compresses into jargon.
+
+== Writing principles from the research
+
+=== Natural Semantic Metalanguage (NSM) and semantic primes
+
+Linguists Anna Wierzbicka and Cliff Goddard argue that languages share a small universal core of irreducible meanings — on the order of ~65 *semantic primes* — such as THERE IS, THINK, KNOW, WANT, WHERE, INSIDE, GOOD, BAD, BECAUSE, IF, CAN, NOT.
+
+Complex concepts can be restated as *reductive paraphrases* built only from primes (plus the language's ordinary grammar).
+The practical writing rule: when you introduce a term of art, unpack it in prime-adjacent everyday relations before you reuse the compressed label.
+
+xref:writing-principles-frameworks/nsm.adoc[NSM deep dive]
+
+=== Image schemas and conceptual metaphor
+
+George Lakoff and Mark Johnson describe abstract reasoning as projection from low-level sensorimotor patterns (*image schemas*): CONTAINER (in/out), SOURCE-PATH-GOAL, VERTICALITY (up/down), FORCE/BLOCKAGE, PART-WHOLE.
+
+Abstract talk borrows those neurological shortcuts — "prices went *up*," "we fell *behind*," "the value lives *inside* the object."
+Good technical prose can make the schema explicit so the reader's spatial machinery does the binding work.
+
+xref:writing-principles-frameworks/image-schemas.adoc[Image schemas deep dive]
+
+=== Grounded and embodied cognition
+
+In cognitive psychology (notably work associated with Lawrence Barsalou), concepts are not purely amodal symbols.
+Understanding *friction* or *grasping* reactivates motor and tactile systems used in those experiences.
+
+For writing: prefer explanations the reader can almost *simulate* — holding, releasing, waiting, bumping into a boundary — without inventing false psychology for the machine.
+
+xref:writing-principles-frameworks/embodied.adoc[Embodied cognition deep dive]
+
+=== Applied writing principles (corpus axes)
+
+The experiment also treats three *applied* principles as first-class styles:
+
+* xref:writing-principles-frameworks/concreteness.adoc[Concreteness / imageability] — prefer sensory-perceptible, basic-level wording (Brysbaert-style norms as inspiration, not a scoring pipeline yet).
+* xref:writing-principles-frameworks/cognitive-load.adoc[Cognitive load optimization] — Sweller-inspired limits on sentence dependency depth and simultaneous novel terms.
+* xref:writing-principles-frameworks/first-principles.adoc[First-principles unpacking] and xref:writing-principles-frameworks/concrete-example-first.adoc[Concrete-example-first] — practical heuristics, operationalized as style rules.
+
+== The grounding gap in current LLMs
+
+Standard LLMs learn *distributional* semantics: tokens live in high-dimensional neighborhoods defined by co-occurrence with other tokens.
+
+*Grounding gap*:: Without sensorimotor feedback, every symbol primarily points at other symbols.
+*Compression mismatch*:: Technical jargon packs many relational implications into one word. Selecting a high-entropy term without unpacking its dependency graph raises the reader's parsing cost.
+
+Alignment techniques under study (and loosely mirrored by our style constraints) include concreteness norms in decoding/RLHF objectives, cognitive-load-aware reward models, multimodal grounding (vision–language–action), and formal decomposition (AMR / NSM-like intermediates).
+
+[cols="2,3,3"]
+|===
+| Field / technique | Mechanism | Goal
+
+| Concreteness and imageability norms
+| Psycholinguistic ratings of sensory perceptibility
+| Penalize excess abstract token generation
+
+| Cognitive load optimization
+| Reward low working-memory overhead (dependency depth, basic-level categories)
+| Keep explanations parseable under limited attention
+
+| Multimodal grounding
+| Joint vision–text–action training
+| Tie lexical geometry to spatial/physical states
+
+| Formal decomposition
+| Semantic parsing into primes / AMR before generation
+| Build explanations compositionally from foundations
+|===
+
+== How to read the writing corpus
+
+The corpus holds axes *isolated* on purpose (v1 does not explode the full cartesian product):
+
+* *Model baselines* — same technical prompt, no style rule, one article per generator model (topic: thread-local GC).
+* *Framework variants* — same prompt plus one style constraint; generator fixed so model variance does not confound style (topics: thread-local GC, CAS vs locks, object capabilities, recursion).
+* *Natural voice* — one parent-agent article under the shared prompt with no style rule.
+
+Shared prompt and style blocks live in the literature folder:
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/prompt-technical-article.md[`prompt-technical-article.md`]
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/style-constraints.md[`style-constraints.md`]
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/manifest.json5[`manifest.json5`]
+
+Judgment is intentionally subjective for now.
+Use the xref:writing-principles-corpus-index.adoc[tabulated index] to compare pieces; score offline however you like; feed winners into agent rules later.
+
+== Literature / source
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/cognitive-primitives/gemini-grounding-ai-in-cognitive-primitives-2026-08-29.md[Gemini export — Grounding AI in Cognitive Primitives] (2026-08-29) — conversation seed; this curated page is the default teaching face and may diverge deliberately.
+
+Also called *cognitive primitives* when the emphasis is on the foundational research rather than the applied writing rules.

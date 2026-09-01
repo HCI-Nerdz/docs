@@ -1,0 +1,31 @@
+= Image schemas and conceptual metaphor (writing rule)
+:description: Grounding abstractions in CONTAINER, PATH, VERTICALITY, and related schemas.
+:page-layout: docs
+
+Part of xref:writing-principles.adoc[Writing principles].
+
+== What the rule is
+
+Image schemas are recurring sensorimotor patterns (CONTAINER, SOURCE-PATH-GOAL, VERTICALITY, FORCE/BLOCKAGE, LINK/PART-WHOLE).
+Conceptual metaphor theory says abstract talk systematically borrows those patterns.
+The writing rule: make the schema *visible* so spatial cognition does binding work — and name where the metaphor stops so it does not lie.
+
+== What good looks like
+
+* “Memory lives *inside* a thread’s private room” (CONTAINER) with an explicit boundary (what cannot cross).
+* Causal stories told as paths with a start, middle, and end state.
+* Vertical metaphors used sparingly and consistently (e.g. call stack *up/down*).
+
+== Failure modes for LLM writing
+
+* Mixed metaphors that fight (“the lock rises while flowing through a container”).
+* Pretty metaphors that contradict the mechanism.
+* Schema name-dropping without actually structuring the explanation.
+
+== Micro-example
+
+*Weak:* “The allocator reclaims unreachable objects.”
+
+*Stronger (schema-forward):* “Imagine the heap as a room of boxes.
+A box is still *in play* if you can walk a path of pointers from a root to that box.
+If no path reaches a box, the collector treats it as outside the living set and reclaims the space.”

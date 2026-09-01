@@ -1,31 +1,5 @@
-= Cognitive load optimization (writing rule)
-:description: Sweller-inspired limits on sentence depth and simultaneous novel terms.
-:page-layout: docs
+= Cognitive load optimization (moved)
+:page-redirect: writing-principles-frameworks/cognitive-load.adoc
+:description: Redirect � framework deep dive moved under Writing principles.
 
-Part of xref:cognitive-primitives.adoc[Cognitive primitives].
-
-== What the rule is
-
-Cognitive Load Theory (Sweller) treats working memory as a scarce budget.
-The writing rule: short sentences, shallow dependency trees, at most one new term per paragraph (defined immediately), and sequenced comparison instead of simultaneous contrast until both sides are established.
-
-== What good looks like
-
-* One idea lands before the next begins.
-* Definitions adjacent to first use.
-* Lists only when they reduce load, not as a default essay shape.
-
-== Failure modes for LLM writing
-
-* “Clarity” that is actually a wall of short undefined nouns.
-* Premature compare-and-contrast before either concept is stable.
-* Parenthetical forests and semicolon chains.
-
-== Micro-example
-
-*Weak:* “Unlike stop-the-world collectors, which pause all mutators, concurrent collectors, while more complex due to read/write barriers, reduce pause times.”
-
-*Stronger:* “Some collectors pause every thread that mutates the heap, then clean, then resume.
-Those pauses are simple to reason about and easy to feel.
-Other collectors clean while threads keep running.
-That design needs extra bookkeeping so the cleaner and the threads do not disagree about what is still alive.”
+This writing-principle deep dive moved under xref:writing-principles.adoc[Writing principles]. See xref:writing-principles-frameworks/cognitive-load.adoc[Cognitive load optimization].

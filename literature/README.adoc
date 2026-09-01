@@ -73,15 +73,15 @@ When a concept page and a conversation disagree, update the curated page deliber
  link:https://hci-nerdz.github.io/blog/making-model-assumptions-transparent/[Essay];
  link:https://hci-nerdz.github.io/demos/grounded-tokens/[Demo]
 
-| Cognitive primitives (writing clarity corpus)
+| Writing principles (cognitive-primitives corpus)
 | link:cognitive-primitives/gemini-grounding-ai-in-cognitive-primitives-2026-08-29.md[`gemini-grounding-ai-in-cognitive-primitives-2026-08-29.md`]
  (Gemini export, 2026-08-29);
  link:cognitive-primitives/prompt-technical-article.md[`prompt-technical-article.md`];
  link:cognitive-primitives/style-constraints.md[`style-constraints.md`];
  link:cognitive-primitives/manifest.json5[`manifest.json5`];
  link:cognitive-primitives/articles/[`articles/`]
-| xref:cognitive-primitives.adoc[Docs topic];
- xref:cognitive-primitives-index.adoc[Corpus index]
+| xref:writing-principles.adoc[Docs topic];
+ xref:writing-principles-corpus-index.adoc[Corpus index]
 |===
 
 == Adding a source
