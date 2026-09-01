@@ -12,6 +12,7 @@ antora:
   extensions:
     - '@antora/lunr-extension'
     - require: '@antora-supplemental/unversioned-component-urls'
+    - '@antora-supplemental/build-stack'
 
 content:
   sources:
