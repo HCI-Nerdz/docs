@@ -1,6 +1,7 @@
 /*
  * HCI Nerdz brand layer on Valentus 2.x chrome.
  * Amber focus + teal honesty on ink/paper.
+ * Light honesty matches hci-nerdz.github.io (darker teal on tan); dark uses brighter teal.
  */
 
 :root {
@@ -11,9 +12,9 @@
   --hci-elevated: #ffffff;
   --hci-focus: #e8a54b;
   --hci-focus-bright: #f0b85f;
-  --hci-honesty: #3d9b8f;
+  --hci-honesty: #0f7a73;
   --hci-border: #d0cbbd;
-  --hci-accent-soft: rgba(232, 165, 75, 0.12);
+  --hci-accent-soft: rgba(15, 122, 115, 0.12);
 
   --adt-canvas: var(--hci-paper);
   --adt-elevated: var(--hci-elevated);

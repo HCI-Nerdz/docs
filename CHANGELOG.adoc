@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-01 — Light-mode link contrast on tan paper
+
+* `hci-brand.css`: light-mode honesty teal `#0f7a73` (matches hci-nerdz.github.io); was `#3d9b8f` dark-theme teal on tan (~2.6:1). Teal-tinted `--hci-accent-soft` for nav/kicker fills.
+
 == 2026-09-01 — Drop valentus descender slipstream
 
 * Remove interim `hci-brand.css` overrides; rolling `v2/ui-bundle.zip` now ships valentus link:https://github.com/antora-supplemental/valentus-theme/releases/tag/v2.0.17[2.0.17+antora.3].
