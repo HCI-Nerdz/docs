@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-09-01 — Nav grouping + build stack refresh
+
+* Sidebar nav grouped into Foundation, Scoped UX & architecture, Interaction patterns, AI & writing, Rendering & media, and Strategy (nested `**` entries; Valentus v2).
+* Build stack aligned with DevCentr: `antora` meta package, explicit `@antora-supplemental/build-stack` dependency, `@antora/lunr-extension` caret range; HCI-specific extensions unchanged (`unversioned-component-urls`, `instruction-flow`).
+
 == 2026-09-01 — Cognitive primitives → Writing principles
 
 * Docs topic renamed: xref:writing-principles.adoc[Writing principles] — cognitive and linguistic primitives as foundation for clear human and AI prose (distinct from xref:principles.adoc[UX principles]).
