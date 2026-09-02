@@ -47,6 +47,12 @@ It also hosts the systems-altitude framing for **Internet Reliability** (referen
 | Shell prompt context tokens — left-arrow focus, boxed segments, theme packs, web demo
 | HCI Nerdz (`shell-context-chrome`, `shell-context-demo`)
 
+| Programmer-POV diagnostics / channel switcher / tool-run attention patterns
+| HCI Nerdz (concept); OpenShellOrg owns the bus + hosts
+
+| Tool-run daemon, wrappers, `OPENSH_SESSION_ID`, compile as structured run
+| OpenShellOrg (`tool-run-diagnostics`, open-terminal / open-shell)
+
 | AsciiDoc preview theme fidelity in editors
 | HCI Nerdz for the presentation layer; Antora plumbing with antora-supplemental
 
@@ -55,6 +61,9 @@ It also hosts the systems-altitude framing for **Internet Reliability** (referen
 
 | Activity map launcher, night theme changer, webcam bridge
 | Desktop Tooling
+
+| OS desktop flash / tray index when the tool-run host *is* the desktop
+| Desktop Tooling (helpers); OpenShellOrg keeps the protocol
 |===
 
 == Related

@@ -1,0 +1,57 @@
+= Programmer-POV diagnostics
+:description: Compiler and tool errors should speak to the programmer’s next action — not only to the compiler’s internal model — and should leave the scrollback for a proper surface.
+:page-audience: practitioners
+:page-usage-context: concept
+:page-orig-author: agent on behalf of AMDphreak
+:page-last-author: agent on behalf of AMDphreak
+
+== Core claim
+
+Diagnostic text is a **communication surface**. When compilers write for their own vocabulary (AST nodes, internal codes, dump-shaped stderr), they force the programmer into a second job: translating machine talk into “what do I change?”
+
+That is the same failure mode as handing a driver raw ECU hex when they asked why the radiator failed.
+
+OpenShellOrg owns the **tool-run bus** and shell hosts that keep diagnostics off the scrollback. HCI Nerdz owns the *wording and attention* face: programmer POV, channel switchers, and demos of how humans scan runs.
+
+Canon: link:https://opensh.org/docs/shell-architecture/tool-run-diagnostics.html[Tool runs and diagnostics @ OpenShellOrg] · link:https://opensh.org/docs/shell-architecture/command-channels.html[Command channels].
+
+== Three stacked problems
+
+. **Vocabulary** — messages describe the compiler’s world, not the programmer’s next edit.
+. **Surface** — multiline stderr in a VT scrollback is wrap-hostile and hostile to agent spam.
+. **Index** — finished runs disappear; fifty agent compiles leave no shared secondary context.
+
+Fixing only vocabulary inside stderr still leaves the wrong surface. Fixing only a GUI without structured events still leaves scrapers.
+
+== Presentation over rewrite
+
+Most ecosystems already emit machine-readable diagnostics (SARIF, rustc JSON, clang tooling JSON). Programmer-POV copy is often a **presentation layer** over codes — glossaries, “do this next,” related spans — not a demand that every frontend be rewritten before the UX can improve.
+
+HCI work here: patterns for gloss, severity without panic theater, and how a diagnostic list should scan when the reader is mid-edit.
+
+== Surfaces HCI cares about
+
+| Surface | HCI question |
+|---|---|
+| Channel switcher (`out` / `err` / `diag`) | Top chips vs left rail; attention without clutter |
+| Tool-run panel | Live vs collapsed tile; how finished work stays findable |
+| Embed in agent timeline | Same widgets, different chrome — no second visual language |
+| Host flash / focus | How to summon the shell that owned the run without stealing focus from the wrong place |
+
+Desktop Tooling may help when the host *is* the OS desktop (tray, flash). Dev-Centr harnesses mount the embeddable library. OpenShellOrg defines the bus.
+
+== Retro-interactivity vs tool runs
+
+**Retro-interactive shell results** (format at display time; stay interactive after exit) help when the output *is* data — tables, lists, API rows.
+
+**Tool runs** help when the output is adversarial diagnostics that should not own the pipeline.
+
+Same thesis (display ≠ transport), different mounts. Do not force compilers into “pretty table” just because Nu can explore tables.
+
+== Related
+
+* xref:shell-layer-chrome.adoc[Shell layer chrome]
+* xref:shell-context-chrome.adoc[Shell context chrome]
+* xref:division-of-labor.adoc[Division of labor]
+* xref:actor-model-agentic-ui.adoc[Actor-model agentic UI]
+* OpenShellOrg: link:https://opensh.org/docs/shell-architecture/tool-run-diagnostics.html[tool-run diagnostics]
