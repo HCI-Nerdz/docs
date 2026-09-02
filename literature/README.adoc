@@ -62,7 +62,7 @@ When a concept page and a conversation disagree, update the curated page deliber
  link:navigating-by-content/cursor-analysis-seed-2026-08-11.md[`cursor-analysis-seed-2026-08-11.md`]
  (Cursor seed, 2026-08-11)
 | xref:navigating-by-content.adoc[Docs — diagnosis/treatment];
- link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[Symptom essay];
+ link:https://hci-nerdz.github.io/blog/path-renames-that-break-dependents/[Symptom essay];
  link:https://hci-nerdz.github.io/blog/labels-versus-wires/[Diagnosis essay];
  link:https://hci-nerdz.github.io/demos/navigating-by-content/[Symptom demo]
 

@@ -17,7 +17,7 @@ The **symptom** face stays separate so either side can revise without dragging t
 
 | Symptom
 | Name what people already feel
-| link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[When renaming a page breaks half your docs] · link:https://hci-nerdz.github.io/demos/navigating-by-content/[demo]
+| link:https://hci-nerdz.github.io/blog/path-renames-that-break-dependents/[Path renames that break dependents] · link:https://hci-nerdz.github.io/demos/navigating-by-content/[demo]
 
 | Diagnosis
 | Name the mistake (label used as wire)
@@ -224,7 +224,7 @@ See the sibling explanation on the connectome-fs docs hub (*Labels versus wires*
 | link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability]
 
 | Symptom essay
-| link:https://hci-nerdz.github.io/blog/when-renaming-a-page-breaks-half-your-docs/[When renaming a page breaks half your docs]
+| link:https://hci-nerdz.github.io/blog/path-renames-that-break-dependents/[Path renames that break dependents]
 
 | Diagnosis essay
 | link:https://hci-nerdz.github.io/blog/labels-versus-wires/[Labels versus wires]

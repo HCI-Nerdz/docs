@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-02 — Path renames symptom retitle
+
+* link:changelog-details/2026-09-02%20-%20path-renames-symptom-retitle.adoc[Details]
+
 == 2026-09-02 — Programmer-POV diagnostics
 
 * Concept page xref:programmer-pov-diagnostics.adoc[Programmer-POV diagnostics] — wording and attention face for OpenShellOrg Tool Runs / command channels.
