@@ -21,7 +21,7 @@
 |===
 
 DevCentr sits beside all three: it recommends and configures developer environments; it does not own SOS, HCI chrome, or Explorer gadgets.
-It also hosts the systems-altitude framing for **Internet Reliability** and **Provider search and mirror backups** under Internet Architecture; HCI Nerdz keeps the *Labels versus wires* and *Host-held history* symptom ↔ diagnosis/treatment faces and published essay/demo URLs.
+It also hosts the systems-altitude framing for **Internet Reliability**, **Provider search and mirror backups**, and **Hash-matched binary conversion profiles** under Internet Architecture; HCI Nerdz keeps the *Labels versus wires*, *Host-held history*, and *On-disk game conversion* symptom ↔ diagnosis/treatment faces and published essay/demo URLs.
 
 == Boundary examples
 
@@ -64,6 +64,9 @@ It also hosts the systems-altitude framing for **Internet Reliability** and **Pr
 
 | OS desktop flash / tray index when the tool-run host *is* the desktop
 | Desktop Tooling (helpers); OpenShellOrg keeps the protocol
+
+| On-disk game conversion (symptom / hub UX / owned-media transformation face)
+| HCI Nerdz; DevCentr systems page + `equivalence-engine` / `binary-tailor` substrate
 |===
 
 == Related

@@ -1,0 +1,90 @@
+= On-disk game conversion
+:description: Symptom and treatment sketch — live API translation (Wine-class) versus convert-once, cache-on-disk, hash-matched conversion profiles for games the user already holds.
+:navtitle: On-disk game conversion
+:page-audience: HCI readers and stakeholders evaluating Linux gaming hubs and owned-media transformation rights
+:page-usage-context: Encyclopedia companion to Labels versus wires; systems detail on DevCentr
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-09-03
+
+ifndef::page-context-active[]
+[.page-context.page-context-lead]
+****
+Audience:: {page-audience}
+****
+
+[.page-context.page-context-footer]
+****
+Original author:: {page-orig-author}
+Latest contributor:: {page-last-author}
+Last updated:: {page-last-edited}
+****
+endif::[]
+
+== Symptom
+
+You bought the game. The bytes sit on your disk. On Linux you are asked to pretend those bytes are still a Windows process forever — live-translating Win32/DirectX calls into host calls on every launch (Wine, Proton, and kin).
+
+The pain is not “compatibility layers are useless.” The pain is **paying the translation tax forever**, with no first-class path to a **native-shaped artifact you keep**, and no store priority that prefers native or lawfully ported builds when they exist.
+
+== Diagnosis
+
+Same family as xref:navigating-by-content.adoc[Labels versus wires]: the storefront label (“Windows build”) is not the only wire that should exist between *your license* and *what runs*.
+
+Live translation keeps the **foreign ABI as the permanent object**.
+On-disk conversion treats the foreign binary as **input** to a recipe that produces a **cached, host-shaped output** (or a verified hybrid), matched to a specific content hash.
+
+The human-rights-shaped intuition: if you may shred, decorate, or otherwise transform a binary you lawfully hold for personal use, a **local conversion pipeline** belongs in that family — not in the “redistribute the publisher’s IP as a cracked upload” family.
+
+== Treatment (near term)
+
+* Hubs and launchers: **vendor source priority** — native Linux → publisher-authorized ported binary → original + hash-matched conversion profile applied locally.
+* Distribute **profiles / recipes**, not converted game trees (unless the rights holder ships the tree).
+* Match profiles by **content hash** (and version metadata); refuse silent apply on hash mismatch.
+* Wrap recognized installers / post-install trees so candidate PE/DLL (and kin) can be converted into a **sidecar cache**; keep originals for verification and rollback.
+* Be honest about hard walls: DRM, kernel anti-cheat, obfuscation, and “full decompile → perfect recompile” are not weekend demos.
+
+== Treatment (north star)
+
+Stores and publishers treat conversion profiles as a **first-class delivery class** beside native builds: analyze once, ship the recipe (or the authorized converted artifact), let every lawful owner apply or download the cache.
+
+AI-assisted analysis and decompilation feed **profile authoring**, not pirate mirrors.
+Bitwise / block-level conversion profiles become a shared equivalence surface — “this hash of `game.exe` maps to this host-native plan.”
+
+Installer porting remains optional and harder; post-install binary conversion is the wedge.
+
+== Legal posture (HCI face — not counsel)
+
+This page is design literature, not legal advice.
+
+* Strongest clean path: **rights holder authorizes** native builds, ports, or profile distribution.
+* Strongest user-agency path: **local conversion of copies the user already may run**, without redistributing game binaries.
+* Gray / hostile zones: EULA reverse-engineering bans, DMCA-style anti-circumvention when DRM/anti-cheat is defeated, and profiles that embed substantial copyrighted expression rather than transformative mapping metadata.
+* “Recipe not binary” reduces *redistribution of the game* risk; it does not erase every copyright, contract, or circumvention question.
+
+== Sibling faces
+
+[cols="1,2"]
+|===
+| Face | Where
+
+| Systems altitude
+| link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/hash-matched-binary-conversion-profiles.html[Hash-matched binary conversion profiles @ DevCentr]
+
+| Technical substrate
+| link:https://github.com/dev-centr/equivalence-engine[equivalence-engine] (rules / DAG mappings); link:https://github.com/dev-centr/binary-tailor[binary-tailor] (post-delivery on-disk reshape — related instinct, different job)
+
+| Catalog idea (when published)
+| DevCentr project-plans seed `2026-09-03 - on-disk-game-conversion`
+|===
+
+== Literature
+
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/on-disk-game-conversion/prompt-seed-2026-09-03.md[Prompt seed — on-disk game conversion]
+
+== Related
+
+* xref:navigating-by-content.adoc[Labels versus wires]
+* xref:host-held-history.adoc[Host-held history]
+* xref:literature.adoc[Literature]
+* xref:division-of-labor.adoc[Division of labor]

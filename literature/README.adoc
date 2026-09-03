@@ -72,6 +72,12 @@ When a concept page and a conversation disagree, update the curated page deliber
 | xref:host-held-history.adoc[Docs topic];
  link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/provider-search-and-mirror-backups.html[Systems @ DevCentr]
 
+| On-disk game conversion
+| link:on-disk-game-conversion/prompt-seed-2026-09-03.md[`prompt-seed-2026-09-03.md`]
+ (Cursor seed, 2026-09-03)
+| xref:on-disk-game-conversion.adoc[Docs topic];
+ link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/hash-matched-binary-conversion-profiles.html[Systems @ DevCentr]
+
 | Grounded tokens
 | link:grounded-tokens/cursor-seed-2026-08-28.md[`cursor-seed-2026-08-28.md`]
  (Cursor seed, 2026-08-28)
