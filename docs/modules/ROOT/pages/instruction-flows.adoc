@@ -116,7 +116,7 @@ See the package roadmap in link:https://github.com/antora-supplemental/asciidoc-
 
 == Prototype
 
-* Blog essay: link:https://hci-nerdz.github.io/blog/instruction-flows/[Navigating by content]
+* Blog essay: link:https://hci-nerdz.github.io/blog/navigating-by-content/[Navigating by content]
 * Site demo (continuation-insert UX): link:https://hci-nerdz.github.io/demos/instruction-flow/[Instruction flow demo]
 * Extension: link:https://github.com/antora-supplemental/asciidoc-interactive[antora-supplemental/asciidoc-interactive]
 

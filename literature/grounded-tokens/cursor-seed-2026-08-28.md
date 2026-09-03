@@ -50,4 +50,4 @@ People first, devs second — the email to Cursor should lead with the **human c
 ## Related HCI Nerdz thesis
 
 - [Attention is not inventory](https://hci-nerdz.github.io/blog/attention-is-not-inventory/) — don’t make users mine every token for “did it actually check?”
-- [Product representation is the bug](https://hci-nerdz.github.io/blog/product-representation-is-the-bug/) — the UI presents guesses with the same weight as facts
+- [When the UI hides what counts](https://hci-nerdz.github.io/blog/when-the-ui-hides-what-counts/) — the UI presents guesses with the same weight as facts

@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-03 — Blog slug/title alignment
+
+* link:changelog-details/2026-09-03%20-%20blog-slug-title-alignment.adoc[Details]
+
 == 2026-09-03 — On-disk game conversion (local lemonade + weaving)
 
 * Clarify local-only “copy instance / lemonade bottle” framing (not store redistribution); defer DRM/anti-cheat; pointer to binary weaving on the systems page.

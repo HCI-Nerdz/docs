@@ -263,4 +263,4 @@ Hover expand is progressive enhancement on desktop.
 * xref:fundamental-contexts.adoc[Fundamental contexts]
 * xref:ecosystem.adoc[Ecosystem]
 * xref:literature.adoc[Literature]
-* link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[When the UI hides what counts]
+* link:https://hci-nerdz.github.io/blog/when-the-ui-hides-what-counts/[When the UI hides what counts]

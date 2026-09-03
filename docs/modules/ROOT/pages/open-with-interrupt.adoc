@@ -138,4 +138,4 @@ Middle-click on files should open the picker in this model; middle-click on dire
 * xref:philosophy.adoc[Philosophy] — product representation; intuition over backwards convention
 * xref:pass-through-extensions.adoc[Pass-through extensions] — association clarity for meta-suffixes
 * xref:literature.adoc[Literature]
-* link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[Product representation is the bug]
+* link:https://hci-nerdz.github.io/blog/when-the-ui-hides-what-counts/[When the UI hides what counts]

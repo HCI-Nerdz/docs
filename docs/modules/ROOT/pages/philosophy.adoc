@@ -62,13 +62,13 @@ Authoritative conversation sources: xref:literature.adoc[Literature].
 When a system applies rules in order, the processing-map surface should treat sequence as the top-level organization.
 Parallelism nests inside steps.
 See xref:processing-maps.adoc[Processing maps] and the
-link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[pipeline composer essay].
+link:https://hci-nerdz.github.io/blog/sequence-as-top-level-organization/[Sequence as top-level organization].
 
 == Instruction flows
 
 When a doc is really a decision tree (install guides, multi-platform setup), present one choice at a time and insert the chosen subflow as a continuation — navigate by content itself.
 See xref:instruction-flows.adoc[Instruction flows] and the
-link:https://hci-nerdz.github.io/blog/instruction-flows/[instruction flows essay].
+link:https://hci-nerdz.github.io/blog/navigating-by-content/[Navigating by content].
 
 == Pass-through extensions
 

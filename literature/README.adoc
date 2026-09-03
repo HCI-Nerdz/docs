@@ -38,7 +38,7 @@ When a concept page and a conversation disagree, update the curated page deliber
 | link:instruction-flows/interactive-document-extension-idea.md[`interactive-document-extension-idea.md`]
  (prompt + Grok review; copied 2026-08-18 from `antora-supplemental/asciidoc-interactive`, not Downloads)
 | xref:instruction-flows.adoc[Docs topic];
- link:https://hci-nerdz.github.io/blog/instruction-flows/[Essay];
+ link:https://hci-nerdz.github.io/blog/navigating-by-content/[Essay];
  link:https://hci-nerdz.github.io/demos/instruction-flow/[Demo]
 
 | Context-bound settings

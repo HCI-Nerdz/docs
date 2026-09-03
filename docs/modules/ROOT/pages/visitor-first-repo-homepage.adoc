@@ -94,4 +94,4 @@ image::github-repo-visitor-first/poc-code-tab-files.png[Code tab showing file br
 * xref:principles.adoc[Principles] — progressive disclosure; surface what counts
 * xref:philosophy.adoc[Philosophy] — product representation; attention ethics
 * xref:literature.adoc[Literature]
-* link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[When the UI hides what counts]
+* link:https://hci-nerdz.github.io/blog/when-the-ui-hides-what-counts/[When the UI hides what counts]

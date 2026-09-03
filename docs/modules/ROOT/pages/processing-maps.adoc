@@ -45,7 +45,7 @@ Classic failure: two vendors each own a redirect, a proxy toggle joins them into
 
 == Prototype
 
-* Blog essay: link:https://hci-nerdz.github.io/blog/pipeline-composer-interfaces/[Sequence as top-level organization]
+* Blog essay: link:https://hci-nerdz.github.io/blog/sequence-as-top-level-organization/[Sequence as top-level organization]
 * Repository: link:https://github.com/HCI-Nerdz/pipeline-composer[HCI-Nerdz/pipeline-composer]
 * Demo: link:https://hci-nerdz.github.io/pipeline-composer/[pipeline-composer demo]
 

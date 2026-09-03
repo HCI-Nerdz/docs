@@ -9,7 +9,7 @@ In plain language: ClearType bets on your subpixels. Wrong bet → colored fring
 
 ClearType is a contract between *renderer geometry* and *panel geometry*. Windows exposes that contract through several setting planes and APIs that do not all share the same scope. The inbox tuner UI often narrates a simpler story than GDI, WPF, and DirectWrite actually implement—especially across multiple monitors.
 
-That is product representation: link:https://hci-nerdz.github.io/blog/product-representation-is-the-bug/[product representation is the bug].
+That is product representation: link:https://hci-nerdz.github.io/blog/when-the-ui-hides-what-counts/[When the UI hides what counts].
 
 == What users are choosing
 

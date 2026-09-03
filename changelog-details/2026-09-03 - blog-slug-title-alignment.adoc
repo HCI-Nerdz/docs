@@ -1,0 +1,8 @@
+= 2026-09-03 — Blog slug/title alignment
+
+* Updated essay URLs to match wired titles on hci-nerdz.github.io (no redirects):
+** `/blog/navigating-by-content/` (*Navigating by content* / instruction flows)
+** `/blog/sequence-as-top-level-organization/`
+** `/blog/when-the-ui-hides-what-counts/`
+** `/blog/color-fonts-as-theme-integrity-colrv1-and-nabla/`
+* Docs, philosophy, literature README, and AGENTS maps updated
