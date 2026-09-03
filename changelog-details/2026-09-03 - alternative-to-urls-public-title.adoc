@@ -1,0 +1,7 @@
+= 2026-09-03 — An alternative to URLs (public title)
+
+* Docs H1 / nav: *An alternative to URLs* (slug `navigating-by-content` kept)
+* Symptom surfaces: `/blog/broken-links-after-a-url-rename/` + `/demos/broken-links-after-a-url-rename/`
+* Diagnosis essay: `/blog/an-alternative-to-urls/`
+* Nickname *Labels versus wires* retained in body after the hook
+* AGENTS + literature links updated; titles doctrine via agent-rules `editorial-titles`

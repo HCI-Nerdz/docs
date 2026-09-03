@@ -2,8 +2,8 @@
 
 ## Editorial titles
 
-- Antora page titles name concepts.
-- News/blog titles: `$AGENT_RULES_PATH/agents/editorial/titles.md` (house; cold-reader gate). Local `STYLE.adoc` is a pointer only.
+- Antora page titles name concepts — still follow `$AGENT_RULES_PATH/agents/editorial/titles.md` (concrete/enthymeme cold-reader gate).
+- News/blog titles: same module; teaching page on docs hub `agent-rules` → `editorial-titles.adoc`. Local `STYLE.adoc` is a pointer only.
 - Philosophy: [Titles as orientation](https://hci-nerdz.github.io/blog/titles-as-orientation/)
 - Workstation facts: `$CODE_ROOT/machine.md` + `$CODE_ROOT/harness.md` — never commit; never per-repo.
 
@@ -19,7 +19,7 @@
 - Visitor-first repo homepage: `visitor-first-repo-homepage.adoc` — hide empty GitHub sidebar CTAs; README before file tree; upstream https://github.com/orgs/community/discussions/204347
 - Context-bound settings: `context-bound-settings.adoc` — settings as dependent process beside activity UI; applicability predicates; essay `/blog/making-settings-follow-the-activity/`; demo `/demos/context-bound-settings/`
 - Context Edge: `context-edge.adoc` (slug: context-edge) — edge-summoned ecosystem nav (top/left rails → wireframe platform map; overlay colors); essay `/blog/ecosystem-nav-at-the-screen-edge/`; demo `/demos/context-edge/`; MVP `HCI-Nerdz/context-edge`
-- Labels versus wires: `navigating-by-content.adoc` (slug kept; concept name is Labels versus wires) — symptom ↔ diagnosis/treatment dialectic; CAS + mutable pointers + `CONSUMERS.md`; symptom essay `/blog/path-renames-that-break-dependents/` + demo `/demos/navigating-by-content/`; diagnosis essay `/blog/labels-versus-wires/`; sibling connectome-fs explanation. **Systems umbrella:** Internet Reliability @ DevCentr (`docs.devcentr.org` … `/internet-architecture/reliability/`). Not the instruction-flows essay `/blog/navigating-by-content/` (*Navigating by content*).
+- An alternative to URLs: `navigating-by-content.adoc` (slug kept; public H1 *An alternative to URLs*; nickname *Labels versus wires*) — symptom ↔ diagnosis/treatment dialectic; CAS + mutable pointers + `CONSUMERS.md`; symptom essay `/blog/broken-links-after-a-url-rename/` + demo `/demos/broken-links-after-a-url-rename/`; diagnosis essay `/blog/an-alternative-to-urls/`; sibling connectome-fs explanation. **Systems umbrella:** Internet Reliability @ DevCentr (`docs.devcentr.org` … `/internet-architecture/reliability/`). Not the instruction-flows essay `/blog/navigating-by-content/` (*Navigating by content*).
 - Host-held history: `host-held-history.adoc` — forge/CDN-only correspondence as consumer-loss symptom; treatment pairs local archives + provider search/mirror APIs. **Systems:** Provider search and mirror backups @ DevCentr.
 - Grounded tokens: `grounded-tokens.adoc` — heuristic vs researched inline marks in AI assistant output; essay `/blog/making-model-assumptions-transparent/`; demo `/demos/grounded-tokens/`; literature `literature/grounded-tokens/`
 - Symptom ↔ diagnosis/treatment: for repertoire ideas people only feel as a symptom, keep a stable symptom entry (essay/demo) paired with a revisable diagnosis/treatment face (docs + technical essay). Either side can revise without retitling the other.

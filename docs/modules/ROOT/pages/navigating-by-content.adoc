@@ -1,8 +1,7 @@
-= Labels versus wires
-:description: Diagnosis and treatment — pretty names are human labels; systems wire on content identity, mutable pointers, and reverse consumers. Symptom entry is the rename essay and demo.
-:navtitle: Labels versus wires
+= An alternative to URLs
+:description: Diagnosis and treatment — an alternative to URL-as-identity. Pretty URLs stay for people; systems wire on content identity, mutable pointers, and reverse consumers.
 
-image::navigating-by-content/icon.svg[Labels versus wires icon — hash core with detachable URL label,width=120]
+image::navigating-by-content/icon.svg[An alternative to URLs — hash core with detachable URL label,width=120]
 
 People already chase the *thing*.
 What they feel is the symptom: a link that used to work, a rename that quietly broke someone else's docs, unpaid string archaeology across repos.
@@ -17,19 +16,19 @@ The **symptom** face stays separate so either side can revise without dragging t
 
 | Symptom
 | Name what people already feel
-| link:https://hci-nerdz.github.io/blog/path-renames-that-break-dependents/[Path renames that break dependents] · link:https://hci-nerdz.github.io/demos/navigating-by-content/[demo]
+| link:https://hci-nerdz.github.io/blog/broken-links-after-a-url-rename/[Broken links after a URL rename] · link:https://hci-nerdz.github.io/demos/broken-links-after-a-url-rename/[demo]
 
 | Diagnosis
 | Name the mistake (label used as wire)
-| link:https://hci-nerdz.github.io/blog/labels-versus-wires/[Labels versus wires] · this topic
+| link:https://hci-nerdz.github.io/blog/an-alternative-to-urls/[An alternative to URLs] · this topic
 
 | Treatment
 | What to do near-term and long-term
 | Adoption sections below · `CONSUMERS.md` · redirects / aliases
 |===
 
-Slug stays `navigating-by-content` (Cool URI absorb); the concept name is *Labels versus wires*.
-Do not confuse with *Navigating by content* on instruction flows — that phrase is about menu-style docs, not reference identity.
+Slug stays `navigating-by-content` (Cool URI absorb). Public title is *An alternative to URLs*; internal nickname after the hook is *Labels versus wires*.
+Do not confuse with the instruction-flows essay *Navigating by content* (`/blog/navigating-by-content/`) — menu-style docs, not URL identity.
 
 **Umbrella (systems altitude):** link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr] — machine ↔ DevX/ecosystem ↔ internet reference durability under Internet Architecture. This page remains the HCI symptom ↔ diagnosis/treatment face.
 
@@ -64,7 +63,7 @@ Same mistake shows up in package names, doc slugs, and file paths.
 
 == Diagnosis
 
-*Labels versus wires* is the claim that **identity should follow the thing**, not the pretty name we hang on it today.
+*An alternative to URLs* (nickname: *labels versus wires*) is the claim that **identity should follow the thing**, not the pretty name we hang on it today.
 Canonical URLs, package names, and doc paths stay useful for humans.
 They must not be the only way machines and dependents find the resource.
 
@@ -224,13 +223,13 @@ See the sibling explanation on the connectome-fs docs hub (*Labels versus wires*
 | link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability]
 
 | Symptom essay
-| link:https://hci-nerdz.github.io/blog/path-renames-that-break-dependents/[Path renames that break dependents]
+| link:https://hci-nerdz.github.io/blog/broken-links-after-a-url-rename/[Broken links after a URL rename]
 
 | Diagnosis essay
-| link:https://hci-nerdz.github.io/blog/labels-versus-wires/[Labels versus wires]
+| link:https://hci-nerdz.github.io/blog/an-alternative-to-urls/[An alternative to URLs]
 
 | Symptom demo
-| link:https://hci-nerdz.github.io/demos/navigating-by-content/[Rename simulation]
+| link:https://hci-nerdz.github.io/demos/broken-links-after-a-url-rename/[Broken links after a URL rename]
 
 | connectome-fs
 | link:https://connectome-fs.github.io/connectome-fs/[Project site] · docs explanation *Labels versus wires*
