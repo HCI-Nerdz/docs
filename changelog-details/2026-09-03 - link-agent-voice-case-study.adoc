@@ -1,0 +1,3 @@
+﻿= 2026-09-03 — Link case study from An alternative to URLs
+
+* Literature/sources points at DevCentr agent-rules case study on agent voice vs reader voice
