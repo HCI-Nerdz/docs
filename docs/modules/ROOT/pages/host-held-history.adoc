@@ -1,0 +1,71 @@
+= Host-held history
+:description: Symptom and treatment sketch — when correspondence and media live only on a host CDN, consumers lose searchable ownership; pair with DevCentr provider mirrors.
+:navtitle: Host-held history
+:page-audience: HCI readers and stakeholders evaluating consumer data portability
+:page-usage-context: Encyclopedia companion to Labels versus wires; systems detail on DevCentr
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-09-02
+
+ifndef::page-context-active[]
+[.page-context.page-context-lead]
+****
+Audience:: {page-audience}
+****
+
+[.page-context.page-context-footer]
+****
+Original author:: {page-orig-author}
+Latest contributor:: {page-last-author}
+Last updated:: {page-last-edited}
+****
+endif::[]
+
+== Symptom
+
+You filed the bug. The screenshot rendered. Months later you cannot find it without the host’s UI — or the CDN link died, or the org revoked access, or the agent cannot RAG against “everything I ever submitted” without scraping.
+
+The pain is not “GitHub is bad at images.” The pain is **history that only the host can search**, while the consumer holds no API-shaped copy.
+
+== Diagnosis
+
+Same family as xref:navigating-by-content.adoc[Labels versus wires]: the pretty host page is a label; the *thing* (body, attachment bytes, thread identity) should remain reachable under consumer-controlled wires.
+
+Forge-native upload (`gh --attach`) correctly improves **live** filing.
+It does not replace **ownership of a searchable backup**.
+
+== Treatment (near term)
+
+* Keep submission markdown + media in a personal archive (`.issues` submissions / `images/`).
+* Opt into forge metadata/body backups (Issues Browser).
+* Prefer provider search APIs when they exist; do not pretend a private disk dump is the end state.
+
+== Treatment (north star)
+
+Data providers expose fuzzy → vector/hybrid search as a first-class surface.
+Consumers can opt into **mirror backups that mimic the provider’s data shape and API**.
+Privacy law and portability norms push toward usable export — not locked HTML.
+
+Building the open path as a demo (portable archives, then API-compatible mirrors) argues against “the business owns your data and hides it from you” on legal, cultural, *and* tooling grounds.
+
+== Sibling faces
+
+[cols="1,2"]
+|===
+| Face | Where
+
+| Systems altitude
+| link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/provider-search-and-mirror-backups.html[Provider search and mirror backups @ DevCentr]
+
+| Substrate
+| link:https://connectome-fs.github.io/connectome-fs/docs/connectome-fs/0.1/explanation/navigating-by-content.html[connectome-fs — Labels versus wires]
+
+| Catalog idea
+| link:https://devcentr.org/ideas/provider-mirror-backups[provider-mirror-backups]
+|===
+
+== Related
+
+* xref:navigating-by-content.adoc[Labels versus wires]
+* xref:literature.adoc[Literature]
+* xref:division-of-labor.adoc[Division of labor]

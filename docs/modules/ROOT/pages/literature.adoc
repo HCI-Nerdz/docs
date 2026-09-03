@@ -55,11 +55,16 @@ Prefer the curated topic pages for teaching; open the literature files when you 
 | xref:instruction-flows.adoc[Instruction flows]
 
 | Labels versus wires
-| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/gemini-dependency-management-and-network-architecture.md[Gemini export â€” Dependency Management and Network Architecture]
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/gemini-dependency-management-and-network-architecture.md[Gemini export — Dependency Management and Network Architecture]
  (2026-08-11);
  link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/cursor-analysis-seed-2026-08-11.md[Cursor analysis seed]
  (2026-08-11)
-| xref:navigating-by-content.adoc[Labels versus wires] Â· systems umbrella link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr]
+| xref:navigating-by-content.adoc[Labels versus wires] · systems umbrella link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr]
+
+| Host-held history
+| link:https://github.com/HCI-Nerdz/docs/blob/main/literature/host-held-history/prompt-seed-2026-09-02.md[Prompt seed — host-held history / provider mirrors]
+ (2026-09-02)
+| xref:host-held-history.adoc[Host-held history] · systems link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/provider-search-and-mirror-backups.html[Provider search and mirror backups @ DevCentr]
 | COLR color fonts (COLRv1 / COLRv0)
 | link:https://github.com/HCI-Nerdz/docs/blob/main/literature/colr-color-fonts/nabla-colrv1-notes.md[Nabla / COLRv1 notes]
 (2026-08-18)
@@ -89,6 +94,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:context-edge.adoc[Context Edge]
 * xref:instruction-flows.adoc[Instruction flows]
 * xref:navigating-by-content.adoc[Labels versus wires]
+* xref:host-held-history.adoc[Host-held history]
 * xref:colr.adoc[COLR color fonts (COLRv1 / COLRv0)]
 * xref:grounded-tokens.adoc[Detecting AI lies]
 * xref:writing-principles.adoc[Writing principles]

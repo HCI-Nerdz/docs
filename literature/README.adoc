@@ -66,6 +66,12 @@ When a concept page and a conversation disagree, update the curated page deliber
  link:https://hci-nerdz.github.io/blog/labels-versus-wires/[Diagnosis essay];
  link:https://hci-nerdz.github.io/demos/navigating-by-content/[Symptom demo]
 
+| Host-held history
+| link:host-held-history/prompt-seed-2026-09-02.md[`prompt-seed-2026-09-02.md`]
+ (Cursor seed, 2026-09-02)
+| xref:host-held-history.adoc[Docs topic];
+ link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/provider-search-and-mirror-backups.html[Systems @ DevCentr]
+
 | Grounded tokens
 | link:grounded-tokens/cursor-seed-2026-08-28.md[`cursor-seed-2026-08-28.md`]
  (Cursor seed, 2026-08-28)

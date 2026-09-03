@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-09-02 — Host-held history
+
+* New concept xref:host-held-history.adoc[Host-held history] — consumer loss when correspondence/media live only on a host; pairs with DevCentr *Provider search and mirror backups*.
+* Literature seed `literature/host-held-history/prompt-seed-2026-09-02.md`; nav + literature catalog + division of labor updated.
+
 == 2026-09-02 — Path renames symptom retitle
 
 * link:changelog-details/2026-09-02%20-%20path-renames-symptom-retitle.adoc[Details]

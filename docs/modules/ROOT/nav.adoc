@@ -20,6 +20,7 @@
 ** xref:contained-tiling.adoc[Contained tiling]
 ** xref:context-edge.adoc[Context Edge]
 ** xref:navigating-by-content.adoc[Labels versus wires]
+** xref:host-held-history.adoc[Host-held history]
 ** xref:spatial-web-windows.adoc[Spatial web windows]
 * AI & writing
 ** xref:grounded-tokens.adoc[Detecting AI lies]
