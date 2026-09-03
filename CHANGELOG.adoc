@@ -1,135 +1,140 @@
 = Changelog
 
-== 2026-09-03 � Link case study from An alternative to URLs
+== 2026-09-03 -- On-disk game conversion (oracle + toy proofs)
+
+* Near-term proof: toy spike (machinery) plus oracle title (dual-shipped Win/Linux depots you own; Valve/Steam first-party natural); points at DevCentr systems page.
+* Literature seed follow-up for oracle titles.
+
+== 2026-09-03 -- Link case study from An alternative to URLs
 
 * link:changelog-details/2026-09-03%20-%20link-agent-voice-case-study.adoc[Details]
 
-== 2026-09-03 � Alternative to URLs opening rewrite
+== 2026-09-03 -- Alternative to URLs opening rewrite
 
 * link:changelog-details/2026-09-03%20-%20alternative-to-urls-opening.adoc[Details]
 
-== 2026-09-03 � Docs slug an-alternative-to-urls
+== 2026-09-03 -- Docs slug an-alternative-to-urls
 
 * link:changelog-details/2026-09-03%20-%20docs-slug-an-alternative-to-urls.adoc[Details]
 
-== 2026-09-03 — An alternative to URLs (public title)
+== 2026-09-03 -- An alternative to URLs (public title)
 
 * link:changelog-details/2026-09-03%20-%20alternative-to-urls-public-title.adoc[Details]
 
-== 2026-09-03 — Blog slug/title alignment
+== 2026-09-03 -- Blog slug/title alignment
 
 * link:changelog-details/2026-09-03%20-%20blog-slug-title-alignment.adoc[Details]
 
-== 2026-09-03 — On-disk game conversion (local lemonade + weaving)
+== 2026-09-03 -- On-disk game conversion (local lemonade + weaving)
 
-* Clarify local-only “copy instance / lemonade bottle” framing (not store redistribution); defer DRM/anti-cheat; pointer to binary weaving on the systems page.
+* Clarify local-only âcopy instance / lemonade bottleâ framing (not store redistribution); defer DRM/anti-cheat; pointer to binary weaving on the systems page.
 * Literature seed follow-up notes in `literature/on-disk-game-conversion/prompt-seed-2026-09-03.md`.
 
-== 2026-09-03 — On-disk game conversion
+== 2026-09-03 -- On-disk game conversion
 
-* New concept xref:on-disk-game-conversion.adoc[On-disk game conversion] — convert-once cache vs Wine-class live translation; hash-matched profiles; store priority; pairs with DevCentr *Hash-matched binary conversion profiles*.
+* New concept xref:on-disk-game-conversion.adoc[On-disk game conversion] -- convert-once cache vs Wine-class live translation; hash-matched profiles; store priority; pairs with DevCentr *Hash-matched binary conversion profiles*.
 * Literature seed `literature/on-disk-game-conversion/prompt-seed-2026-09-03.md`; nav + literature catalog + division of labor updated.
 
-== 2026-09-02 — Host-held history
+== 2026-09-02 -- Host-held history
 
-* New concept xref:host-held-history.adoc[Host-held history] — consumer loss when correspondence/media live only on a host; pairs with DevCentr *Provider search and mirror backups*.
+* New concept xref:host-held-history.adoc[Host-held history] -- consumer loss when correspondence/media live only on a host; pairs with DevCentr *Provider search and mirror backups*.
 * Literature seed `literature/host-held-history/prompt-seed-2026-09-02.md`; nav + literature catalog + division of labor updated.
 
-== 2026-09-02 — Path renames symptom retitle
+== 2026-09-02 -- Path renames symptom retitle
 
 * link:changelog-details/2026-09-02%20-%20path-renames-symptom-retitle.adoc[Details]
 
-== 2026-09-02 — Programmer-POV diagnostics
+== 2026-09-02 -- Programmer-POV diagnostics
 
-* Concept page xref:programmer-pov-diagnostics.adoc[Programmer-POV diagnostics] — wording and attention face for OpenShellOrg Tool Runs / command channels.
+* Concept page xref:programmer-pov-diagnostics.adoc[Programmer-POV diagnostics] -- wording and attention face for OpenShellOrg Tool Runs / command channels.
 * Division of labor rows for tool-run bus (OSO), POV/switcher (HCI), OS flash helpers (Desktop Tooling).
 
-== 2026-09-01 — Light-mode link contrast on tan paper
+== 2026-09-01 -- Light-mode link contrast on tan paper
 
 * `hci-brand.css`: light-mode honesty teal `#0f7a73` (matches hci-nerdz.github.io); was `#3d9b8f` dark-theme teal on tan (~2.6:1). Teal-tinted `--hci-accent-soft` for nav/kicker fills.
 
-== 2026-09-01 — Drop valentus descender slipstream
+== 2026-09-01 -- Drop valentus descender slipstream
 
 * Remove interim `hci-brand.css` overrides; rolling `v2/ui-bundle.zip` now ships valentus link:https://github.com/antora-supplemental/valentus-theme/releases/tag/v2.0.17[2.0.17+antora.3].
 
-== 2026-09-01 — Page title descender clip
+== 2026-09-01 -- Page title descender clip
 
-* Fix lowercase descenders (g, p, y) clipped on page titles and breadcrumb mast text — slipstream override in `hci-brand.css` until valentus 2.0.17+ ships in the rolling `v2/ui-bundle.zip`.
+* Fix lowercase descenders (g, p, y) clipped on page titles and breadcrumb mast text -- slipstream override in `hci-brand.css` until valentus 2.0.17+ ships in the rolling `v2/ui-bundle.zip`.
 
-== 2026-09-01 — Partner footer left alignment
+== 2026-09-01 -- Partner footer left alignment
 
 * Partner organizations list: drop flex centering and max-width cap so header and entries align left with the rest of the footer (DevCentr pattern).
 
-== 2026-09-01 — Nav grouping + build stack refresh
+== 2026-09-01 -- Nav grouping + build stack refresh
 
 * Sidebar nav grouped into Foundation, Scoped UX & architecture, Interaction patterns, AI & writing, Rendering & media, and Strategy (nested `**` entries; Valentus v2).
 * Build stack aligned with DevCentr: `antora` meta package, explicit `@antora-supplemental/build-stack` dependency, `@antora/lunr-extension` caret range; HCI-specific extensions unchanged (`unversioned-component-urls`, `instruction-flow`).
 
-== 2026-09-01 — Cognitive primitives → Writing principles
+== 2026-09-01 -- Cognitive primitives â Writing principles
 
-* Docs topic renamed: xref:writing-principles.adoc[Writing principles] — cognitive and linguistic primitives as foundation for clear human and AI prose (distinct from xref:principles.adoc[UX principles]).
+* Docs topic renamed: xref:writing-principles.adoc[Writing principles] -- cognitive and linguistic primitives as foundation for clear human and AI prose (distinct from xref:principles.adoc[UX principles]).
 * Corpus index: xref:writing-principles-corpus-index.adoc[Writing principles corpus].
 * Framework deep dives moved to `writing-principles-frameworks/`; `cognitive-primitives*` paths redirect.
 * Nav and literature index updated; literature folder path unchanged (`literature/cognitive-primitives/`).
 
-== 2026-09-01 — Cognitive primitives opening question
+== 2026-09-01 -- Cognitive primitives opening question
 
 * xref:writing-principles.adoc[Writing principles]: add stand-alone opening questions on AI vs human voice before the existing intro.
 
-== 2026-08-30 — Open-with interrupt essay retitle
+== 2026-08-30 -- Open-with interrupt essay retitle
 
 * link:changelog-details/2026-08-30%20-%20open-with-interrupt-essay-retitle.adoc[Details]
 
-== 2026-08-30 — Detecting AI lies title + spatial nav
+== 2026-08-30 -- Detecting AI lies title + spatial nav
 
-* Docs topic / nav: Grounded tokens → Detecting AI lies (alias kept in body).
+* Docs topic / nav: Grounded tokens â Detecting AI lies (alias kept in body).
 * Spatial web windows added to Antora nav.
 
-== 2026-08-30 — OpenShellOrg links use opensh.org
+== 2026-08-30 -- OpenShellOrg links use opensh.org
 
 * Docs and footer OpenShellOrg URLs use https://opensh.org/ instead of openshellorg.github.io.
 
-== 2026-08-30 — Inline partner footer flex
+== 2026-08-30 -- Inline partner footer flex
 
-* Docs partner footer: wrapping flex row — bold name, description, · between items.
+* Docs partner footer: wrapping flex row -- bold name, description, Â· between items.
 
-== 2026-08-30 — Compact partner footer columns
+== 2026-08-30 -- Compact partner footer columns
 
-* Docs partner footer: multi-column grid with name · title on one line.
+* Docs partner footer: multi-column grid with name Â· title on one line.
 
-== 2026-08-30 — Partner footer titles
+== 2026-08-30 -- Partner footer titles
 
 * Docs footer: one link per org with a short title; adds Desktop Tooling and remaining sibling orgs.
 
-== 2026-08-30 — Partner footer single entry points
+== 2026-08-30 -- Partner footer single entry points
 
 * Partner footer: one homepage link per org; drop Docs / GitHub stacks beside HCI Nerdz, OpenShellOrg, and DevCentr.
 
-== 2026-08-30 — Cold-reader essay URL updates
+== 2026-08-30 -- Cold-reader essay URL updates
 
 * Essay links retargeted to cold-reader titles (node graph, task grid, Context Edge, settings, labels versus wires, etc.).
 
-== 2026-08-30 — AGENTS / STYLE house pointer
+== 2026-08-30 -- AGENTS / STYLE house pointer
 
 * Editorial section points at `agents/editorial/titles.md`; local `STYLE.adoc` thinned; drop `MEMORIES.md` line (use `machine.md` / `harness.md`).
 
-== 2026-08-30 — Grounded-tokens essay link
+== 2026-08-30 -- Grounded-tokens essay link
 
 * Essay URL and title: link:https://hci-nerdz.github.io/blog/making-model-assumptions-transparent/[Making model assumptions transparent] (trust / provenance first).
 * Literature index, seed note, AGENTS, and xref:grounded-tokens.adoc[Grounded tokens] cross-links updated.
 
-== 2026-08-30 — Context Edge rename
+== 2026-08-30 -- Context Edge rename
 
 * Topic, nav, literature, and images move from `context-rails` / Edge Bar to xref:context-edge.adoc[Context Edge] (`context-edge` slug)
 * Stub xref:context-rails.adoc[context-rails] points at the new page for old bookmarks
 
-== 2026-08-29 — Actor-model harness canvas projection
+== 2026-08-29 -- Actor-model harness canvas projection
 
 * xref:actor-model-agentic-ui.adoc[Actor-model agentic UI]: harness canvas named as a peer projection (PM statuses, rearrangeable previews, archive position memory); Piles kept as email sibling; link to rebase plan.
 
-== 2026-08-29 — Cognitive primitives writing corpus
+== 2026-08-29 -- Cognitive primitives writing corpus
 
-* New topic: xref:cognitive-primitives.adoc[Cognitive primitives] — grounding AI explanations in NSM, image schemas, embodied cognition, and related clarity constraints.
+* New topic: xref:cognitive-primitives.adoc[Cognitive primitives] -- grounding AI explanations in NSM, image schemas, embodied cognition, and related clarity constraints.
 * Corpus index: xref:cognitive-primitives-index.adoc[tabulated model baselines + framework variants].
 * Literature: `literature/cognitive-primitives/` (Gemini seed, shared prompt, style constraints, manifest, 8 baselines, 28 framework articles across thread-local GC, CAS vs locks, object capabilities, recursion).
 * Framework deep dives under `cognitive-primitives-frameworks/`.
@@ -144,11 +149,11 @@
 * New topic: xref:contained-tiling.adoc[Contained tiling] -- app-nested tiling without replacing the OS WM; group vs zone registration.
 * Open Terminal / DevCentr apply the pattern; HCI owns the abstract essay.
 
-== 2026-08-28 — Highlight vs pipe linking
+== 2026-08-28 -- Highlight vs pipe linking
 
-* New topic: xref:highlight-vs-pipe-linking.adoc[Highlight versus pipe linking] — prefer highlight+dull over decorative window pipes for terminal-manager ↔ project-grid selection.
+* New topic: xref:highlight-vs-pipe-linking.adoc[Highlight versus pipe linking] -- prefer highlight+dull over decorative window pipes for terminal-manager â project-grid selection.
 * Pairs with OpenShellOrg `devcentr-terminal-manager` / `projectGroupedManager`.
-== 2026-08-28 — Consolas cell default
+== 2026-08-28 -- Consolas cell default
 
 * xref:shell-layer-chrome.adoc[Shell layer chrome]: note Open Shell curated Consolas monospace + fallbacks; link shell-architecture typography.
 
@@ -156,13 +161,13 @@
 
 * shell-layer-chrome: distinguish **inserted** host chrome / stacked app top bar from **hover** widgets; link OpenShellOrg host-native-widgets spec.
 * Demo Widget: Host | Overlay mock deferred.
-== 2026-08-28 — Shell layer chrome
+== 2026-08-28 -- Shell layer chrome
 
 * New topic: paste preview overlay, step tracker, control-plane focus, mode swap UI.
 * Pairs with OpenShellOrg xref:shell-display-layers.adoc[display layers] spec (cross-org link in prose).
 == 2026-08-28 - Host chrome negotiation (HCI note)
 
-* shell-layer-chrome / shell-context-chrome: mode-engaged top bar — native host chrome vs overlay fallback.
+* shell-layer-chrome / shell-context-chrome: mode-engaged top bar -- native host chrome vs overlay fallback.
 * Demo: Host chrome | Overlay simulation control.
 
 == 2026-08-28 - Prompt spatial line modes + arrow mode
@@ -171,26 +176,26 @@
 * Literature: literature/prompt-spatial-layout/prompt-seed-2026-08-28.md
 * Details: link:changelog-details/2026-08-28%20-%20prompt-spatial-line-modes.adoc[changelog-details]
 
-== 2026-08-28 — Shell context chrome
+== 2026-08-28 -- Shell context chrome
 
-* New topic: xref:docs/modules/ROOT/pages/shell-context-chrome.adoc[shell context chrome] — interactive prompt tokens, left-arrow focus, theme packs; pairs with OpenShellOrg persistent shell context spec.
+* New topic: xref:docs/modules/ROOT/pages/shell-context-chrome.adoc[shell context chrome] -- interactive prompt tokens, left-arrow focus, theme packs; pairs with OpenShellOrg persistent shell context spec.
 * Literature seed: literature/shell-context-chrome/prompt-seed-2026-08-28.md
 * Division of labor boundary rows for OpenShellOrg vs HCI Nerdz split.
 = Changelog
 
-== 2026-09-03 � Link case study from An alternative to URLs
+== 2026-09-03 -- Link case study from An alternative to URLs
 
 * link:changelog-details/2026-09-03%20-%20link-agent-voice-case-study.adoc[Details]
 
-== 2026-09-03 � Alternative to URLs opening rewrite
+== 2026-09-03 -- Alternative to URLs opening rewrite
 
 * link:changelog-details/2026-09-03%20-%20alternative-to-urls-opening.adoc[Details]
 
-== 2026-09-03 � Docs slug an-alternative-to-urls
+== 2026-09-03 -- Docs slug an-alternative-to-urls
 
 * link:changelog-details/2026-09-03%20-%20docs-slug-an-alternative-to-urls.adoc[Details]
 
-== 2026-08-28 — Prohelp gutter + auto-help
+== 2026-08-28 -- Prohelp gutter + auto-help
 
 * shell-layer-chrome + shell-context-chrome updated; literature/prohelp-gutter seed.
 
@@ -199,115 +204,115 @@
 * Docs topic: parallel task grid, cosmetic forks, actor mailboxes, chapter snapshots
 * link:changelog-details/2026-08-28%20-%20project-inbox.adoc[Details]
 
-== 2026-08-25  Internet Reliability umbrella pointer
+== 2026-08-25 Â Internet Reliability umbrella pointer
 
 * *Labels versus wires* and literature catalog point at DevCentr **Internet Reliability** as systems umbrella; symptom essays/demo and this diagnosis/treatment face stay on HCI (Cool URI / slug absorb unchanged).
 * Ecosystem + division of labor note the DevCentr altitude / antora-facto compose pack.
 
 * link:changelog-details/2026-08-25%20-%20internet-reliability-umbrella.adoc[Details]
 
-== 2026-08-24  Labels versus wires (symptom ? diagnosis)
+== 2026-08-24 Â Labels versus wires (symptom ? diagnosis)
 
 * Concept title is *Labels versus wires*; page slug is `an-alternative-to-urls` (Cool URI absorb).
 * Docs topic structured as Symptom / Diagnosis / Treatment; paired with site essays and demo for revisability.
 * link:changelog-details/2026-08-24%20-%20labels-versus-wires-dialectic.adoc[Details]
 
-== 2026-08-18  Desktop Tooling sibling
+== 2026-08-18 Â Desktop Tooling sibling
 
 * Division of labor names Desktop Tooling as the OS-utilities home (Explorer, shell extensions, launchers).
 * link:changelog-details/2026-08-18%20-%20desktop-tooling-sibling.adoc[Details]
 
-== 2026-08-18  Instruction-flow origin dump
+== 2026-08-18 Â Instruction-flow origin dump
 
 * Literature: prompt + Grok review copied from `antora-supplemental/asciidoc-interactive` (not Downloads)
 * link:changelog-details/2026-08-18%20-%20instruction-flow-literature.adoc[Details]
 
-== 2026-08-11  Math formula plumbing
+== 2026-08-11 Â Math formula plumbing
 
 * Enable stem: latexmath and KaTeX (site-math.js) on every docs page, even when unused
 
-== 2026-08-11  Navigating by content
+== 2026-08-11 Â Navigating by content
 
 * Analysis + proposal: labels vs wires; CAS, mutable pointers, reverse consumers
 * Mermaid rendering via supplemental `site-mermaid.js`
 * link:changelog-details/2026-08-11%20-%20an-alternative-to-urls.adoc[Details]
 
-== 2026-08-11  Edge Bar is the topic name
+== 2026-08-11 Â Edge Bar is the topic name
 
 * The Antora page, nav, and hub link say Edge Bar; slug stays `context-rails`
 
-== 2026-08-11  Framework impedance match
+== 2026-08-11 Â Framework impedance match
 
 * Context-rails topic heading matches the README
 
-== 2026-08-10  Path overflow zone and tint-as-hover
+== 2026-08-10 Â Path overflow zone and tint-as-hover
 
 * Length is a ceiling; left pack origin; tint is monochrome until hover
 
-== 2026-08-10  Path length and mode notes
+== 2026-08-10 Â Path length and mode notes
 
 * `topLength` / `leftLength`; expand keeps rootward compression; Tint / Live called out on the topic
 
-== 2026-08-10  Path Edge and paired hover
+== 2026-08-10 Â Path Edge and paired hover
 
 * link:changelog-details/2026-08-10%20-%20path-edge.adoc[Details]
 
-== 2026-08-10  Map Edge vs Modal Edge variants
+== 2026-08-10 Â Map Edge vs Modal Edge variants
 
 * link:changelog-details/2026-08-10%20-%20map-vs-modal-edge.adoc[Details]
 
-== 2026-08-10  Context rails
+== 2026-08-10 Â Context rails
 
 * link:changelog-details/2026-08-10%20-%20context-rails.adoc[Details]
 
-== 2026-08-10  Context-bound settings
+== 2026-08-10 Â Context-bound settings
 
 * link:changelog-details/2026-08-10%20-%20context-bound-settings.adoc[Details]
 
-== 2026-08-08  Visitor-first repo homepage
+== 2026-08-08 Â Visitor-first repo homepage
 
 * link:changelog-details/2026-08-08%20-%20visitor-first-repo-homepage.adoc[Details]
 
-== 2026-08-05  ClearType
+== 2026-08-05 Â ClearType
 
 * link:changelog-details/2026-08-05%20-%20cleartype.adoc[Details]
 
-== 2026-08-04  Open-with interrupt
+== 2026-08-04 Â Open-with interrupt
 
 * link:changelog-details/2026-08-04%20-%20open-with-interrupt.adoc[Details]
 
-== 2026-08-03  Literature sources for Scoped UX
+== 2026-08-03 Â Literature sources for Scoped UX
 
 * link:changelog-details/2026-08-03%20-%20literature-scoped-ux.adoc[Details]
 
-== 2026-08-02  Pass-through extensions
+== 2026-08-02 Â Pass-through extensions
 
 * link:changelog-details/2026-08-02%20-%20pass-through-extensions.adoc[Details]
 
-== 2026-08-02  Editorial title style
+== 2026-08-02 Â Editorial title style
 
 * link:changelog-details/2026-08-02%20-%20editorial-title-style.adoc[Details]
 
-== 2026-08-02  Instruction flows
+== 2026-08-02 Â Instruction flows
 
 * link:changelog-details/2026-08-02%20-%20instruction-flows.adoc[Details]
 
-== 2026-08-01  Scoped UX architecture
+== 2026-08-01 Â Scoped UX architecture
 
 * link:changelog-details/2026-08-01%20-%20scoped-ux-architecture.adoc[Details]
 
-== 2026-08-01  Processing maps scope
+== 2026-08-01 Â Processing maps scope
 
 * link:changelog-details/2026-08-01%20-%20processing-maps-scope.adoc[Details]
 
-== 2026-08-02  Prototype strategy topics
+== 2026-08-02 Â Prototype strategy topics
 
 * link:changelog-details/2026-08-02%20-%20prototype-strategy-topics.adoc[Details]
 
-== 2026-08-02  Processing maps
+== 2026-08-02 Â Processing maps
 
 * link:changelog-details/2026-08-02%20-%20processing-maps.adoc[Details]
 
-== 2026-08-01  Docs bootstrap
+== 2026-08-01 Â Docs bootstrap
 
 * link:changelog-details/2026-08-01%20-%20docs%20bootstrap.adoc[Details]

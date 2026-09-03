@@ -23,6 +23,7 @@ Moral intuition stated by author: if you may shred or decorate a binary you lawf
 * DRM / kernel anti-cheat explicitly deferred (already broken elsewhere).
 * **Binary weaving**: weave post-translation (or rewritten) segments with translation-unnecessary segments; ask whether that helps or only adds overhead. Systems page answers: same-ISA leave-alone + coarse module cuts help; fine-grained thunks and dual runtimes usually hurt.
 * Clarified **toy spike**: self-authored tiny PE proving hash → profile → Linux cache → run — not a commercial before/after gallery.
+* **Oracle title**: dual-shipped Win/Linux (e.g. Valve/Steam first-party you own) — convert Windows depot, compare to official Linux depot as quality ground truth (behavioral, not bit-identical).
 
 ## Do not treat this file as policy
 

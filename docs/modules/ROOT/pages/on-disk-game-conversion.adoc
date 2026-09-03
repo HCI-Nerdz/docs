@@ -54,7 +54,8 @@ Bitwise / block-level conversion profiles become a shared equivalence surface �
 
 Installer porting remains optional and harder; post-install binary conversion is the wedge.
 
-First engineering proof is a **toy spike** (self-authored tiny PE → hash-matched profile → Linux cache runs) — not a commercial before/after gallery. Detail: systems page *Near-term proof*.
+First engineering proof is a **toy spike** (self-authored tiny PE → hash-matched profile → Linux cache runs).
+Quality proof is an **oracle title**: a dual-shipped Win/Linux game you own (Valve/Steam first-party are natural) — convert the Windows depot locally and compare behavior to the official Linux depot (not bit-identical). Detail: systems page *Near-term proof*.
 
 == Legal posture (HCI face — not counsel)
 
