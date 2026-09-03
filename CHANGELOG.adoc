@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-03 — Alternative to URLs opening rewrite
+
+* link:changelog-details/2026-09-03%20-%20alternative-to-urls-opening.adoc[Details]
+
 == 2026-09-03 — Docs slug an-alternative-to-urls
 
 * link:changelog-details/2026-09-03%20-%20docs-slug-an-alternative-to-urls.adoc[Details]
@@ -169,6 +173,10 @@
 * Literature seed: literature/shell-context-chrome/prompt-seed-2026-08-28.md
 * Division of labor boundary rows for OpenShellOrg vs HCI Nerdz split.
 = Changelog
+
+== 2026-09-03 — Alternative to URLs opening rewrite
+
+* link:changelog-details/2026-09-03%20-%20alternative-to-urls-opening.adoc[Details]
 
 == 2026-09-03 — Docs slug an-alternative-to-urls
 

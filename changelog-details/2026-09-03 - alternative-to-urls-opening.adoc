@@ -1,0 +1,4 @@
+﻿= 2026-09-03 — Alternative to URLs opening rewrite
+
+* Reader hook: URLs are a problem / why?; removed slug/nickname/do-not-confuse meta from the body
+* Umbrella sentence rewritten for humans (Internet Reliability @ DevCentr)

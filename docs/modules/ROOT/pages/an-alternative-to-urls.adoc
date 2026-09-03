@@ -1,36 +1,42 @@
 = An alternative to URLs
-:description: Diagnosis and treatment — an alternative to URL-as-identity. Pretty URLs stay for people; systems wire on content identity, mutable pointers, and reverse consumers.
+:description: Pretty URLs are fine for people. Using them as the only way systems find a resource is why renames leave broken links behind.
+:page-audience: Developers and docs authors tired of URL rot after renames
+:page-usage-context: HCI Nerdz docs — diagnosis and treatment for URL-as-identity
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-09-03
 
 image::an-alternative-to-urls/icon.svg[An alternative to URLs — hash core with detachable URL label,width=120]
 
-People already chase the *thing*.
-What they feel is the symptom: a link that used to work, a rename that quietly broke someone else's docs, unpaid string archaeology across repos.
-They rarely arrive with the diagnosis.
+URLs are a problem.
+But why are they a problem, you ask?
 
-This page is the **diagnosis and treatment** face of the idea.
-The **symptom** face stays separate so either side can revise without dragging the other:
+Because we ask one string to do two jobs.
+It has to be a readable place people can share — and the only address every README, nav file, and CI config uses to find the resource.
+Rename the place for clarity, and those addresses break.
+You get broken links, unpaid grepping across repos, and the sense that the rename was correct while the cleanup is somehow still yours.
+
+If you already feel that ache, start with the short essay and demo, then come back here for the diagnosis and what to do about it:
 
 [cols="1,2,2"]
 |===
-| Face | Job | Current surface
+| Face | Job | Where
 
 | Symptom
-| Name what people already feel
+| Name what you already feel
 | link:https://hci-nerdz.github.io/blog/broken-links-after-a-url-rename/[Broken links after a URL rename] · link:https://hci-nerdz.github.io/demos/broken-links-after-a-url-rename/[demo]
 
 | Diagnosis
-| Name the mistake (label used as wire)
-| link:https://hci-nerdz.github.io/blog/an-alternative-to-urls/[An alternative to URLs] · this topic
+| Name the mistake
+| link:https://hci-nerdz.github.io/blog/an-alternative-to-urls/[An alternative to URLs] · this page
 
 | Treatment
 | What to do near-term and long-term
-| Adoption sections below · `CONSUMERS.md` · redirects / aliases
+| Sections below · `CONSUMERS.md` · redirects / aliases
 |===
 
-Page slug is `an-alternative-to-urls`. Internal nickname after the hook is *Labels versus wires*.
-Do not confuse with the instruction-flows essay *Navigating by content* (`/blog/navigating-by-content/`) — menu-style docs, not URL identity.
-
-**Umbrella (systems altitude):** link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr] — machine ↔ DevX/ecosystem ↔ internet reference durability under Internet Architecture. This page remains the HCI symptom ↔ diagnosis/treatment face.
+This article sits under the umbrella of link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr] — the systems-level story about making references on the internet stay usable when names and locations move.
+Here we stay on the HCI / DevX face: what breaks in docs and repos, and how to stop treating the pretty URL as identity.
 
 == Symptom
 
@@ -63,9 +69,9 @@ Same mistake shows up in package names, doc slugs, and file paths.
 
 == Diagnosis
 
-*An alternative to URLs* (nickname: *labels versus wires*) is the claim that **identity should follow the thing**, not the pretty name we hang on it today.
+*An alternative to URLs* is the claim that **identity should follow the thing**, not the pretty name we hang on it today.
 Canonical URLs, package names, and doc paths stay useful for humans.
-They must not be the only way machines and dependents find the resource.
+They must not be the only way machines and other projects find the resource.
 
 This is a UX argument and, more sharply, a *DevX* argument: developers should not spend attention chasing renamed strings across repos.
 
