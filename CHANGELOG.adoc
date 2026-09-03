@@ -1,14 +1,18 @@
 = Changelog
 
-== 2026-09-03 — Link case study from An alternative to URLs
+== 2026-09-03 â€” On-disk game conversion (toy spike clarified)
+
+* North-star note: first proof is a self-authored toy PE pipeline spike, not a commercial before/after gallery; points at DevCentr systems *Near-term proof*.
+* Literature seed follow-up line for toy spike.
+== 2026-09-03 ï¿½ Link case study from An alternative to URLs
 
 * link:changelog-details/2026-09-03%20-%20link-agent-voice-case-study.adoc[Details]
 
-== 2026-09-03 — Alternative to URLs opening rewrite
+== 2026-09-03 ï¿½ Alternative to URLs opening rewrite
 
 * link:changelog-details/2026-09-03%20-%20alternative-to-urls-opening.adoc[Details]
 
-== 2026-09-03 — Docs slug an-alternative-to-urls
+== 2026-09-03 ï¿½ Docs slug an-alternative-to-urls
 
 * link:changelog-details/2026-09-03%20-%20docs-slug-an-alternative-to-urls.adoc[Details]
 
@@ -178,15 +182,15 @@
 * Division of labor boundary rows for OpenShellOrg vs HCI Nerdz split.
 = Changelog
 
-== 2026-09-03 — Link case study from An alternative to URLs
+== 2026-09-03 ï¿½ Link case study from An alternative to URLs
 
 * link:changelog-details/2026-09-03%20-%20link-agent-voice-case-study.adoc[Details]
 
-== 2026-09-03 — Alternative to URLs opening rewrite
+== 2026-09-03 ï¿½ Alternative to URLs opening rewrite
 
 * link:changelog-details/2026-09-03%20-%20alternative-to-urls-opening.adoc[Details]
 
-== 2026-09-03 — Docs slug an-alternative-to-urls
+== 2026-09-03 ï¿½ Docs slug an-alternative-to-urls
 
 * link:changelog-details/2026-09-03%20-%20docs-slug-an-alternative-to-urls.adoc[Details]
 
