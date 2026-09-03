@@ -17,6 +17,12 @@ People keep live-transcoding Windows game binaries into Linux calls (Wine / Prot
 
 Moral intuition stated by author: if you may shred or decorate a binary you lawfully hold, local conversion should be in the same family — with the usual DRM / EULA / anti-circumvention caveats called out in the curated pages (not as cheerleading).
 
+### Follow-up (same day)
+
+* Hello Kitty / lemonade framing is **local machine only** — own the copy instance, not the copyright; not a store-redistribution argument.
+* DRM / kernel anti-cheat explicitly deferred (already broken elsewhere).
+* **Binary weaving**: weave post-translation (or rewritten) segments with translation-unnecessary segments; ask whether that helps or only adds overhead. Systems page answers: same-ISA leave-alone + coarse module cuts help; fine-grained thunks and dual runtimes usually hurt.
+
 ## Do not treat this file as policy
 
 Prefer the curated AsciiDoc pages. This seed is provenance for wording and unused side-paths.

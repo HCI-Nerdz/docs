@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-09-03 — On-disk game conversion (local lemonade + weaving)
+
+* Clarify local-only “copy instance / lemonade bottle” framing (not store redistribution); defer DRM/anti-cheat; pointer to binary weaving on the systems page.
+* Literature seed follow-up notes in `literature/on-disk-game-conversion/prompt-seed-2026-09-03.md`.
+
 == 2026-09-03 — On-disk game conversion
 
 * New concept xref:on-disk-game-conversion.adoc[On-disk game conversion] — convert-once cache vs Wine-class live translation; hash-matched profiles; store priority; pairs with DevCentr *Hash-matched binary conversion profiles*.
