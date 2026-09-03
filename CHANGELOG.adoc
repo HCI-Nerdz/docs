@@ -181,7 +181,6 @@
 * New topic: xref:docs/modules/ROOT/pages/shell-context-chrome.adoc[shell context chrome] -- interactive prompt tokens, left-arrow focus, theme packs; pairs with OpenShellOrg persistent shell context spec.
 * Literature seed: literature/shell-context-chrome/prompt-seed-2026-08-28.md
 * Division of labor boundary rows for OpenShellOrg vs HCI Nerdz split.
-= Changelog
 
 == 2026-09-03 -- Link case study from An alternative to URLs
 
