@@ -3,8 +3,8 @@
 
 == Added
 
-* Antora topic `navigating-by-content.adoc` with mermaid stack diagrams and `CONSUMERS.md` shape
-* Literature: Gemini export + Cursor analysis seed under `literature/navigating-by-content/`
+* Antora topic `an-alternative-to-urls.adoc` with mermaid stack diagrams and `CONSUMERS.md` shape
+* Literature: Gemini export + Cursor analysis seed under `literature/an-alternative-to-urls/`
 * Principle row: pretty names as labels, not wires
 * Supplemental Mermaid JS/CSS (ported from DevCentr docs pattern)
 

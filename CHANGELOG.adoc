@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-03 � Docs slug an-alternative-to-urls
+
+* link:changelog-details/2026-09-03%20-%20docs-slug-an-alternative-to-urls.adoc[Details]
+
 == 2026-09-03 — An alternative to URLs (public title)
 
 * link:changelog-details/2026-09-03%20-%20alternative-to-urls-public-title.adoc[Details]
@@ -166,6 +170,10 @@
 * Division of labor boundary rows for OpenShellOrg vs HCI Nerdz split.
 = Changelog
 
+== 2026-09-03 � Docs slug an-alternative-to-urls
+
+* link:changelog-details/2026-09-03%20-%20docs-slug-an-alternative-to-urls.adoc[Details]
+
 == 2026-08-28 — Prohelp gutter + auto-help
 
 * shell-layer-chrome + shell-context-chrome updated; literature/prohelp-gutter seed.
@@ -184,7 +192,7 @@
 
 == 2026-08-24  Labels versus wires (symptom ? diagnosis)
 
-* Concept title is *Labels versus wires*; slug stays `navigating-by-content` (Cool URI absorb).
+* Concept title is *Labels versus wires*; page slug is `an-alternative-to-urls` (Cool URI absorb).
 * Docs topic structured as Symptom / Diagnosis / Treatment; paired with site essays and demo for revisability.
 * link:changelog-details/2026-08-24%20-%20labels-versus-wires-dialectic.adoc[Details]
 
@@ -206,7 +214,7 @@
 
 * Analysis + proposal: labels vs wires; CAS, mutable pointers, reverse consumers
 * Mermaid rendering via supplemental `site-mermaid.js`
-* link:changelog-details/2026-08-11%20-%20navigating-by-content.adoc[Details]
+* link:changelog-details/2026-08-11%20-%20an-alternative-to-urls.adoc[Details]
 
 == 2026-08-11  Edge Bar is the topic name
 

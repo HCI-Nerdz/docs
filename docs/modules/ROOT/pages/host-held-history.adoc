@@ -29,7 +29,7 @@ The pain is not “GitHub is bad at images.” The pain is **history that only t
 
 == Diagnosis
 
-Same family as xref:navigating-by-content.adoc[Labels versus wires]: the pretty host page is a label; the *thing* (body, attachment bytes, thread identity) should remain reachable under consumer-controlled wires.
+Same family as xref:an-alternative-to-urls.adoc[An alternative to URLs]: the pretty host page is a label; the *thing* (body, attachment bytes, thread identity) should remain reachable under consumer-controlled wires.
 
 Forge-native upload (`gh --attach`) correctly improves **live** filing.
 It does not replace **ownership of a searchable backup**.
@@ -66,6 +66,6 @@ Building the open path as a demo (portable archives, then API-compatible mirrors
 
 == Related
 
-* xref:navigating-by-content.adoc[Labels versus wires]
+* xref:an-alternative-to-urls.adoc[An alternative to URLs]
 * xref:literature.adoc[Literature]
 * xref:division-of-labor.adoc[Division of labor]

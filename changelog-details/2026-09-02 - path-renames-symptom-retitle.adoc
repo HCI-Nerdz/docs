@@ -1,5 +1,5 @@
 = 2026-09-02 — Path renames symptom retitle
 
 * Symptom essay URL/title on the site: *Path renames that break dependents* (`/blog/broken-links-after-a-url-rename/`)
-* Updated links in `navigating-by-content.adoc`, literature README, and AGENTS content map
+* Updated links in `an-alternative-to-urls.adoc`, literature README, and AGENTS content map
 * Prior URL `/blog/when-renaming-a-page-breaks-half-your-docs/` still 301s on the site

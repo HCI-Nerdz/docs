@@ -19,7 +19,7 @@
 ** xref:highlight-vs-pipe-linking.adoc[Highlight vs pipe linking]
 ** xref:contained-tiling.adoc[Contained tiling]
 ** xref:context-edge.adoc[Context Edge]
-** xref:navigating-by-content.adoc[An alternative to URLs]
+** xref:an-alternative-to-urls.adoc[An alternative to URLs]
 ** xref:host-held-history.adoc[Host-held history]
 ** xref:on-disk-game-conversion.adoc[On-disk game conversion]
 ** xref:spatial-web-windows.adoc[Spatial web windows]

@@ -56,7 +56,7 @@ image::highlight-vs-pipe-linking/highlight-dull-demo.png[Manager focus linked to
 * xref:spatial-web-windows.adoc[Spatial web windows] -- separate surfaces, shared selection via channels (not drawn wires).
 * xref:project-inbox.adoc[Project inbox] -- grid of parallel work; selection/dimming cousins.
 * xref:contained-tiling.adoc[Contained tiling] -- zones inside app chrome (cousin placement pattern).
-* Labels versus wires (xref:navigating-by-content.adoc[Labels versus wires]) is a different claim (identity vs pretty names) -- do not conflate with on-screen connector graphics.
+* Labels versus wires (xref:an-alternative-to-urls.adoc[An alternative to URLs]) is a different claim (identity vs pretty names) -- do not conflate with on-screen connector graphics.
 
 == Non-goals
 

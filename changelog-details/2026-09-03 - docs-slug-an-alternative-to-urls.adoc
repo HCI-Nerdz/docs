@@ -1,0 +1,4 @@
+﻿= 2026-09-03 — Docs slug an-alternative-to-urls
+
+* Renamed Antora page, images, and literature folder from `navigating-by-content` to `an-alternative-to-urls` (no redirect; title and slug match)
+* Cross-links updated; instruction-flows blog `/blog/navigating-by-content/` unchanged

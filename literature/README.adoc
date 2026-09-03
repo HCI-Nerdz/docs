@@ -56,12 +56,12 @@ When a concept page and a conversation disagree, update the curated page deliber
  link:https://hci-nerdz.github.io/demos/context-edge/[Demo];
  link:https://hci-nerdz.github.io/context-edge/[MVP]
 
-| Labels versus wires (slug `navigating-by-content`)
-| link:navigating-by-content/gemini-dependency-management-and-network-architecture.md[`gemini-dependency-management-and-network-architecture.md`]
+| An alternative to URLs (nickname: Labels versus wires)
+| link:an-alternative-to-urls/gemini-dependency-management-and-network-architecture.md[`gemini-dependency-management-and-network-architecture.md`]
  (Gemini export, 2026-08-11);
- link:navigating-by-content/cursor-analysis-seed-2026-08-11.md[`cursor-analysis-seed-2026-08-11.md`]
+ link:an-alternative-to-urls/cursor-analysis-seed-2026-08-11.md[`cursor-analysis-seed-2026-08-11.md`]
  (Cursor seed, 2026-08-11)
-| xref:navigating-by-content.adoc[Docs — diagnosis/treatment];
+| xref:an-alternative-to-urls.adoc[Docs — diagnosis/treatment];
  link:https://hci-nerdz.github.io/blog/broken-links-after-a-url-rename/[Symptom essay];
  link:https://hci-nerdz.github.io/blog/an-alternative-to-urls/[Diagnosis essay];
  link:https://hci-nerdz.github.io/demos/broken-links-after-a-url-rename/[Symptom demo]

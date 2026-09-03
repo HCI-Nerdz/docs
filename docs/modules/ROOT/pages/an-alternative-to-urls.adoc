@@ -1,7 +1,7 @@
 = An alternative to URLs
 :description: Diagnosis and treatment — an alternative to URL-as-identity. Pretty URLs stay for people; systems wire on content identity, mutable pointers, and reverse consumers.
 
-image::navigating-by-content/icon.svg[An alternative to URLs — hash core with detachable URL label,width=120]
+image::an-alternative-to-urls/icon.svg[An alternative to URLs — hash core with detachable URL label,width=120]
 
 People already chase the *thing*.
 What they feel is the symptom: a link that used to work, a rename that quietly broke someone else's docs, unpaid string archaeology across repos.
@@ -27,7 +27,7 @@ The **symptom** face stays separate so either side can revise without dragging t
 | Adoption sections below · `CONSUMERS.md` · redirects / aliases
 |===
 
-Slug stays `navigating-by-content` (Cool URI absorb). Public title is *An alternative to URLs*; internal nickname after the hook is *Labels versus wires*.
+Page slug is `an-alternative-to-urls`. Internal nickname after the hook is *Labels versus wires*.
 Do not confuse with the instruction-flows essay *Navigating by content* (`/blog/navigating-by-content/`) — menu-style docs, not URL identity.
 
 **Umbrella (systems altitude):** link:https://docs.devcentr.org/general-knowledge/explanation/internet-architecture/reliability/index.html[Internet Reliability @ DevCentr] — machine ↔ DevX/ecosystem ↔ internet reference durability under Internet Architecture. This page remains the HCI symptom ↔ diagnosis/treatment face.
@@ -237,7 +237,7 @@ See the sibling explanation on the connectome-fs docs hub (*Labels versus wires*
 
 == Literature / sources
 
-* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/gemini-dependency-management-and-network-architecture.md[Gemini export — Dependency Management and Network Architecture] (2026-08-11)
-* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/navigating-by-content/cursor-analysis-seed-2026-08-11.md[Cursor analysis seed] (2026-08-11)
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/an-alternative-to-urls/gemini-dependency-management-and-network-architecture.md[Gemini export — Dependency Management and Network Architecture] (2026-08-11)
+* link:https://github.com/HCI-Nerdz/docs/blob/main/literature/an-alternative-to-urls/cursor-analysis-seed-2026-08-11.md[Cursor analysis seed] (2026-08-11)
 * W3C: Cool URIs don't change
 * NDN project materials; Unison language; Sourcegraph / Kythe; OpenRewrite / Moderne

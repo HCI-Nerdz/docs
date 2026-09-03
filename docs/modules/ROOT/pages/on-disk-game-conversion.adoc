@@ -29,7 +29,7 @@ The pain is not “compatibility layers are useless.” The pain is **paying the
 
 == Diagnosis
 
-Same family as xref:navigating-by-content.adoc[Labels versus wires]: the storefront label (“Windows build”) is not the only wire that should exist between *your license* and *what runs*.
+Same family as xref:an-alternative-to-urls.adoc[An alternative to URLs]: the storefront label (“Windows build”) is not the only wire that should exist between *your license* and *what runs*.
 
 Live translation keeps the **foreign ABI as the permanent object**.
 On-disk conversion treats the foreign binary as **input** to a recipe that produces a **cached, host-shaped output** (or a verified hybrid), matched to a specific content hash.
@@ -85,7 +85,7 @@ This page is design literature, not legal advice.
 
 == Related
 
-* xref:navigating-by-content.adoc[Labels versus wires]
+* xref:an-alternative-to-urls.adoc[An alternative to URLs]
 * xref:host-held-history.adoc[Host-held history]
 * xref:literature.adoc[Literature]
 * xref:division-of-labor.adoc[Division of labor]

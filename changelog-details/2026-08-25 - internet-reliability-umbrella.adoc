@@ -1,5 +1,5 @@
 = 2026-08-25 — Internet Reliability umbrella pointer
 
 * Docs topic, literature catalog, ecosystem, and division of labor point at DevCentr Internet Reliability as the systems-altitude umbrella
-* HCI keeps symptom essays/demo + *Labels versus wires* diagnosis/treatment (slug `navigating-by-content` unchanged)
+* HCI keeps symptom essays/demo + *Labels versus wires* diagnosis/treatment (slug `an-alternative-to-urls` unchanged)
 * Mentions `antora-supplemental/antora-facto` as the Valentus+extras compose pack (theme stays lean)
