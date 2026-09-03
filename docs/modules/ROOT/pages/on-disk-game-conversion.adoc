@@ -54,6 +54,8 @@ Bitwise / block-level conversion profiles become a shared equivalence surface �
 
 Installer porting remains optional and harder; post-install binary conversion is the wedge.
 
+First engineering proof is a **toy spike** (self-authored tiny PE → hash-matched profile → Linux cache runs) — not a commercial before/after gallery. Detail: systems page *Near-term proof*.
+
 == Legal posture (HCI face — not counsel)
 
 This page is design literature, not legal advice.
