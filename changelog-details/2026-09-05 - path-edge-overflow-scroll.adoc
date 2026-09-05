@@ -1,0 +1,4 @@
+= 2026-09-05 — Path Edge overflow scroll docs
+
+* Context Edge topic: overflow under pinned Home replaces log-compression end-zone wording
+* Top marks + quieter labels; Home pin; scroll/drag; rail foundation; workshop zone notes updated

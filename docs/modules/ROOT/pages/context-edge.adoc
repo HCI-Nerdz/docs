@@ -45,7 +45,7 @@ What happens *on click*, and what the idle color *means*, splits into variants w
 | Left edge
 | Same color as top; expand together; no icon toolbar
 | Sheet chrome; layers underneath
-| Current level *top-most* (one mark); ancestors compress downward
+| Home pinned at the start; ancestors scroll under Home; one mark per level
 
 | Tension
 | Great for “where else can I go?”
@@ -68,18 +68,16 @@ Placement is *either* the top edge *or* the side edge — not the same hops on b
 
 Hover:
 
-* *Top placement* — full-width horizontal text labels only (no vertical / rotated type)
-* *Side placement* — full-height, one mark per *level* (not a sidebar of in-app destinations). Current level sits first so you see *where you are* before ancestors
+* *Top placement* — full-width edge; mark-forward hops with quieter subordinate labels (no vertical / rotated type)
+* *Side placement* — full-height, one mark per *level* (not a sidebar of in-app destinations). Home stays pinned at the start of the edge; ancestors scroll under it
 * Icon soup is a non-goal: icons rarely carry meaning alone; a cue word under an enlarged icon mostly helps as a *shape combo*. Here the user needs to *identify the level and enter it*. Background color per hop does that memory work; at most one mark per hop
 
 Depth:
 
-* The path uses the entire edge length. Segments that fit stay conventional; only the ones that would run off are log-compressed into a reserved end-zone
-* Side sequence is root→leaf toward the far end, whether the pack sits at the start or the end of the edge
-* Workshop demos (vanilla and framework implementations) share one suite: Rest / Live rows, Color / Subtle style, expandable zone
-
-File-explorer trees grow downward (root at top).
-Path Edge on the *side* inverts that on purpose: you want the *current* mark first.
+* The rail foundation spans the entire edge. Hops keep a conventional size; when they do not fit they overflow and clip under the pinned Home — drag or swipe to scroll
+* Top order is root→leaf left-to-right with Home pinned on the left; current trails toward the far side
+* Side pack can sit at the start or end of the edge; Home stays pinned at the start of the hop group
+* Workshop demos (vanilla and framework implementations) share one suite: Rest / Live rows, Color / Subtle style, expandable zone (overflow scroll, not compression)
 
 == Core claim
 
@@ -96,7 +94,7 @@ Preferred shape:
 . *Hover expands the pair* — if top and left are the same nav type, either hover presents both; labels on the top edge only
 . *Click opens wireframe ecosystem nav* (Variant A / Map Edge) — a dedicated substrate UI, not another header row
 . *Or click reveals modal ancestry* (Variant B / Modal Edge) — slide the current sheet; colored layers are prior nodes
-. *Or the edge is a path trace* (Variant C / Path Edge) — unique colors for the hops on the top *or* the side (not both with the same items); labels on top placement; one mark per level on side
+. *Or the edge is a path trace* (Variant C / Path Edge) — unique colors for the hops on the top *or* the side (not both with the same items); marks + quieter labels on top placement; one mark per level on side with Home pinned
 . *Platform / node overlay colors* — stable washes so activity identity is visual and non-competing
 
 == Why it exists
@@ -150,8 +148,8 @@ Orientation is instant even before any label appears.
 
 image::context-edge/path-edge-hover.png[Expanded path rail with labels on a top placement (or marks on a side placement),width=100%]
 
-Top placement carries the words across the full top edge.
-Side placement carries one mark per hop on the full left edge, current level first.
+Top placement carries marks with quieter labels across the full top edge.
+Side placement carries one mark per hop on the full left edge, with Home pinned at the start.
 Pick one placement — do not mirror the same hops on both edges.
 Click a hop to enter that level — not to hunt among in-app icons.
 
@@ -179,9 +177,9 @@ Treat rails as chrome owned by the *ecosystem shell*, not by each page:
 * `path[].color` — unique hop colors (sequence = this breadcrumb); optional `path[].mark` (one per level)
 * `pairHover` — when sides share a nav type, hover/focus on either expands both
 * `labelSide` — `top` (no rotated left-edge type)
-* `leftOrder` — `current-first` (top-most = here)
-* `topLength` / `leftLength` — a ceiling, not a forced fill. Hops that fit keep a conventional size; only overflow hops share a reserved end-zone (log compression).
-* Left pack sits at the *top* or *bottom* of the left edge. Sequence is always root→leaf, bottom to top — not a transpose.
+* `homePin` — Home stays sticky at the start of the edge; overflow clips under it
+* Overflow — conventional hop sizes; scroll / drag / swipe (no log-compression end-zone)
+* Left pack sits at the *top* or *bottom* of the left edge; Home pins at the start of the hop group
 * Tint is idle-monochrome (page-color greys). Hover keeps icons and the mono field; a pointer mask reveals stored hop color via a selectable blend mode.
 * `activePlatform.overlay` / `stack[].overlay` — CSS variables or theme tokens for base wash / duo-tone / layer identity
 
