@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-09-05 — Path Edge top or side
+
+* Path Edge notes: Top and Side are alternate placements (not the same hops on an L)
+* link:changelog-details/2026-09-05%20-%20path-edge-top-or-side.adoc[Details]
+
 == 2026-09-03 -- On-disk game conversion (oracle + toy proofs)
 
 * Near-term proof: toy spike (machinery) plus oracle title (dual-shipped Win/Linux depots you own; Valve/Steam first-party natural); points at DevCentr systems page.

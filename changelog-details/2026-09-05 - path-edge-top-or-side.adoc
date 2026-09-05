@@ -1,0 +1,4 @@
+= 2026-09-05 — Path Edge top or side
+
+* Path Edge notes: Top and Side are alternate placements (not the same hops on an L)
+* Hover and idle captions updated to match single-edge demos

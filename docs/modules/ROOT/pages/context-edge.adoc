@@ -64,19 +64,21 @@ Prefer explicit modes (or different edges / modifiers) while the pattern is stil
 Idle rails show the path as color segments (Google-shaped depth: Home → Cloud → Console → Billing → Accounts — use your own tokens; primary brand colors can seed early hops without forcing “every app = one brand hue”).
 A unique *sequence* identifies the path even when two apps share a hue.
 
+Placement is *either* the top edge *or* the side edge — not the same hops on both at once (that pairing belongs to Map when both edges share one nav type).
+
 Hover:
 
-* *Top* — horizontal text labels only (no vertical / rotated type)
-* *Left* — one mark per *level* (not a sidebar of in-app destinations). Current level sits at the top-left so you see *where you are* first and the corner stays clean
+* *Top placement* — full-width horizontal text labels only (no vertical / rotated type)
+* *Side placement* — full-height, one mark per *level* (not a sidebar of in-app destinations). Current level sits first so you see *where you are* before ancestors
 * Icon soup is a non-goal: icons rarely carry meaning alone; a cue word under an enlarged icon mostly helps as a *shape combo*. Here the user needs to *identify the level and enter it*. Background color per hop does that memory work; at most one mark per hop
 
 Depth:
 
-* A length ceiling. Segments that fit stay conventional; only the ones that would run off are log-compressed into a reserved end-zone
-* Left sequence is root→leaf, bottom to top, whether the pack sits at the top or the bottom of the edge
+* The path uses the entire edge length. Segments that fit stay conventional; only the ones that would run off are log-compressed into a reserved end-zone
+* Side sequence is root→leaf toward the far end, whether the pack sits at the start or the end of the edge
 
 File-explorer trees grow downward (root at top).
-Path Edge inverts that on the *left* on purpose: you want the *current* mark first.
+Path Edge on the *side* inverts that on purpose: you want the *current* mark first.
 
 == Core claim
 
@@ -93,7 +95,7 @@ Preferred shape:
 . *Hover expands the pair* — if top and left are the same nav type, either hover presents both; labels on the top edge only
 . *Click opens wireframe ecosystem nav* (Variant A / Map Edge) — a dedicated substrate UI, not another header row
 . *Or click reveals modal ancestry* (Variant B / Modal Edge) — slide the current sheet; colored layers are prior nodes
-. *Or the edge is a path trace* (Variant C / Path Edge) — stacked unique colors for the hops; one mark per level, current at top-left
+. *Or the edge is a path trace* (Variant C / Path Edge) — unique colors for the hops on the top *or* the side (not both with the same items); labels on top placement; one mark per level on side
 . *Platform / node overlay colors* — stable washes so activity identity is visual and non-competing
 
 == Why it exists
@@ -138,17 +140,18 @@ The left rail is not a conventional icon sidebar: no column of unclear glyphs pr
 
 === Path Edge idle — breadcrumb as color series
 
-image::context-edge/path-edge-idle.png[Thin L-rails striped with the path's unique colors,width=100%]
+image::context-edge/path-edge-idle.png[Thin single-edge rail striped with the path's unique colors,width=100%]
 
 Not one wash around the frame: a *series* of colors for the exact path in the org tree.
 Orientation is instant even before any label appears.
 
-=== Path Edge hover — labels on top, current mark at top-left
+=== Path Edge hover — top labels or side marks
 
-image::context-edge/path-edge-hover.png[Expanded path rails with top labels and one mark per level on the left,width=100%]
+image::context-edge/path-edge-hover.png[Expanded path rail with labels on a top placement (or marks on a side placement),width=100%]
 
-Top edge carries the words.
-Left edge carries one mark per hop, current level first.
+Top placement carries the words across the full top edge.
+Side placement carries one mark per hop on the full left edge, current level first.
+Pick one placement — do not mirror the same hops on both edges.
 Click a hop to enter that level — not to hunt among in-app icons.
 
 === Wireframe ecosystem nav
