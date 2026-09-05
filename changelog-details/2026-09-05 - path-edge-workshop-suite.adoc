@@ -1,0 +1,4 @@
+= 2026-09-05 — Path Edge workshop suite
+
+* Path Edge notes: Rest / Live rows, Color / Subtle style, expandable zone
+* Framework implementations share the same workshop suite as vanilla

@@ -76,6 +76,7 @@ Depth:
 
 * The path uses the entire edge length. Segments that fit stay conventional; only the ones that would run off are log-compressed into a reserved end-zone
 * Side sequence is root→leaf toward the far end, whether the pack sits at the start or the end of the edge
+* Workshop demos (vanilla and framework implementations) share one suite: Rest / Live rows, Color / Subtle style, expandable zone
 
 File-explorer trees grow downward (root at top).
 Path Edge on the *side* inverts that on purpose: you want the *current* mark first.
