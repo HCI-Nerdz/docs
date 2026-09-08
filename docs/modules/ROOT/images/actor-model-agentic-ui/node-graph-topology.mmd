@@ -1,0 +1,22 @@
+flowchart TB
+  coord["coordinator<br/>nodes/coord-001"] --> discussion["discussion<br/>spawnedBy: coord-001"]
+  discussion --> task1["task<br/>docs#3"]
+  discussion --> task2["task<br/>bitwarden"]
+  discussion --> task3["task<br/>openshellorg"]
+  discussion --> tangent["discussion<br/>CLA tangent"]
+  task1 -. mailbox .-> task2
+  task2 -. mailbox .-> task3
+  task1 --> disk["$CHAT_ROOT<br/>graph.json + node metadata + chat logs<br/>summaries/latest.json mailboxes"]
+  task2 --> disk
+  task3 --> disk
+  class coord accent
+  class discussion,tangent warning
+  class task1,task2,task3 primary
+  class disk secondary
+
+  classDef primary fill:#ffffff,stroke:#52606d,color:#172033
+  classDef secondary fill:#e8edf2,stroke:#52606d,color:#172033
+  classDef accent fill:#d9eee9,stroke:#0f7a73,color:#172033
+  classDef success fill:#e9f7ee,stroke:#2f855a,color:#172033
+  classDef warning fill:#fff4df,stroke:#b7791f,color:#172033
+  classDef danger fill:#fde8e7,stroke:#c53030,color:#172033

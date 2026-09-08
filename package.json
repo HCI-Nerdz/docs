@@ -7,6 +7,8 @@
     "build:online": "antora antora-playbook.yml",
     "docs": "antora antora-playbook.yml",
     "docs:local": "antora antora-playbook-local.yml",
+    "diagrams:generate": "node scripts/generate-themed-diagrams.mjs",
+    "diagrams:check": "node scripts/generate-themed-diagrams.mjs --check",
     "format": "dprint fmt",
     "format:check": "dprint check"
   },
@@ -15,6 +17,14 @@
     "@antora-supplemental/instruction-flow": "github:antora-supplemental/asciidoc-interactive",
     "@antora-supplemental/unversioned-component-urls": "github:antora-supplemental/antora-unversioned-component-urls#v2.1.0",
     "@antora/lunr-extension": "^1.0.0-alpha.13",
+    "@dev-centr/mermaid-svg-css-vars": "0.1.2",
+    "@dev-centr/themed-svg": "0.1.1",
+    "@mermaid-js/mermaid-cli": "11.12.0",
     "antora": "^3.1.14"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "puppeteer"
+    ]
   }
 }

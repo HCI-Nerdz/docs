@@ -50,19 +50,7 @@ What people notice:
 * Move a site → every hardcoded URL becomes archaeology
 * AI agents sweep the wrong trees because nobody recorded *who depends on you*
 
-[mermaid]
-----
-flowchart LR
-  subgraph today [Today — label is the wire]
-    P[Producer renames /docs/v1]
-    C1[Consumer README]
-    C2[Sibling Antora nav]
-    C3[Blog citation]
-    P -.->|string break| C1
-    P -.->|string break| C2
-    P -.->|string break| C3
-  end
-----
+image::an-alternative-to-urls/label-wire-breakage/label-wire-breakage.svg[alt="Producer rename breaking three string-bound consumers",role=themed-svg,width=760]
 
 URL reliability on today's internet is the familiar slice of this pain — not the whole claim.
 Same mistake shows up in package names, doc slugs, and file paths.
@@ -97,22 +85,7 @@ They solve different bounds.
 | Kythe / Sourcegraph graphs; OpenRewrite multi-repo recipes; Unison content-addressed definitions; producer-owned `CONSUMERS.md`
 |===
 
-[mermaid]
-----
-flowchart TB
-  subgraph app [Application — semantic life cycle]
-    AST[AST / docs / manifests]
-    REV[Reverse consumer graph]
-    REF[Refactor / PRs]
-    AST --> REV --> REF
-  end
-  subgraph net [Network — delivery]
-    NAME[Content or hierarchical name]
-    CACHE[Nearest cache / peer]
-    NAME --> CACHE
-  end
-  app -.->|"opaque name string"| net
-----
+image::an-alternative-to-urls/application-vs-network-naming/application-vs-network-naming.svg[alt="Separate application semantic lifecycle and network delivery layers",role=themed-svg,width=760]
 
 NDN (and similar ICN designs) decouple *data from location*.
 They do **not** rewrite a Markdown link when you rename `/docs/v1` to `/docs/v2`.
@@ -133,21 +106,7 @@ That want is served by *stacking* layers, not by pretending one layer does both 
 
 == Treatment
 
-[mermaid]
-----
-flowchart TB
-  Consumer[Consumer app / docs / agent]
-  Hash["Content hash / node id\n(immutable identity)"]
-  Pointer["Mutable human pointer\n(/org/docs/auth → current hash)"]
-  Meta["Self-describing metadata\ncanonical path, aliases, signatures"]
-  ConsumersFile["CONSUMERS.md / registry\n(who holds labels)"]
-
-  Consumer -->|"prefer"| Hash
-  Consumer -->|"or resolve"| Pointer
-  Pointer --> Hash
-  Hash --> Meta
-  ConsumersFile -->|"when labels must move"| Consumer
-----
+image::an-alternative-to-urls/content-identity-resolution-stack/content-identity-resolution-stack.svg[alt="Identity, mutable pointer, metadata, and reverse consumers",role=themed-svg,width=760]
 
 === Content-addressed identity
 

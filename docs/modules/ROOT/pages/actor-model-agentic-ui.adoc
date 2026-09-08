@@ -79,7 +79,7 @@ Interactive typing happens in `nodes/{id}/chat.jsonl`; the metathread is the spi
 
 == Graph + views
 
-image::actor-model-agentic-ui/node-graph-topology.svg[Node graph — spawn edges, mailboxes, grid projection,width=720]
+image::actor-model-agentic-ui/node-graph-topology.svg[alt="Node graph with spawn edges, mailboxes, and grid projection",role=themed-svg,width=720]
 
 One graph; multiple projections over the same disk store:
 

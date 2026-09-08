@@ -1,0 +1,156 @@
+{
+  "$schema": "https://docs.devcentr.org/themed-svg/schemas/themed-svg-manifest-v1.schema.json",
+  "schemaVersion": 1,
+  "namespace": "hci-provenance",
+  "source": {
+    "kind": "hand-authored-svg",
+    "uri": "provenance-legend.fixed.svg"
+  },
+  "tokens": [
+    {
+      "id": "color.canvas",
+      "description": "canvas"
+    },
+    {
+      "id": "color.surface.primary",
+      "description": "surface primary"
+    },
+    {
+      "id": "color.surface.secondary",
+      "description": "surface secondary"
+    },
+    {
+      "id": "color.surface.accent",
+      "description": "surface accent"
+    },
+    {
+      "id": "color.surface.success",
+      "description": "surface success"
+    },
+    {
+      "id": "color.surface.warning",
+      "description": "surface warning"
+    },
+    {
+      "id": "color.surface.danger",
+      "description": "surface danger"
+    },
+    {
+      "id": "color.text.primary",
+      "description": "text primary"
+    },
+    {
+      "id": "color.text.muted",
+      "description": "text muted"
+    },
+    {
+      "id": "color.border.primary",
+      "description": "border primary"
+    },
+    {
+      "id": "color.edge",
+      "description": "edge"
+    },
+    {
+      "id": "color.edge.label",
+      "description": "edge label"
+    },
+    {
+      "id": "color.accent.primary",
+      "description": "accent primary"
+    },
+    {
+      "id": "color.status.warning",
+      "description": "warning"
+    },
+    {
+      "id": "color.status.success",
+      "description": "success"
+    }
+  ],
+  "defaultPreset": "light",
+  "presets": {
+    "light": {
+      "color.canvas": "#e8e4d9",
+      "color.surface.primary": "#ffffff",
+      "color.surface.secondary": "#d9d4c6",
+      "color.surface.accent": "#d9eee9",
+      "color.surface.success": "#d9eee9",
+      "color.surface.warning": "#fff0d7",
+      "color.surface.danger": "#f7dfdc",
+      "color.text.primary": "#0e1218",
+      "color.text.muted": "#4b5563",
+      "color.border.primary": "#52606d",
+      "color.edge": "#0f7a73",
+      "color.edge.label": "#0e1218",
+      "color.accent.primary": "#0f7a73",
+      "color.status.warning": "#b7791f",
+      "color.status.success": "#2f855a"
+    },
+    "dark": {
+      "color.canvas": "#0e1218",
+      "color.surface.primary": "#1a2330",
+      "color.surface.secondary": "#161c26",
+      "color.surface.accent": "#173934",
+      "color.surface.success": "#173934",
+      "color.surface.warning": "#49351c",
+      "color.surface.danger": "#4c2527",
+      "color.text.primary": "#e8e4d9",
+      "color.text.muted": "#b6bdc8",
+      "color.border.primary": "#8f9baa",
+      "color.edge": "#4fb3a6",
+      "color.edge.label": "#e8e4d9",
+      "color.accent.primary": "#e8a54b",
+      "color.status.warning": "#e8a54b",
+      "color.status.success": "#4fb3a6"
+    }
+  },
+  "bindings": [
+    {
+      "kind": "presentation",
+      "selector": "svg > rect",
+      "attribute": "fill",
+      "token": "color.canvas"
+    },
+    {
+      "kind": "presentation",
+      "selector": "svg > text:nth-of-type(1), svg > text:nth-of-type(3), svg > text:nth-of-type(7)",
+      "attribute": "fill",
+      "token": "color.text.primary"
+    },
+    {
+      "kind": "presentation",
+      "selector": "svg > text:nth-of-type(5), svg > text:nth-of-type(9)",
+      "attribute": "fill",
+      "token": "color.text.muted"
+    },
+    {
+      "kind": "presentation",
+      "selector": "svg > text:nth-of-type(2), svg > text:nth-of-type(4)",
+      "attribute": "fill",
+      "token": "color.status.warning"
+    },
+    {
+      "kind": "presentation",
+      "selector": "svg > line:nth-of-type(1)",
+      "attribute": "stroke",
+      "token": "color.status.warning"
+    },
+    {
+      "kind": "presentation",
+      "selector": "svg > text:nth-of-type(6), svg > text:nth-of-type(8)",
+      "attribute": "fill",
+      "token": "color.status.success"
+    },
+    {
+      "kind": "presentation",
+      "selector": "svg > line:nth-of-type(2)",
+      "attribute": "stroke",
+      "token": "color.status.success"
+    }
+  ],
+  "fallback": {
+    "unresolvedToken": "error",
+    "missingTarget": "warn"
+  }
+}

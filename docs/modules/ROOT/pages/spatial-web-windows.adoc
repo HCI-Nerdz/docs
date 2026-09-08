@@ -76,7 +76,7 @@ After redirect back to app origin, `BroadcastChannel` can replace a stale `opene
 
 === Topology
 
-image::spatial-web-windows/communication-topology.svg[Viewport, SharedWorker hub, and lite palette windows,width=80%]
+image::spatial-web-windows/communication-topology.svg[alt="Viewport, SharedWorker hub, and lightweight palette windows",role=themed-svg,width=80%]
 
 == Lite window primitives
 

@@ -1,0 +1,23 @@
+{
+  "deterministicIds": true,
+  "deterministicIDSeed": "hci-nerdz-themed-diagrams-v1",
+  "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+  "securityLevel": "strict",
+  "htmlLabels": false,
+  "securityLevel": "strict",
+  "flowchart": {
+    "curve": "basis",
+    "htmlLabels": false
+  },
+  "theme": "base",
+  "themeVariables": {
+    "background": "#e8e4d9",
+    "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+    "lineColor": "#52606d",
+    "primaryColor": "#ffffff",
+    "primaryTextColor": "#172033",
+    "primaryBorderColor": "#52606d",
+    "secondaryColor": "#e8edf2",
+    "tertiaryColor": "#fff4df"
+  }
+}

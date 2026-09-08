@@ -1,0 +1,18 @@
+flowchart TB
+  consumer["Consumer app / docs / agent"] -->|prefer| hash["Content hash / node id<br/>immutable identity"]
+  consumer -->|or resolve| pointer["Mutable human pointer<br/>current intent"]
+  pointer --> hash
+  hash --> meta["Self-describing metadata<br/>canonical path, aliases, signatures"]
+  registry["CONSUMERS.md / registry<br/>who holds labels"] -->|when labels move| consumer
+  class consumer primary
+  class hash accent
+  class pointer secondary
+  class meta success
+  class registry warning
+
+  classDef primary fill:#ffffff,stroke:#52606d,color:#172033
+  classDef secondary fill:#e8edf2,stroke:#52606d,color:#172033
+  classDef accent fill:#d9eee9,stroke:#0f7a73,color:#172033
+  classDef success fill:#e9f7ee,stroke:#2f855a,color:#172033
+  classDef warning fill:#fff4df,stroke:#b7791f,color:#172033
+  classDef danger fill:#fde8e7,stroke:#c53030,color:#172033

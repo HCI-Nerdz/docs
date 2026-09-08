@@ -1,0 +1,3 @@
+= Adaptive semantic diagrams
+
+Four existing diagram families and three diagrams extracted from _An alternative to URLs_ now use the Themed SVG artifact contract. Fixed originals remain available, canonical sources and explicit manifests live only in this repository, and pinned tooling generates deterministic standalone-adaptive and host artifacts. The HCI palette maps to Valentus light and dark modes while portable files remain readable without JavaScript.
