@@ -43,6 +43,12 @@ const diagrams = [
     title: 'Content identity resolution stack',
     description: 'Consumers resolve mutable human pointers to content identities while reverse-consumer records absorb label changes.',
   },
+  {
+    stem: 'grounded-tokens/provenance-legend',
+    title: 'Grounded token provenance legend',
+    description: 'Heuristic tokens use a dashed warm underline while researched tokens use a solid cool underline.',
+    sourceExtension: '.fixed.svg',
+  },
 ];
 
 function run(command, args) {
@@ -73,19 +79,23 @@ try {
     const base = join(images, diagram.stem);
     const manifest = JSON.parse(await readFile(`${base}.theme.json`, 'utf8'));
     let rendered;
-    const raw = join(temp, `${basename(base)}.raw.svg`);
+    if (diagram.sourceExtension) {
+      rendered = await readFile(`${base}${diagram.sourceExtension}`, 'utf8');
+    } else {
+      const raw = join(temp, `${basename(base)}.raw.svg`);
       await run(process.execPath, [
         resolve(root, 'node_modules/@mermaid-js/mermaid-cli/src/cli.js'),
-      '-i',
-      `${base}.mmd`,
-      '-o',
-      raw,
-      '-c',
-      mermaidConfig,
-      '-b',
-      'transparent',
-    ]);
-    rendered = await readFile(raw, 'utf8');
+        '-i',
+        `${base}.mmd`,
+        '-o',
+        raw,
+        '-c',
+        mermaidConfig,
+        '-b',
+        'transparent',
+      ]);
+      rendered = await readFile(raw, 'utf8');
+    }
 
     const metadata = {
       role: 'img',
@@ -99,7 +109,6 @@ try {
     }
     await assertOrWrite(`${base}.svg`, result.standaloneSvg);
     await assertOrWrite(`${base}.host.svg`, result.hostSvg);
-
   }
 } finally {
   await rm(temp, { recursive: true, force: true });
