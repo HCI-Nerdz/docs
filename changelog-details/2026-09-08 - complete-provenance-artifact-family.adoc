@@ -1,0 +1,3 @@
+= Complete provenance artifact family
+
+The fixed provenance legend remains the hand-authored canonical input. Stable element IDs replace unsupported positional selectors so the pinned diagram adapter can deterministically generate both standalone-adaptive and host SVG artifacts.
