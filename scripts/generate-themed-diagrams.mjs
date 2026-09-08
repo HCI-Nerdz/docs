@@ -47,7 +47,7 @@ const diagrams = [
 
 function run(command, args) {
   return new Promise((resolvePromise, reject) => {
-    const child = spawn(command, args, { cwd: root, shell: process.platform === 'win32' });
+    const child = spawn(command, args, { cwd: root });
     let stderr = '';
     child.stderr.on('data', (chunk) => (stderr += chunk));
     child.on('error', reject);
@@ -74,9 +74,8 @@ try {
     const manifest = JSON.parse(await readFile(`${base}.theme.json`, 'utf8'));
     let rendered;
     const raw = join(temp, `${basename(base)}.raw.svg`);
-    await run('pnpm', [
-      'exec',
-      'mmdc',
+      await run(process.execPath, [
+        resolve(root, 'node_modules/@mermaid-js/mermaid-cli/src/cli.js'),
       '-i',
       `${base}.mmd`,
       '-o',
