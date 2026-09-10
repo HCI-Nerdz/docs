@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-09-10 -- Actor-model Linear / Grid / Tree UX contract
+
+* xref:actor-model-agentic-ui.adoc[Actor-model agentic UI]: cadence separation (main/discussion ≠ worker output); Linear, Grid, Tree projections; temporal scrubber spans all modes.
+* Demo section updated to match live desk at `/demos/actor-model-agentic-ui/`.
+
 == 2026-09-10 -- Host CSS provenance tokens and Mermaid dark theme
 
 * Host CSS now maps `hci-provenance` light and dark tokens so the provenance legend follows Valentus theme switches.
