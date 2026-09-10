@@ -1,0 +1,20 @@
+= Host CSS provenance tokens and Mermaid dark theme
+:page-audience: docs readers and maintainers
+:page-usage-context: Understanding why provenance and Mermaid diagrams follow site theme
+:page-orig-author: Cursor agent on behalf of Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-09-10
+
+The provenance legend namespace (`hci-provenance`) already emitted CSS custom
+properties in host SVGs, but supplemental UI only defined `hci-diagram`
+tokens. Dark mode therefore left provenance fills on light fallbacks.
+
+Host CSS now publishes matching light and dark `--themed-svg-hci-provenance-*`
+variables from the provenance legend manifest presets.
+
+Separately, Mermaid host artifacts still carried inline
+`style="fill:… !important"` that beat theme stylesheet rules after the
+themed-svg runtime upgrade. Generation now uses local `@dev-centr/themed-svg`
+0.2.2 (via `file:`) so stylesheet bindings rewrite those inline presentation
+colors to CSS variables. Browser runtime remains on the latest published CDN
+pin (0.2.1) until 0.2.2 is published to npm.
