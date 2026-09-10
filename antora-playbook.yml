@@ -1,6 +1,10 @@
 site:
   title: HCI Nerdz Docs
   url: https://hci-nerdz.github.io/docs
+  robots: |
+    User-agent: *
+    Allow: /
+    Sitemap: https://hci-nerdz.github.io/docs/sitemap.xml
   start_page: hci-nerdz::index.adoc
   keys:
     header_logo: logo.svg
@@ -11,7 +15,7 @@ site:
 antora:
   extensions:
     - '@antora/lunr-extension'
-    - require: '@antora-supplemental/unversioned-component-urls'
+    - require: '@antora-supplemental/unversioned-component-urls'
     - '@antora-supplemental/page-edit'
     - '@antora-supplemental/build-stack'
 

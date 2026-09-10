@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-10 -- Publish robots.txt with sitemap
+
+* Antora `site.robots` now emits `/robots.txt` with an absolute `Sitemap:` line for the production host.
+
 == 2026-09-10 -- Actor-model Linear / Grid / Tree UX contract
 
 * xref:actor-model-agentic-ui.adoc[Actor-model agentic UI]: cadence separation (main/discussion ≠ worker output); Linear, Grid, Tree projections; temporal scrubber spans all modes.
