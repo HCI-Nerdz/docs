@@ -3,7 +3,7 @@
 == 2026-09-10 -- Host CSS provenance tokens and Mermaid dark theme
 
 * Host CSS now maps `hci-provenance` light and dark tokens so the provenance legend follows Valentus theme switches.
-* Diagram generation pins local `@dev-centr/themed-svg` 0.2.2 so Mermaid host SVGs rewrite inline `fill`/`stroke` `!important` to CSS variables.
+* Diagram generation and the CDN runtime pin `@dev-centr/themed-svg` 0.2.2 so Mermaid host SVGs rewrite inline `fill`/`stroke` `!important` to CSS variables.
 * link:changelog-details/2026-09-10%20-%20host-css-provenance-and-mermaid-dark.adoc[Details]
 
 == 2026-09-08 -- Complete provenance artifact family

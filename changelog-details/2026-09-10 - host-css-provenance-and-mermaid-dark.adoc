@@ -14,7 +14,6 @@ variables from the provenance legend manifest presets.
 
 Separately, Mermaid host artifacts still carried inline
 `style="fill:… !important"` that beat theme stylesheet rules after the
-themed-svg runtime upgrade. Generation now uses local `@dev-centr/themed-svg`
-0.2.2 (via `file:`) so stylesheet bindings rewrite those inline presentation
-colors to CSS variables. Browser runtime remains on the latest published CDN
-pin (0.2.1) until 0.2.2 is published to npm.
+themed-svg runtime upgrade. Generation and the CDN browser runtime now pin
+`@dev-centr/themed-svg` 0.2.2 so stylesheet bindings rewrite those inline
+presentation colors to CSS variables.
