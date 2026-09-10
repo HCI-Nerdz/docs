@@ -11,7 +11,8 @@ site:
 antora:
   extensions:
     - '@antora/lunr-extension'
-    - require: '@antora-supplemental/unversioned-component-urls'
+    - require: '@antora-supplemental/unversioned-component-urls'
+    - '@antora-supplemental/page-edit'
     - '@antora-supplemental/build-stack'
 
 content:

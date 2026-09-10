@@ -15,6 +15,7 @@
   "devDependencies": {
     "@antora-supplemental/build-stack": "github:antora-supplemental/build-stack#main",
     "@antora-supplemental/instruction-flow": "github:antora-supplemental/asciidoc-interactive",
+    "@antora-supplemental/page-edit": "github:antora-supplemental/page-edit#main",
     "@antora-supplemental/unversioned-component-urls": "github:antora-supplemental/antora-unversioned-component-urls#v2.1.0",
     "@antora/lunr-extension": "^1.0.0-alpha.13",
     "@dev-centr/mermaid-svg-css-vars": "0.1.2",
