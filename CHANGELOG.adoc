@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-09-14 -- page-edit 0.2.3 DOCTYPE fix
+
+* Pin `@antora-supplemental/page-edit` to `v0.2.3` (was rolling `#main`) so View | Edit is not prepended before the HTML DOCTYPE.
+
 == 2026-09-10 -- Dark-mode Mermaid diagram box fills
 
 * Bumped `@dev-centr/themed-svg` to **0.2.3** and regenerated diagrams so Mermaid inline `fill`/`stroke` `!important` paints become theme CSS variables under dark mode.
@@ -30,7 +34,6 @@
 * Four fixed originals remain alongside three consolidated Mermaid sources extracted from the publications.
 * Pinned generation and freshness checks enforce adapter 0.1.2 and runtime 0.1.1 output.
 * link:changelog-details/2026-09-08%20-%20adaptive-semantic-diagrams.adoc[Details]
-
 
 == 2026-09-05 — Path Edge overflow scroll docs
 
