@@ -1,0 +1,19 @@
+= Eye mark header logo and favicon
+:page-audience: docs maintainers and readers
+:page-usage-context: Confirming the docs chrome matches the HCI Nerdz marketing site brand
+:page-orig-author: Grok Bot on behalf of Ryan Johnson
+:page-last-author: Grok Bot on behalf of Ryan Johnson
+:page-last-edited: 2026-09-26
+
+The Antora header still showed the older connectome-ring mark in
+`supplemental-ui/img/logo.svg` (and the matching module image under
+`docs/modules/ROOT/images/logo.svg`).
+
+Those files now use the transparent eye mark from
+`HCI-Nerdz.github.io/public/logo-mark.svg` (same bytes as the marketing
+site favicon). Favicon links were added in `head-meta.hbs` pointing at
+`favicon.svg`, `favicon.ico`, `favicon-32.png`, and
+`apple-touch-icon.png` copied from the marketing site `public/` folder.
+
+Valentus `header_logo` stays `logo.svg` with the default brand tone —
+the eye already has contrast on light and dark header bars.

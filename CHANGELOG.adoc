@@ -1,5 +1,11 @@
 = Changelog
 
+== 2026-09-26 -- Eye mark header logo and favicon
+
+* Replace outdated connectome-ring header/module logos with the marketing-site eye mark.
+* Add SVG/ICO/PNG favicons (and apple-touch) from `HCI-Nerdz.github.io/public/`.
+* link:changelog-details/2026-09-26%20-%20eye-mark-header-logo.adoc[Details]
+
 == 2026-09-15 -- page-edit 0.2.4 component-home Source
 
 * Pin `@antora-supplemental/page-edit` to `v0.2.4` so Antora component start pages get the Source | View | Edit row (empty lead shells no longer false-positive on page-context CSS).
