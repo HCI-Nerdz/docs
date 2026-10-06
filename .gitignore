@@ -24,3 +24,5 @@
 !dprint.jsonc
 !.cursor/
 !.cursor/**
+!/.editorconfig
+!/.gitattributes
