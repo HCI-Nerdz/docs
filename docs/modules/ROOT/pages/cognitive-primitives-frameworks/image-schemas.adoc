@@ -1,5 +1,5 @@
 = Image schemas and conceptual metaphor (moved)
 :page-redirect: writing-principles-frameworks/image-schemas.adoc
-:description: Redirect — framework deep dive moved under Writing principles.
+:description: Redirect â€” framework deep dive moved under Writing principles.
 
 This writing-principle deep dive moved under xref:writing-principles.adoc[Writing principles]. See xref:writing-principles-frameworks/image-schemas.adoc[Image schemas and conceptual metaphor].

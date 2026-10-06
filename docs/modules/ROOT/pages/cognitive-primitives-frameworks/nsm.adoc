@@ -1,5 +1,5 @@
 = NSM / semantic primes (moved)
 :page-redirect: writing-principles-frameworks/nsm.adoc
-:description: Redirect — framework deep dive moved under Writing principles.
+:description: Redirect â€” framework deep dive moved under Writing principles.
 
 This writing-principle deep dive moved under xref:writing-principles.adoc[Writing principles]. See xref:writing-principles-frameworks/nsm.adoc[NSM / semantic primes].

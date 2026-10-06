@@ -15,5 +15,5 @@ site favicon). Favicon links were added in `head-meta.hbs` pointing at
 `favicon.svg`, `favicon.ico`, `favicon-32.png`, and
 `apple-touch-icon.png` copied from the marketing site `public/` folder.
 
-Valentus `header_logo` stays `logo.svg` with the default brand tone —
+Valentus `header_logo` stays `logo.svg` with the default brand tone â€”
 the eye already has contrast on light and dark header bars.

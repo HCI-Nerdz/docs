@@ -1,5 +1,5 @@
 = First-principles unpacking (moved)
 :page-redirect: writing-principles-frameworks/first-principles.adoc
-:description: Redirect — framework deep dive moved under Writing principles.
+:description: Redirect â€” framework deep dive moved under Writing principles.
 
 This writing-principle deep dive moved under xref:writing-principles.adoc[Writing principles]. See xref:writing-principles-frameworks/first-principles.adoc[First-principles unpacking].

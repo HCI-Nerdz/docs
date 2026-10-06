@@ -1,5 +1,5 @@
 = Cognitive load optimization (moved)
 :page-redirect: writing-principles-frameworks/cognitive-load.adoc
-:description: Redirect — framework deep dive moved under Writing principles.
+:description: Redirect â€” framework deep dive moved under Writing principles.
 
 This writing-principle deep dive moved under xref:writing-principles.adoc[Writing principles]. See xref:writing-principles-frameworks/cognitive-load.adoc[Cognitive load optimization].

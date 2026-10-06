@@ -1,5 +1,5 @@
 = Grounded / embodied cognition (moved)
 :page-redirect: writing-principles-frameworks/embodied.adoc
-:description: Redirect — framework deep dive moved under Writing principles.
+:description: Redirect â€” framework deep dive moved under Writing principles.
 
 This writing-principle deep dive moved under xref:writing-principles.adoc[Writing principles]. See xref:writing-principles-frameworks/embodied.adoc[Grounded / embodied cognition].

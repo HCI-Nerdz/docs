@@ -1,5 +1,5 @@
 = Concrete-example-first (moved)
 :page-redirect: writing-principles-frameworks/concrete-example-first.adoc
-:description: Redirect — framework deep dive moved under Writing principles.
+:description: Redirect â€” framework deep dive moved under Writing principles.
 
 This writing-principle deep dive moved under xref:writing-principles.adoc[Writing principles]. See xref:writing-principles-frameworks/concrete-example-first.adoc[Concrete-example-first].
