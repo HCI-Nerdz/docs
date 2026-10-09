@@ -1,0 +1,97 @@
+= Agent Canvas
+:description: Agent chats as movable preview cards on a desk, with inbox statuses, an archive bin, and file-to-chat links.
+:page-audience: HCI and agent-UI authors
+:page-usage-context: Reference page on the HCI Nerdz docs hub
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-10-09T03:50-0500
+
+An *agent canvas* puts agent chats on a desk instead of a single scrolling list.
+Each chat is a card: a picture of the conversation, a short clipped blurb, and an optional status lamp beside History.
+You move the cards. The transcript stays closed until you open one.
+
+== Core claim
+
+A harness inbox is project management.
+Agent working, needs-you, unread, read, error, draft, and signed-off are different jobs.
+A checkmark is not enough, and "the agent stopped" is not the same as "I reviewed it and signed off."
+
+== Cards
+
+* *Preview* — a picture of the conversation, so you recognize it before you read the words.
+* *Blurb* — one or two clipped lines under the picture.
+* *Status lamp* — beside History on the card footer; color encodes the states below. No lamp after sign-off.
+* *Position* — you place the card. The desk remembers.
+
+Only cards inside the viewport are mounted.
+A card is a shell: title, status, blurb, position.
+The full transcript loads when you open the chat.
+
+== Statuses
+
+[cols="1,1,2"]
+|===
+| Lamp | Color | Meaning
+
+| Agent working
+| Green solid
+| The agent is running or background work is still live.
+
+| Waiting on CI
+| Green flashing
+| External pipeline (CI, etc.) — not the same as yellow needs-attention.
+
+| Needs attention
+| Yellow
+| Your attention is required: feedback, planning waits, unread, composing a first prompt, and similar.
+
+| Read (clean composer)
+| Grey ring
+| You saw the latest; composer empty; not signed off.
+
+| Dirty composer
+| Grey fill
+| Unsent text in the chat box (overlay on read, working, CI wait, etc.).
+
+| Needs attention + dirty
+| Half yellow / half grey
+| Needs-attention thread with a dirty composer (split lamp).
+
+| Stopped on error
+| Red
+| The agent run halted on an error.
+
+| Signed off
+| (none)
+| You reviewed and marked done. No lamp on the card.
+|===
+
+== Archive bin
+
+Archiving takes a card off the desk.
+The bin remembers the card's place.
+Opening the bin offers three views:
+
+* *Spatial* — cards return to their remembered spots, stacked by how recently they were archived.
+* *Grid* — chronological thumbnails.
+* *List* — compact rows.
+
+Restore puts the card back on the desk at the remembered place and raises it above the cards already there.
+
+== Files and topic history
+
+Drop a file from Explorer onto the desk.
+Drag a connection from that file to the chat that should start from it — for example a markdown copy of an earlier chat used as the next prompt.
+
+When the title changes, the previous title becomes a bookmark.
+Bookmarks are newest-first under *History* on the card.
+
+== Demo and product
+
+The public demo at https://hci-nerdz.github.io/agent-canvas/ is a static prototype.
+The shipped product would load real transcripts, provider status, and OS-window chat on desktop.
+
+== See also
+
+* https://hci-nerdz.github.io/demos/agent-canvas/[Live demo]
+* https://github.com/HCI-Nerdz/conversation-canvas[Source repository]
