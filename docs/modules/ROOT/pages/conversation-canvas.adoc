@@ -1,4 +1,4 @@
-= Conversation canvas
+= Agent Chat - canvas
 :description: Agent chats as movable preview cards on a desk, with inbox statuses, an archive bin, and file-to-chat links.
 :page-audience: HCI and agent-UI authors
 :page-usage-context: Reference page on the HCI Nerdz docs hub

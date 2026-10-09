@@ -2,7 +2,7 @@
 
 == 2026-10-09 -- Conversation canvas
 
-* xref:docs/modules/ROOT/pages/conversation-canvas.adoc[Conversation canvas]: preview cards, inbox statuses, archive bin, file links, and topic bookmarks.
+* xref:docs/modules/ROOT/pages/conversation-canvas.adoc[Agent Chat - canvas]: preview cards, inbox statuses, archive bin, file links, and topic bookmarks.
 * link:changelog-details/2026-10-09%20-%20conversation-canvas.adoc[Details]
 
 == 2026-09-26 -- Eye mark header logo and favicon

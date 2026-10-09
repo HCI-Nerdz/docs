@@ -23,7 +23,7 @@
 ** xref:host-held-history.adoc[Host-held history]
 ** xref:on-disk-game-conversion.adoc[On-disk game conversion]
 ** xref:spatial-web-windows.adoc[Spatial web windows]
-** xref:conversation-canvas.adoc[Conversation canvas]
+** xref:conversation-canvas.adoc[Agent Chat - canvas]
 * AI & writing
 ** xref:grounded-tokens.adoc[Detecting AI lies]
 ** xref:writing-principles.adoc[Writing principles]
