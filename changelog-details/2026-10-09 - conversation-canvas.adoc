@@ -1,0 +1,4 @@
+= Conversation canvas
+:date: 2026-10-09
+
+Concept page for the spatial agent inbox: preview cards, six inbox statuses, archive bin, file links, and topic bookmarks.

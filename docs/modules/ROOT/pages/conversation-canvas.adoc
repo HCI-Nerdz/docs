@@ -1,0 +1,86 @@
+= Conversation canvas
+:description: Agent chats as movable preview cards on a desk, with inbox statuses, an archive bin, and file-to-chat links.
+:page-audience: HCI and agent-UI authors
+:page-usage-context: Reference page on the HCI Nerdz docs hub
+:page-orig-author: Ryan Johnson
+:page-last-author: Cursor agent on behalf of Ryan Johnson
+:page-last-edited: 2026-10-09T00:30-0500
+
+A *conversation canvas* puts agent chats on a desk instead of a single scrolling list.
+Each chat is a card: a picture of the conversation, a short clipped blurb, and a status color.
+You move the cards. The transcript stays closed until you open one.
+
+== Core claim
+
+A harness inbox is project management.
+Working, waiting, unread, read, needs-a-response, and completed are different jobs.
+A checkmark is not enough, and "the agent stopped" is not the same as "I am done with this."
+
+== Cards
+
+* *Preview* — a picture of the conversation, so you recognize it before you read the words.
+* *Blurb* — one or two clipped lines under the picture.
+* *Status color* — the same colors the inbox already uses, mapped onto the six states below.
+* *Position* — you place the card. The desk remembers.
+
+Only cards inside the viewport are mounted.
+A card is a shell: title, status, blurb, position.
+The full transcript loads when you open the chat.
+
+== Statuses
+
+[cols="1,2"]
+|===
+| Status | Meaning
+
+| Working
+| The agent is running, or background work is still live.
+
+| Waiting
+| You parked it. Nothing should proceed until a reply or a timer.
+
+| Unread
+| Something new arrived since you last opened it.
+
+| Read
+| You have seen the latest activity, and nothing is asking you to act.
+
+| Needs response
+| You have read it, and an approval, a question, or a plan is still waiting on you.
+
+| Completed
+| You marked it done. The agent finishing is not this state.
+|===
+
+== Archive bin
+
+Archiving takes a card off the desk.
+The bin remembers the card's place.
+Opening the bin offers three views:
+
+* *Spatial* — cards return to their remembered spots, stacked by how recently they were archived.
+* *Grid* — chronological thumbnails.
+* *List* — compact rows.
+
+Restore puts the card back on the desk at the remembered place and raises it above the cards already there.
+
+== Files and topic history
+
+Drop a file from Explorer onto the desk.
+Drag a connection from that file to the chat that should start from it — for example a markdown copy of an earlier chat used as the next prompt.
+
+When the title changes, the previous title becomes a bookmark.
+The latest title stays on the card.
+The older titles list newest first, the way a thread can show earlier names under the current one.
+
+== Prototype
+
+* Demo: link:https://hci-nerdz.github.io/conversation-canvas/[conversation canvas]
+* Repository: link:https://github.com/HCI-Nerdz/conversation-canvas[HCI-Nerdz/conversation-canvas]
+* t3code route, experimental: `/canvas` on branch `feat/conversation-canvas`
+
+== Related
+
+* xref:prototype-strategy.adoc[Prototype strategy]
+* xref:actor-model-agentic-ui.adoc[Actor-model agentic UI]
+* xref:spatial-web-windows.adoc[Spatial web windows]
