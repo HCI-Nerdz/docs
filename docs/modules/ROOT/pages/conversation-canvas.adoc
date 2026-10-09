@@ -4,7 +4,7 @@
 :page-usage-context: Reference page on the HCI Nerdz docs hub
 :page-orig-author: Ryan Johnson
 :page-last-author: Cursor agent on behalf of Ryan Johnson
-:page-last-edited: 2026-10-09T00:30-0500
+:page-last-edited: 2026-10-09T03:15-0500
 
 A *conversation canvas* puts agent chats on a desk instead of a single scrolling list.
 Each chat is a card: a picture of the conversation, a short clipped blurb, and an optional status lamp beside History.
@@ -13,14 +13,14 @@ You move the cards. The transcript stays closed until you open one.
 == Core claim
 
 A harness inbox is project management.
-Working, waiting, unread, read, needs-a-response, and signed-off are different jobs.
+Agent working, needs-you, unread, read, error, draft, and signed-off are different jobs.
 A checkmark is not enough, and "the agent stopped" is not the same as "I reviewed it and signed off."
 
 == Cards
 
 * *Preview* — a picture of the conversation, so you recognize it before you read the words.
 * *Blurb* — one or two clipped lines under the picture.
-* *Status lamp* — beside History on the card footer; the same colors the inbox already uses for the five active states below. No lamp after sign-off.
+* *Status lamp* — beside History on the card footer; color encodes the states below. No lamp after sign-off.
 * *Position* — you place the card. The desk remembers.
 
 Only cards inside the viewport are mounted.
@@ -29,27 +29,45 @@ The full transcript loads when you open the chat.
 
 == Statuses
 
-[cols="1,2"]
+[cols="1,1,2"]
 |===
-| Status | Meaning
+| Lamp | Color | Meaning
 
-| Working
-| The agent is running, or background work is still live.
+| Agent working
+| Green
+| The agent is running or background work is still live.
 
-| Waiting
-| You parked it. Nothing should proceed until a reply or a timer.
+| Needs your response
+| Yellow
+| Waiting on your review or reply (including planning-mode style waits).
 
 | Unread
-| Something new arrived since you last opened it.
+| Blue
+| New activity since you last opened the thread.
 
 | Read
-| You have seen the latest activity, and nothing is asking you to act.
+| Grey
+| You saw the latest; not signed off.
 
-| Needs response
-| You have read it, and an approval, a question, or a plan is still waiting on you.
+| Unsent draft
+| Grey
+| You have unsubmitted text in the composer (first prompt or any reply).
+
+| Draft while needs-you
+| Half yellow / half grey
+| Unsent reply on a thread that already needs you (vertical split on the lamp).
+
+| Stopped on error
+| Red
+| The agent run halted on an error.
+
+| Paused
+| Slate
+| Parked until an external event (CI, timer) — not the same as yellow needs-you.
 
 | Signed off
-| You reviewed the thread and marked it done. The card shows no status lamp; the agent finishing alone is not this state.
+| (none)
+| You reviewed and marked done. No lamp on the card.
 |===
 
 == Archive bin
@@ -70,17 +88,14 @@ Drop a file from Explorer onto the desk.
 Drag a connection from that file to the chat that should start from it — for example a markdown copy of an earlier chat used as the next prompt.
 
 When the title changes, the previous title becomes a bookmark.
-The latest title stays on the card.
-The older titles list newest first, the way a thread can show earlier names under the current one.
+Bookmarks are newest-first under *History* on the card.
 
-== Prototype
+== Demo and product
 
-* Demo: link:https://hci-nerdz.github.io/conversation-canvas/[conversation canvas]
-* Repository: link:https://github.com/HCI-Nerdz/conversation-canvas[HCI-Nerdz/conversation-canvas]
-* t3code route, experimental: `/canvas` on branch `feat/conversation-canvas`
+The public demo at https://hci-nerdz.github.io/conversation-canvas/ is a static prototype.
+The shipped product would load real transcripts, provider status, and OS-window chat on desktop.
 
-== Related
+== See also
 
-* xref:prototype-strategy.adoc[Prototype strategy]
-* xref:actor-model-agentic-ui.adoc[Actor-model agentic UI]
-* xref:spatial-web-windows.adoc[Spatial web windows]
+* https://hci-nerdz.github.io/demos/conversation-canvas/[Live demo]
+* https://github.com/HCI-Nerdz/conversation-canvas[Source repository]
