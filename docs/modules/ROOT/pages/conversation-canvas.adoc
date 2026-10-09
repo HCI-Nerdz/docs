@@ -34,36 +34,32 @@ The full transcript loads when you open the chat.
 | Lamp | Color | Meaning
 
 | Agent working
-| Green
+| Green solid
 | The agent is running or background work is still live.
 
-| Needs your response
+| Waiting on CI
+| Green flashing
+| External pipeline (CI, etc.) — not the same as yellow needs-attention.
+
+| Needs attention
 | Yellow
-| Waiting on your review or reply (including planning-mode style waits).
+| Your attention is required: feedback, planning waits, unread, composing a first prompt, and similar.
 
-| Unread
-| Blue
-| New activity since you last opened the thread.
+| Read (clean composer)
+| Grey ring
+| You saw the latest; composer empty; not signed off.
 
-| Read
-| Grey
-| You saw the latest; not signed off.
+| Dirty composer
+| Grey fill
+| Unsent text in the chat box (overlay on read, working, CI wait, etc.).
 
-| Unsent draft
-| Grey
-| You have unsubmitted text in the composer (first prompt or any reply).
-
-| Draft while needs-you
+| Needs attention + dirty
 | Half yellow / half grey
-| Unsent reply on a thread that already needs you (vertical split on the lamp).
+| Needs-attention thread with a dirty composer (split lamp).
 
 | Stopped on error
 | Red
 | The agent run halted on an error.
-
-| Paused
-| Slate
-| Parked until an external event (CI, timer) — not the same as yellow needs-you.
 
 | Signed off
 | (none)
