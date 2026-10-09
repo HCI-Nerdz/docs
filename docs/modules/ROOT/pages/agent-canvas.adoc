@@ -34,12 +34,12 @@ The full transcript loads when you open the chat.
 | Lamp | Color | Meaning
 
 | Agent working
-| Green solid
-| The agent is running or background work is still live.
+| Green flashing
+| The agent is running — activity in progress.
 
 | Waiting on CI
-| Green flashing
-| External pipeline (CI, etc.) — not the same as yellow needs-attention.
+| Green solid
+| On hold until an external pipeline (CI, etc.) finishes — not yellow needs-attention.
 
 | Needs attention
 | Yellow
