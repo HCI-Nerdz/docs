@@ -7,20 +7,20 @@
 :page-last-edited: 2026-10-09T00:30-0500
 
 A *conversation canvas* puts agent chats on a desk instead of a single scrolling list.
-Each chat is a card: a picture of the conversation, a short clipped blurb, and a status color.
+Each chat is a card: a picture of the conversation, a short clipped blurb, and an optional status lamp beside History.
 You move the cards. The transcript stays closed until you open one.
 
 == Core claim
 
 A harness inbox is project management.
-Working, waiting, unread, read, needs-a-response, and completed are different jobs.
-A checkmark is not enough, and "the agent stopped" is not the same as "I am done with this."
+Working, waiting, unread, read, needs-a-response, and signed-off are different jobs.
+A checkmark is not enough, and "the agent stopped" is not the same as "I reviewed it and signed off."
 
 == Cards
 
 * *Preview* — a picture of the conversation, so you recognize it before you read the words.
 * *Blurb* — one or two clipped lines under the picture.
-* *Status color* — the same colors the inbox already uses, mapped onto the six states below.
+* *Status lamp* — beside History on the card footer; the same colors the inbox already uses for the five active states below. No lamp after sign-off.
 * *Position* — you place the card. The desk remembers.
 
 Only cards inside the viewport are mounted.
@@ -48,8 +48,8 @@ The full transcript loads when you open the chat.
 | Needs response
 | You have read it, and an approval, a question, or a plan is still waiting on you.
 
-| Completed
-| You marked it done. The agent finishing is not this state.
+| Signed off
+| You reviewed the thread and marked it done. The card shows no status lamp; the agent finishing alone is not this state.
 |===
 
 == Archive bin
