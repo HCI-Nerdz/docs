@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-10-19 -- Facto compose pack + local content
+
+* `@antora-supplemental/facto-stack` **v0.2.34** (lean hub `omit` list). Removed `antora-playbook-local.yml`; `pnpm build` uses `antora-playbook.yml`. Hub `.antora-source-id`.
+
 == 2026-10-09 -- Conversation canvas
 
 * xref:docs/modules/ROOT/pages/agent-canvas.adoc[Agent Canvas] (renamed from conversation canvas): preview cards, inbox statuses, archive bin, file links, and topic bookmarks.

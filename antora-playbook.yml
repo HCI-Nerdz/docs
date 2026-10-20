@@ -12,12 +12,26 @@ site:
     site_home_label: HCI Nerdz home
     header_doc_title: HCI Nerdz Docs
 
+urls:
+  html_extension_style: indexify
+
 antora:
   extensions:
-    - '@antora/lunr-extension'
-    - require: '@antora-supplemental/unversioned-component-urls'
-    - '@antora-supplemental/page-edit'
-    - '@antora-supplemental/build-stack'
+    - require: '@antora-supplemental/facto-stack'
+      profile: hub
+      omit:
+        - '@antora-supplemental/antora-search-chat'
+        - '@antora-supplemental/site-nav-tree'
+        - '@antora-supplemental/nav-typology'
+        - '@antora-supplemental/nav-typology-diataxis'
+        - '@antora-supplemental/link-validator'
+        - '@antora-supplemental/linkinator'
+        - '@antora-supplemental/soft-nav-page-toc'
+        - '@antora-supplemental/extension-lister'
+        - '@antora-supplemental/orphan-finder/extension'
+        - '@antora-supplemental/page-context/antora'
+        - '@antora-supplemental/mermaid-client/antora'
+        - '@antora-supplemental/diagram-lightbox'
 
 content:
   sources:

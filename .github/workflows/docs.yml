@@ -7,7 +7,7 @@ on:
       - "docs/**"
       - "supplemental-ui/**"
       - "antora-playbook.yml"
-      - "antora-playbook-local.yml"
+      - ".antora-source-id"
       - "package.json"
       - "pnpm-lock.yaml"
       - ".github/workflows/docs.yml"
