@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-10-19 -- Opaque search chrome
+
+* Pin `@antora-supplemental/facto-stack` **v0.2.36**.
+
 == 2026-10-19 -- Facto compose pack + local content
 
 * `@antora-supplemental/facto-stack` **v0.2.34** (lean hub `omit` list). Removed `antora-playbook-local.yml`; `pnpm build` uses `antora-playbook.yml`. Hub `.antora-source-id`.
