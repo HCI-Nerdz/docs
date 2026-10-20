@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-10-19 -- Local content banner
+
+* Pin `@antora-supplemental/facto-stack` **v0.2.37** (disk-search banner prints once, as ASCII, on Windows).
+
 == 2026-10-19 -- Opaque search chrome
 
 * Pin `@antora-supplemental/facto-stack` **v0.2.36**.
