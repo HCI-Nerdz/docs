@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-10-22 -- facto-stack rolling minor pin
+
+* Float `@antora-supplemental/facto-stack` on **`#v0.2`** (resolves **v0.2.64** today).
+
 == 2026-10-20 -- Search dock layout
 
 * Pin `@antora-supplemental/facto-stack` **v0.2.40** (search bar stays on screen above the footer).

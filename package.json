@@ -10,7 +10,7 @@
     "format:check": "dprint check"
   },
   "devDependencies": {
-    "@antora-supplemental/facto-stack": "github:antora-supplemental/facto-stack#v0.2.45",
+    "@antora-supplemental/facto-stack": "github:antora-supplemental/facto-stack#v0.2",
     "@antora-supplemental/instruction-flow": "github:antora-supplemental/asciidoc-interactive",
     "@dev-centr/mermaid-svg-css-vars": "0.1.3",
     "@dev-centr/themed-svg": "0.2.3",
