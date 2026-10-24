@@ -1,0 +1,8 @@
+= 2026-10-23 — Location overloading
+:date: 2026-10-23
+
+Documented location overloading: a stable screen location whose function depends on hidden context.
+
+* New page: `location-overloading.adoc` with a verified reference list (DOI or publisher URL per entry)
+* Nav entry under Interaction patterns
+* Points at the site essay *When the same menu means two things*

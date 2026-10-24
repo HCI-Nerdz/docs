@@ -1,0 +1,95 @@
+= Location overloading
+:description: When one screen location or menu slot does different jobs depending on hidden context — why it fights spatial memory and mode research, with verified references.
+
+*Location overloading* is reusing the same screen location, menu slot, or navigation item for different functions, where the function depends on context the user cannot see at the point of action (which team, project, scope, or filter is active).
+
+In plain language: the button did not move, but what it means did.
+
+== Example
+
+Vercel's dashboard navigation, the default since 26 February 2026, puts team-level and project-level navigation in one sidebar.
+Its changelog lists "consistent tabs for unified navigations across both team and project levels" and "projects as filters so you can switch between team and project versions of the same page in one click" (link:https://vercel.com/changelog/dashboard-navigation-redesign-rollout[Vercel changelog]).
+The same sidebar item can therefore open a team-wide page or a project-scoped page, depending on a filter state set elsewhere.
+
+== Why it is a problem
+
+=== It is a mode
+
+Raskin defines an interface as modal for a gesture when the current state is not the user's locus of attention and the interface gives one of several responses depending on that state (Raskin 2000, ch. 3).
+A sidebar item whose target depends on an out-of-view scope filter fits that definition.
+Tesler spent his career removing modes from text editing (Tesler 2012).
+Norman's taxonomy of action slips puts *mode errors* under errors in forming the intention: the user's action is right for one state and the system is in another (Norman 1981).
+
+=== It spends spatial memory
+
+Expert users stop reading labels and go by place.
+Scarr, Cockburn, Gutwin and Bunt showed that a flat, spatially stable command layout (CommandMaps) beats menus and the Ribbon for experienced users (Scarr et al. 2012).
+Scarr, Cockburn, Gutwin and Malacria found spatial-memory gains survive translation and scaling of a layout but are hurt when it reflows (Scarr et al. 2013).
+Robertson et al.'s Data Mountain showed people retrieve documents better when they place them in space themselves (Robertson et al. 1998).
+Cockburn, Gutwin and Greenberg model the shift from visual search to decision by location as users learn a stable menu (Cockburn et al. 2007).
+Overloading keeps the *place* stable but changes the *meaning*, so the memory still fires and lands on the wrong thing.
+
+=== Adaptive layouts carry a known cost
+
+Findlater and McGrenere found a static split menu significantly faster than an adaptive one, and most users preferred the adaptable (user-controlled) version (Findlater & McGrenere 2004).
+Gajos et al. map when adaptation helps and when it hurts; predictability is a large part of the answer (Gajos et al. 2006).
+
+=== It breaks consistency and recognition
+
+Nielsen's heuristics #4 (Consistency and standards: users should not wonder whether different situations or actions mean the same thing) and #6 (Recognition rather than recall: users should not have to remember information from one part of the interface to another) both apply (Nielsen 1994/2024).
+Norman separates affordances (what you can do) from signifiers (what tells you how and where) (Norman 2013).
+An overloaded slot has one signifier for two affordances.
+
+=== It costs working memory
+
+Cognitive load theory holds that working memory is limited and that load spent on things other than the task gets in the way of learning (Sweller 1988).
+Tracking a hidden scope is that kind of load.
+
+=== Stable targets get faster
+
+Fitts's law ties pointing time to target distance and size (Fitts 1954).
+Practiced users aim before they look; a stable target keeps that aim valid, an overloaded one makes the aim land on a different function.
+
+== Background: place in memory
+
+O'Keefe and Dostrovsky's place-cell recordings in rat hippocampus started the "hippocampus as a spatial map" line of research (O'Keefe & Dostrovsky 1971).
+Maguire et al. found that most superior memorizers used the method of loci and showed more activity in brain regions tied to spatial memory and navigation (Maguire et al. 2003).
+This is background, not proof about UIs: it explains why people lean on place, and the HCI studies above measure what happens on screens.
+
+== Counterarguments
+
+* *Screen real estate.* One sidebar for two scopes saves space, and the space limit is real. Scarr et al. (2012) open by saying hierarchy exists because of screen space limits.
+* *Progressive disclosure.* Showing only what the current context needs cuts clutter and errors for novices (Nielsen 2006). The fix is to make context visible, not to bring back every control.
+* *Consistency of structure.* Vercel's stated goal is consistent tabs across levels. Same structure in two scopes is fine *when the scope is visible where the user acts*; Raskin's definition turns on locus of attention.
+
+== Design guidance
+
+* Put the active scope in the slot itself (label, color, or breadcrumb inside the item), not only in a distant switcher.
+* Give each scope its own stable location rather than one location with a filter.
+* Make scope changes user-initiated and reversible; avoid automatic reflow.
+* Related: xref:context-bound-settings.adoc[Context-bound settings], xref:scoped-ux-architecture.adoc[Scoped UX architecture].
+
+Essay: link:https://hci-nerdz.github.io/blog/when-the-same-menu-means-two-things/[When the same menu means two things].
+
+== References
+
+Every entry below was checked against the publisher or DOI record on 2026-10-23.
+
+[bibliography]
+* Cockburn, A., Gutwin, C., & Greenberg, S. (2007). A predictive model of menu performance. _CHI '07_, 627–636. https://doi.org/10.1145/1240624.1240723
+* Findlater, L., & McGrenere, J. (2004). A comparison of static, adaptive, and adaptable menus. _CHI '04_, 89–96. https://doi.org/10.1145/985692.985704
+* Fitts, P. M. (1954). The information capacity of the human motor system in controlling the amplitude of movement. _Journal of Experimental Psychology_, 47(6), 381–391. https://doi.org/10.1037/h0055392
+* Gajos, K. Z., Czerwinski, M., Tan, D. S., & Weld, D. S. (2006). Exploring the design space for adaptive graphical user interfaces. _AVI '06_, 201–208. https://doi.org/10.1145/1133265.1133306
+* Maguire, E. A., Valentine, E. R., Wilding, J. M., & Kapur, N. (2003). Routes to remembering: the brains behind superior memory. _Nature Neuroscience_, 6(1), 90–95. https://doi.org/10.1038/nn988
+* Nielsen, J. (1994; reviewed 2024). 10 usability heuristics for user interface design. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
+* Nielsen, J. (2006). Progressive disclosure. Nielsen Norman Group. https://www.nngroup.com/articles/progressive-disclosure/
+* Norman, D. A. (1981). Categorization of action slips. _Psychological Review_, 88(1), 1–15. https://doi.org/10.1037/0033-295X.88.1.1
+* Norman, D. A. (2013). _The design of everyday things_ (revised and expanded ed.). Basic Books. ISBN 978-0-465-05065-9. https://jnd.org/books/the-design-of-everyday-things-revised-and-expanded-edition/
+* O'Keefe, J., & Dostrovsky, J. (1971). The hippocampus as a spatial map: Preliminary evidence from unit activity in the freely-moving rat. _Brain Research_, 34(1), 171–175. https://doi.org/10.1016/0006-8993(71)90358-1
+* Raskin, J. (2000). _The humane interface: New directions for designing interactive systems_. Addison-Wesley. ISBN 978-0-201-37937-2. https://search.worldcat.org/title/43286483
+* Robertson, G., Czerwinski, M., Larson, K., Robbins, D. C., Thiel, D., & van Dantzich, M. (1998). Data Mountain: Using spatial memory for document management. _UIST '98_, 153–162. https://doi.org/10.1145/288392.288596
+* Scarr, J., Cockburn, A., Gutwin, C., & Bunt, A. (2012). Improving command selection with CommandMaps. _CHI '12_, 257–266. https://doi.org/10.1145/2207676.2207713
+* Scarr, J., Cockburn, A., Gutwin, C., & Malacria, S. (2013). Testing the robustness and performance of spatially consistent interfaces. _CHI '13_, 3139–3148. https://doi.org/10.1145/2470654.2466430
+* Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. _Cognitive Science_, 12(2), 257–285. https://doi.org/10.1207/s15516709cog1202_4
+* Tesler, L. (2012). A personal history of modeless text editing and cut/copy-paste. _Interactions_, 19(4), 70–75. https://doi.org/10.1145/2212877.2212896
+* Vercel (2026, February 26). New dashboard redesign is now the default. https://vercel.com/changelog/dashboard-navigation-redesign-rollout

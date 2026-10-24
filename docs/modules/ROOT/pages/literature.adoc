@@ -97,6 +97,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:open-with-interrupt.adoc[Open-with interrupt]
 * xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 * xref:context-bound-settings.adoc[Context-bound settings]
+* xref:location-overloading.adoc[Location overloading] (published reference list)
 * xref:context-edge.adoc[Context Edge]
 * xref:instruction-flows.adoc[Instruction flows]
 * xref:an-alternative-to-urls.adoc[An alternative to URLs]

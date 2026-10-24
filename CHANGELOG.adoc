@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-10-23 -- Location overloading
+
+* xref:docs/modules/ROOT/pages/location-overloading.adoc[Location overloading]: one screen location doing different jobs by hidden context, with verified references on modes, spatial memory, and adaptive menus.
+* link:changelog-details/2026-10-23%20-%20location-overloading.adoc[Details]
+
 == 2026-10-22 -- facto-stack rolling minor pin
 
 * Float `@antora-supplemental/facto-stack` on **`#v0.2`** (resolves **v0.2.64** today).
