@@ -1,5 +1,9 @@
 = Changelog
 
+== 2026-10-23 -- Black-box service map: tree trace is a proposal
+
+* xref:docs/modules/ROOT/pages/black-box-service-map.adoc[Black-box service map]: the tree-trace nav map is now described as a new proposed map modeled on Map Edge, not as existing work.
+
 == 2026-10-23 -- Black-box service map: summonable nav map
 
 * xref:docs/modules/ROOT/pages/black-box-service-map.adoc[Black-box service map]: adds a summonable tree-trace nav map. A fixed minimize button shrinks the page into its node and clicking the node restores it, animated both ways. The breadcrumb stays always visible. Adds a matching demo direction.

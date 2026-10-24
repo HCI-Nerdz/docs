@@ -4,5 +4,5 @@
 == What changed
 
 * New subsection "Summonable nav map (tree trace)" under the preferred design. The map is off screen by default. A simple minimize button in a fixed spot shrinks the current page into its node in the tree-trace map, and clicking the node restores the page. Both transitions are animated, so the map is not a hidden mode. The breadcrumb remains the always-visible navigation.
-* Links to the existing Context Edge Map Edge and Path Edge demos. No HCI-Nerdz artifact is literally named "tree-trace"; these are the closest existing maps.
+* The tree trace is a new proposed map, modeled on the Context Edge Map Edge demo. Path Edge is linked as a related reference only.
 * New demo direction: the summonable nav map on the preferred-design demo.
