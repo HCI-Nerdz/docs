@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-10-23 -- Black-box service map: summonable nav map
+
+* xref:docs/modules/ROOT/pages/black-box-service-map.adoc[Black-box service map]: adds a summonable tree-trace nav map. A fixed minimize button shrinks the page into its node and clicking the node restores it, animated both ways. The breadcrumb stays always visible. Adds a matching demo direction.
+* link:changelog-details/2026-10-23%20-%20black-box-nav-map.adoc[Details]
+
 == 2026-10-23 -- Black-box service map: preferred overlay design
 
 * xref:docs/modules/ROOT/pages/black-box-service-map.adoc[Black-box service map]: the preferred design is now box-anchored overlays (Input/Output settings, black-box sub-item picker that loads the next level) and a simple breadcrumb. The pseudo-3D footprint stays as an alternative, and the demo directions are revised to match.

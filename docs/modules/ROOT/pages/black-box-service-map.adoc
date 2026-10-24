@@ -53,6 +53,18 @@ Ryan's refined design keeps the function-model page as the stable base and opens
 * *Black box:* clicking it opens an overlay for picking a sub-item (a workspace, project, or child service). Picking one clears the view and loads a new page with the same input/box/output model at that level.
 * *Navigation:* a simple breadcrumb at the top, possibly centered (for example, Org › Workspace › Project › Service). Each crumb loads that level's function-model page. With levels this uniform, the pseudo-3D footprint may not be needed. It is kept below as an alternative.
 
+=== Summonable nav map (tree trace)
+
+The breadcrumb stays the always-visible navigation. For the whole hierarchy at once, the user can summon a *nav map*: a tree trace of the levels, with one node per page.
+
+* *Trigger:* a simple minimize button in a fixed spot on the page. It never moves and never changes meaning.
+* *Off screen by default:* the map takes no space until it is summoned.
+* *Minimize:* clicking the button shrinks the current page into its own node in the tree-trace map, which then fills the view.
+* *Restore:* clicking that node (or any other node) grows the page back out of it. Clicking another node loads that level's function-model page.
+* *Animated both ways:* the shrink and the grow are animated, so the user sees exactly where the page went and where it comes back from. Because the transition shows the state change, the map is not a hidden mode, which keeps it consistent with xref:location-overloading.adoc[Location overloading].
+
+This builds on existing HCI-Nerdz navigation maps. Context Edge's Map Edge variant summons a wireframe ecosystem map from the edge ("summon a street map"), and its Path Edge variant draws the edge as a trace of the hops you took. See xref:context-edge.adoc[Context Edge], the link:https://hci-nerdz.github.io/context-edge/demos/vanilla-mature/[Map Edge demo], and the link:https://hci-nerdz.github.io/context-edge/demos/path-edge/[Path Edge demo].
+
 === Why this avoids location overloading
 
 xref:location-overloading.adoc[Location overloading] happens when one screen location does different jobs depending on hidden context.
@@ -135,6 +147,7 @@ The black-box model borrows that picture for *configuration* rather than computa
 . *Overlay variants.* Anchored popover, larger anchored sheet, and centered modal, all at the same transparency. Measure whether the anchor keeps the "which box am I editing" link and whether the dimmed diagram distracts during long edits.
 . *Breadcrumb vs footprint.* The preferred breadcrumb (centered and left-aligned) against the alternative footprint with lines or translucent trapezoids. Build the footprint once in DOM/SVG and once in canvas to compare inspection, accessibility, and animation.
 . *Windowed regions (alternative).* Inputs, box, and outputs as tear-off windows on a desk, reusing the Spatial web windows desk, with a prototype "window tree" exposed to the accessibility tree.
+. *Summonable nav map.* Add the fixed minimize button to the preferred-design demo. The page animates down into its node in a tree-trace map, and clicking a node restores it or loads another level. Reuse the Context Edge Map Edge tree (`src/lib/org-tree.ts`). Test whether users can say where the page went and get back without help, and compare against the breadcrumb alone.
 . *White-label skin.* The same frame filled with two different vendors' service catalogs, to test whether the spatial habit transfers.
 
 == References
