@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-10-23 -- Black-box service map: preferred overlay design
+
+* xref:docs/modules/ROOT/pages/black-box-service-map.adoc[Black-box service map]: the preferred design is now box-anchored overlays (Input/Output settings, black-box sub-item picker that loads the next level) and a simple breadcrumb. The pseudo-3D footprint stays as an alternative, and the demo directions are revised to match.
+* link:changelog-details/2026-10-23%20-%20black-box-overlay-design.adoc[Details]
+
 == 2026-10-23 -- Black-box service map
 
 * xref:docs/modules/ROOT/pages/black-box-service-map.adoc[Black-box service map]: concept note on input/box/output service dashboards, recursive service directories, a stacked navigation footprint, and windowing, with verified references and demo directions.

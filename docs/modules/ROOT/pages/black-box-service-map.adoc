@@ -24,7 +24,7 @@ The black-box model swaps the tab strip for a single spatial frame that matches 
 |Destinations, logs, metrics, alerts, webhooks out, exports
 |===
 
-Entering any of the three regions opens it in place, with an animated transition that keeps the diagram visible as context.
+Clicking a region opens it with an animated transition that keeps the diagram visible as context. The xref:#preferred-design[preferred design] below says what each click opens.
 
 === Directories of services, nested recursively
 
@@ -44,9 +44,24 @@ That is the direct fix for xref:location-overloading.adoc[location overloading],
 Taken all the way, the model is a *uniform management dashboard*: one frame that any platform could fill with its own services and white-label.
 Companies would stop rebuilding the same dashboard chrome, and users would carry one spatial habit from vendor to vendor.
 
-== Navigation footprint
+[#preferred-design]
+== Preferred design: box-anchored overlays and a breadcrumb
 
-Along the top runs a *navigation footprint*: a pseudo-3D stack drawn as a 2D projection.
+Ryan's refined design keeps the function-model page as the stable base and opens everything from it:
+
+* *Input or Output box:* clicking it opens that box's settings as a semi-transparent overlay on top of the function-model page, anchored to the box. The diagram stays visible underneath, and closing the overlay returns you to the same page.
+* *Black box:* clicking it opens an overlay for picking a sub-item (a workspace, project, or child service). Picking one clears the view and loads a new page with the same input/box/output model at that level.
+* *Navigation:* a simple breadcrumb at the top, possibly centered (for example, Org › Workspace › Project › Service). Each crumb loads that level's function-model page. With levels this uniform, the pseudo-3D footprint may not be needed. It is kept below as an alternative.
+
+=== Why this avoids location overloading
+
+xref:location-overloading.adoc[Location overloading] happens when one screen location does different jobs depending on hidden context.
+Here each overlay comes from its own box: the input overlay only ever holds input settings, the output overlay only output settings, and the black-box overlay only ever picks the next level down.
+A location's meaning stays fixed. Scope changes only by loading a new page, and the breadcrumb names that page, so scope is never a hidden filter on the same slot.
+
+== Alternative: navigation footprint
+
+Instead of the breadcrumb, the top of the page could carry a *navigation footprint*: a pseudo-3D stack drawn as a 2D projection.
 The base level (the directory) is the widest layer at the bottom. Each deeper level is a smaller layer above it.
 Each child connects to its parent with lines, or with a translucent trapezoid that reads as a projection from the parent's slot, the way a zoomed region links to its source in an overview+detail view.
 
@@ -57,6 +72,8 @@ Open questions:
 * *Overflow:* wide directories could scroll horizontally inside their layer, but horizontal scroll is easy to miss. It needs a visible affordance.
 
 == Is separating navigation from content the problem?
+
+The preferred design gives one answer: the breadcrumb is the only separate navigation, and the diagram itself is the way in, with overlays keeping content on the same surface. The question stays open for the alternatives below.
 
 Most dashboards put navigation (sidebar, tabs, breadcrumbs) in one place and content in another.
 The black-box model hints that they could be one surface: the diagram is both the map and the page.
@@ -113,11 +130,11 @@ The black-box model borrows that picture for *configuration* rather than computa
 
 == Possible demo directions
 
-. *Single-service black box.* One fake service (for example, a hosting deployment) as an input/box/output page. Every existing setting is placed in one of the three regions, with animated enter and exit. Test: can a user predict where a named setting lives before searching?
-. *Recursive directory.* Org → workspace → project → service, each the same frame, with only global settings at the top. Compare it against a Vercel-style unified sidebar on the same task set, measuring wrong-scope edits.
-. *Navigation footprint variants.* The same hierarchy shown three ways: lines, translucent trapezoids, and a flat breadcrumb. Build one in DOM/SVG and one in canvas to compare inspection, accessibility, and animation smoothness.
-. *Merged nav and content.* A version where the diagram is the page, with a shrink-to-strip and a fisheye neighbourhood while a region is open. Test whether the page stays readable during long editing.
-. *Windowed regions.* Inputs, box, and outputs as tear-off windows on a desk, reusing the Spatial web windows desk. Prototype a "window tree" exposed to the accessibility tree.
+. *Preferred design, single service.* One fake service (for example, a hosting deployment) as an input/box/output page. Input and Output open box-anchored, semi-transparent settings overlays. Test: can a user predict where a named setting lives before opening anything?
+. *Preferred design, recursive levels.* The black-box overlay picks a sub-item and loads the next level's page, with a centered breadcrumb. Org → workspace → project → service, global settings only at the top. Compare against a Vercel-style unified sidebar on the same task set, measuring wrong-scope edits.
+. *Overlay variants.* Anchored popover, larger anchored sheet, and centered modal, all at the same transparency. Measure whether the anchor keeps the "which box am I editing" link and whether the dimmed diagram distracts during long edits.
+. *Breadcrumb vs footprint.* The preferred breadcrumb (centered and left-aligned) against the alternative footprint with lines or translucent trapezoids. Build the footprint once in DOM/SVG and once in canvas to compare inspection, accessibility, and animation.
+. *Windowed regions (alternative).* Inputs, box, and outputs as tear-off windows on a desk, reusing the Spatial web windows desk, with a prototype "window tree" exposed to the accessibility tree.
 . *White-label skin.* The same frame filled with two different vendors' service catalogs, to test whether the spatial habit transfers.
 
 == References

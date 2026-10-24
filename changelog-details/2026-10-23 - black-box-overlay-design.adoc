@@ -1,0 +1,9 @@
+= 2026-10-23 — Black-box service map: preferred overlay design
+:date: 2026-10-23
+
+== What changed
+
+* New section "Preferred design: box-anchored overlays and a breadcrumb". Input and Output open semi-transparent settings overlays anchored to their box. The black box opens a sub-item picker, and picking one loads a new page with the same model at that level. Navigation is a simple breadcrumb at the top, possibly centered.
+* New subsection explaining why the design avoids location overloading: each overlay comes from its own box, so a location's meaning stays fixed. It links to Location overloading.
+* "Navigation footprint" is renamed "Alternative: navigation footprint".
+* Possible demo directions are revised around the preferred design, with overlay variants and a breadcrumb-vs-footprint comparison.
