@@ -1,0 +1,9 @@
+= 2026-10-23 — Black-box service map
+:date: 2026-10-23
+
+== What changed
+
+* New page `black-box-service-map.adoc`, a research and concept note on Ryan Johnson's black-box function model for service dashboards: an input/box/output master page per service, recursive directories (global settings at the top, workspaces and projects deeper), a uniform white-label dashboard, animated transitions, a pseudo-3D navigation footprint, merging navigation with content, and windowing inside web apps (egui).
+* References verified through Crossref or publisher and library catalogs: Pad, Pad++, ZoomWorld (Raskin), generalized fisheye views, _Readings in Information Visualization_, the Cockburn et al. overview+detail review, a dataflow languages survey, and spatial-memory work.
+* Linked from the nav (Interaction patterns), from Location overloading, and from Literature.
+* Lists possible demo directions and how they relate to Context Edge, Context rails, Context-bound settings, Scoped UX, Spatial web windows, Contained tiling, Agent Canvas, and Pipeline composer.

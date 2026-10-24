@@ -67,6 +67,7 @@ This is background, not proof about UIs: it explains why people lean on place, a
 * Put the active scope in the slot itself (label, color, or breadcrumb inside the item), not only in a distant switcher.
 * Give each scope its own stable location rather than one location with a filter.
 * Make scope changes user-initiated and reversible; avoid automatic reflow.
+* Concept note on a layout that avoids it: xref:black-box-service-map.adoc[Black-box service map].
 * Related: xref:context-bound-settings.adoc[Context-bound settings], xref:scoped-ux-architecture.adoc[Scoped UX architecture].
 
 Essay: link:https://hci-nerdz.github.io/blog/when-the-same-menu-means-two-things/[When the same menu means two things].

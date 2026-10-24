@@ -14,6 +14,7 @@
 ** xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 ** xref:context-bound-settings.adoc[Context-bound settings]
 ** xref:location-overloading.adoc[Location overloading]
+** xref:black-box-service-map.adoc[Black-box service map]
 ** xref:shell-context-chrome.adoc[Shell context chrome]
 ** xref:shell-layer-chrome.adoc[Shell layer chrome]
 ** xref:programmer-pov-diagnostics.adoc[Programmer-POV diagnostics]

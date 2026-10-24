@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-10-23 -- Black-box service map
+
+* xref:docs/modules/ROOT/pages/black-box-service-map.adoc[Black-box service map]: concept note on input/box/output service dashboards, recursive service directories, a stacked navigation footprint, and windowing, with verified references and demo directions.
+* link:changelog-details/2026-10-23%20-%20black-box-service-map.adoc[Details]
+
 == 2026-10-23 -- Location overloading
 
 * xref:docs/modules/ROOT/pages/location-overloading.adoc[Location overloading]: one screen location doing different jobs by hidden context, with verified references on modes, spatial memory, and adaptive menus.

@@ -1,0 +1,138 @@
+= Black-box service map
+:description: A research and concept note on laying out every service dashboard as a function diagram (input, black box, output), nested recursively, with a stacked navigation footprint, plus verified references on spatial memory, zooming, focus+context, and dataflow UIs.
+
+A *black-box service map* is a dashboard layout model in which each service's master page is drawn as a function diagram: an *input* box on the left, a large *black box* named for the service in the middle, and an *output* box on the right.
+Every setting sits where it belongs in that picture. Things that shape what goes in sit on the input. Things that change how the service behaves sit on the box. Things that shape what comes out (delivery, retention, alerts, exports) sit on the output.
+
+In plain language: the page looks like what the service does, so you know where a setting lives before you look for it.
+
+This is a concept note, not a finished pattern. It records Ryan Johnson's proposal, the open questions, the research it draws on, and some possible demos.
+
+== The model
+
+=== One service, one diagram
+
+Most service dashboards are a tab strip of nouns: Overview, Deployments, Logs, Settings, Integrations.
+The black-box model swaps the tab strip for a single spatial frame that matches how an engineer already thinks about the service: something goes in, something happens, something comes out.
+
+[cols="1,2,1"]
+|===
+|Input |Black box (service name) |Output
+
+|Sources, triggers, credentials, ingress rules, webhooks in
+|Runtime, scaling, region, version, behaviour flags
+|Destinations, logs, metrics, alerts, webhooks out, exports
+|===
+
+Entering any of the three regions opens it in place, with an animated transition that keeps the diagram visible as context.
+
+=== Directories of services, nested recursively
+
+A multi-service platform starts at a *directory* of its services and products.
+Each entry opens into its own input/box/output view, and the nesting continues:
+
+* *Top level:* the directory, plus global settings only (billing, identity, org-wide policy).
+* *Workspace or team level:* the services in that workspace, each as a black box, with workspace-scoped settings on the workspace's own frame.
+* *Project level:* the project's services and their wiring, then the single service view.
+
+Each level is the same shape, so a user who has learned one level has learned them all.
+Settings never float across levels: a project setting cannot appear on the team page.
+That is the direct fix for xref:location-overloading.adoc[location overloading], where one sidebar slot means a team page or a project page depending on hidden filter state.
+
+=== A uniform, white-label dashboard
+
+Taken all the way, the model is a *uniform management dashboard*: one frame that any platform could fill with its own services and white-label.
+Companies would stop rebuilding the same dashboard chrome, and users would carry one spatial habit from vendor to vendor.
+
+== Navigation footprint
+
+Along the top runs a *navigation footprint*: a pseudo-3D stack drawn as a 2D projection.
+The base level (the directory) is the widest layer at the bottom. Each deeper level is a smaller layer above it.
+Each child connects to its parent with lines, or with a translucent trapezoid that reads as a projection from the parent's slot, the way a zoomed region links to its source in an overview+detail view.
+
+Open questions:
+
+* *Canvas or DOM?* Canvas or WebGL gives smooth projection and animation. DOM keeps links, find-in-page, text selection, and the accessibility tree.
+* *Zoom and pan?* Should the footprint itself zoom and pan (a small ZUI), or stay a fixed breadcrumb picture?
+* *Overflow:* wide directories could scroll horizontally inside their layer, but horizontal scroll is easy to miss. It needs a visible affordance.
+
+== Is separating navigation from content the problem?
+
+Most dashboards put navigation (sidebar, tabs, breadcrumbs) in one place and content in another.
+The black-box model hints that they could be one surface: the diagram is both the map and the page.
+
+If they merge, the page has to stay clean while you work in it. Some options:
+
+* The diagram shrinks to a thin strip (or into the footprint) while a region is open, and expands again on exit.
+* Focus+context: the open region gets most of the space, and its neighbours stay visible but compressed, like a fisheye view.
+* Explicit modes ("map" and "work") are tempting, but a mode is exactly what the location-overloading research warns about. Any mode must be visible at the point of action.
+
+== Toward windowing inside web apps
+
+A further direction is real windowing inside a web app: inputs, the box, and outputs as movable, dockable windows, as in the egui web demo (link:https://www.egui.rs/#demo[egui.rs]), where many floating windows share one browser canvas.
+egui is an immediate-mode Rust GUI that renders through WebGL, so its web build gives up the inspectable DOM. Its README notes that web accessibility relies on an experimental built-in screen reader rather than the browser's own (link:https://github.com/emilk/egui[egui README]).
+That trade suggests a research question: what would a *DOM model for windowed apps* look like? It would need a semantic tree that knows about windows, z-order, docking, and focus, so that windowed web apps keep inspection, links, and assistive technology.
+See xref:spatial-web-windows.adoc[Spatial web windows] and xref:contained-tiling.adoc[Contained tiling] for the org's existing work on windows in the browser.
+
+== Research background
+
+=== Spatial memory and the method of loci
+
+People remember where things are, and stable locations become fast to reach.
+The method of loci, which places items along an imagined route, was the strategy most used by the world-class memorisers that Maguire et al. (2003) scanned. They showed no structural brain difference from controls but did show heavier use of spatial-memory regions, including the hippocampus.
+The hippocampus's role in place goes back to O'Keefe and Dostrovsky's (1971) place-cell recordings.
+In interfaces, Robertson et al. (1998) found that people could retrieve web pages by their spatial position on Data Mountain, and Scarr et al. (2012, 2013) showed gains from spatially stable command layouts.
+A black-box map gives every setting a fixed place in a picture that is the same at every level, which is the condition these studies reward.
+
+=== Zoomable user interfaces
+
+Pad (Perlin & Fox, 1993) and Pad++ (Bederson & Hollan, 1994) put information on an infinite plane you move through by zooming, rather than through windows and pages.
+Raskin's _The Humane Interface_ (2000) proposes ZoomWorld (chapter 6, "Better Navigation: ZoomWorld"), where navigation is zooming into a single space instead of opening applications and files.
+The recursive service directory is a ZUI with fixed levels: zooming into a box reveals its own input/box/output.
+
+=== Focus+context and overview+detail
+
+Furnas (1986) proposed generalized fisheye views, which show the local focus in detail and distant items according to a degree-of-interest function.
+Card, Mackinlay, and Shneiderman's _Readings in Information Visualization_ (1999) collects the classic focus+context and overview papers.
+Cockburn, Karlson, and Bederson (2009) review overview+detail, zooming, and focus+context designs and the evidence for each. Their review is the closest guide to choosing between a footprint (overview+detail), a zoom transition, or a compressed fisheye neighbourhood.
+
+=== Dataflow and node UIs
+
+Diagrams of boxes with inputs and outputs are the native picture of dataflow programming.
+Johnston, Hanna, and Millar (2004) survey dataflow languages, including visual dataflow environments where programs are drawn as nodes and wires.
+The black-box model borrows that picture for *configuration* rather than computation. A service is a node, its settings are its ports, and a project view is a small dataflow graph of the services in it.
+
+== Relation to existing HCI-Nerdz work
+
+* xref:context-edge.adoc[Context Edge] and xref:context-rails.adoc[Context rails] move ecosystem travel to thin edge rails. The navigation footprint is a vertical, stacked cousin of the same idea: show where you are in the hierarchy without spending the content area.
+* xref:context-bound-settings.adoc[Context-bound settings] argues that a setting belongs next to the thing it affects. The input/box/output layout gives that rule a fixed geometry.
+* xref:scoped-ux-architecture.adoc[Scoped UX architecture] separates global, workspace, and project scopes. Here each scope becomes one nesting level.
+* xref:spatial-web-windows.adoc[Spatial web windows], xref:contained-tiling.adoc[Contained tiling], and xref:agent-canvas.adoc[Agent Canvas] explore windows and desks in the browser, the starting point for the windowing direction.
+* The Pipeline composer demo (link:https://hci-nerdz.github.io/pipeline-composer/[hci-nerdz.github.io/pipeline-composer]) already draws a typed processing map with insert-between sockets and nested composites. It is the closest existing piece to a service drawn as a box with ports.
+* xref:location-overloading.adoc[Location overloading] names the problem this model is meant to remove.
+
+== Possible demo directions
+
+. *Single-service black box.* One fake service (for example, a hosting deployment) as an input/box/output page. Every existing setting is placed in one of the three regions, with animated enter and exit. Test: can a user predict where a named setting lives before searching?
+. *Recursive directory.* Org → workspace → project → service, each the same frame, with only global settings at the top. Compare it against a Vercel-style unified sidebar on the same task set, measuring wrong-scope edits.
+. *Navigation footprint variants.* The same hierarchy shown three ways: lines, translucent trapezoids, and a flat breadcrumb. Build one in DOM/SVG and one in canvas to compare inspection, accessibility, and animation smoothness.
+. *Merged nav and content.* A version where the diagram is the page, with a shrink-to-strip and a fisheye neighbourhood while a region is open. Test whether the page stays readable during long editing.
+. *Windowed regions.* Inputs, box, and outputs as tear-off windows on a desk, reusing the Spatial web windows desk. Prototype a "window tree" exposed to the accessibility tree.
+. *White-label skin.* The same frame filled with two different vendors' service catalogs, to test whether the spatial habit transfers.
+
+== References
+
+[bibliography]
+* Bederson, B. B., & Hollan, J. D. (1994). Pad++: A zooming graphical interface for exploring alternate interface physics. _UIST '94_, 17–26. https://doi.org/10.1145/192426.192435
+* Card, S. K., Mackinlay, J. D., & Shneiderman, B. (Eds.). (1999). _Readings in information visualization: Using vision to think_. Morgan Kaufmann. ISBN 1-55860-533-9. http://www.cs.umd.edu/hcil/pubs/books/readings-info-vis.shtml
+* Cockburn, A., Karlson, A., & Bederson, B. B. (2009). A review of overview+detail, zooming, and focus+context interfaces. _ACM Computing Surveys_, 41(1), 1–31. https://doi.org/10.1145/1456650.1456652
+* egui contributors. egui: an easy-to-use immediate mode GUI in Rust (README and web demo). https://github.com/emilk/egui, https://www.egui.rs/#demo
+* Furnas, G. W. (1986). Generalized fisheye views. _CHI '86_, 16–23. https://doi.org/10.1145/22627.22342
+* Johnston, W. M., Hanna, J. R. P., & Millar, R. J. (2004). Advances in dataflow programming languages. _ACM Computing Surveys_, 36(1), 1–34. https://doi.org/10.1145/1013208.1013209
+* Maguire, E. A., Valentine, E. R., Wilding, J. M., & Kapur, N. (2003). Routes to remembering: The brains behind superior memory. _Nature Neuroscience_, 6(1), 90–95. https://doi.org/10.1038/nn988
+* O'Keefe, J., & Dostrovsky, J. (1971). The hippocampus as a spatial map: Preliminary evidence from unit activity in the freely-moving rat. _Brain Research_, 34(1), 171–175. https://doi.org/10.1016/0006-8993(71)90358-1
+* Perlin, K., & Fox, D. (1993). Pad: An alternative approach to the computer interface. _SIGGRAPH '93_, 57–64. https://doi.org/10.1145/166117.166125
+* Raskin, J. (2000). _The humane interface: New directions for designing interactive systems_. Addison-Wesley. ISBN 978-0-201-37937-2. https://search.worldcat.org/title/43286483
+* Robertson, G., Czerwinski, M., Larson, K., Robbins, D. C., Thiel, D., & van Dantzich, M. (1998). Data Mountain: Using spatial memory for document management. _UIST '98_, 153–162. https://doi.org/10.1145/288392.288596
+* Scarr, J., Cockburn, A., Gutwin, C., & Bunt, A. (2012). Improving command selection with CommandMaps. _CHI '12_, 257–266. https://doi.org/10.1145/2207676.2207713
+* Scarr, J., Cockburn, A., Gutwin, C., & Malacria, S. (2013). Testing the robustness and performance of spatially consistent interfaces. _CHI '13_, 3139–3148. https://doi.org/10.1145/2470654.2466430

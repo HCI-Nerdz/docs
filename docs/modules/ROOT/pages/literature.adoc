@@ -98,6 +98,7 @@ Repo index: link:https://github.com/HCI-Nerdz/docs/blob/main/literature/README.a
 * xref:visitor-first-repo-homepage.adoc[Visitor-first repo homepage]
 * xref:context-bound-settings.adoc[Context-bound settings]
 * xref:location-overloading.adoc[Location overloading] (published reference list)
+* xref:black-box-service-map.adoc[Black-box service map] (concept note with verified references)
 * xref:context-edge.adoc[Context Edge]
 * xref:instruction-flows.adoc[Instruction flows]
 * xref:an-alternative-to-urls.adoc[An alternative to URLs]
