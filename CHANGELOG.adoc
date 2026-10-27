@@ -1,5 +1,12 @@
 = Changelog
 
+== 2026-10-23 -- Extension updates and default contrast check
+
+* Bumps facto-stack v0.2 (0.2.64) -> v0.4.0, Valentus UI bundle v2 -> v4.3.1, Antora 3.2.0 -> ^3.2.1 and mermaid-cli 11.12.0 -> 12.0.0.
+* The Facto chassis contrast check is now on by default (built into facto-stack v0.4.0), and the build passes it.
+* Hub brand CSS is mapped onto Valentus 4 `--valentus-*` variables, so the light theme now shows the HCI paper palette. Muted text, link and focus colors are adjusted to meet WCAG AA.
+* link:changelog-details/2026-10-23%20-%20extension-update.adoc[Details]
+
 == 2026-10-23 -- Black-box service map: tree trace is a proposal
 
 * xref:docs/modules/ROOT/pages/black-box-service-map.adoc[Black-box service map]: the tree-trace nav map is now described as a new proposed map modeled on Map Edge, not as existing work.

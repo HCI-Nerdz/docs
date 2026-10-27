@@ -1,0 +1,32 @@
+= 2026-10-23 — Extension updates and default contrast check
+:date: 2026-10-23
+
+== Version changes
+
+[cols="2,1,1"]
+|===
+|Dependency |Old |New
+
+|@antora-supplemental/facto-stack |#v0.2 (0.2.64) |#v0.4.0
+|Valentus UI bundle |v2 |v4.3.1
+|antora |^3.1.14 (3.2.0) |^3.2.1
+|@mermaid-js/mermaid-cli |11.12.0 |12.0.0
+|@dev-centr/mermaid-svg-css-vars |0.1.3 |0.1.3 (already latest)
+|@dev-centr/themed-svg |0.2.3 |0.2.3 (already latest)
+|@antora-supplemental/instruction-flow |github default branch (0.1.0) |unchanged: the upstream repo has no tags yet
+|===
+
+== Contrast check
+
+facto-stack v0.4.0 runs the chassis contrast check by default after each build. It fails on WCAG AA errors in dark mode and in dynamic states. The hub does not override or disable it.
+
+== Brand CSS fixes
+
+* Each hub `--adt-*` variable now has a `--valentus-*` alias, so Valentus 4 picks up the hub palette. Before this, Valentus 4 ignored most of the hub brand in light mode.
+* Light `--hci-ink-muted` is `#4b5563` and `--hci-honesty` is `#0b625c` (AA on the paper background).
+* Search results, highlight.js section titles and page-context panels get dark-mode colors. The search input gets a visible dark focus ring.
+
+== Follow-ups
+
+* Valentus/page-context dark defaults are below AA. The hub overrides them for now; they should be fixed upstream.
+* 112 light-mode static findings are still reported only. They are outside the default fail scope.

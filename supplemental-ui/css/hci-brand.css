@@ -6,37 +6,56 @@
 
 :root {
   --hci-ink: #0e1218;
-  --hci-ink-muted: #6b7280;
+  --hci-ink-muted: #4b5563;
   --hci-paper: #e8e4d9;
   --hci-paper-deep: #d9d4c6;
   --hci-elevated: #ffffff;
   --hci-focus: #e8a54b;
   --hci-focus-bright: #f0b85f;
-  --hci-honesty: #0f7a73;
+  --hci-honesty: #0b625c;
   --hci-border: #d0cbbd;
   --hci-accent-soft: rgba(15, 122, 115, 0.12);
 
   --adt-canvas: var(--hci-paper);
+  --valentus-canvas: var(--adt-canvas);
   --adt-elevated: var(--hci-elevated);
+  --valentus-elevated: var(--adt-elevated);
   --adt-ink: var(--hci-ink);
+  --valentus-ink: var(--adt-ink);
   --adt-ink-muted: var(--hci-ink-muted);
+  --valentus-ink-muted: var(--adt-ink-muted);
   --adt-accent: var(--hci-honesty);
+  --valentus-accent: var(--adt-accent);
   --adt-accent-hover: var(--hci-focus);
+  --valentus-accent-hover: var(--adt-accent-hover);
   --adt-accent-soft: var(--hci-accent-soft);
+  --valentus-accent-soft: var(--adt-accent-soft);
   --adt-border: var(--hci-border);
+  --valentus-border: var(--adt-border);
   --adt-chrome: var(--hci-paper-deep);
+  --valentus-chrome: var(--adt-chrome);
   --adt-chrome-border: var(--hci-border);
+  --valentus-chrome-border: var(--adt-chrome-border);
   --adt-nav-bg: transparent;
+  --valentus-nav-bg: var(--adt-nav-bg);
   --adt-shadow-float: 0 0.35rem 1rem rgba(14, 18, 24, 0.1);
   --adt-shadow-sticky: 0 4px 16px rgba(14, 18, 24, 0.07);
 
   --adt-bc-kicker-fg: var(--adt-accent);
+
+  --valentus-bc-kicker-fg: var(--adt-bc-kicker-fg);
   --adt-bc-kicker-bg: var(--adt-accent-soft);
+  --valentus-bc-kicker-bg: var(--adt-bc-kicker-bg);
   --adt-bc-kicker-border: color-mix(in srgb, var(--adt-accent) 28%, transparent);
+  --valentus-bc-kicker-border: var(--adt-bc-kicker-border);
   --adt-header-bar-bg: var(--adt-chrome);
+  --valentus-header-bar-bg: var(--adt-header-bar-bg);
   --adt-header-bar-fg: var(--adt-ink);
+  --valentus-header-bar-fg: var(--adt-header-bar-fg);
   --adt-header-bar-border: var(--adt-chrome-border);
+  --valentus-header-bar-border: var(--adt-header-bar-border);
   --adt-header-bar-hover: var(--adt-accent-soft);
+  --valentus-header-bar-hover: var(--adt-header-bar-hover);
 
   --body-font-family: "Literata", "Iowan Old Style", "Palatino Linotype", serif;
   --heading-font-family: "Syne", "Avenir Next", "Segoe UI", sans-serif;
@@ -55,27 +74,46 @@ html.dark-theme {
   --hci-accent-soft: rgba(232, 165, 75, 0.14);
 
   --adt-canvas: var(--hci-paper);
+  --valentus-canvas: var(--adt-canvas);
   --adt-elevated: var(--hci-elevated);
+  --valentus-elevated: var(--adt-elevated);
   --adt-ink: var(--hci-ink);
+  --valentus-ink: var(--adt-ink);
   --adt-ink-muted: var(--hci-ink-muted);
+  --valentus-ink-muted: var(--adt-ink-muted);
   --adt-accent: var(--hci-honesty);
+  --valentus-accent: var(--adt-accent);
   --adt-accent-hover: var(--hci-focus);
+  --valentus-accent-hover: var(--adt-accent-hover);
   --adt-accent-soft: var(--hci-accent-soft);
+  --valentus-accent-soft: var(--adt-accent-soft);
   --adt-border: var(--hci-border);
+  --valentus-border: var(--adt-border);
   --adt-chrome: var(--hci-paper-deep);
+  --valentus-chrome: var(--adt-chrome);
   --adt-chrome-border: var(--hci-border);
+  --valentus-chrome-border: var(--adt-chrome-border);
   --adt-nav-bg: transparent;
+  --valentus-nav-bg: var(--adt-nav-bg);
   --adt-shadow-float: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.45);
   --adt-shadow-sticky: 0 6px 18px rgba(0, 0, 0, 0.35);
   --adt-header-vcs-icon-filter: none;
 
   --adt-bc-kicker-fg: var(--adt-accent);
+
+  --valentus-bc-kicker-fg: var(--adt-bc-kicker-fg);
   --adt-bc-kicker-bg: var(--adt-accent-soft);
+  --valentus-bc-kicker-bg: var(--adt-bc-kicker-bg);
   --adt-bc-kicker-border: color-mix(in srgb, var(--adt-accent) 35%, transparent);
+  --valentus-bc-kicker-border: var(--adt-bc-kicker-border);
   --adt-header-bar-bg: var(--adt-chrome);
+  --valentus-header-bar-bg: var(--adt-header-bar-bg);
   --adt-header-bar-fg: var(--adt-ink);
+  --valentus-header-bar-fg: var(--adt-header-bar-fg);
   --adt-header-bar-border: var(--adt-chrome-border);
+  --valentus-header-bar-border: var(--adt-header-bar-border);
   --adt-header-bar-hover: var(--adt-accent-soft);
+  --valentus-header-bar-hover: var(--adt-header-bar-hover);
 }
 
 html:not(.dark-theme) .doc h1,
@@ -185,4 +223,71 @@ html.dark-theme .navbar .button.is-primary:hover {
   color: var(--hci-ink-muted);
   font-size: 0.92rem;
   font-weight: 400;
+}
+
+/* Dark-mode fixes found by the Facto v0.4 contrast check (Valentus 4.3.1). */
+html.dark-theme .search-result-dataset {
+  background: var(--hci-elevated);
+  border-color: var(--hci-border);
+  color: var(--hci-ink);
+}
+
+html.dark-theme .search-result-component-header,
+html.dark-theme .search-result-document-title,
+html.dark-theme .search-result-document-hit,
+html.dark-theme .search-result-document-hit > a {
+  color: var(--hci-ink);
+}
+
+html.dark-theme .search-result-document-hit > a:hover {
+  color: var(--hci-focus-bright);
+}
+
+html.dark-theme .search-result-document-hit .search-result-section-title,
+html.dark-theme .search-result-document-hit .search-result-keywords {
+  color: var(--hci-ink-muted);
+}
+
+html.dark-theme .search-result-document-hit .search-result-highlight {
+  color: var(--hci-focus-bright);
+}
+
+html.dark-theme .hljs-section,
+html.dark-theme .hljs-selector-id,
+html.dark-theme .hljs-title {
+  color: #f28b82;
+}
+
+/* page-context footer and panel labels in dark mode (follow-up: fix the dark defaults in page-context). */
+html.dark-theme .page-context,
+html.dark-theme .doc .page-context,
+html.dark-theme .page-context-lead,
+html.dark-theme .page-context-footer,
+html.dark-theme .page-context-panel {
+  --page-context-fg: var(--hci-ink-muted);
+  --page-context-label: var(--hci-ink-muted);
+  color: var(--hci-ink-muted);
+}
+
+html.dark-theme .page-context-table th,
+html.dark-theme .doc table.page-context-table > tbody > tr > th,
+html.dark-theme .page-context-author-name,
+html.dark-theme .page-context-via {
+  color: var(--hci-ink-muted);
+}
+
+html.dark-theme .page-context-source-label {
+  color: var(--hci-ink-muted);
+}
+
+/* Facto contrast check: visible search focus ring in dark mode; muted page-context labels in light mode. */
+html.dark-theme #search-input:focus,
+html.dark-theme #search-input:focus-visible {
+  outline: 2px solid var(--hci-focus-bright);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 2px var(--hci-focus-bright);
+}
+.doc table.page-context-table > tbody > tr > th,
+.page-context-table th {
+  color: var(--hci-ink-muted);
 }
