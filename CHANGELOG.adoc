@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-11-10 -- Valentus names in the brand layer
+
+* The paint-hold, read width, font size, and math tags use the `valentus` names the v4 bundle reads. A saved `adt` width or size still applies.
+* `--valentus-chrome` stays. `--soft-nav-context` uses the same paper-deep color. The contrast overrides from the Valentus 4 palette stay.
+
 == 2026-11-10 -- View conformance
 
 * xref:docs/modules/ROOT/pages/view-conformance.adoc[View conformance]: the human rules for edge inset, target size, and sideways overflow, and where an exception differs from a rule that does not apply.

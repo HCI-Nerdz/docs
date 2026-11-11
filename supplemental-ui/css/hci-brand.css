@@ -1,5 +1,5 @@
 /*
- * HCI Nerdz brand layer on Valentus 2.x chrome.
+ * HCI Nerdz brand layer on Valentus 4 chrome.
  * Amber focus + teal honesty on ink/paper.
  * Light honesty matches hci-nerdz.github.io (darker teal on tan); dark uses brighter teal.
  */
@@ -34,6 +34,7 @@
   --valentus-border: var(--adt-border);
   --adt-chrome: var(--hci-paper-deep);
   --valentus-chrome: var(--adt-chrome);
+  --soft-nav-context: var(--hci-paper-deep);
   --adt-chrome-border: var(--hci-border);
   --valentus-chrome-border: var(--adt-chrome-border);
   --adt-nav-bg: transparent;
@@ -91,6 +92,7 @@ html.dark-theme {
   --valentus-border: var(--adt-border);
   --adt-chrome: var(--hci-paper-deep);
   --valentus-chrome: var(--adt-chrome);
+  --soft-nav-context: var(--hci-paper-deep);
   --adt-chrome-border: var(--hci-border);
   --valentus-chrome-border: var(--adt-chrome-border);
   --adt-nav-bg: transparent;
@@ -119,6 +121,7 @@ html.dark-theme {
 html:not(.dark-theme) .doc h1,
 html:not(.dark-theme) .doc h1.page,
 html:not(.dark-theme) .doc .adt-page-title,
+html:not(.dark-theme) .doc .valentus-page-title,
 html:not(.dark-theme) .doc h2 {
   color: var(--hci-ink) !important;
   font-family: var(--heading-font-family);
