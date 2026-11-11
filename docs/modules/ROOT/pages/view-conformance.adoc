@@ -1,0 +1,57 @@
+= View conformance
+:description: The human rules a view meets for its product context, and where the checker lives.
+:page-audience: People designing views
+:page-usage-context: Reference page on the HCI Nerdz docs hub
+:page-orig-author: Grok 4.7 on behalf of Ryan Johnson
+:page-last-author: Grok 4.7 on behalf of Ryan Johnson
+:page-last-edited: 2026-11-10
+
+A view is checked in a product context chosen when the product is built.
+The contexts are desktop, web, mobile web, phone, iPad web, and iPad app.
+iPad web is a web page on a larger touch surface.
+An iPad app is a separate context from a web page.
+
+The checker is link:https://github.com/dev-centr/view-check[dev-centr/view-check].
+It reads a snapshot of the view and the context name.
+The contexts it selects today are web, mobile web, and iPad web.
+
+[source,shell]
+----
+view-check --profile mobile-web --snapshot layout.json
+----
+
+== Text stays off the edge
+
+On a phone web page, body text stays 16px from the edge.
+On iPad web the gap is 20px.
+A rendered view that breaks the gap fails.
+A source file that would break it, before the view is drawn, is a warning.
+
+Touching the edge is allowed when that choice is written down for the view.
+The record names the rule, the node, and the reason.
+A full-bleed title can say so.
+That record belongs to the view.
+
+A profile can also say the rule does not apply to a product context at all.
+That is a different fact.
+It is not a note on one view.
+
+== Controls are large enough to hit
+
+A control meets a minimum target size.
+The product context chooses the number.
+Phone web and iPad web in the library use 44px.
+The checker reads an existing axe `target-size` result.
+It does not measure the control a second time, and it does not write a second WCAG.
+
+== The view stays within its width
+
+A box wider than the view fails.
+The page should not grow a sideways scrollbar because a child is wider than the screen.
+Desktop web is checked for this.
+Phone web and iPad web are checked for it as well.
+
+== A canvas inside a page
+
+An embedded canvas is a second view.
+Check it on its own, then place it in the page.

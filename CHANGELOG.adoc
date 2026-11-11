@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-11-10 -- View conformance
+
+* xref:docs/modules/ROOT/pages/view-conformance.adoc[View conformance]: the human rules for edge inset, target size, and sideways overflow, and where an exception differs from a rule that does not apply.
+* link:changelog-details/2026-11-10%20-%20view-conformance.adoc[Details]
+
 == 2026-10-23 -- Extension updates and default contrast check
 
 * Bumps facto-stack v0.2 (0.2.64) -> v0.4.0, Valentus UI bundle v2 -> v4.3.1, Antora 3.2.0 -> ^3.2.1 and mermaid-cli 11.12.0 -> 12.0.0.

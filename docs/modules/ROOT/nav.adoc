@@ -26,6 +26,7 @@
 ** xref:on-disk-game-conversion.adoc[On-disk game conversion]
 ** xref:spatial-web-windows.adoc[Spatial web windows]
 ** xref:agent-canvas.adoc[Agent Canvas]
+** xref:view-conformance.adoc[View conformance]
 * AI & writing
 ** xref:grounded-tokens.adoc[Detecting AI lies]
 ** xref:writing-principles.adoc[Writing principles]

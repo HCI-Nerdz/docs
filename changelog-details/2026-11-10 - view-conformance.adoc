@@ -1,0 +1,4 @@
+= View conformance
+:date: 2026-11-10
+
+The human rules for a view: text stays off the edge, controls are large enough to hit, and the view stays within its width. The checker is dev-centr/view-check.
