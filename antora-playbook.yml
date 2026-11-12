@@ -10,6 +10,8 @@ site:
     header_logo: logo.svg
     site_home_url: https://hci-nerdz.github.io
     site_home_label: HCI Nerdz home
+    schema_org_name: HCI Nerdz
+    schema_org_url: https://hci-nerdz.github.io
     header_doc_title: HCI Nerdz Docs
 
 urls:
