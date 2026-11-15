@@ -1,5 +1,6 @@
 ifndef::env-github[:icons: font]
-:toc: preamble
+:toc: macro
+:toc-title:
 :toclevels: 2
 :sectanchors:
 
@@ -41,6 +42,15 @@ link:https://github.com/HCI-Nerdz/docs/issues[Report Bug]
 · 
 link:https://github.com/HCI-Nerdz/docs/issues[Request Feature]
 endif::[]
+
+++++
+<details>
+<summary>Table of Contents</summary>
+++++
+toc::[]
+++++
+</details>
+++++
 
 Antora documentation hub for link:https://github.com/HCI-Nerdz[HCI-Nerdz], themed with link:https://github.com/antora-supplemental/valentus-theme[Valentus].
 == About The Project
